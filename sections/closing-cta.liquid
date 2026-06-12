@@ -1,11 +1,11 @@
-<section class="closing" id="closing">
+{% comment %}
+  <section class="closing" id="closing">
     <div class="wrap">
       <div class="eyebrow">Start today</div>
       <h2>Ready to start your smile?</h2>
       <p>
-        Order your impression kit today and your custom veneers are designed
-        within <strong>2–3 weeks</strong>, from <strong>$1,297</strong>, or 3
-        interest-free payments. Backed by a 30-day money-back guarantee.
+        Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks</strong>, from
+        <strong>$1,297</strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.
       </p>
       <div class="closing-actions">
         <button class="btn-primary scroll-buy">
@@ -35,3 +35,104 @@
       </div>
     </div>
   </section>
+{% endcomment %}
+<section class="closing" id="{{ section.settings.section_id | default: 'closing' }}">
+  <div class="wrap">
+    <div class="eyebrow">
+      {{ section.settings.eyebrow }}
+    </div>
+
+    <h2>
+      {{ section.settings.heading }}
+    </h2>
+
+    <span>
+      {{ section.settings.description }}
+    </span>
+
+    <div class="closing-actions">
+      <button
+        class="btn-primary scroll-buy"
+        {% if section.settings.button_target != blank %}
+          data-target="{{ section.settings.button_target }}"
+        {% endif %}
+      >
+        {{ section.settings.button_label }}
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </button>
+
+      <span class="closing-reassure">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12l5 5 9-11"></path>
+        </svg>
+
+        {{ section.settings.reassurance }}
+      </span>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Closing Cta",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "closing"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Start today"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Ready to start your smile?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks</strong>, from <strong>$1,297</strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.<.p>"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Label",
+      "default": "Start your smile"
+    },
+    {
+      "type": "text",
+      "id": "button_target",
+      "label": "Button Target",
+      "default": "#buy"
+    },
+    {
+      "type": "text",
+      "id": "reassurance",
+      "label": "Reassurance Text",
+      "default": "30-day money-back guarantee · Free remakes until it's right"
+    }
+  ]
+}
+{% endschema %}

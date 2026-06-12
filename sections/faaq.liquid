@@ -1,175 +1,188 @@
 <section class="faq" id="faq">
-    <div class="wrap faq-grid">
-      <div class="faq-left">
-        <div class="eyebrow">Common Questions</div>
-        <h2 class="display" style="margin-top: 14px">
-          What people ask before buying
-        </h2>
-        <p class="sub">
-          The essentials are here. Anything else, we're one email away.
-        </p>
-        <div class="faq-help">
-          <div class="fh-t">Still have questions?</div>
-          <p>Our team responds within one business day.</p>
-          <a class="contact" href="mailto:hello@reviveteeth.com"
-            >Contact us
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M5 12h14M13 6l6 6-6 6"></path>
-            </svg>
-          </a>
-        </div>
+  <div class="wrap faq-grid">
+    <div class="faq-left">
+      <div class="eyebrow">
+        {{ section.settings.eyebrow }}
       </div>
-      <div class="faq-list" id="faqList">
-        <div class="faq-item">
-          <button class="faq-q">
-            Should I get both arches or single arch?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                Most buyers choose both arches because upper-only veneers can
-                look unnatural when you smile or talk — your lower teeth show,
-                and a color mismatch between veneered upper teeth and natural
-                lower teeth looks off. We recommend both unless your lower
-                teeth are already in good shape. At $1,994 for both vs. $1,297
-                for single, most people find the upgrade worth it.
-              </p>
-            </div>
-          </div>
+
+      <h2 class="display" style="margin-top:14px">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="sub">
+        {{ section.settings.description }}
+      </p>
+
+      <div class="faq-help">
+        <div class="fh-t">
+          {{ section.settings.help_title }}
         </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            Am I a candidate for Revive Veneers?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                Most people are. Revive Veneers work well for anyone with
-                healthy teeth and gums who wants to improve the appearance of
-                stained, slightly gapped, or worn teeth. They aren't right for
-                people with active gum disease, severe bite issues, multiple
-                missing teeth at the end of the arch, or anyone currently
-                wearing full dentures. Take our 30-second Smile Quiz above if
-                you're unsure, it includes guidance on missing teeth and
-                impression quality.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            What happens after I order?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                Your impression kit ships within 48 hours. You take
-                impressions at home (about 5 minutes), mail them back free,
-                and your custom veneers arrive 2–3 weeks after we receive
-                them. Dr. Turley designs every case in between. The kit
-                includes two batches of putty, so if your first impressions
-                don't capture enough detail we send a second kit free before
-                production starts.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            Can I cancel after ordering?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                Yes — cancel for a full refund any time before we start
-                designing your case. Once design begins, your 30-day
-                money-back guarantee covers you after delivery. Just email
-                hello@reviveteeth.com.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            How long do the veneers last?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                With everyday care, Revive Veneers are built to last 3–5
-                years. Rinse them after eating, brush them gently, and keep
-                them in their case when they're out.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-q">
-            Can I eat with them in?<svg
-              class="chev"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M6 9l6 6 6-6"></path>
-            </svg>
-          </button>
-          <div class="faq-a">
-            <div>
-              <p>
-                Yes — they're made for everyday wear, including most meals. We
-                recommend taking them out for very hard or sticky foods to
-                keep them looking their best.
-              </p>
-            </div>
-          </div>
-        </div>
+
+        <p>
+          {{ section.settings.help_text }}
+        </p>
+
+        <a
+          class="contact"
+          href="mailto:{{ section.settings.contact_email }}"
+        >
+          {{ section.settings.contact_label }}
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
       </div>
     </div>
-  </section>
+    <div class="faq-list" id="faqList">
+      {% for block in section.blocks %}
+        <div
+          class="faq-item"
+          {{ block.shopify_attributes }}
+        >
+          <button class="faq-q">
+            {{ block.settings.question }}
+
+            <svg
+              class="chev"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M6 9l6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div class="faq-a">
+            <div>
+              {{ block.settings.answer }}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Faqs",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Common Questions"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What people ask before buying"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The essentials are here. Anything else, we're one email away."
+    },
+    {
+      "type": "text",
+      "id": "help_title",
+      "label": "Help Title",
+      "default": "Still have questions?"
+    },
+    {
+      "type": "textarea",
+      "id": "help_text",
+      "label": "Help Text",
+      "default": "Our team responds within one business day."
+    },
+    {
+      "type": "text",
+      "id": "contact_label",
+      "label": "Contact Button Label",
+      "default": "Contact us"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Contact Email",
+      "default": "hello@reviveteeth.com"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ",
+      "blocks": [
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Should I get both arches or single arch?",
+            "answer": "<p>Most buyers choose both arches because upper-only veneers can look unnatural when you smile or talk.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Am I a candidate for Revive Veneers?",
+            "answer": "<p>Most people are. Revive Veneers work well for anyone with healthy teeth and gums.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "What happens after I order?",
+            "answer": "<p>Your impression kit ships within 48 hours and your custom veneers arrive 2–3 weeks later.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Can I cancel after ordering?",
+            "answer": "<p>Yes. Cancel for a full refund any time before we start designing your case.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "How long do the veneers last?",
+            "answer": "<p>With everyday care, Revive Veneers are built to last 3–5 years.</p>"
+          }
+        },
+        {
+          "type": "faq",
+          "settings": {
+            "question": "Can I eat with them in?",
+            "answer": "<p>Yes. They're made for everyday wear, including most meals.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

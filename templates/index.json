@@ -7,14 +7,72 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
+
+
 {
   "sections": {
-    "main": {
-      "type": "hello-world",
+    "hero": {
+      "type": "hero",
+      "settings": {}
+    },
+    "emotional-bridge": {
+      "type": "emotional-bridge",
+      "settings": {}
+    },
+    "real-stories": {
+      "type": "real-stories",
+      "settings": {}
+    },
+    "meet-designer": {
+      "type": "meet-designer",
+      "settings": {}
+    },
+    "how-it-works": {
+      "type": "how-it-works",
+      "settings": {}
+    },
+    "before-after": {
+      "type": "before-after",
+      "settings": {}
+    },
+    "the-protocols": {
+      "type": "the-protocols",
+      "settings": {}
+    },
+    "comparison": {
+      "type": "comparison",
+      "settings": {}
+    },
+    "candidate": {
+      "type": "candidate",
+      "settings": {}
+    },
+    "trust-badge": {
+      "type": "trust-badges",
+      "settings": {}
+    },
+    "faq": {
+      "type": "faaq",
+      "settings": {}
+    },
+    "closing-cta": {
+      "type": "closing-cta",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "hero",
+    "emotional-bridge",
+    "real-stories",
+    "meet-designer",
+    "how-it-works",
+    "before-after",
+    "the-protocols",
+    "comparison",
+    "candidate",
+    "trust-badge",
+    "faq",
+    "closing-cta"
   ]
 }
+

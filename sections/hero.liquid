@@ -1,0 +1,570 @@
+<section class="hero">
+  <div class="wrap hero-grid">
+    <!-- Gallery -->
+    <div class="gallery">
+      <div class="gallery-main" id="galMain">
+        <img
+          id="galImg"
+          src="{{ 'gallery-img-1.png' |  asset_url }}"
+          alt="Revive Veneers · front view"
+          height="100"
+          width="100"
+        >
+      </div>
+      <div class="thumbs" id="thumbs">
+        <button
+          class="thumb active"
+          data-alt="Front view"
+          aria-label="Front view"
+        >
+          <img
+            src="{{ 'gallery-img-1.png' |  asset_url }}"
+            alt=""
+            height="100"
+            width="100"
+          >
+        </button>
+        <button
+          class="thumb"
+          data-alt="Three-quarter angle"
+          aria-label="Three-quarter angle"
+        >
+          <img
+            src="{{ 'galery-img-2.png' |  asset_url }}"
+            alt=""
+            height="100"
+            width="100"
+          >
+        </button>
+        <button
+          class="thumb"
+          data-alt="Top-down arch"
+          aria-label="Top-down arch"
+        >
+          <img
+            src="{{ 'galery-img-3.png' |  asset_url }}"
+            alt=""
+            height="100"
+            width="100"
+          >
+        </button>
+        <button
+          class="thumb"
+          data-alt="In protective case"
+          aria-label="In protective case"
+        >
+          <img
+            src="{{ 'galery-img-4.png' |  asset_url }}"
+            alt=""
+            height="100"
+            width="100"
+          >
+        </button>
+      </div>
+    </div>
+    <!-- Buybox -->
+    <div class="buybox">
+      <div class="eyebrow-sm">Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years</div>
+      <h1 class="display">The snap-on veneer your dentist would actually recommend.</h1>
+      <p class="lead">
+        Designed by a cosmetic dentist and custom-fitted to your teeth — made to order, reviewed before it ships.
+      </p>
+      <div class="hero-badges">
+        <span class="hbadge">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12l5 5 9-11"></path>
+          </svg>
+          Dentist-Designed</span
+        >
+        <span class="hbadge">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
+            ></path>
+          </svg>
+          30-Day Money-Back</span
+        >
+        <span class="hbadge">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"></path>
+            <path d="M21 4v4h-4"></path>
+            <path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"></path>
+            <path d="M3 20v-4h4"></path>
+          </svg>
+          Free Remakes</span
+        >
+        <span class="hbadge">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 21V4"></path>
+            <path
+              d="M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0"
+            ></path>
+          </svg>
+          Designed in the USA</span
+        >
+      </div>
+      <hr>
+      <div class="config-label">Configuration <span class="req">· Choose one</span></div>
+      <div
+        class="config"
+        id="config"
+        role="radiogroup"
+        aria-label="Configuration"
+      >
+        <button
+          class="opt"
+          role="radio"
+          aria-checked="false"
+          data-key="upper"
+          data-price="1297"
+        >
+          <svg
+            class="arch-icon"
+            viewBox="0 0 60 32"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 22 C 8 6, 52 6, 56 22"></path>
+            <path
+              d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
+              stroke-width="1.6"
+            ></path>
+          </svg>
+          <div>
+            <div class="opt-name">Upper Arch</div>
+            <div class="opt-price">$1,297</div>
+          </div>
+        </button>
+        <button
+          class="opt"
+          role="radio"
+          aria-checked="false"
+          data-key="lower"
+          data-price="1297"
+        >
+          <svg
+            class="arch-icon"
+            viewBox="0 0 60 32"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+            <path
+              d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+              stroke-width="1.6"
+            ></path>
+          </svg>
+          <div>
+            <div class="opt-name">Lower Arch</div>
+            <div class="opt-price">$1,297</div>
+          </div>
+        </button>
+        <button
+          class="opt selected"
+          role="radio"
+          aria-checked="true"
+          data-key="both"
+          data-price="1994"
+        >
+          <span class="badge">Most Popular</span>
+          <svg
+            class="arch-icon"
+            viewBox="0 0 60 40"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 16 C 8 0, 52 0, 56 16"></path>
+            <path d="M4 24 C 8 40, 52 40, 56 24"></path>
+          </svg>
+          <div>
+            <div class="opt-name">Both Arches</div>
+            <div class="opt-price">$1,994</div>
+            <div class="save">Save $600 vs. buying separately</div>
+          </div>
+        </button>
+      </div>
+      <div class="price-block">
+        <div class="price-top">
+          <div class="price-now" id="priceNow">$1,994</div>
+        </div>
+        <div class="price-pay">
+          or 3 interest-free payments of
+          <strong id="pricePay">$665</strong>. No fees, no credit check.
+        </div>
+        <div class="price-fine">A fraction of the cost of porcelain veneers — with none of the drilling.</div>
+      </div>
+      <div class="stock"><span class="pulse"></span> In stock · Ships your impression kit within 48 hours</div>
+      <!--
+        SHOPIFY DEVELOPER NOTE: Wire this button to push the selected variant ID to the Shopify cart. Selection is tracked via `current` ("upper" | "lower" | "both"). Map each to its Shopify variant ID. Replace bumpCart() with real cart logic.
+      -->
+      <button class="cta" id="cta">
+        Get started
+        <svg
+          width="16"
+          height="16"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M5 12h14M13 6l6 6-6 6"></path>
+        </svg>
+      </button>
+      <div class="reassure-line">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12l5 5 9-11"></path>
+        </svg>
+        30-Day Money-Back Guarantee · Free Remakes Until It's Right
+      </div>
+      <div class="pay-row" aria-label="Accepted payment methods">
+        <!-- PLACEHOLDER: replace text pills with real payment-provider SVG logos before launch. -->
+        <span class="pay-pill">VISA</span>
+        <span class="pay-pill">Mastercard</span>
+        <span class="pay-pill">AMEX</span>
+        <span class="pay-pill">Apple Pay</span>
+        <span class="pay-secure">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+          </svg>
+          Secure checkout</span
+        >
+      </div>
+      <!-- ===== BELOW-CTA DROPDOWNS ===== -->
+      <div class="drops" id="drops">
+        <div class="drop">
+          <button class="drop-q" aria-expanded="false">
+            What's in Your Kit <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="drop-a">
+            <div>
+              <div class="drop-inner">
+                <div class="kit-list">
+                  <div class="kit-row">
+                    <span class="kit-ico">
+                      <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linecap="round"
+                      >
+                        <path
+                          d="M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Upper &amp; Lower Impression Trays</h5>
+                      <p>Pre-sized to fit most adult arches comfortably.</p>
+                    </div>
+                  </div>
+                  <div class="kit-row">
+                    <span class="kit-ico">
+                      <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                      >
+                        <circle cx="12" cy="16" r="6"></circle>
+                        <circle cx="21" cy="16" r="6"></circle>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Dental Putty (×2 batches)</h5>
+                      <p>A backup batch is included so you have room for error.</p>
+                    </div>
+                  </div>
+                  <div class="kit-row">
+                    <span class="kit-ico">
+                      <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                      >
+                        <rect
+                          x="5"
+                          y="8"
+                          width="22"
+                          height="16"
+                          rx="2"
+                        ></rect>
+                        <rect x="8" y="11" width="3" height="10"></rect>
+                        <rect x="13" y="11" width="3" height="10"></rect>
+                        <rect x="18" y="11" width="3" height="10"></rect>
+                        <rect
+                          x="23"
+                          y="11"
+                          width="1.5"
+                          height="10"
+                        ></rect>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Shade Matching Card</h5>
+                      <p>A reference strip to capture your actual tooth color.</p>
+                    </div>
+                  </div>
+                  <div class="kit-row">
+                    <span class="kit-ico">
+                      <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M4 10 L16 4 L28 10 L28 24 L4 24 Z"></path>
+                        <path d="M4 10 L16 16 L28 10"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Prepaid Return Mailer</h5>
+                      <p>Drop it in any USPS box. No postage required.</p>
+                    </div>
+                  </div>
+                  <div class="kit-row">
+                    <span class="kit-ico">
+                      <svg
+                        viewBox="0 0 32 32"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.6"
+                      >
+                        <circle cx="16" cy="16" r="11"></circle>
+                        <path
+                          d="M13 11l8 5-8 5z"
+                          fill="currentColor"
+                          stroke="none"
+                        ></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Video Instructions</h5>
+                      <p>QR code to Dr. Turley's step-by-step walkthrough.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="drop-note">
+                  If your first impressions don't capture enough detail, we send a second kit free.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drop">
+          <button class="drop-q" aria-expanded="false">
+            Your Order Includes
+            <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="drop-a">
+            <div>
+              <div class="drop-inner">
+                <div class="incl-grid">
+                  <div class="incl-cell">
+                    <span class="ic">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                      >
+                        <circle cx="12" cy="8" r="4"></circle>
+                        <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Designed by Dr. Turley</h5>
+                      <p>Every case is made to the 7-point protocol he designed as a practicing cosmetic dentist.</p>
+                    </div>
+                  </div>
+                  <div class="incl-cell">
+                    <span class="ic">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
+                        ></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>30-Day Money-Back Guarantee</h5>
+                      <p>Full refund if you aren't satisfied. No questions.</p>
+                    </div>
+                  </div>
+                  <div class="incl-cell">
+                    <span class="ic">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"></path>
+                        <path d="M21 4v4h-4"></path>
+                        <path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"></path>
+                        <path d="M3 20v-4h4"></path>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Free Remakes</h5>
+                      <p>If the fit isn't perfect, we remake it at no cost to you.</p>
+                    </div>
+                  </div>
+                  <div class="incl-cell">
+                    <span class="ic">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="1.9"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          x="1"
+                          y="7"
+                          width="14"
+                          height="10"
+                          rx="1.5"
+                        ></rect>
+                        <path d="M15 10h4l3 3v4h-7z"></path>
+                        <circle cx="6" cy="18" r="2"></circle>
+                        <circle cx="18" cy="18" r="2"></circle>
+                      </svg>
+                    </span>
+                    <div>
+                      <h5>Free Shipping Both Ways</h5>
+                      <p>We cover your kit, your return, and your veneers.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="guarantee-card">
+                  <div class="gc-h">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.9"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
+                      ></path>
+                      <path d="M8.5 12.5l2.5 2.5L16 10"></path>
+                    </svg>
+                    Try It Risk-Free
+                  </div>
+                  <div class="gc-sub">30-Day Money-Back Guarantee</div>
+                  <p>
+                    If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If
+                    the fit isn't right, we remake them at no cost. Your money is protected.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="drop">
+          <button class="drop-q" aria-expanded="false">
+            How to Start <span class="plus" aria-hidden="true"></span>
+          </button>
+          <div class="drop-a">
+            <div>
+              <div class="drop-inner">
+                <div class="start-steps">
+                  <div class="start-step">
+                    <span class="sn">01</span>
+                    <div>
+                      <h5>Order today</h5>
+                      <p>Your impression kit ships within 48 hours.</p>
+                    </div>
+                  </div>
+                  <div class="start-step">
+                    <span class="sn">02</span>
+                    <div>
+                      <h5>Take impressions at home</h5>
+                      <p>A simple 5-minute process. Video instructions included. Mail them back free.</p>
+                    </div>
+                  </div>
+                  <div class="start-step">
+                    <span class="sn">03</span>
+                    <div>
+                      <h5>Receive your custom smile</h5>
+                      <p>
+                        Your case is designed against Dr. Turley's protocol. Your veneers arrive ready to wear in 2–3
+                        weeks.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

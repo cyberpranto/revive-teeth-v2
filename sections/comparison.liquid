@@ -1,205 +1,119 @@
 <section>
   <div class="wrap">
     <div class="sect-head center">
-      <div class="eyebrow">What makes it different</div>
-      <h2 class="display" style="margin-top: 14px">The cheap snap-on you almost bought, next to the one you should.</h2>
-      <p class="sub">Same category. Completely different product.</p>
+      <div class="eyebrow">{{ section.settings.eyebrow }}</div>
+      <h2 class="display" style="margin-top: 14px">{{ section.settings.heading }}</h2>
+      <p class="sub">{{ section.settings.description }}</p>
     </div>
     <div class="cmp-split">
-      <div class="cmp-col lose">
-        <div class="cmp-img lose">
-          <img
-            src="{{ 'different-img-1.png' |  asset_url }}"
-            alt="Generic snap-on veneer with uniform, blocky teeth"
-            height="100"
-            width="100"
+      {% for block in section.blocks %}
+        {% if block.type == 'comparison_card' %}
+          <div
+            class="cmp-col {{ block.settings.card_style }}"
+            {{ block.shopify_attributes }}
           >
-        </div>
-        <div class="cmp-content">
-          <div class="cmp-tag">What you find elsewhere</div>
-          <h3>Generic Snap-Ons</h3>
-          <div class="cmp-price">What you find for $200–$400 online</div>
-          <ul class="cmp-list">
-            <li>
-              <span class="ico x">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
+            <div class="cmp-img {{ block.settings.card_style }}">
+              {% if block.settings.image %}
+                <img
+                  src="{{ block.settings.image | image_url }}"
+                  alt="{{ block.settings.title }}"
+                  height="100"
+                  width="100"
                 >
-                  <path d="M6 6l12 12M18 6L6 18"></path>
-                </svg></span
-              >One mold. Every customer gets the same shape.
-            </li>
-            <li>
-              <span class="ico x">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
+              {% elsif block.settings.card_style == 'lose' %}
+                <img
+                  src="{{ 'different-img-1.png' | asset_url }}"
+                  alt="{{ block.settings.title }}"
+                  height="100"
+                  width="100"
                 >
-                  <path d="M6 6l12 12M18 6L6 18"></path>
-                </svg></span
-              >Visible gap where plastic meets the gum.
-            </li>
-            <li>
-              <span class="ico x">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
+              {% else %}
+                <img
+                  src="{{ 'different-img-2.png' | asset_url }}"
+                  alt="{{ block.settings.title }}"
+                  height="100"
+                  width="100"
                 >
-                  <path d="M6 6l12 12M18 6L6 18"></path>
-                </svg></span
-              >Every tooth identical. No individual shaping.
-            </li>
-            <li>
-              <span class="ico x">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18"></path>
-                </svg></span
-              >Ships in days because no one designed it.
-            </li>
-            <li>
-              <span class="ico x">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                >
-                  <path d="M6 6l12 12M18 6L6 18"></path>
-                </svg></span
-              >No dentist involved, no design, no inspection.
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="cmp-col win">
-        <div class="cmp-img win">
-          <img
-            src="{{ 'different-img-2.png' |  asset_url }}"
-            alt="Revive Veneers · custom-designed front view"
-            height="100"
-            width="100"
-          >
-        </div>
-        <div class="cmp-content">
-          <div class="cmp-tag">What you get from Revive</div>
-          <h3>Revive Veneers</h3>
-          <div class="cmp-price">Custom-designed by Dr. Turley</div>
-          <ul class="cmp-list">
-            <li>
-              <span class="ico c">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg></span
-              >Thin and individually shaped, tooth by tooth.
-            </li>
-            <li>
-              <span class="ico c">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg></span
-              >Gumline contoured to your own anatomy.
-            </li>
-            <li>
-              <span class="ico c">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg></span
-              >Natural proportions and translucent edges, tooth by tooth.
-            </li>
-            <li>
-              <span class="ico c">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg></span
-              >7 design checkpoints; 14–21 days of design work.
-            </li>
-            <li>
-              <span class="ico c">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg></span
-              >Designed against Dr. Turley's 7-point protocol. Every case.
-            </li>
-          </ul>
-        </div>
-      </div>
+              {% endif %}
+            </div>
+
+            <div class="cmp-content">
+              <div class="cmp-tag">
+                {{ block.settings.tag }}
+              </div>
+
+              <h3>
+                {{ block.settings.title }}
+              </h3>
+
+              <div class="cmp-price">
+                {{ block.settings.price }}
+              </div>
+
+              <ul class="cmp-list">
+                {% for i in (1..5) %}
+                  {% assign feature_key = 'feature_' | append: i %}
+                  {% assign feature = block.settings[feature_key] %}
+
+                  {% if feature != blank %}
+                    <li>
+                      {% if block.settings.card_style == 'win' %}
+                        <span class="ico c">✓</span>
+                      {% else %}
+                        <span class="ico x">✕</span>
+                      {% endif %}
+
+                      {{ feature }}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
     </div>
     <div class="anchor-wrap">
-      <p class="anchor-label">Where Revive sits on the smile-upgrade spectrum:</p>
+      <p class="anchor-label">
+        {{ section.settings.anchor_label }}
+      </p>
+
       <div class="anchor-row">
-        <div class="anchor-card">
-          <div class="ac-name">Porcelain veneers at a dentist</div>
-          <div class="ac-price">$10k–$20k+</div>
-          <div class="ac-note">Per arch. Multiple visits, drilling, and permanent removal of natural enamel.</div>
-        </div>
-        <div class="anchor-card is-revive">
-          <span class="ac-flag">You are here</span>
-          <div class="ac-name">Revive Veneers</div>
-          <div class="ac-price">$1,297–$1,994</div>
-          <div class="ac-note">Dentist-designed and custom-fit. Removable, no drilling, mailed to your door.</div>
-        </div>
-        <div class="anchor-card">
-          <div class="ac-name">Generic snap-ons online</div>
-          <div class="ac-price">$200–$400</div>
-          <div class="ac-note">One-size mold, no dentist involved, the look most people quietly stop wearing.</div>
-        </div>
+        {% for block in section.blocks %}
+          {% if block.type == 'spectrum_card' %}
+            <div
+              class="anchor-card {% if block.settings.highlight %}is-revive{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {% if block.settings.badge != blank %}
+                <span class="ac-flag">
+                  {{ block.settings.badge }}
+                </span>
+              {% endif %}
+
+              <div class="ac-name">
+                {{ block.settings.title }}
+              </div>
+
+              <div class="ac-price">
+                {{ block.settings.price }}
+              </div>
+
+              <div class="ac-note">
+                {{ block.settings.description }}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
       </div>
     </div>
     <div class="sect-cta-row">
-      <button class="btn-primary scroll-buy">
-        Get started
+      <a
+        href="{{ section.settings.button_target }}"
+        class="btn-primary"
+      >
+        {{ section.settings.button_text }}
+
         <svg
           viewBox="0 0 24 24"
           fill="none"
@@ -208,7 +122,216 @@
         >
           <path d="M5 12h14M13 6l6 6-6 6"></path>
         </svg>
-      </button>
+      </a>
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Make it Different",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "What makes it different"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The cheap snap-on you almost bought, next to the one you should."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Same category. Completely different product."
+    },
+    {
+      "type": "text",
+      "id": "anchor_label",
+      "label": "Anchor Label",
+      "default": "Where Revive sits on the smile-upgrade spectrum:"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get started"
+    },
+    {
+      "type": "text",
+      "id": "button_target",
+      "label": "Button Target",
+      "default": "#top"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_card",
+      "name": "Comparison Card",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "select",
+          "id": "card_style",
+          "label": "Card Style",
+          "options": [
+            {
+              "value": "lose",
+              "label": "Generic"
+            },
+            {
+              "value": "win",
+              "label": "Revive"
+            }
+          ],
+          "default": "lose"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price / Subtitle"
+        },
+
+        {
+          "type": "textarea",
+          "id": "feature_1",
+          "label": "Feature 1"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_2",
+          "label": "Feature 2"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_3",
+          "label": "Feature 3"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_4",
+          "label": "Feature 4"
+        },
+        {
+          "type": "textarea",
+          "id": "feature_5",
+          "label": "Feature 5"
+        }
+      ]
+    },
+    {
+      "type": "spectrum_card",
+      "name": "Spectrum Card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight Card",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+  "name": "Comparison Section",
+  "blocks": [
+    {
+      "type": "comparison_card",
+      "settings": {
+        "card_style": "lose",
+        "tag": "What you find elsewhere",
+        "title": "Generic Snap-Ons",
+        "price": "What you find for $200–$400 online",
+        "feature_1": "One mold. Every customer gets the same shape.",
+        "feature_2": "Visible gap where plastic meets the gum.",
+        "feature_3": "Every tooth identical. No individual shaping.",
+        "feature_4": "Ships in days because no one designed it.",
+        "feature_5": "No dentist involved, no design, no inspection."
+      }
+    },
+    {
+      "type": "comparison_card",
+      "settings": {
+        "card_style": "win",
+        "tag": "What you get from Revive",
+        "title": "Revive Veneers",
+        "price": "Custom-designed by Dr. Turley",
+        "feature_1": "Thin and individually shaped, tooth by tooth.",
+        "feature_2": "Gumline contoured to your own anatomy.",
+        "feature_3": "Natural proportions and translucent edges, tooth by tooth.",
+        "feature_4": "7 design checkpoints; 14–21 days of design work.",
+        "feature_5": "Designed against Dr. Turley's 7-point protocol. Every case."
+      }
+    },
+    {
+      "type": "spectrum_card",
+      "settings": {
+        "title": "Porcelain veneers at a dentist",
+        "price": "$10k–$20k+",
+        "description": "Per arch. Multiple visits, drilling, and permanent removal of natural enamel."
+      }
+    },
+    {
+      "type": "spectrum_card",
+      "settings": {
+        "highlight": true,
+        "badge": "You are here",
+        "title": "Revive Veneers",
+        "price": "$1,297–$1,994",
+        "description": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+      }
+    },
+    {
+      "type": "spectrum_card",
+      "settings": {
+        "title": "Generic snap-ons online",
+        "price": "$200–$400",
+        "description": "One-size mold, no dentist involved, the look most people quietly stop wearing."
+      }
+    }
+  ]
+}
+  ]
+}
+{% endschema %}
