@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "t:general.footer",
+  "sections": {
+    "footer_new_gAYzTK": {
+      "type": "footer-new",
+      "blocks": {
+        "support_link_NF6Y7x": {
+          "type": "support_link",
+          "settings": {
+            "title": "Track Your Order",
+            "url": "#"
+          }
+        },
+        "support_link_wCyMj6": {
+          "type": "support_link",
+          "settings": {
+            "title": "Contact Support",
+            "url": "#"
+          }
+        },
+        "support_link_ccwdLY": {
+          "type": "support_link",
+          "settings": {
+            "title": "FAQ",
+            "url": "#"
+          }
+        },
+        "support_link_ReB9pe": {
+          "type": "support_link",
+          "settings": {
+            "title": "Returns & Remakes",
+            "url": "#"
+          }
+        },
+        "support_link_qJ3Gip": {
+          "type": "support_link",
+          "settings": {
+            "title": "Am I a Candidate?",
+            "url": "#"
+          }
+        },
+        "legal_link_RXx4Mk": {
+          "type": "legal_link",
+          "settings": {
+            "title": "Privacy Policy",
+            "url": "#"
+          }
+        },
+        "legal_link_VW8c9R": {
+          "type": "legal_link",
+          "settings": {
+            "title": "Terms of Service",
+            "url": "#"
+          }
+        },
+        "legal_link_KqgDkc": {
+          "type": "legal_link",
+          "settings": {
+            "title": "Return Policy",
+            "url": "#"
+          }
+        },
+        "legal_link_cPiegU": {
+          "type": "legal_link",
+          "settings": {
+            "title": "Shipping Policy",
+            "url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "support_link_NF6Y7x",
+        "support_link_wCyMj6",
+        "support_link_ccwdLY",
+        "support_link_ReB9pe",
+        "support_link_qJ3Gip",
+        "legal_link_RXx4Mk",
+        "legal_link_VW8c9R",
+        "legal_link_KqgDkc",
+        "legal_link_cPiegU"
+      ],
+      "name": "Footer",
+      "settings": {
+        "logo": "shopify://shop_images/footer-logo.jpg",
+        "tagline": "Cosmetic dentistry without the dental chair.",
+        "payment_text": "<p>$1,997 paid at checkout. 3-payment plans available on request. Email <a href=\"mailto:hello@reviveteeth.com?subject=Revive%20Veneers%20%E2%80%94%20Split%20payment%20request\">hello@reviveteeth.com</a> to arrange.</p>",
+        "newsletter_heading": "Get smile design tips from Dr. Turley",
+        "placeholder": "you@example.com",
+        "button_text": "Subscribe",
+        "klaviyo_list_id": "XeDPAa",
+        "newsletter_note": "No spam. Unsubscribe anytime.",
+        "copyright": "© 2026 Revive Teeth. All rights reserved.",
+        "disclaimer": "<p>Revive Veneers are custom cosmetic snap-on appliances. They are not a substitute for professional dental care. Consult a licensed dentist for any dental health concerns. Individual results vary. Materials are dental-grade resin used in cosmetic appliances.</p>"
+      }
+    }
+  },
+  "order": [
+    "footer_new_gAYzTK"
+  ]
+}

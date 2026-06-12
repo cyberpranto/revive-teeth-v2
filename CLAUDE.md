@@ -1,0 +1,1 @@
+C:/Users/Pranto Mridha/Desktop/Projects/Shopify Theme/revive-teeth-v2/revive-teeth-v2/AGENTS.md

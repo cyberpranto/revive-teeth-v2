@@ -1,0 +1,234 @@
+<!-- ============== FOOTER ============== -->
+<footer id="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot foot-brand">
+        <div class="brand" style="margin-bottom: 10px">
+          <img
+            src="{{ 'footer-logo.jfif' |  asset_url }}"
+            alt="Revive Teeth"
+            height="100"
+            width="100"
+          >
+        </div>
+        <p class="tag">Cosmetic dentistry without the dental chair.</p>
+      </div>
+      <div class="foot">
+        <h5>Customer Support</h5>
+        <ul>
+          <li><a href="#">Track Your Order</a></li>
+          <li>
+            <a href="mailto:hello@reviveteeth.com">Contact Support</a>
+          </li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#">Returns &amp; Remakes</a></li>
+          <li><a href="#candidate">Am I a Candidate?</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h5>Payment</h5>
+        <p class="foot-tagline-small">
+          $1,994 paid at checkout, or 3 interest-free payments of $665. No fees, no credit check. Email
+          <a
+            href="mailto:hello@reviveteeth.com?subject=Revive%20Veneers%20%E2%80%94%203-pay%20plan%20request"
+            >hello@reviveteeth.com</a
+          >
+          to set up a payment plan.
+        </p>
+      </div>
+      <div class="foot">
+        <h5>Get smile design tips from Dr. Turley</h5>
+        <!--
+          SHOPIFY DEVELOPER NOTE: replace this fake-submit form with real Klaviyo capture. Tag subscribers "footer-signup".
+        -->
+        <form
+          class="sub-input"
+          onsubmit="
+            event.preventDefault();
+            this.querySelector('button').textContent = 'Subscribed';
+          "
+        >
+          <input
+            type="email"
+            placeholder="you@example.com"
+            aria-label="Email address"
+            required=""
+          >
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="foot-tagline-small">No spam. Unsubscribe anytime.</div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <div>© 2026 Revive Teeth. All rights reserved.</div>
+      <div class="legal">
+        <a href="#">Privacy Policy</a><span style="opacity: 0.4">·</span> <a href="#">Terms of Service</a
+        ><span style="opacity: 0.4">·</span> <a href="#">Return Policy</a><span style="opacity: 0.4">·</span>
+        <a href="#">Shipping Policy</a>
+      </div>
+    </div>
+    <p class="foot-disclaimer">
+      Revive Veneers are custom cosmetic snap-on appliances. They are not a substitute for professional dental care.
+      Consult a licensed dentist for any dental health concerns. Individual results vary. Materials are dental-grade
+      resin used in cosmetic appliances.
+    </p>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('newsletter-form');
+
+    if (!form) return;
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById('newsletter-email').value;
+
+      const button = document.getElementById('newsletter-submit');
+
+      const message = document.getElementById('newsletter-message');
+
+      const listId = form.dataset.listId;
+
+      button.disabled = true;
+
+      const originalText = button.textContent;
+
+      button.textContent = 'Subscribing...';
+
+      try {
+        await fetch('https://manage.kmail-lists.com/ajax/subscriptions/subscribe', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+          },
+          body: new URLSearchParams({
+            g: listId,
+            email: email,
+          }),
+        });
+
+        message.textContent = 'Thanks for subscribing!';
+
+        form.reset();
+
+        button.textContent = 'Subscribed';
+      } catch (error) {
+        console.error(error);
+
+        message.textContent = 'Something went wrong.';
+
+        button.textContent = originalText;
+      }
+
+      button.disabled = fals;
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "Cosmetic dentistry without the dental chair."
+    },
+    {
+      "type": "richtext",
+      "id": "payment_text",
+      "label": "Payment Text"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "label": "Newsletter Heading",
+      "default": "Get smile design tips from Dr. Turley"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Input Placeholder",
+      "default": "[you@example.com](mailto:you@example.com)"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "klaviyo_list_id",
+      "label": "Klaviyo List ID"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_note",
+      "label": "Newsletter Note",
+      "default": "No spam. Unsubscribe anytime."
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright",
+      "default": "© 2026 Revive Teeth. All rights reserved."
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Disclaimer"
+    }
+  ],
+
+  "blocks": [
+    {
+      "type": "support_link",
+      "name": "Support Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    },
+    {
+      "type": "legal_link",
+      "name": "Legal Link",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "URL"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Footer"
+    }
+  ]
+}
+{% endschema %}
