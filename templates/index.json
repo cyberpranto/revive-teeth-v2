@@ -109,7 +109,7 @@
             "number": "03",
             "title": "Tooth-by-Tooth Proportions",
             "description": "Each tooth is sized individually, no uniform chiclet look. The side teeth sit slightly smaller than the front ones, the way real teeth do.",
-            "svg_code": ""
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 31C38 25 62 25 88 31\" stroke-width=\"1\" opacity=\".5\"></path><path d=\"M13.5 36Q13.5 33 18.5 33Q23.5 33 23.5 36L22.5 53Q18.5 57 14.5 53Z\"></path><path d=\"M26.5 35Q26.5 32 31 32Q35.5 32 35.5 35L34.5 55Q31 59 27.5 55Z\"></path><path d=\"M38.5 34Q38.5 31 44 31Q49.5 31 49.5 34L48.5 60Q44 65 39.5 60Z\"></path><path d=\"M50.5 34Q50.5 31 56 31Q61.5 31 61.5 34L60.5 60Q56 65 51.5 60Z\"></path><path d=\"M64.5 35Q64.5 32 69 32Q73.5 32 73.5 35L72.5 55Q69 59 65.5 55Z\"></path><path d=\"M76.5 36Q76.5 33 81.5 33Q86.5 33 86.5 36L85.5 53Q81.5 57 77.5 53Z\"></path><path d=\"M38.5 70v3M61.5 70v3M38.5 71.5H61.5\" stroke-width=\"1\" opacity=\".55\"></path></svg>"
           }
         },
         "protocol_item_x96bxm": {
