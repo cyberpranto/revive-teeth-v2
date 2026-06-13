@@ -86,8 +86,76 @@
       "type": "the-protocols",
       "settings": {}
     },
-    "comparison": {
+    "comparison_JP6KmX": {
       "type": "comparison",
+      "blocks": {
+        "comparison_card_cbkYFT": {
+          "type": "comparison_card",
+          "settings": {
+            "card_style": "lose",
+            "tag": "What you find elsewhere",
+            "title": "Generic Snap-Ons",
+            "price": "What you find for $200–$400 online",
+            "feature_1": "One mold. Every customer gets the same shape.",
+            "feature_2": "Visible gap where plastic meets the gum.",
+            "feature_3": "Every tooth identical. No individual shaping.",
+            "feature_4": "Ships in days because no one designed it.",
+            "feature_5": "No dentist involved, no design, no inspection."
+          }
+        },
+        "comparison_card_76Uphr": {
+          "type": "comparison_card",
+          "settings": {
+            "card_style": "win",
+            "tag": "What you get from Revive",
+            "title": "Revive Veneers",
+            "price": "Custom-designed by Dr. Turley",
+            "feature_1": "Thin and individually shaped, tooth by tooth.",
+            "feature_2": "Gumline contoured to your own anatomy.",
+            "feature_3": "Natural proportions and translucent edges, tooth by tooth.",
+            "feature_4": "7 design checkpoints; 14–21 days of design work.",
+            "feature_5": "Designed against Dr. Turley's 7-point protocol. Every case."
+          }
+        },
+        "spectrum_card_4j7etP": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": false,
+            "badge": "",
+            "title": "Porcelain veneers at a dentist",
+            "price": "$10k–$20k+",
+            "description": "Per arch. Multiple visits, drilling, and permanent removal of natural enamel."
+          }
+        },
+        "spectrum_card_tGqGy6": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": true,
+            "badge": "You are here",
+            "title": "Revive Veneers",
+            "price": "$1,297–$1,994",
+            "description": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+          }
+        },
+        "spectrum_card_i6MwU9": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": false,
+            "badge": "",
+            "title": "Generic snap-ons online",
+            "price": "$200–$400",
+            "description": "One-size mold, no dentist involved, the look most people quietly stop wearing."
+          }
+        }
+      },
+      "block_order": [
+        "comparison_card_cbkYFT",
+        "comparison_card_76Uphr",
+        "spectrum_card_4j7etP",
+        "spectrum_card_tGqGy6",
+        "spectrum_card_i6MwU9"
+      ],
+      "name": "Comparison Section",
       "settings": {
         "eyebrow": "What makes it different",
         "heading": "The cheap snap-on you almost bought, next to the one you should.",
@@ -146,7 +214,7 @@
     "how_it_works_wH89jW",
     "before-after",
     "the-protocols",
-    "comparison",
+    "comparison_JP6KmX",
     "candidate",
     "trust-badge",
     "faq",
