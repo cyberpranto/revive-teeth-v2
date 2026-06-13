@@ -82,9 +82,91 @@
       "type": "before-after",
       "settings": {}
     },
-    "the-protocols": {
+    "the_protocols_FCBtDY": {
       "type": "the-protocols",
-      "settings": {}
+      "blocks": {
+        "protocol_item_EDbKxR": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "01",
+            "title": "Smile Architecture",
+            "description": "Your veneers are shaped to suit your face, not a template. Your lip line and facial proportions guide the design.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13C33 13 24 30 24 49c0 21 13 38 26 38s26-17 26-38C76 30 67 13 50 13Z\"></path><line x1=\"50\" y1=\"16\" x2=\"50\" y2=\"84\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><line x1=\"27\" y1=\"40\" x2=\"73\" y2=\"40\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><line x1=\"27\" y1=\"60\" x2=\"73\" y2=\"60\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><path d=\"M37 63c5 7 21 7 26 0\" stroke-width=\"1.8\"></path><path d=\"M41 65h18\" stroke-width=\"1\" opacity=\".5\"></path></svg>"
+          }
+        },
+        "protocol_item_AUXJwf": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "02",
+            "title": "Bite Alignment",
+            "description": "Your upper and lower teeth should meet naturally. Your bite is mapped so nothing feels off when you close.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 36C32 22 68 22 84 36\"></path><path d=\"M24 37v9M34 35v12M45 34v13M55 34v13M66 35v12M76 37v9\" stroke-width=\"1.1\"></path><path d=\"M16 64C32 78 68 78 84 64\"></path><path d=\"M24 63v-9M34 65v-12M45 66v-13M55 66v-13M66 65v-12M76 63v-9\" stroke-width=\"1.1\"></path><line x1=\"14\" y1=\"50\" x2=\"86\" y2=\"50\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"></line></svg>"
+          }
+        },
+        "protocol_item_mPbBXk": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "03",
+            "title": "Tooth-by-Tooth Proportions",
+            "description": "Each tooth is sized individually, no uniform chiclet look. The side teeth sit slightly smaller than the front ones, the way real teeth do.",
+            "svg_code": ""
+          }
+        },
+        "protocol_item_x96bxm": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "04",
+            "title": "Gumline Precision",
+            "description": "The edge where veneer meets gum is where cheap snap-ons give themselves away. Yours is contoured to your own gumline so it doesn't look applied.",
+            "svg_code": ""
+          }
+        },
+        "protocol_item_DGM9PW": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "05",
+            "title": "Natural Translucency",
+            "description": "Real teeth aren't flat white. The biting edges are built with graduated translucency so they catch light the way enamel does.",
+            "svg_code": ""
+          }
+        },
+        "protocol_item_DU6nHQ": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "06",
+            "title": "Shade Matching",
+            "description": "Your shade card is matched against a professional shade guide, calibrated to your natural teeth, not a generic Hollywood white.",
+            "svg_code": ""
+          }
+        },
+        "protocol_item_hxd8xY": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "07",
+            "title": "Final Inspection",
+            "description": "Every finished case is checked against the first six points. If anything is off, it's remade before it ships, at our cost, not yours.",
+            "svg_code": ""
+          }
+        }
+      },
+      "block_order": [
+        "protocol_item_EDbKxR",
+        "protocol_item_AUXJwf",
+        "protocol_item_mPbBXk",
+        "protocol_item_x96bxm",
+        "protocol_item_DGM9PW",
+        "protocol_item_DU6nHQ",
+        "protocol_item_hxd8xY"
+      ],
+      "name": "7 Point Protocol",
+      "settings": {
+        "eyebrow": "The Protocol",
+        "heading": "Seven decisions that make them look like your own teeth.",
+        "description": "",
+        "footer_text": "",
+        "button_text": "See how it works",
+        "button_target": "#how"
+      }
     },
     "comparison_JP6KmX": {
       "type": "comparison",
@@ -378,7 +460,7 @@
     "meet-designer",
     "how_it_works_wH89jW",
     "before-after",
-    "the-protocols",
+    "the_protocols_FCBtDY",
     "comparison_JP6KmX",
     "candidate_WUVAB3",
     "trust_badges_jFaabb",
