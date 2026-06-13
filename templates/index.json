@@ -127,7 +127,7 @@
             "number": "05",
             "title": "Natural Translucency",
             "description": "Real teeth aren't flat white. The biting edges are built with graduated translucency so they catch light the way enamel does.",
-            "svg_code": ""
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"pe\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".42\"></stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".03\"></stop></lineargradient></defs><path d=\"M33 20Q33 14 50 14Q67 14 67 20L71 72Q50 84 29 72Z\" fill=\"url(#pe)\" stroke=\"currentColor\"></path><path d=\"M29 72Q50 84 71 72\" stroke-width=\"2.2\"></path><path d=\"M32 64Q50 73 68 64\" stroke-width=\"1\" stroke-dasharray=\"2 2\" opacity=\".5\"></path><line x1=\"50\" y1=\"90\" x2=\"50\" y2=\"97\" stroke-width=\"1\" opacity=\".5\"></line><line x1=\"41\" y1=\"89\" x2=\"38\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"></line><line x1=\"59\" y1=\"89\" x2=\"62\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"></line></svg>"
           }
         },
         "protocol_item_DU6nHQ": {
