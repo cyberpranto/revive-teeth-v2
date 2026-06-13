@@ -165,8 +165,61 @@
         "button_target": "#top"
       }
     },
-    "candidate": {
+    "candidate_WUVAB3": {
       "type": "candidate",
+      "blocks": {
+        "candidate_card_GyxXxc": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "ideal",
+            "title": "Ideal candidates",
+            "item_1": "Generally healthy teeth and gums",
+            "item_2": "Want to improve the appearance of stained, slightly gapped, or worn teeth",
+            "item_3": "All upper or all lower teeth present",
+            "item_4": "No active gum disease or recent major dental work"
+          }
+        },
+        "candidate_card_WF3LTQ": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "good",
+            "title": "Good candidates, extended timeline",
+            "item_1": "Small to medium gaps in teeth",
+            "item_2": "Minor bite issues (slight overbite or underbite)",
+            "item_3": "Worn or short teeth from grinding",
+            "item_4": "One or two missing teeth not at the end of the arch"
+          }
+        },
+        "candidate_card_FR6HYF": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "consult",
+            "title": "Consult before ordering",
+            "item_1": "Active gum disease or significant gum recession",
+            "item_2": "Severe crossbite or bite alignment issues",
+            "item_3": "Recent major dental work within the last 3 months",
+            "item_4": "Multiple missing teeth or teeth missing at the end of the arch"
+          }
+        },
+        "candidate_card_gdaBfy": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "not",
+            "title": "Not a candidate",
+            "item_1": "No remaining teeth in the arch you want covered",
+            "item_2": "Currently wearing full dentures",
+            "item_3": "Active oral infection or untreated periodontal disease",
+            "item_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "candidate_card_GyxXxc",
+        "candidate_card_WF3LTQ",
+        "candidate_card_FR6HYF",
+        "candidate_card_gdaBfy"
+      ],
+      "name": "Candidate Section",
       "settings": {
         "eyebrow": "Are You a Candidate?",
         "heading": "Revive Veneers work for most people. They're not right for everyone.",
@@ -177,12 +230,124 @@
         "disclaimer": "Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."
       }
     },
-    "trust-badge": {
+    "trust_badges_jFaabb": {
       "type": "trust-badges",
+      "blocks": {
+        "badge_HNwdnc": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"></path></svg>",
+            "title": "Dentist-Designed",
+            "subtitle": "Every case by Dr. Turley, DDS"
+          }
+        },
+        "badge_RpNNQK": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"> <path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path></svg>",
+            "title": "30-Day Money-Back",
+            "subtitle": "Full refund if it isn't right"
+          }
+        },
+        "badge_HJP7ai": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
+            "title": "3–5 Year Lifespan",
+            "subtitle": "Durable dental-grade resin"
+          }
+        },
+        "badge_ycYXU7": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"><path d=\"M12 3 C 12 9, 18 12, 18 17 a6 6 0 0 1 -12 0 C 6 12, 12 9, 12 3 Z\"></path></svg>",
+            "title": "BPA-Free Resin",
+            "subtitle": "Safe cosmetic-grade material"
+          }
+        },
+        "badge_KgVpz4": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h13l-4-4M16 12l-4 4\"></path><path d=\"M21 6v12\"></path></svg>",
+            "title": "Ships Free Both Ways",
+            "subtitle": "Kit, return & veneers covered"
+          }
+        },
+        "badge_9Rjhwm": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"></path><path d=\"M21 4v4h-4\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"></path><path d=\"M3 20v-4h4\"></path></svg>",
+            "title": "Free Remakes",
+            "subtitle": "Until the fit is right"
+          }
+        }
+      },
+      "block_order": [
+        "badge_HNwdnc",
+        "badge_RpNNQK",
+        "badge_HJP7ai",
+        "badge_ycYXU7",
+        "badge_KgVpz4",
+        "badge_9Rjhwm"
+      ],
+      "name": "Trust Badges",
       "settings": {}
     },
-    "faq": {
+    "faaq_G3ch9C": {
       "type": "faaq",
+      "blocks": {
+        "faq_UTLaUp": {
+          "type": "faq",
+          "settings": {
+            "question": "Should I get both arches or single arch?",
+            "answer": "<p>Most buyers choose both arches because upper-only veneers can look unnatural when you smile or talk.</p>"
+          }
+        },
+        "faq_LGq4UP": {
+          "type": "faq",
+          "settings": {
+            "question": "Am I a candidate for Revive Veneers?",
+            "answer": "<p>Most people are. Revive Veneers work well for anyone with healthy teeth and gums.</p>"
+          }
+        },
+        "faq_nRiRU8": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens after I order?",
+            "answer": "<p>Your impression kit ships within 48 hours and your custom veneers arrive 2–3 weeks later.</p>"
+          }
+        },
+        "faq_GNUR9K": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I cancel after ordering?",
+            "answer": "<p>Yes. Cancel for a full refund any time before we start designing your case.</p>"
+          }
+        },
+        "faq_fphxPT": {
+          "type": "faq",
+          "settings": {
+            "question": "How long do the veneers last?",
+            "answer": "<p>With everyday care, Revive Veneers are built to last 3–5 years.</p>"
+          }
+        },
+        "faq_ffxCDD": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I eat with them in?",
+            "answer": "<p>Yes. They're made for everyday wear, including most meals.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_UTLaUp",
+        "faq_LGq4UP",
+        "faq_nRiRU8",
+        "faq_GNUR9K",
+        "faq_fphxPT",
+        "faq_ffxCDD"
+      ],
+      "name": "FAQ",
       "settings": {
         "eyebrow": "Common Questions",
         "heading": "What people ask before buying",
@@ -215,9 +380,9 @@
     "before-after",
     "the-protocols",
     "comparison_JP6KmX",
-    "candidate",
-    "trust-badge",
-    "faq",
+    "candidate_WUVAB3",
+    "trust_badges_jFaabb",
+    "faaq_G3ch9C",
     "closing-cta"
   ]
 }
