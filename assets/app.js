@@ -3,33 +3,33 @@
    =================================================================== */
 
 /* ============== CONFIG STATE ============== */
-const CONFIGS = {
-    upper: {label:"Upper Arch", price:1297, pay:432},
-    lower: {label:"Lower Arch", price:1297, pay:432},
-    both:  {label:"Both Arches", price:1994, pay:665}
-  };
-  let current = "both";
-  function fmt(n){return "$"+n.toLocaleString("en-US")}
+// const CONFIGS = {
+//     upper: {label:"Upper Arch", price:1297, pay:432},
+//     lower: {label:"Lower Arch", price:1297, pay:432},
+//     both:  {label:"Both Arches", price:1994, pay:665}
+//   };
+//   let current = "both";
+//   function fmt(n){return "$"+n.toLocaleString("en-US")}
   
-  function applyConfig(key){
-    current = key;
-    const c = CONFIGS[key];
-    document.querySelectorAll(".opt").forEach(o=>{
-      const sel = o.dataset.key === key;
-      o.classList.toggle("selected", sel);
-      o.setAttribute("aria-checked", sel?"true":"false");
-    });
-    document.getElementById("priceNow").textContent = fmt(c.price);
-    document.getElementById("pricePay").textContent = "$"+c.pay.toLocaleString("en-US");
-    document.getElementById("sbL1").textContent = `Revive Veneers Â· ${c.label} Â· ${fmt(c.price)}`;
-    const payTxt = `or 3 payments of $${c.pay.toLocaleString("en-US")}, interest-free`;
-    document.getElementById("sbL2").textContent = payTxt;
-    document.getElementById("sbPay").textContent = payTxt;
-  }
-  document.querySelectorAll(".opt").forEach(o=>{
-    o.addEventListener("click",()=>applyConfig(o.dataset.key));
-  });
-  applyConfig("both");
+//   function applyConfig(key){
+//     current = key;
+//     const c = CONFIGS[key];
+//     document.querySelectorAll(".opt").forEach(o=>{
+//       const sel = o.dataset.key === key;
+//       o.classList.toggle("selected", sel);
+//       o.setAttribute("aria-checked", sel?"true":"false");
+//     });
+//     document.getElementById("priceNow").textContent = fmt(c.price);
+//     document.getElementById("pricePay").textContent = "$"+c.pay.toLocaleString("en-US");
+//     document.getElementById("sbL1").textContent = `Revive Veneers Â· ${c.label} Â· ${fmt(c.price)}`;
+//     const payTxt = `or 3 payments of $${c.pay.toLocaleString("en-US")}, interest-free`;
+//     document.getElementById("sbL2").textContent = payTxt;
+//     document.getElementById("sbPay").textContent = payTxt;
+//   }
+//   document.querySelectorAll(".opt").forEach(o=>{
+//     o.addEventListener("click",()=>applyConfig(o.dataset.key));
+//   });
+//   applyConfig("both");
   
   /* ============== GALLERY ============== */
   const thumbs = document.querySelectorAll(".thumb");
@@ -69,70 +69,7 @@ const CONFIGS = {
   }
   
   /* ============== 7-POINT PROTOCOL (INTERACTIVE) ============== */
-  const D = {
-    arch:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 13C33 13 24 30 24 49c0 21 13 38 26 38s26-17 26-38C76 30 67 13 50 13Z"/><line x1="50" y1="16" x2="50" y2="84" stroke-width="1" stroke-dasharray="2 3" opacity=".32"/><line x1="27" y1="40" x2="73" y2="40" stroke-width="1" stroke-dasharray="2 3" opacity=".32"/><line x1="27" y1="60" x2="73" y2="60" stroke-width="1" stroke-dasharray="2 3" opacity=".32"/><path d="M37 63c5 7 21 7 26 0" stroke-width="1.8"/><path d="M41 65h18" stroke-width="1" opacity=".5"/></svg>`,
-    bite:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 36C32 22 68 22 84 36"/><path d="M24 37v9M34 35v12M45 34v13M55 34v13M66 35v12M76 37v9" stroke-width="1.1"/><path d="M16 64C32 78 68 78 84 64"/><path d="M24 63v-9M34 65v-12M45 66v-13M55 66v-13M66 65v-12M76 63v-9" stroke-width="1.1"/><line x1="14" y1="50" x2="86" y2="50" stroke-width="1" stroke-dasharray="3 3" opacity=".4"/></svg>`,
-    prop:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 31C38 25 62 25 88 31" stroke-width="1" opacity=".5"/><path d="M13.5 36Q13.5 33 18.5 33Q23.5 33 23.5 36L22.5 53Q18.5 57 14.5 53Z"/><path d="M26.5 35Q26.5 32 31 32Q35.5 32 35.5 35L34.5 55Q31 59 27.5 55Z"/><path d="M38.5 34Q38.5 31 44 31Q49.5 31 49.5 34L48.5 60Q44 65 39.5 60Z"/><path d="M50.5 34Q50.5 31 56 31Q61.5 31 61.5 34L60.5 60Q56 65 51.5 60Z"/><path d="M64.5 35Q64.5 32 69 32Q73.5 32 73.5 35L72.5 55Q69 59 65.5 55Z"/><path d="M76.5 36Q76.5 33 81.5 33Q86.5 33 86.5 36L85.5 53Q81.5 57 77.5 53Z"/><path d="M38.5 70v3M61.5 70v3M38.5 71.5H61.5" stroke-width="1" opacity=".55"/></svg>`,
-    gum:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 42C33 30 67 30 82 42" stroke-width="1" opacity=".5"/><path d="M34 40Q34 31 50 31Q66 31 66 40L62 73Q50 81 38 73Z"/><path d="M34 40Q50 34 66 40" stroke-width="2.2"/><line x1="66" y1="39" x2="82" y2="31" stroke-width="1" opacity=".5"/><circle cx="83" cy="30" r="1.7" fill="currentColor" stroke="none"/></svg>`,
-    edge:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="pe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity=".42"/><stop offset="1" stop-color="currentColor" stop-opacity=".03"/></linearGradient></defs><path d="M33 20Q33 14 50 14Q67 14 67 20L71 72Q50 84 29 72Z" fill="url(#pe)" stroke="currentColor"/><path d="M29 72Q50 84 71 72" stroke-width="2.2"/><path d="M32 64Q50 73 68 64" stroke-width="1" stroke-dasharray="2 2" opacity=".5"/><line x1="50" y1="90" x2="50" y2="97" stroke-width="1" opacity=".5"/><line x1="41" y1="89" x2="38" y2="95" stroke-width="1" opacity=".4"/><line x1="59" y1="89" x2="62" y2="95" stroke-width="1" opacity=".4"/></svg>`,
-    shade:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><defs><linearGradient id="ps" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="currentColor" stop-opacity=".5"/><stop offset="1" stop-color="currentColor" stop-opacity=".06"/></linearGradient></defs><path d="M16 32Q16 28 22 28Q28 28 28 32L27 56Q22 60 17 56Z"/><path d="M44 31Q44 27 50 27Q56 27 56 31L55 57Q50 61 45 57Z" stroke-width="1.9"/><path d="M72 32Q72 28 78 28Q84 28 84 32L83 56Q78 60 73 56Z"/><rect x="16" y="68" width="68" height="8" rx="4" fill="url(#ps)" stroke="currentColor" stroke-width="1"/><path d="M50 62l3.5 4.5h-7Z" fill="currentColor" stroke="none"/></svg>`,
-    verify:`<svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M50 13L75 22V46C75 64 64 77 50 85C36 77 25 64 25 46V22Z"/><path d="M39 47L47 56L62 37" stroke-width="2.4"/></svg>`
-  };
   
-  const PROTOCOL = [
-    {n:"01", t:"Smile Architecture", d:D.arch, p:"Your veneers are shaped to suit your face, not a template. Your lip line and facial proportions guide the design."},
-    {n:"02", t:"Bite Alignment", d:D.bite, p:"Your upper and lower teeth should meet naturally. Your bite is mapped so nothing feels off when you close."},
-    {n:"03", t:"Tooth-by-Tooth Proportions", d:D.prop, p:"Each tooth is sized individually, no uniform \u201cchiclet\u201d look. The side teeth sit slightly smaller than the front ones, the way real teeth do."},
-    {n:"04", t:"Gumline Precision", d:D.gum, p:"The edge where veneer meets gum is where cheap snap-ons give themselves away. Yours is contoured to your own gumline so it doesn't look applied."},
-    {n:"05", t:"Natural Translucency", d:D.edge, p:"Real teeth aren't flat white. The biting edges are built with graduated translucency so they catch light the way enamel does."},
-    {n:"06", t:"Shade Matching", d:D.shade, p:"Your shade card is matched against a professional shade guide, calibrated to your natural teeth, not a generic â€œHollywood white.â€"},
-    {n:"07", t:"Final Inspection", d:D.verify, p:"Every finished case is checked against the first six points. If anything is off, it's remade before it ships, at our cost, not yours."}
-  ];
-  
-  const protoTabs = document.getElementById("protoTabs");
-  const protoStage = document.getElementById("protoStage");
-  const protoAcc = document.getElementById("protoAcc");
-  let activeProto = 0;
-  
-  PROTOCOL.forEach((item,i)=>{
-    const tab = document.createElement("button");
-    tab.className = "proto-tab" + (i===0?" active":"");
-    tab.setAttribute("role","tab");
-    tab.innerHTML = `<span class="tn">${item.n}</span><span class="tt">${item.t}</span>`;
-    tab.addEventListener("click",()=>setProto(i));
-    tab.addEventListener("mouseenter",()=>setProto(i));
-    protoTabs.appendChild(tab);
-  
-    const acc = document.createElement("div");
-    acc.className = "pa-item" + (i===0?" open":"");
-    acc.innerHTML = `
-      <button class="pa-q"><span class="tn">${item.n}</span><span class="tt">${item.t}</span>
-        <svg class="pchev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></button>
-      <div class="pa-a"><div><p>${item.p}</p></div></div>`;
-    acc.querySelector(".pa-q").addEventListener("click",()=>{
-      const open = acc.classList.contains("open");
-      protoAcc.querySelectorAll(".pa-item").forEach(x=>x.classList.remove("open"));
-      if(!open) acc.classList.add("open");
-    });
-    protoAcc.appendChild(acc);
-  });
-  
-  function renderProto(){
-    const item = PROTOCOL[activeProto];
-    protoStage.innerHTML = `
-      <div class="proto-diagram proto-anim">${item.d}</div>
-      <div class="proto-detail proto-anim">
-        <span class="pnum">Point ${item.n}</span>
-        <h3>${item.t}</h3>
-        <p>${item.p}</p>
-      </div>`;
-  }
-  function setProto(i){
-    activeProto = i;
-    protoTabs.querySelectorAll(".proto-tab").forEach((t,idx)=>t.classList.toggle("active", idx===i));
-    renderProto();
-  }
-  renderProto();
   
   /* ============== SECTION CTAs ============== */
   function scrollToBuy(){
@@ -143,10 +80,10 @@ const CONFIGS = {
     },600);
   }
   document.querySelectorAll(".scroll-buy").forEach(b=>b.addEventListener("click", scrollToBuy));
-  document.getElementById("protoCta").addEventListener("click",()=>{
-    document.querySelector("#top").scrollIntoView({behavior:"smooth"});
-    setTimeout(()=>openDrop(2), 650); // open "How to Start"
-  });
+  // document.getElementById("protoCta").addEventListener("click",()=>{
+  //   document.querySelector("#top").scrollIntoView({behavior:"smooth"});
+  //   setTimeout(()=>openDrop(2), 650); // open "How to Start"
+  // });
   var bridgeCta = document.getElementById("bridgeCta");
   if(bridgeCta) bridgeCta.addEventListener("click",()=>{
     document.querySelector("#top").scrollIntoView({behavior:"smooth"});
