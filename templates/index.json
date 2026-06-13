@@ -45,20 +45,20 @@
         "step_PUANi9": {
           "type": "step",
           "settings": {
-            "step_icon_svg": "",
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M5 13 C 7 6, 25 6, 27 13 L25 22 H7 Z\"></path>\n              <path d=\"M5 13 C 9 10, 23 10, 27 13\"></path>\n            </svg>",
             "step_title": "Take impressions at home",
             "step_description": "Follow Dr. Turley's video walkthrough, about five minutes. Drop the prepaid mailer in any USPS box to send them back, free.",
-            "step_time_icon_svg": "",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <circle cx=\"12\" cy=\"12\" r=\"9\"></circle>\n                <path d=\"M12 7v5l3 2\"></path>\n              </svg>",
             "step_time_text": "About 5 minutes"
           }
         },
         "step_dnkK6M": {
           "type": "step",
           "settings": {
-            "step_icon_svg": "",
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M6 13 C 10 24, 22 24, 26 13\"></path>\n              <path d=\"M6 13 C 9 11, 23 11, 26 13\"></path>\n              <path d=\"M11 12.5 L11 15 M16 12.5 L16 15.5 M21 12.5 L21 15\"></path>\n            </svg>",
             "step_title": "Receive your custom smile",
             "step_description": "Your veneers are made to your impressions and designed against Dr. Turley's 7-point protocol.",
-            "step_time_icon_svg": "",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"></rect>\n                <path d=\"M4 10h16M9 3v4M15 3v4\"></path>\n              </svg>",
             "step_time_text": "2-3 weeks"
           }
         }
