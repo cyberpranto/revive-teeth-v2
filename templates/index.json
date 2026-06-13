@@ -7,8 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
-
 {
   "sections": {
     "hero": {
@@ -17,7 +15,11 @@
     },
     "emotional-bridge": {
       "type": "emotional-bridge",
-      "settings": {}
+      "settings": {
+        "content": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You've looked into fixing it — $15,000 and a dental chair felt out of reach. <em>This is the other way.</em></p>",
+        "button_text": "See how it works",
+        "button_link": ""
+      }
     },
     "real-stories": {
       "type": "real-stories",
@@ -27,9 +29,54 @@
       "type": "meet-designer",
       "settings": {}
     },
-    "how-it-works": {
+    "how_it_works_wH89jW": {
       "type": "how-it-works",
-      "settings": {}
+      "blocks": {
+        "step_NkQzJK": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\">\n              <path d=\"M4 11 L16 5 L28 11 L28 25 L4 25 Z\"></path>\n              <path d=\"M4 11 L16 17 L28 11\"></path>\n              <path d=\"M16 17 L16 27\"></path>\n            </svg>",
+            "step_title": "Order your impression kit",
+            "step_description": "Pick your arches and check out. Your kit ships free within 48 hours, with everything you need and a backup batch of putty.",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <path d=\"M5 12h13l-4-4M18 12l-4 4\"></path>\n              </svg>",
+            "step_time_text": "Ships in 48 hours"
+          }
+        },
+        "step_PUANi9": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "",
+            "step_title": "Take impressions at home",
+            "step_description": "Follow Dr. Turley's video walkthrough, about five minutes. Drop the prepaid mailer in any USPS box to send them back, free.",
+            "step_time_icon_svg": "",
+            "step_time_text": "About 5 minutes"
+          }
+        },
+        "step_dnkK6M": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "",
+            "step_title": "Receive your custom smile",
+            "step_description": "Your veneers are made to your impressions and designed against Dr. Turley's 7-point protocol.",
+            "step_time_icon_svg": "",
+            "step_time_text": "2-3 weeks"
+          }
+        }
+      },
+      "block_order": [
+        "step_NkQzJK",
+        "step_PUANi9",
+        "step_dnkK6M"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "section_id": "how",
+        "eyebrow": "How It Works",
+        "heading": "A better smile, mailed to your door.",
+        "description": "No dental chair, no drilling, no multiple visits. Three simple steps, mostly from your couch.",
+        "button_text": "Start your smile",
+        "button_link": ""
+      }
     },
     "before-after": {
       "type": "before-after",
@@ -41,11 +88,26 @@
     },
     "comparison": {
       "type": "comparison",
-      "settings": {}
+      "settings": {
+        "eyebrow": "What makes it different",
+        "heading": "The cheap snap-on you almost bought, next to the one you should.",
+        "description": "Same category. Completely different product.",
+        "anchor_label": "Where Revive sits on the smile-upgrade spectrum:",
+        "button_text": "Get started",
+        "button_target": "#top"
+      }
     },
     "candidate": {
       "type": "candidate",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Are You a Candidate?",
+        "heading": "Revive Veneers work for most people. They're not right for everyone.",
+        "description": "They're designed for people with healthy teeth who want a better-looking smile, not for people who need dental treatment. Here's an honest breakdown of who they're built for.",
+        "cta_text": "Take the 30-Second Smile Quiz",
+        "cta_target": "#quiz",
+        "nudge_text": "<p>Not sure? <strong>Take our free quiz.</strong> We'll tell you honestly.</p>",
+        "disclaimer": "Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."
+      }
     },
     "trust-badge": {
       "type": "trust-badges",
@@ -53,11 +115,27 @@
     },
     "faq": {
       "type": "faaq",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Common Questions",
+        "heading": "What people ask before buying",
+        "description": "The essentials are here. Anything else, we're one email away.",
+        "help_title": "Still have questions?",
+        "help_text": "Our team responds within one business day.",
+        "contact_label": "Contact us",
+        "contact_email": "hello@reviveteeth.com"
+      }
     },
     "closing-cta": {
       "type": "closing-cta",
-      "settings": {}
+      "settings": {
+        "section_id": "closing",
+        "eyebrow": "Start today",
+        "heading": "Ready to start your smile?",
+        "description": "<p>Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks</strong>, from <strong>$1,297</strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.<.p></p>",
+        "button_label": "Start your smile",
+        "button_target": "#buy",
+        "reassurance": "30-day money-back guarantee · Free remakes until it's right"
+      }
     }
   },
   "order": [
@@ -65,7 +143,7 @@
     "emotional-bridge",
     "real-stories",
     "meet-designer",
-    "how-it-works",
+    "how_it_works_wH89jW",
     "before-after",
     "the-protocols",
     "comparison",
@@ -75,4 +153,3 @@
     "closing-cta"
   ]
 }
-
