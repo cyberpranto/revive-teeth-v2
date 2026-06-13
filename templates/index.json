@@ -136,7 +136,7 @@
             "number": "06",
             "title": "Shade Matching",
             "description": "Your shade card is matched against a professional shade guide, calibrated to your natural teeth, not a generic Hollywood white.",
-            "svg_code": ""
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"ps\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".5\"></stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".06\"></stop></lineargradient></defs><path d=\"M16 32Q16 28 22 28Q28 28 28 32L27 56Q22 60 17 56Z\"></path><path d=\"M44 31Q44 27 50 27Q56 27 56 31L55 57Q50 61 45 57Z\" stroke-width=\"1.9\"></path><path d=\"M72 32Q72 28 78 28Q84 28 84 32L83 56Q78 60 73 56Z\"></path><rect x=\"16\" y=\"68\" width=\"68\" height=\"8\" rx=\"4\" fill=\"url(#ps)\" stroke=\"currentColor\" stroke-width=\"1\"></rect><path d=\"M50 62l3.5 4.5h-7Z\" fill=\"currentColor\" stroke=\"none\"></path></svg>"
           }
         },
         "protocol_item_hxd8xY": {
@@ -145,7 +145,7 @@
             "number": "07",
             "title": "Final Inspection",
             "description": "Every finished case is checked against the first six points. If anything is off, it's remade before it ships, at our cost, not yours.",
-            "svg_code": ""
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13L75 22V46C75 64 64 77 50 85C36 77 25 64 25 46V22Z\"></path><path d=\"M39 47L47 56L62 37\" stroke-width=\"2.4\"></path></svg>"
           }
         }
       },
