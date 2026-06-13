@@ -118,7 +118,7 @@
             "number": "04",
             "title": "Gumline Precision",
             "description": "The edge where veneer meets gum is where cheap snap-ons give themselves away. Yours is contoured to your own gumline so it doesn't look applied.",
-            "svg_code": ""
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 42C33 30 67 30 82 42\" stroke-width=\"1\" opacity=\".5\"></path><path d=\"M34 40Q34 31 50 31Q66 31 66 40L62 73Q50 81 38 73Z\"></path><path d=\"M34 40Q50 34 66 40\" stroke-width=\"2.2\"></path><line x1=\"66\" y1=\"39\" x2=\"82\" y2=\"31\" stroke-width=\"1\" opacity=\".5\"></line><circle cx=\"83\" cy=\"30\" r=\"1.7\" fill=\"currentColor\" stroke=\"none\"></circle></svg>"
           }
         },
         "protocol_item_DGM9PW": {
