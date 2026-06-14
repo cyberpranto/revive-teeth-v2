@@ -11,100 +11,53 @@
   "type": "footer",
   "name": "t:general.footer",
   "sections": {
-    "footer_new_gAYzTK": {
+    "footer_new_ccKEnf": {
       "type": "footer-new",
       "blocks": {
-        "support_link_NF6Y7x": {
-          "type": "support_link",
+        "brand_hgLECx": {
+          "type": "brand",
           "settings": {
-            "title": "Track Your Order",
-            "url": "#"
+            "tagline": "Cosmetic dentistry without the dental chair."
           }
         },
-        "support_link_wCyMj6": {
-          "type": "support_link",
+        "menu_tdKF3k": {
+          "type": "menu",
           "settings": {
-            "title": "Contact Support",
-            "url": "#"
+            "heading": "Customer Support",
+            "menu": "customer-support"
           }
         },
-        "support_link_ccwdLY": {
-          "type": "support_link",
+        "text_kxJPze": {
+          "type": "text",
           "settings": {
-            "title": "FAQ",
-            "url": "#"
+            "heading": "Payment",
+            "content": "<p>$1,994 paid at checkout, or 3 interest-free payments of $665. No fees, no credit check. Email: <a href=\"mailto:hello@reviveteeth.com?subject=Revive%20Veneers%20%E2%80%94%203-pay%20plan%20request\">hello@reviveteeth.com</a> to set up a payment plan.</p>"
           }
         },
-        "support_link_ReB9pe": {
-          "type": "support_link",
+        "newsletter_tQhFGJ": {
+          "type": "newsletter",
           "settings": {
-            "title": "Returns & Remakes",
-            "url": "#"
-          }
-        },
-        "support_link_qJ3Gip": {
-          "type": "support_link",
-          "settings": {
-            "title": "Am I a Candidate?",
-            "url": "#"
-          }
-        },
-        "legal_link_RXx4Mk": {
-          "type": "legal_link",
-          "settings": {
-            "title": "Privacy Policy",
-            "url": "#"
-          }
-        },
-        "legal_link_VW8c9R": {
-          "type": "legal_link",
-          "settings": {
-            "title": "Terms of Service",
-            "url": "#"
-          }
-        },
-        "legal_link_KqgDkc": {
-          "type": "legal_link",
-          "settings": {
-            "title": "Return Policy",
-            "url": "#"
-          }
-        },
-        "legal_link_cPiegU": {
-          "type": "legal_link",
-          "settings": {
-            "title": "Shipping Policy",
-            "url": "#"
+            "heading": "Get smile design tips from Dr. Turley",
+            "subtext": "No spam. Unsubscribe anytime."
           }
         }
       },
       "block_order": [
-        "support_link_NF6Y7x",
-        "support_link_wCyMj6",
-        "support_link_ccwdLY",
-        "support_link_ReB9pe",
-        "support_link_qJ3Gip",
-        "legal_link_RXx4Mk",
-        "legal_link_VW8c9R",
-        "legal_link_KqgDkc",
-        "legal_link_cPiegU"
+        "brand_hgLECx",
+        "menu_tdKF3k",
+        "text_kxJPze",
+        "newsletter_tQhFGJ"
       ],
-      "name": "Footer",
+      "name": "Revive Footer",
       "settings": {
-        "logo": "shopify://shop_images/footer-logo.jpg",
-        "tagline": "Cosmetic dentistry without the dental chair.",
-        "payment_text": "<p>$1,997 paid at checkout. 3-payment plans available on request. Email <a href=\"mailto:hello@reviveteeth.com?subject=Revive%20Veneers%20%E2%80%94%20Split%20payment%20request\">hello@reviveteeth.com</a> to arrange.</p>",
-        "newsletter_heading": "Get smile design tips from Dr. Turley",
-        "placeholder": "you@example.com",
-        "button_text": "Subscribe",
-        "klaviyo_list_id": "XeDPAa",
-        "newsletter_note": "No spam. Unsubscribe anytime.",
         "copyright": "© 2026 Revive Teeth. All rights reserved.",
-        "disclaimer": "<p>Revive Veneers are custom cosmetic snap-on appliances. They are not a substitute for professional dental care. Consult a licensed dentist for any dental health concerns. Individual results vary. Materials are dental-grade resin used in cosmetic appliances.</p>"
+        "disclaimer": "Revive Veneers are custom cosmetic snap-on appliances. They are not a substitute for professional dental care. Consult a licensed dentist for any dental health concerns. Individual results vary. Materials are dental-grade resin used in cosmetic appliances.",
+        "legal_menu": "legal-pages",
+        "klaviyo_list_id": ""
       }
     }
   },
   "order": [
-    "footer_new_gAYzTK"
+    "footer_new_ccKEnf"
   ]
 }
