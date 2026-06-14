@@ -41,38 +41,52 @@
       "name": "Top Strip",
       "settings": {}
     },
-    "header_new_BipAaK": {
+    "header_new_4nc9hk": {
       "type": "header-new",
       "blocks": {
-        "menu_item_4gmKQh": {
+        "menu_item_VRxdq3": {
+          "type": "menu_item",
+          "settings": {
+            "label": "Meet the Designer",
+            "link": "#designer"
+          }
+        },
+        "menu_item_wqJ9y4": {
           "type": "menu_item",
           "settings": {
             "label": "How It Works",
             "link": "#how"
           }
         },
-        "menu_item_EjdpEA": {
+        "menu_item_htBgQ3": {
+          "type": "menu_item",
+          "settings": {
+            "label": "Results",
+            "link": "#results"
+          }
+        },
+        "menu_item_7McTPb": {
+          "type": "menu_item",
+          "settings": {
+            "label": "Before & After",
+            "link": "#before-after"
+          }
+        },
+        "menu_item_cAn6zR": {
           "type": "menu_item",
           "settings": {
             "label": "The Protocol",
             "link": "#protocol"
           }
         },
-        "menu_item_nM6YKf": {
-          "type": "menu_item",
-          "settings": {
-            "label": "Reviews",
-            "link": "#reviews"
-          }
-        },
-        "menu_item_7cteFz": {
+        "menu_item_tD4CfM": {
           "type": "menu_item",
           "settings": {
             "label": "Am I a Candidate?",
             "link": "#candidate"
           }
         },
-        "menu_item_eqPtHR": {
+        "menu_item_WdHYjB": {
           "type": "menu_item",
           "settings": {
             "label": "FAQ",
@@ -81,22 +95,23 @@
         }
       },
       "block_order": [
-        "menu_item_4gmKQh",
-        "menu_item_EjdpEA",
-        "menu_item_nM6YKf",
-        "menu_item_7cteFz",
-        "menu_item_eqPtHR"
+        "menu_item_VRxdq3",
+        "menu_item_wqJ9y4",
+        "menu_item_htBgQ3",
+        "menu_item_7McTPb",
+        "menu_item_cAn6zR",
+        "menu_item_tD4CfM",
+        "menu_item_WdHYjB"
       ],
       "name": "Navigation",
       "settings": {
         "logo_link": "",
-        "logo_alt": "Revive Teeth",
         "cart_text": "Cart"
       }
     }
   },
   "order": [
     "header_top_strip_6CjMMH",
-    "header_new_BipAaK"
+    "header_new_4nc9hk"
   ]
 }
