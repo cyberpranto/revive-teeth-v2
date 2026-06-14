@@ -72,18 +72,23 @@
               data-variant-id="{{ variant.id }}"
               data-price="{{ variant.price }}"
             >
-              {% if variant.title contains 'Upper' %}
-                {{ section.settings.upper_icon }}
+              {% assign title = variant.title | downcase %}
 
-              {% elsif variant.title contains 'Lower' %}
-                {{ section.settings.lower_icon }}
-
-              {% else %}
+              {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
                 <span class="badge">
                   {{ section.settings.popular_badge }}
                 </span>
 
                 {{ section.settings.both_icon }}
+
+              {% elsif title contains 'upper' %}
+                {{ section.settings.upper_icon }}
+
+              {% elsif title contains 'lower' %}
+                {{ section.settings.lower_icon }}
+
+              {% else %}
+                {{ section.settings.lower_icon }}
               {% endif %}
 
               <div>
@@ -95,7 +100,7 @@
                   {{ variant.price | money_without_trailing_zeros }}
                 </div>
 
-                {% if variant.title contains 'Both' %}
+                {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
                   <div class="save">
                     {{ section.settings.bundle_save_text }}
                   </div>
@@ -308,8 +313,7 @@
     </div>
   </section>
 
-  {% render 'sticky-bar'  %}
-
+  {% render 'sticky-bar' %}
 {% endif %}
 <script>
   const thumbs = document.querySelectorAll('.thumb');

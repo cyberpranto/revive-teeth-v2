@@ -141,6 +141,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 body {
   font-family: var(--body);
@@ -239,21 +240,7 @@ h2.display {
   margin: 0 0.55em;
 }
 /* -------------- HEADER -------------- */
-header.nav {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: saturate(140%) blur(8px);
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-  border-bottom: 1px solid transparent;
-}
-header.nav.scrolled {
-  border-bottom-color: var(--line);
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
-}
+
 .nav-inner {
   display: flex;
   align-items: center;
@@ -347,6 +334,15 @@ header.nav.scrolled {
   position: sticky;
   top: 90px;
 }
+
+@media screen and (max-width: 980px) {
+  .gallery {
+    position: relative;
+    top: 0px;
+  }
+}
+
+
 .gallery-main {
   background: #000;
   border-radius: var(--r-xl);
