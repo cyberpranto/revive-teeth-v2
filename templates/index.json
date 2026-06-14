@@ -21,6 +21,10 @@
         "button_link": ""
       }
     },
+    "real-stories": {
+      "type": "real-stories",
+      "settings": {}
+    },
     "meet_designer_8TmEMk": {
       "type": "meet-designer",
       "blocks": {
@@ -58,21 +62,7 @@
         "body_content": "<p>Most snap-on veneers are cheaply manufactured plastic, shipped from factories by companies without a practicing dentist on the team.</p><p>Patients walk into my practice wearing them. Within a month, they stop. They're embarrassed by something they paid for.</p><p>That's the gap Revive fills. Every case is designed against my 7-Point Smile Design Protocol. <strong>If it doesn't pass, it doesn't ship.</strong> If it arrives and isn't right, we remake it. My name is on this because I built it.</p>",
         "doctor_name": "Dr. Brandon Turley, DDS",
         "doctor_title": "Doctor of Dental Surgery · Founder, Revive Teeth",
-        "video_caption": "Dr. Brandon Turley, DDS · 1 min 52 sec"
-      }
-    },
-    "real-stories": {
-      "type": "real-stories",
-      "settings": {}
-    },
-    "meet-designer": {
-      "type": "meet-designer",
-      "settings": {
-        "eyebrow": "Meet Your Designer",
-        "quote": "Most snap-on veneers are an embarrassment. I built one that isn't.",
-        "body_content": "",
-        "doctor_name": "Dr. Brandon Turley, DDS",
-        "doctor_title": "Doctor of Dental Surgery · Founder, Revive Teeth",
+        "video": "shopify://files/videos/Dr T Intro V2(1).mp4",
         "video_caption": "Dr. Brandon Turley, DDS · 1 min 52 sec"
       }
     },
@@ -503,9 +493,8 @@
   "order": [
     "hero",
     "emotional-bridge",
-    "meet_designer_8TmEMk",
     "real-stories",
-    "meet-designer",
+    "meet_designer_8TmEMk",
     "how_it_works_wH89jW",
     "before-after",
     "the_protocols_FCBtDY",
