@@ -1,324 +1,304 @@
 {% assign product = section.settings.product %}
-
+{% assign current_variant = product.selected_or_first_available_variant %}
 {% if product == blank %}
   <p>Please select a product.</p>
-  {% break %}
-{% endif %}
 
-{% assign current_variant = product.selected_or_first_available_variant %}
-
-<section class="hero">
-  <div class="wrap hero-grid">
-    <!-- Gallery -->
-    <div class="gallery">
-      <div class="gallery-main" id="galMain">
-        <img
-          id="galImg"
-          src="{{ product.featured_image | image_url: width: 1200 }}"
-          alt="{{ product.featured_image.alt }}"
-          height="100"
-          width="100"
-        >
-      </div>
-      <div class="thumbs" id="thumbs">
-        {% for image in product.images %}
-          <button
-            class="thumb {% if forloop.first %}active{% endif %}"
-            data-image="{{ image | image_url: width: 1200 }}"
-            data-alt="{{ image.alt | escape }}"
-            aria-label="{{ image.alt | escape }}"
+{% else %}
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <!-- Gallery -->
+      <div class="gallery">
+        <div class="gallery-main" id="galMain">
+          <img
+            id="galImg"
+            src="{{ product.featured_image | image_url: width: 1200 }}"
+            alt="{{ product.featured_image.alt }}"
+            height="100"
+            width="100"
           >
-            <img
-              src="{{ image | image_url: width: 200 }}"
-              alt="{{ image.alt | escape }}"
-              width="200"
-              height="200"
+        </div>
+        <div class="thumbs" id="thumbs">
+          {% for image in product.images %}
+            <button
+              class="thumb {% if forloop.first %}active{% endif %}"
+              data-image="{{ image | image_url: width: 1200 }}"
+              data-alt="{{ image.alt | escape }}"
+              aria-label="{{ image.alt | escape }}"
             >
-          </button>
-        {% endfor %}
+              <img
+                src="{{ image | image_url: width: 200 }}"
+                alt="{{ image.alt | escape }}"
+                width="200"
+                height="200"
+              >
+            </button>
+          {% endfor %}
+        </div>
       </div>
-    </div>
-    <!-- Buybox -->
-    <div class="buybox">
-      <div class="eyebrow-sm">{{ section.settings.eyebrow }}</div>
-      <h1 class="display">{{ section.settings.heading }}</h1>
-      <p class="lead">
-        {{ section.settings.description }}
-      </p>
-      <div class="hero-badges">
-        {% for block in section.blocks %}
-          {% if block.type == 'hero_badge' %}
-            <span class="hbadge" {{ block.shopify_attributes }}>
-              {% if block.settings.icon != blank %}
-                {{ block.settings.icon }}
-              {% endif %}
+      <!-- Buybox -->
+      <div class="buybox">
+        <div class="eyebrow-sm">{{ section.settings.eyebrow }}</div>
+        <h1 class="display">{{ section.settings.heading }}</h1>
+        <p class="lead">
+          {{ section.settings.description }}
+        </p>
+        <div class="hero-badges">
+          {% for block in section.blocks %}
+            {% if block.type == 'hero_badge' %}
+              <span class="hbadge" {{ block.shopify_attributes }}>
+                {% if block.settings.icon != blank %}
+                  {{ block.settings.icon }}
+                {% endif %}
 
-              {{ block.settings.text }}
-            </span>
-          {% endif %}
-        {% endfor %}
-      </div>
-      <hr>
-      <div class="config-label">Configuration <span class="req">· Choose one</span></div>
-      <div
-        class="config"
-        id="config"
-        role="radiogroup"
-        aria-label="Configuration"
-      >
-        {% for variant in product.variants %}
-          <button
-            class="opt {% if forloop.first %}selected{% endif %}"
-            role="radio"
-            aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
-            data-variant-id="{{ variant.id }}"
-            data-price="{{ variant.price }}"
-          >
-            {% if variant.title contains 'Upper' %}
-              {{ section.settings.upper_icon }}
-
-            {% elsif variant.title contains 'Lower' %}
-              {{ section.settings.lower_icon }}
-
-            {% else %}
-              <span class="badge">
-                {{ section.settings.popular_badge }}
+                {{ block.settings.text }}
               </span>
-
-              {{ section.settings.both_icon }}
             {% endif %}
-
-            <div>
-              <div class="opt-name">
-                {{ variant.title }}
-              </div>
-
-              <div class="opt-price">
-                {{ variant.price | money_without_trailing_zeros }}
-              </div>
-
-              {% if variant.title contains 'Both' %}
-                <div class="save">
-                  {{ section.settings.bundle_save_text }}
-                </div>
-              {% endif %}
-            </div>
-          </button>
-        {% endfor %}
-      </div>
-      <div class="price-block">
-        <div class="price-top">
-          <div class="price-now" id="priceNow">{{ current_variant.price | money_without_trailing_zeros }}</div>
+          {% endfor %}
         </div>
-        <div class="price-pay">
-          or 3 interest-free payments of
-          <strong id="pricePay"> {{ current_variant.price | divided_by: 3 | money_without_trailing_zeros }}</strong>. No
-          fees, no credit check.
-        </div>
-        <div class="price-fine">A fraction of the cost of porcelain veneers — with none of the drilling.</div>
-      </div>
-      <div class="stock"><span class="pulse"></span> {{ section.settings.stock_text }}</div>
-      <!--
-        SHOPIFY DEVELOPER NOTE: Wire this button to push the selected variant ID to the Shopify cart. Selection is tracked via `current` ("upper" | "lower" | "both"). Map each to its Shopify variant ID. Replace bumpCart() with real cart logic.
-      -->
-      <button class="cta" id="cta" data-variant-id="{{ current_variant.id }}">
-        {{ section.settings.button_text }}
-        <svg
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+        <hr>
+        <div class="config-label">Configuration <span class="req">· Choose one</span></div>
+        <div
+          class="config"
+          id="config"
+          role="radiogroup"
+          aria-label="Configuration"
         >
-          <path d="M5 12h14M13 6l6 6-6 6"></path>
-        </svg>
-      </button>
-      <div class="reassure-line">
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2.4"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path d="M5 12l5 5 9-11"></path>
-        </svg>
-        {{ section.settings.guarantee_text }}
-      </div>
-      <div class="pay-row" aria-label="Accepted payment methods">
-        {% for block in section.blocks %}
-          {% if block.type == 'payment_method' %}
-            <!-- PLACEHOLDER: replace text pills with real payment-provider SVG logos before launch. -->
-            <span
-              class="pay-pill"
-              {{ block.shopify_attributes }}
+          {% for variant in product.variants %}
+            <button
+              class="opt {% if forloop.first %}selected{% endif %}"
+              role="radio"
+              data-key="{{ variant.title | handle }}"
+              aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
+              data-variant-id="{{ variant.id }}"
+              data-price="{{ variant.price }}"
             >
-              {{ block.settings.label }}
-            </span>
-          {% endif %}
-        {% endfor %}
+              {% if variant.title contains 'Upper' %}
+                {{ section.settings.upper_icon }}
 
-        <span class="pay-secure">
+              {% elsif variant.title contains 'Lower' %}
+                {{ section.settings.lower_icon }}
+
+              {% else %}
+                <span class="badge">
+                  {{ section.settings.popular_badge }}
+                </span>
+
+                {{ section.settings.both_icon }}
+              {% endif %}
+
+              <div>
+                <div class="opt-name">
+                  {{ variant.title }}
+                </div>
+
+                <div class="opt-price">
+                  {{ variant.price | money_without_trailing_zeros }}
+                </div>
+
+                {% if variant.title contains 'Both' %}
+                  <div class="save">
+                    {{ section.settings.bundle_save_text }}
+                  </div>
+                {% endif %}
+              </div>
+            </button>
+          {% endfor %}
+        </div>
+        <div class="price-block">
+          <div class="price-top">
+            <div class="price-now" id="priceNow">{{ current_variant.price | money_without_trailing_zeros }}</div>
+          </div>
+          <div class="price-pay">
+            or 3 interest-free payments of
+            <strong id="pricePay"> {{ current_variant.price | divided_by: 3 | money_without_trailing_zeros }}</strong>.
+            No fees, no credit check.
+          </div>
+          <div class="price-fine">A fraction of the cost of porcelain veneers — with none of the drilling.</div>
+        </div>
+        <div class="stock"><span class="pulse"></span> {{ section.settings.stock_text }}</div>
+        <!--
+          SHOPIFY DEVELOPER NOTE: Wire this button to push the selected variant ID to the Shopify cart. Selection is tracked via `current` ("upper" | "lower" | "both"). Map each to its Shopify variant ID. Replace bumpCart() with real cart logic.
+        -->
+        <button
+          class="cta"
+          id="cta"
+          data-variant-id="{{ current_variant.id }}"
+          data-product-title="{{ product.title }}"
+        >
+          {{ section.settings.button_text }}
           <svg
+            width="16"
+            height="16"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             stroke-width="2"
           >
-            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
           </svg>
+        </button>
+        <div class="reassure-line">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.4"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12l5 5 9-11"></path>
+          </svg>
+          {{ section.settings.guarantee_text }}
+        </div>
+        <div class="pay-row" aria-label="Accepted payment methods">
+          {% for block in section.blocks %}
+            {% if block.type == 'payment_method' %}
+              <!-- PLACEHOLDER: replace text pills with real payment-provider SVG logos before launch. -->
+              <span
+                class="pay-pill"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.label }}
+              </span>
+            {% endif %}
+          {% endfor %}
 
-          {{ section.settings.secure_checkout_text }}
-        </span>
-      </div>
-      <!-- ===== BELOW-CTA DROPDOWNS ===== -->
-      <div class="drops" id="drops">
-        <div class="drop">
-          <button class="drop-q" aria-expanded="false">
-            {{ section.settings.kit_title -}}
-            <span class="plus" aria-hidden="true"></span>
-          </button>
-          <div class="drop-a">
-            <div>
-              <div class="drop-inner">
-                <div class="kit-list">
-                  {% for block in section.blocks %}
-                    {% if block.type == 'kit_item' %}
-                      <div class="kit-row" {{ block.shopify_attributes }}>
-                        <span class="kit-ico">
-                          {{ block.settings.icon }}
-                        </span>
+          <span class="pay-secure">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+            </svg>
 
-                        <div>
-                          <h5>
-                            {{ block.settings.heading }}
-                          </h5>
+            {{ section.settings.secure_checkout_text }}
+          </span>
+        </div>
+        <!-- ===== BELOW-CTA DROPDOWNS ===== -->
+        <div class="drops" id="drops">
+          <div class="drop">
+            <button class="drop-q" aria-expanded="false">
+              {{ section.settings.kit_title -}}
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="drop-a">
+              <div>
+                <div class="drop-inner">
+                  <div class="kit-list">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'kit_item' %}
+                        <div class="kit-row" {{ block.shopify_attributes }}>
+                          <span class="kit-ico">
+                            {{ block.settings.icon }}
+                          </span>
 
-                          <p>
-                            {{ block.settings.text }}
-                          </p>
+                          <div>
+                            <h5>
+                              {{ block.settings.heading }}
+                            </h5>
+
+                            <p>
+                              {{ block.settings.text }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                <div class="drop-note">
-                  {{ section.settings.kit_note }}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+                  <div class="drop-note">
+                    {{ section.settings.kit_note }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="drop">
-          <button class="drop-q" aria-expanded="false">
-            {{ section.settings.includes_title }}
-            <span class="plus" aria-hidden="true"></span>
-          </button>
-          <div class="drop-a">
-            <div>
-              <div class="drop-inner">
-                <div class="incl-grid">
-                  {% for block in section.blocks %}
-                    {% if block.type == 'include_item' %}
-                      <div
-                        class="incl-cell"
-                        {{ block.shopify_attributes }}
-                      >
-                        <span class="ic">
-                          {{ block.settings.icon }}
-                        </span>
+          <div class="drop">
+            <button class="drop-q" aria-expanded="false">
+              {{ section.settings.includes_title }}
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="drop-a">
+              <div>
+                <div class="drop-inner">
+                  <div class="incl-grid">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'include_item' %}
+                        <div
+                          class="incl-cell"
+                          {{ block.shopify_attributes }}
+                        >
+                          <span class="ic">
+                            {{ block.settings.icon }}
+                          </span>
 
-                        <div>
-                          <h5>
-                            {{ block.settings.heading }}
-                          </h5>
+                          <div>
+                            <h5>
+                              {{ block.settings.heading }}
+                            </h5>
 
-                          <p>
-                            {{ block.settings.text }}
-                          </p>
+                            <p>
+                              {{ block.settings.text }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
-                </div>
-                {% comment %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
+
                   <div class="guarantee-card">
                     <div class="gc-h">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.9"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
-                        ></path>
-                        <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-                      </svg>
-                      Try It Risk-Free
+                      {{ section.settings.guarantee_card_icon }}
+
+                      {{ section.settings.guarantee_card_heading }}
                     </div>
-                    <div class="gc-sub">30-Day Money-Back Guarantee</div>
+
+                    <div class="gc-sub">
+                      {{ section.settings.guarantee_card_subheading }}
+                    </div>
+
                     <p>
-                      If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If
-                      the fit isn't right, we remake them at no cost. Your money is protected.
+                      {{ section.settings.guarantee_card_text }}
                     </p>
                   </div>
-                {% endcomment %}
-                <div class="guarantee-card">
-                  <div class="gc-h">
-                    {{ section.settings.guarantee_card_icon }}
-
-                    {{ section.settings.guarantee_card_heading }}
-                  </div>
-
-                  <div class="gc-sub">
-                    {{ section.settings.guarantee_card_subheading }}
-                  </div>
-
-                  <p>
-                    {{ section.settings.guarantee_card_text }}
-                  </p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="drop">
-          <button class="drop-q" aria-expanded="false">
-            {{ section.settings.how_to_start_title }}
-            <span class="plus" aria-hidden="true"></span>
-          </button>
-          <div class="drop-a">
-            <div>
-              <div class="drop-inner">
-                <div class="start-steps">
-                  {% for block in section.blocks %}
-                    {% if block.type == 'start_step' %}
-                      <div
-                        class="start-step"
-                        {{ block.shopify_attributes }}
-                      >
-                        <span class="sn">
-                          {{ block.settings.number }}
-                        </span>
+          <div class="drop">
+            <button class="drop-q" aria-expanded="false">
+              {{ section.settings.how_to_start_title }}
+              <span class="plus" aria-hidden="true"></span>
+            </button>
+            <div class="drop-a">
+              <div>
+                <div class="drop-inner">
+                  <div class="start-steps">
+                    {% for block in section.blocks %}
+                      {% if block.type == 'start_step' %}
+                        <div
+                          class="start-step"
+                          {{ block.shopify_attributes }}
+                        >
+                          <span class="sn">
+                            {{ block.settings.number }}
+                          </span>
 
-                        <div>
-                          <h5>
-                            {{ block.settings.heading }}
-                          </h5>
+                          <div>
+                            <h5>
+                              {{ block.settings.heading }}
+                            </h5>
 
-                          <p>
-                            {{ block.settings.text }}
-                          </p>
+                            <p>
+                              {{ block.settings.text }}
+                            </p>
+                          </div>
                         </div>
-                      </div>
-                    {% endif %}
-                  {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                  </div>
                 </div>
               </div>
             </div>
@@ -326,9 +306,11 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
+  {% render 'sticky-bar'  %}
+
+{% endif %}
 <script>
   const thumbs = document.querySelectorAll('.thumb');
   const galImg = document.getElementById('galImg');
@@ -370,14 +352,61 @@
       option.setAttribute('aria-checked', 'true');
 
       const price = Number(option.dataset.price);
+      const variantId = option.dataset.variantId;
+
+      const title = option.querySelector('.opt-name')?.textContent.trim() || 'Selected Option';
+      const productTitle = cta.dataset.productTitle || '';
+
+      const installment = Math.round(price / 3);
+
+      /*
+  HERO PRICE
+  */
 
       priceNow.textContent = formatMoney(price);
 
-      pricePay.textContent = formatMoney(Math.round(price / 3));
+      pricePay.textContent = formatMoney(installment);
 
-      cta.dataset.variantId = option.dataset.variantId;
+      /*
+  HERO CTA
+  */
+
+      cta.dataset.variantId = variantId;
+
+      /*
+  STICKY BAR
+  */
+
+      const sbCta = document.getElementById('sbCta');
+      const sbL1 = document.getElementById('sbL1');
+      const sbL2 = document.getElementById('sbL2');
+      const sbPay = document.getElementById('sbPay');
+
+      if (sbCta) {
+        sbCta.dataset.variantId = variantId;
+      }
+
+      if (sbL1) {
+        sbL1.textContent = `Revive Veneers · ${title} · ${formatMoney(price)}`;
+      }
+
+      const paymentText = `or 3 payments of ${formatMoney(installment)}, interest-free`;
+
+      if (sbL2) {
+        sbL2.textContent = paymentText;
+      }
+
+      if (sbPay) {
+        sbPay.textContent = paymentText;
+      }
     });
   });
+
+  const defaultVariant = document.querySelector('.opt.selected') || document.querySelector('.opt');
+
+  if (defaultVariant) {
+    defaultVariant.click();
+  }
 </script>
 {% schema %}
 {

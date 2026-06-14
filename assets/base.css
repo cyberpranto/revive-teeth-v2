@@ -1,101 +1,101 @@
 /* cyrillic-ext */
 @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./Inter-Regular.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url("./Inter-Medium.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("./Inter-SemiBold.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter Tight";
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./InterTight-Regular.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter Tight";
-    font-style: normal;
-    font-weight: 500;
-    font-display: swap;
-    src: url("./InterTight-Medium.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter Tight";
-    font-style: normal;
-    font-weight: 600;
-    font-display: swap;
-    src: url("/cdn/shop/t/4/assets/InterTight-SemiBold.ttf") format("truetype");
-  }
-  
-  /* cyrillic-ext */
-  @font-face {
-    font-family: "Inter Tight";
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url("./InterTight-Bold.ttf") format("truetype");
-  }
-  
-  /* vietnamese */
-  @font-face {
-    font-family: "Newsreader";
-    font-style: italic;
-    font-weight: 400;
-    font-display: swap;
-    src: url("./Newsreader-Italic.ttf") format("truetype");
-  }
-  
-  /* vietnamese */
-  @font-face {
-    font-family: "Newsreader";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url("./Newsreader-MediumItalic.ttf") format("truetype");
-  }
-  
-  /* vietnamese */
-  @font-face {
-    font-family: "Playfair Display";
-    font-style: italic;
-    font-weight: 500;
-    font-display: swap;
-    src: url("./PlayfairDisplay-MediumItalic.ttf") format("truetype");
-  }
-  
-  /* vietnamese */
-  @font-face {
-    font-family: "Playfair Display";
-    font-style: italic;
-    font-weight: 600;
-    font-display: swap;
-    src: url("./PlayfairDisplay-SemiBoldItalic.ttf") format("truetype");
-  }
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Inter-Regular.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Inter-Medium.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./Inter-SemiBold.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./InterTight-Regular.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./InterTight-Medium.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/cdn/shop/t/4/assets/InterTight-SemiBold.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./InterTight-Bold.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Newsreader-Italic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Newsreader-MediumItalic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./PlayfairDisplay-MediumItalic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./PlayfairDisplay-SemiBoldItalic.ttf") format("truetype");
+}
 
 :root {
   --navy: #1b2d5c;
@@ -1432,10 +1432,34 @@ section.dark .sub {
   background: var(--line);
   position: relative;
 }
-.ba-pair image-slot {
+.ba-pair .image-slot {
+  max-width: 100%;
   width: 100%;
-  aspect-ratio: 1/1.15;
+  aspect-ratio: 1 / 1;
   display: block;
+}
+.ba-pair .image-slot img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.ba-pair .image-slot.before {
+  border: 1px dashed rgba(0, 0, 0, 0.55);
+  border-radius: 16px 0 0 16px;
+}
+.ba-pair .image-slot.after {
+  border: 1px dashed rgba(0, 0, 0, 0.55);
+  border-radius: 0px 16px 16px 0px;
+}
+.ba-pair .image-slot .empty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
 }
 .ba-tag {
   position: absolute;

@@ -77,14 +77,18 @@
               class="testimonial-video"
               preload="metadata"
               playsinline
-              poster="{{ block.settings.thumbnail | image_url: width: 1200 }}"
+              {% if block.settings.thumbnail != blank %}
+                poster="{{ block.settings.thumbnail | image_url: width: 1200 }}"
+              {% endif %}
             >
-              {% for source in block.settings.video.sources %}
-                <source
-                  src="{{ source.url }}"
-                  type="{{ source.mime_type }}"
-                >
-              {% endfor %}
+              {% if block.settings.video != blank %}
+                {% for source in block.settings.video.sources %}
+                  <source
+                    src="{{ source.url }}"
+                    type="{{ source.mime_type }}"
+                  >
+                {% endfor %}
+              {% endif %}
             </video>
 
             <div class="test-overlay">
@@ -131,21 +135,6 @@
     {% endif %}
   </div>
 </section>
-{% comment %}
-  <div class="testimonial-modal" id="testimonialModal-{{ section.id }}">
-    <div class="tm-backdrop"></div>
-
-    <div class="tm-inner">
-      <button class="tm-close">×</button>
-
-      <video
-        id="testimonialVideo-{{ section.id }}"
-        controls
-        playsinline
-      ></video>
-    </div>
-  </div>
-{% endcomment %}
 <script>
   document.querySelectorAll('.testimonial-play').forEach((btn) => {
     btn.addEventListener('click', () => {

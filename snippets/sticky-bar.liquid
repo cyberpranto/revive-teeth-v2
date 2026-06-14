@@ -1,12 +1,36 @@
 <div class="sticky-bar" id="stickyBar" role="region" aria-label="Buy bar">
   <div class="sticky-inner">
     <button class="sb-info" id="sbInfo">
-      <span class="l1" id="sbL1">Revive Veneers · Both Arches · $1,994</span>
-      <span class="l2" id="sbL2">or 3 payments of $665, interest-free</span>
+      <span class="l1" id="sbL1"></span>
+      <span class="l2" id="sbL2"></span>
     </button>
     <div class="sb-right">
       <button class="sb-cta" id="sbCta">Add to cart</button>
-      <span class="sb-pay" id="sbPay">or 3 payments of $665, interest-free</span>
+      <span class="sb-pay" id="sbPay"></span>
     </div>
   </div>
 </div>
+<script>document.addEventListener('DOMContentLoaded', () => {
+  const sbCta = document.getElementById('sbCta');
+  const sbInfo = document.getElementById('sbInfo');
+
+  if (sbCta) {
+    sbCta.addEventListener('click', () => {
+      const variantId = sbCta.dataset.variantId;
+
+      if (!variantId) return;
+
+      window.location.href = `/cart/${variantId}:1`;
+    });
+  }
+
+  if (sbInfo) {
+    sbInfo.addEventListener('click', () => {
+      document.getElementById('config')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    });
+  }
+});
+</script>

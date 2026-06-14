@@ -1,36 +1,56 @@
-/* ===================================================================
-   REVIVE TEETH, PRODUCT PAGE v8 SCRIPT
-   =================================================================== */
+async function buyNow(variantId) {
 
-/* ============== CONFIG STATE ============== */
-// const CONFIGS = {
-//     upper: {label:"Upper Arch", price:1297, pay:432},
-//     lower: {label:"Lower Arch", price:1297, pay:432},
-//     both:  {label:"Both Arches", price:1994, pay:665}
-//   };
-//   let current = "both";
-//   function fmt(n){return "$"+n.toLocaleString("en-US")}
-  
-//   function applyConfig(key){
-//     current = key;
-//     const c = CONFIGS[key];
-//     document.querySelectorAll(".opt").forEach(o=>{
-//       const sel = o.dataset.key === key;
-//       o.classList.toggle("selected", sel);
-//       o.setAttribute("aria-checked", sel?"true":"false");
-//     });
-//     document.getElementById("priceNow").textContent = fmt(c.price);
-//     document.getElementById("pricePay").textContent = "$"+c.pay.toLocaleString("en-US");
-//     document.getElementById("sbL1").textContent = `Revive Veneers Â· ${c.label} Â· ${fmt(c.price)}`;
-//     const payTxt = `or 3 payments of $${c.pay.toLocaleString("en-US")}, interest-free`;
-//     document.getElementById("sbL2").textContent = payTxt;
-//     document.getElementById("sbPay").textContent = payTxt;
-//   }
-//   document.querySelectorAll(".opt").forEach(o=>{
-//     o.addEventListener("click",()=>applyConfig(o.dataset.key));
-//   });
-//   applyConfig("both");
-  
+  try {
+
+    await fetch('/cart/clear.js', {
+      method: 'POST'
+    });
+
+    const response = await fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        id: Number(variantId),
+        quantity: 1
+      })
+    });
+
+    if (!response.ok) {
+      throw new Error('Cart Error');
+    }
+
+    window.location.href = '/checkout';
+
+  } catch (error) {
+    console.error(error);
+  }
+
+}
+
+const heroButton = document.getElementById('cta');
+
+heroButton?.addEventListener('click', () => {
+
+  const variantId = heroButton.dataset.variantId;
+
+  if (!variantId) return;
+
+  buyNow(variantId);
+
+});
+const stickyButton = document.getElementById('sbCta');
+
+stickyButton?.addEventListener('click', () => {
+
+  const variantId = stickyButton.dataset.variantId;
+
+  if (!variantId) return;
+
+  buyNow(variantId);
+
+});
   
   /* ============== BELOW-CTA DROPDOWNS ============== */
   const drops = document.querySelectorAll("#drops .drop");
