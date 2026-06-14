@@ -75,7 +75,7 @@
         "kit_item_wJEktJ": {
           "type": "kit_item",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"16\" r=\"6\"></circle><circle cx=\"21\" cy=\"16\" r=\"6\"></circle></svg>",
             "heading": "Dental Putty (×2 batches)",
             "text": "A backup batch is included so you have room for error."
           }
@@ -83,7 +83,7 @@
         "kit_item_bCTC3k": {
           "type": "kit_item",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"5\" y=\"8\" width=\"22\" height=\"16\" rx=\"2\"></rect><rect x=\"8\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"13\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"18\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"23\" y=\"11\" width=\"1.5\" height=\"10\"></rect></svg>",
             "heading": "Shade Matching Card",
             "text": "A reference strip to capture your actual tooth color."
           }
@@ -91,7 +91,7 @@
         "kit_item_N7a6at": {
           "type": "kit_item",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"><path d=\"M4 10 L16 4 L28 10 L28 24 L4 24 Z\"></path><path d=\"M4 10 L16 16 L28 10\"></path></svg>",
             "heading": "Prepaid Return Mailer",
             "text": "Drop it in any USPS box. No postage required."
           }
@@ -99,7 +99,7 @@
         "kit_item_4kR7xA": {
           "type": "kit_item",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"16\" cy=\"16\" r=\"11\"></circle><path d=\"M13 11l8 5-8 5z\" fill=\"currentColor\" stroke=\"none\"></path></svg>",
             "heading": "Video Instructions",
             "text": "QR code to Dr. Turley's step-by-step walkthrough."
           }
