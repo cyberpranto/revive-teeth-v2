@@ -9,9 +9,59 @@
  */
 {
   "sections": {
-    "hero": {
+    "hero_FdjPBd": {
       "type": "hero",
-      "settings": {}
+      "blocks": {
+        "hero_badge_ifTM7A": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Dentist-Designed"
+          }
+        },
+        "hero_badge_Y7bxU4": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path></svg>",
+            "text": "30-Day Money-Back"
+          }
+        },
+        "hero_badge_KWFMNa": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"></path><path d=\"M21 4v4h-4\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"></path><path d=\"M3 20v-4h4\"></path></svg>",
+            "text": "Free Remakes"
+          }
+        },
+        "hero_badge_7KwXXW": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4\"></path><path d=\"M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0\"></path></svg>",
+            "text": "Designed in the USA"
+          }
+        }
+      },
+      "block_order": [
+        "hero_badge_ifTM7A",
+        "hero_badge_Y7bxU4",
+        "hero_badge_KWFMNa",
+        "hero_badge_7KwXXW"
+      ],
+      "name": "Hero Section",
+      "settings": {
+        "product": "revive-veneers",
+        "eyebrow": "Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years",
+        "heading": "The snap-on veneer your dentist would actually recommend.",
+        "description": "Designed by a cosmetic dentist and custom-fitted to your teeth — made to order, reviewed before it ships.",
+        "upper_icon": "<svg\n            class=\"arch-icon\"\n            viewBox=\"0 0 60 32\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            stroke-width=\"2.2\"\n            stroke-linecap=\"round\"\n            stroke-linejoin=\"round\"\n            aria-hidden=\"true\"\n          >\n            <path d=\"M4 22 C 8 6, 52 6, 56 22\"></path>\n            <path\n              d=\"M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19\"\n              stroke-width=\"1.6\"\n            ></path>\n          </svg>",
+        "lower_icon": "<svg\n            class=\"arch-icon\"\n            viewBox=\"0 0 60 32\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            stroke-width=\"2.2\"\n            stroke-linecap=\"round\"\n            stroke-linejoin=\"round\"\n            aria-hidden=\"true\"\n          >\n            <path d=\"M4 10 C 8 26, 52 26, 56 10\"></path>\n            <path\n              d=\"M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13\"\n              stroke-width=\"1.6\"\n            ></path>\n          </svg>",
+        "both_icon": "<svg\n            class=\"arch-icon\"\n            viewBox=\"0 0 60 40\"\n            fill=\"none\"\n            stroke=\"currentColor\"\n            stroke-width=\"2.2\"\n            stroke-linecap=\"round\"\n            stroke-linejoin=\"round\"\n            aria-hidden=\"true\"\n          >\n            <path d=\"M4 16 C 8 0, 52 0, 56 16\"></path>\n            <path d=\"M4 24 C 8 40, 52 40, 56 24\"></path>\n          </svg>",
+        "popular_badge": "Most Popular",
+        "bundle_save_text": "Save $600 vs. buying separately",
+        "stock_text": "In stock · Ships your impression kit within 48 hours",
+        "button_text": "Get Started",
+        "guarantee_text": "30-Day Money-Back Guarantee · Free Remakes Until It's Right"
+      }
     },
     "emotional-bridge": {
       "type": "emotional-bridge",
@@ -23,7 +73,14 @@
     },
     "real-stories": {
       "type": "real-stories",
-      "settings": {}
+      "settings": {
+        "section_id": "results",
+        "eyebrow": "Customer Stories",
+        "heading": "Real stories, arriving soon.",
+        "subheading": "We're filming unscripted first-impression reactions from our launch customers, no incentives, no edits.",
+        "note": "Video testimonials from our launch customers will appear here. We're recording real first-impression reactions, no scripts, no incentives.",
+        "button_label": "Start your smile"
+      }
     },
     "meet_designer_8TmEMk": {
       "type": "meet-designer",
@@ -491,7 +548,7 @@
     }
   },
   "order": [
-    "hero",
+    "hero_FdjPBd",
     "emotional-bridge",
     "real-stories",
     "meet_designer_8TmEMk",
