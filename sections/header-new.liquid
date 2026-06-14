@@ -26,18 +26,51 @@
 {% endcomment %}
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="brand" aria-label="Revive Teeth">
-      <img src="{{ "footer-logo.jfif" |  asset_url}}" alt="Revive Teeth" height="100" width="100">
+    <a
+      href="{{ section.settings.logo_link }}"
+      class="brand"
+      aria-label="{{ shop.name }}"
+    >
+      {% if section.settings.logo %}
+        <img
+          src="{{ section.settings.logo | image_url: width: 400 }}"
+          alt="{{ shop.name }}"
+          width="200"
+          height="100"
+          loading="eager"
+        >
+      {% else %}
+        <img
+          src="{{ 'footer-logo.jfif' | asset_url }}"
+          alt="{{ shop.name }}"
+          width="200"
+          height="100"
+          loading="eager"
+        >
+      {% endif %}
     </a>
-    <nav class="navlinks" aria-label="Primary">
-      <a href="#designer">Meet the Designer</a>
-      <a href="#how">How It Works</a> <a href="#results">Results</a>
-      <a href="#before-after">Before &amp; After</a>
-      <a href="#protocol">The Protocol</a>
-      <a href="#candidate">Am I a Candidate?</a> <a href="#faq">FAQ</a>
+
+    <nav
+      class="navlinks"
+      aria-label="Primary"
+    >
+      {% for block in section.blocks %}
+        {% if block.type == 'menu_item' %}
+          <a
+            href="{{ block.settings.link }}"
+            {{ block.shopify_attributes }}
+          >
+            {{ block.settings.label }}
+          </a>
+        {% endif %}
+      {% endfor %}
     </nav>
+
     <div class="nav-right">
-      <button class="cart-btn" aria-label="Cart">
+      <button
+        class="cart-btn"
+        aria-label="Cart"
+      >
         <svg
           width="14"
           height="14"
@@ -51,11 +84,20 @@
           <circle cx="18" cy="20" r="1.5"></circle>
           <path d="M6 6L4 2H2"></path>
         </svg>
-        Cart <span class="count" id="cartCount">0</span>
+
+        {{ section.settings.cart_text }}
+
+        <span
+          class="count"
+          id="cartCount"
+        >
+          0
+        </span>
       </button>
     </div>
   </div>
 </header>
+
 <a id="top"></a>
 
 {% schema %}
@@ -71,12 +113,6 @@
       "type": "url",
       "id": "logo_link",
       "label": "Logo Link"
-    },
-    {
-      "type": "text",
-      "id": "logo_alt",
-      "label": "Logo Alt Text",
-      "default": "Revive Teeth"
     },
     {
       "type": "text",
@@ -96,9 +132,10 @@
           "label": "Menu Label"
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "link",
-          "label": "Menu Link"
+          "label": "Anchor / URL",
+          "default": "#"
         }
       ]
     }
@@ -110,6 +147,13 @@
         {
           "type": "menu_item",
           "settings": {
+            "label": "Meet the Designer",
+            "link": "#designer"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
             "label": "How It Works",
             "link": "#how"
           }
@@ -117,15 +161,22 @@
         {
           "type": "menu_item",
           "settings": {
-            "label": "The Protocol",
-            "link": "#protocol"
+            "label": "Results",
+            "link": "#results"
           }
         },
         {
           "type": "menu_item",
           "settings": {
-            "label": "Reviews",
-            "link": "#reviews"
+            "label": "Before & After",
+            "link": "#before-after"
+          }
+        },
+        {
+          "type": "menu_item",
+          "settings": {
+            "label": "The Protocol",
+            "link": "#protocol"
           }
         },
         {

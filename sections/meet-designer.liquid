@@ -1,44 +1,67 @@
 <section class="dark on-dark" id="designer">
   <div class="wrap founder-grid">
     <div>
-      <div class="eyebrow on-gold">Meet Your Designer</div>
-      <p class="founder-quote">"Most snap-on veneers are an embarrassment. I built one that isn't."</p>
-      <div class="founder-body">
-        <p>
-          Most snap-on veneers are cheaply manufactured plastic, shipped from factories by companies without a
-          practicing dentist on the team.
-        </p>
-        <p>
-          Patients walk into my practice wearing them. Within a month, they stop. They're embarrassed by something they
-          paid for.
-        </p>
-        <p>
-          That's the gap Revive fills. Every case is designed against my 7-Point Smile Design Protocol.
-          <strong>If it doesn't pass, it doesn't ship.</strong> If it arrives and isn't right, we remake it. My name is
-          on this because I built it.
-        </p>
+      <div class="eyebrow on-gold">
+        {{ section.settings.eyebrow }}
       </div>
+
+      <p class="founder-quote">"{{ section.settings.quote }}"</p>
+
+      <div class="founder-body">
+        {{ section.settings.body_content }}
+      </div>
+
       <div class="sig-wrap">
-        <img
-          src="{{'signature.png'|  asset_url}}"
-          alt="Dr. Brandon Turley"
-          class="sig-img"
-          height="100"
-          width="100"
-        >
-        <div class="sig-name">Dr. Brandon Turley, DDS</div>
-        <div class="sig-sub">Doctor of Dental Surgery · Founder, Revive Teeth</div>
+        {% if section.settings.signature_image %}
+          <img
+            src="{{ section.settings.signature_image | image_url: width: 600 }}"
+            alt="{{ section.settings.doctor_name }}"
+            class="sig-img"
+            loading="lazy"
+            height="100"
+            width="100"
+          >
+        {% else %}
+          <img
+            src="{{ 'signature.png' | asset_url }}"
+            alt="{{ section.settings.doctor_name }}"
+            class="sig-img"
+            loading="lazy"
+            height="100"
+            width="100"
+          >
+        {% endif %}
+
+        <div class="sig-name">
+          {{ section.settings.doctor_name }}
+        </div>
+
+        <div class="sig-sub">
+          {{ section.settings.doctor_title }}
+        </div>
       </div>
     </div>
+
     <div class="founder-video-col">
       <div class="founder-video">
+        {% assign poster_image = section.settings.video_poster %}
+
         <video
           id="founderVideo"
           preload="metadata"
-          playsinline=""
-          poster="8c0a3ce7-ea3a-4dd3-8d23-308024d240b9"
-          src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663208502486/UWfZsUxCUvkcxmuP.mp4"
+          playsinline
+
+          {% if poster_image %}
+            poster="{{ poster_image | image_url: width: 1200 }}"
+          {% else %}
+            poster="{{ 'founder-image.jfif' | asset_url }}"
+          {% endif %}
+
+          {% if section.settings.video != blank %}
+            src="{{ section.settings.video.sources[0].url }}"
+          {% endif %}
         ></video>
+
         <div class="fv-overlay" id="fvOverlay">
           <button class="fv-play" aria-label="Play founder video">
             <svg viewBox="0 0 24 24" fill="currentColor">
@@ -47,52 +70,128 @@
           </button>
         </div>
       </div>
-      <div class="fv-cap">Dr. Brandon Turley, DDS · 1 min 52 sec</div>
-      <div class="cred-badges">
-        <span class="cred-badge">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.9"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <circle cx="12" cy="12" r="9"></circle>
-            <path d="M12 7v5l3 2"></path>
-          </svg>
-          12+ Years Practice</span
-        >
-        <span class="cred-badge">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.9"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z"
-            ></path>
-          </svg>
-          Cosmetic Dentist</span
-        >
-        <span class="cred-badge">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.9"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
-            <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-          </svg>
-          7-Point Protocol Creator</span
-        >
+
+      <div class="fv-cap">
+        {{ section.settings.video_caption }}
       </div>
+
+      {% if section.blocks.size > 0 %}
+        <div class="cred-badges">
+          {% for block in section.blocks %}
+            <span
+              class="cred-badge"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.svg_icon }}
+              {{ block.settings.title }}
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
     </div>
   </div>
 </section>
+
+{% schema %}
+{
+  "name": "Meet Designer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Meet Your Designer"
+    },
+    {
+      "type": "textarea",
+      "id": "quote",
+      "label": "Quote",
+      "default": "Most snap-on veneers are an embarrassment. I built one that isn't."
+    },
+    {
+      "type": "richtext",
+      "id": "body_content",
+      "label": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "signature_image",
+      "label": "Signature Image"
+    },
+    {
+      "type": "text",
+      "id": "doctor_name",
+      "label": "Doctor Name",
+      "default": "Dr. Brandon Turley, DDS"
+    },
+    {
+      "type": "text",
+      "id": "doctor_title",
+      "label": "Doctor Title",
+      "default": "Doctor of Dental Surgery · Founder, Revive Teeth"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Founder Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster"
+    },
+    {
+      "type": "text",
+      "id": "video_caption",
+      "label": "Video Caption",
+      "default": "Dr. Brandon Turley, DDS · 1 min 52 sec"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Credibility Badge",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "svg_icon",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Meet Your Designer",
+      "blocks": [
+        {
+          "type": "badge",
+          "settings": {
+            "title": "12+ Years Practice",
+            "svg_icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'><circle cx='12' cy='12' r='9'></circle><path d='M12 7v5l3 2'></path></svg>"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "Cosmetic Dentist",
+            "svg_icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'><path d='M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z'></path></svg>"
+          }
+        },
+        {
+          "type": "badge",
+          "settings": {
+            "title": "7-Point Protocol Creator",
+            "svg_icon": "<svg viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='1.9' stroke-linecap='round' stroke-linejoin='round'><path d='M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z'></path><path d='M8.5 12.5l2.5 2.5L16 10'></path></svg>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
