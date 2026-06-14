@@ -31,23 +31,6 @@
 //   });
 //   applyConfig("both");
   
-  /* ============== GALLERY ============== */
-  // const thumbs = document.querySelectorAll(".thumb");
-  // const galMain = document.getElementById("galMain");
-  // thumbs.forEach((t)=>{
-  //   t.addEventListener("click",()=>{
-  //     thumbs.forEach(x=>x.classList.remove("active"));
-  //     t.classList.add("active");
-  //     galMain.classList.add("fade");
-  //     setTimeout(()=>{
-  //       const tImg = t.querySelector("img");
-  //       const src = (tImg && tImg.src) || "";
-  //       const alt = t.dataset.alt || "Revive Veneers";
-  //       galMain.innerHTML = `<img id="galImg" src="${src}" alt="Revive Veneers Â· ${alt}" />`;
-  //       galMain.classList.remove("fade");
-  //     },220);
-  //   });
-  // });
   
   /* ============== BELOW-CTA DROPDOWNS ============== */
   const drops = document.querySelectorAll("#drops .drop");

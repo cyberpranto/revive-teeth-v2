@@ -239,11 +239,18 @@
         {{ section.settings.guarantee_text }}
       </div>
       <div class="pay-row" aria-label="Accepted payment methods">
-        <!-- PLACEHOLDER: replace text pills with real payment-provider SVG logos before launch. -->
-        <span class="pay-pill">VISA</span>
-        <span class="pay-pill">Mastercard</span>
-        <span class="pay-pill">AMEX</span>
-        <span class="pay-pill">Apple Pay</span>
+        {% for block in section.blocks %}
+          {% if block.type == 'payment_method' %}
+            <!-- PLACEHOLDER: replace text pills with real payment-provider SVG logos before launch. -->
+            <span
+              class="pay-pill"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.label }}
+            </span>
+          {% endif %}
+        {% endfor %}
+
         <span class="pay-secure">
           <svg
             viewBox="0 0 24 24"
@@ -254,128 +261,43 @@
             <rect x="4" y="11" width="16" height="10" rx="2"></rect>
             <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
           </svg>
-          Secure checkout</span
-        >
+
+          {{ section.settings.secure_checkout_text }}
+        </span>
       </div>
       <!-- ===== BELOW-CTA DROPDOWNS ===== -->
       <div class="drops" id="drops">
         <div class="drop">
           <button class="drop-q" aria-expanded="false">
-            What's in Your Kit <span class="plus" aria-hidden="true"></span>
+            {{ section.settings.kit_title -}}
+            <span class="plus" aria-hidden="true"></span>
           </button>
           <div class="drop-a">
             <div>
               <div class="drop-inner">
                 <div class="kit-list">
-                  <div class="kit-row">
-                    <span class="kit-ico">
-                      <svg
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linecap="round"
-                      >
-                        <path
-                          d="M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z"
-                        ></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Upper &amp; Lower Impression Trays</h5>
-                      <p>Pre-sized to fit most adult arches comfortably.</p>
-                    </div>
-                  </div>
-                  <div class="kit-row">
-                    <span class="kit-ico">
-                      <svg
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                      >
-                        <circle cx="12" cy="16" r="6"></circle>
-                        <circle cx="21" cy="16" r="6"></circle>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Dental Putty (×2 batches)</h5>
-                      <p>A backup batch is included so you have room for error.</p>
-                    </div>
-                  </div>
-                  <div class="kit-row">
-                    <span class="kit-ico">
-                      <svg
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                      >
-                        <rect
-                          x="5"
-                          y="8"
-                          width="22"
-                          height="16"
-                          rx="2"
-                        ></rect>
-                        <rect x="8" y="11" width="3" height="10"></rect>
-                        <rect x="13" y="11" width="3" height="10"></rect>
-                        <rect x="18" y="11" width="3" height="10"></rect>
-                        <rect
-                          x="23"
-                          y="11"
-                          width="1.5"
-                          height="10"
-                        ></rect>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Shade Matching Card</h5>
-                      <p>A reference strip to capture your actual tooth color.</p>
-                    </div>
-                  </div>
-                  <div class="kit-row">
-                    <span class="kit-ico">
-                      <svg
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M4 10 L16 4 L28 10 L28 24 L4 24 Z"></path>
-                        <path d="M4 10 L16 16 L28 10"></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Prepaid Return Mailer</h5>
-                      <p>Drop it in any USPS box. No postage required.</p>
-                    </div>
-                  </div>
-                  <div class="kit-row">
-                    <span class="kit-ico">
-                      <svg
-                        viewBox="0 0 32 32"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.6"
-                      >
-                        <circle cx="16" cy="16" r="11"></circle>
-                        <path
-                          d="M13 11l8 5-8 5z"
-                          fill="currentColor"
-                          stroke="none"
-                        ></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Video Instructions</h5>
-                      <p>QR code to Dr. Turley's step-by-step walkthrough.</p>
-                    </div>
-                  </div>
+                  {% for block in section.blocks %}
+                    {% if block.type == 'kit_item' %}
+                      <div class="kit-row" {{ block.shopify_attributes }}>
+                        <span class="kit-ico">
+                          {{ block.settings.icon }}
+                        </span>
+
+                        <div>
+                          <h5>
+                            {{ block.settings.heading }}
+                          </h5>
+
+                          <p>
+                            {{ block.settings.text }}
+                          </p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 </div>
                 <div class="drop-note">
-                  If your first impressions don't capture enough detail, we send a second kit free.
+                  {{ section.settings.kit_note }}
                 </div>
               </div>
             </div>
@@ -383,119 +305,74 @@
         </div>
         <div class="drop">
           <button class="drop-q" aria-expanded="false">
-            Your Order Includes
+            {{ section.settings.includes_title }}
             <span class="plus" aria-hidden="true"></span>
           </button>
           <div class="drop-a">
             <div>
               <div class="drop-inner">
                 <div class="incl-grid">
-                  <div class="incl-cell">
-                    <span class="ic">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.9"
+                  {% for block in section.blocks %}
+                    {% if block.type == 'include_item' %}
+                      <div
+                        class="incl-cell"
+                        {{ block.shopify_attributes }}
                       >
-                        <circle cx="12" cy="8" r="4"></circle>
-                        <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Designed by Dr. Turley</h5>
-                      <p>Every case is made to the 7-point protocol he designed as a practicing cosmetic dentist.</p>
-                    </div>
-                  </div>
-                  <div class="incl-cell">
-                    <span class="ic">
+                        <span class="ic">
+                          {{ block.settings.icon }}
+                        </span>
+
+                        <div>
+                          <h5>
+                            {{ block.settings.heading }}
+                          </h5>
+
+                          <p>
+                            {{ block.settings.text }}
+                          </p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                {% comment %}
+                  <div class="guarantee-card">
+                    <div class="gc-h">
                       <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
                         stroke-width="1.9"
+                        stroke-linecap="round"
                         stroke-linejoin="round"
                       >
                         <path
                           d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
                         ></path>
+                        <path d="M8.5 12.5l2.5 2.5L16 10"></path>
                       </svg>
-                    </span>
-                    <div>
-                      <h5>30-Day Money-Back Guarantee</h5>
-                      <p>Full refund if you aren't satisfied. No questions.</p>
+                      Try It Risk-Free
                     </div>
+                    <div class="gc-sub">30-Day Money-Back Guarantee</div>
+                    <p>
+                      If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If
+                      the fit isn't right, we remake them at no cost. Your money is protected.
+                    </p>
                   </div>
-                  <div class="incl-cell">
-                    <span class="ic">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.9"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"></path>
-                        <path d="M21 4v4h-4"></path>
-                        <path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"></path>
-                        <path d="M3 20v-4h4"></path>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Free Remakes</h5>
-                      <p>If the fit isn't perfect, we remake it at no cost to you.</p>
-                    </div>
-                  </div>
-                  <div class="incl-cell">
-                    <span class="ic">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.9"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <rect
-                          x="1"
-                          y="7"
-                          width="14"
-                          height="10"
-                          rx="1.5"
-                        ></rect>
-                        <path d="M15 10h4l3 3v4h-7z"></path>
-                        <circle cx="6" cy="18" r="2"></circle>
-                        <circle cx="18" cy="18" r="2"></circle>
-                      </svg>
-                    </span>
-                    <div>
-                      <h5>Free Shipping Both Ways</h5>
-                      <p>We cover your kit, your return, and your veneers.</p>
-                    </div>
-                  </div>
-                </div>
+                {% endcomment %}
                 <div class="guarantee-card">
                   <div class="gc-h">
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="1.9"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
-                      ></path>
-                      <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-                    </svg>
-                    Try It Risk-Free
+                    {{ section.settings.guarantee_card_icon }}
+
+                    {{ section.settings.guarantee_card_heading }}
                   </div>
-                  <div class="gc-sub">30-Day Money-Back Guarantee</div>
+
+                  <div class="gc-sub">
+                    {{ section.settings.guarantee_card_subheading }}
+                  </div>
+
                   <p>
-                    If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If
-                    the fit isn't right, we remake them at no cost. Your money is protected.
+                    {{ section.settings.guarantee_card_text }}
                   </p>
                 </div>
               </div>
@@ -504,36 +381,35 @@
         </div>
         <div class="drop">
           <button class="drop-q" aria-expanded="false">
-            How to Start <span class="plus" aria-hidden="true"></span>
+            {{ section.settings.how_to_start_title }}
+            <span class="plus" aria-hidden="true"></span>
           </button>
           <div class="drop-a">
             <div>
               <div class="drop-inner">
                 <div class="start-steps">
-                  <div class="start-step">
-                    <span class="sn">01</span>
-                    <div>
-                      <h5>Order today</h5>
-                      <p>Your impression kit ships within 48 hours.</p>
-                    </div>
-                  </div>
-                  <div class="start-step">
-                    <span class="sn">02</span>
-                    <div>
-                      <h5>Take impressions at home</h5>
-                      <p>A simple 5-minute process. Video instructions included. Mail them back free.</p>
-                    </div>
-                  </div>
-                  <div class="start-step">
-                    <span class="sn">03</span>
-                    <div>
-                      <h5>Receive your custom smile</h5>
-                      <p>
-                        Your case is designed against Dr. Turley's protocol. Your veneers arrive ready to wear in 2–3
-                        weeks.
-                      </p>
-                    </div>
-                  </div>
+                  {% for block in section.blocks %}
+                    {% if block.type == 'start_step' %}
+                      <div
+                        class="start-step"
+                        {{ block.shopify_attributes }}
+                      >
+                        <span class="sn">
+                          {{ block.settings.number }}
+                        </span>
+
+                        <div>
+                          <h5>
+                            {{ block.settings.heading }}
+                          </h5>
+
+                          <p>
+                            {{ block.settings.text }}
+                          </p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
                 </div>
               </div>
             </div>
@@ -665,6 +541,59 @@
       "id": "guarantee_text",
       "label": "Guarantee Text",
       "default": "30-Day Money-Back Guarantee · Free Remakes Until It's Right"
+    },
+    {
+      "type": "text",
+      "id": "secure_checkout_text",
+      "label": "Secure Checkout Text",
+      "default": "Secure checkout"
+    },
+    {
+      "type": "text",
+      "id": "kit_title",
+      "label": "Kit Accordion Title",
+      "default": "What's in Your Kit"
+    },
+    {
+      "type": "textarea",
+      "id": "kit_note",
+      "label": "Kit Note",
+      "default": "If your first impressions don't capture enough detail, we send a second kit free."
+    },
+    {
+      "type": "text",
+      "id": "includes_title",
+      "label": "Includes Accordion Title",
+      "default": "Your Order Includes"
+    },
+    {
+      "type": "liquid",
+      "id": "guarantee_card_icon",
+      "label": "Guarantee Card Icon"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_card_heading",
+      "label": "Guarantee Card Heading",
+      "default": "Try It Risk-Free"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_card_subheading",
+      "label": "Guarantee Card Sub Heading",
+      "default": "30-Day Money-Back Guarantee"
+    },
+    {
+      "type": "textarea",
+      "id": "guarantee_card_text",
+      "label": "Guarantee Card Description",
+      "default": "If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If the fit isn't right, we remake them at no cost. Your money is protected."
+    },
+    {
+      "type": "text",
+      "id": "how_to_start_title",
+      "label": "How To Start Title",
+      "default": "How to Start"
     }
   ],
   "blocks": [
@@ -682,6 +611,82 @@
           "id": "text",
           "label": "Badge Text",
           "default": "Dentist Designed"
+        }
+      ]
+    },
+    {
+      "type": "payment_method",
+      "name": "Payment Method",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Payment Label",
+          "default": "VISA"
+        }
+      ]
+    },
+    {
+      "type": "kit_item",
+      "name": "Kit Item",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "icon",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "include_item",
+      "name": "Order Include",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "icon",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
+        }
+      ]
+    },
+    {
+      "type": "start_step",
+      "name": "Start Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Step Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description"
         }
       ]
     }
@@ -712,6 +717,117 @@
           "type": "hero_badge",
           "settings": {
             "text": "Designed in the USA"
+          }
+        },
+        {
+          "type": "payment_method",
+          "settings": {
+            "label": "VISA"
+          }
+        },
+        {
+          "type": "payment_method",
+          "settings": {
+            "label": "Mastercard"
+          }
+        },
+        {
+          "type": "payment_method",
+          "settings": {
+            "label": "AMEX"
+          }
+        },
+        {
+          "type": "payment_method",
+          "settings": {
+            "label": "Apple Pay"
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "heading": "Upper & Lower Impression Trays",
+            "text": "Pre-sized to fit most adult arches comfortably."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "heading": "Dental Putty (×2 batches)",
+            "text": "A backup batch is included so you have room for error."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "heading": "Shade Matching Card",
+            "text": "A reference strip to capture your actual tooth color."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "heading": "Prepaid Return Mailer",
+            "text": "Drop it in any USPS box. No postage required."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "heading": "Video Instructions",
+            "text": "QR code to Dr. Turley's step-by-step walkthrough."
+          }
+        },
+        {
+          "type": "include_item",
+          "settings": {
+            "heading": "Designed by Dr. Turley",
+            "text": "Every case is made to the 7-point protocol he designed as a practicing cosmetic dentist."
+          }
+        },
+        {
+          "type": "include_item",
+          "settings": {
+            "heading": "30-Day Money-Back Guarantee",
+            "text": "Full refund if you aren't satisfied. No questions."
+          }
+        },
+        {
+          "type": "include_item",
+          "settings": {
+            "heading": "Free Remakes",
+            "text": "If the fit isn't perfect, we remake it at no cost to you."
+          }
+        },
+        {
+          "type": "include_item",
+          "settings": {
+            "heading": "Free Shipping Both Ways",
+            "text": "We cover your kit, your return, and your veneers."
+          }
+        },
+        {
+          "type": "start_step",
+          "settings": {
+            "number": "01",
+            "heading": "Order today",
+            "text": "Your impression kit ships within 48 hours."
+          }
+        },
+        {
+          "type": "start_step",
+          "settings": {
+            "number": "02",
+            "heading": "Take impressions at home",
+            "text": "A simple 5-minute process. Video instructions included. Mail them back free."
+          }
+        },
+        {
+          "type": "start_step",
+          "settings": {
+            "number": "03",
+            "heading": "Receive your custom smile",
+            "text": "Your veneers arrive ready to wear in 2–3 weeks."
           }
         }
       ]
