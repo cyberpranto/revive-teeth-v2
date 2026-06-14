@@ -189,7 +189,7 @@
         "eyebrow": "Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years",
         "heading": "The snap-on veneer your dentist would actually recommend.",
         "description": "Designed by a cosmetic dentist and custom-fitted to your teeth — made to order, reviewed before it ships.",
-        "upper_icon": "",
+        "upper_icon": "<svg class=\"arch-icon\" viewBox=\"0 0 60 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 22 C 8 6, 52 6, 56 22\"></path>\n            <path d=\"M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19\" stroke-width=\"1.6\"></path>\n          </svg>",
         "lower_icon": "",
         "both_icon": "",
         "popular_badge": "Most Popular",
