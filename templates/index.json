@@ -216,8 +216,37 @@
         "button_link": ""
       }
     },
-    "real-stories": {
+    "real_stories_9ctqdi": {
       "type": "real-stories",
+      "blocks": {
+        "story_dfWmNJ": {
+          "type": "story",
+          "settings": {
+            "tag": "Confidence",
+            "meta": "Coming Soon"
+          }
+        },
+        "story_tKEcNW": {
+          "type": "story",
+          "settings": {
+            "tag": "Transformation",
+            "meta": "Coming Soon"
+          }
+        },
+        "story_gY9rgG": {
+          "type": "story",
+          "settings": {
+            "tag": "The Process",
+            "meta": "Coming Soon"
+          }
+        }
+      },
+      "block_order": [
+        "story_dfWmNJ",
+        "story_tKEcNW",
+        "story_gY9rgG"
+      ],
+      "name": "Real Stories",
       "settings": {
         "section_id": "results",
         "eyebrow": "Customer Stories",
@@ -695,7 +724,7 @@
   "order": [
     "hero_NFhTYw",
     "emotional-bridge",
-    "real-stories",
+    "real_stories_9ctqdi",
     "meet_designer_8TmEMk",
     "how_it_works_wH89jW",
     "before-after",
