@@ -9,9 +9,59 @@
  */
 {
   "sections": {
-    "hero": {
+    "hero_FdjPBd": {
       "type": "hero",
-      "settings": {}
+      "blocks": {
+        "hero_badge_ifTM7A": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "",
+            "text": "Dentist-Designed"
+          }
+        },
+        "hero_badge_Y7bxU4": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "",
+            "text": "30-Day Money-Back"
+          }
+        },
+        "hero_badge_KWFMNa": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "",
+            "text": "Free Remakes"
+          }
+        },
+        "hero_badge_7KwXXW": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "",
+            "text": "Designed in the USA"
+          }
+        }
+      },
+      "block_order": [
+        "hero_badge_ifTM7A",
+        "hero_badge_Y7bxU4",
+        "hero_badge_KWFMNa",
+        "hero_badge_7KwXXW"
+      ],
+      "name": "Hero Section",
+      "settings": {
+        "product": "revive-veneers",
+        "eyebrow": "Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years",
+        "heading": "The snap-on veneer your dentist would actually recommend.",
+        "description": "Designed by a cosmetic dentist and custom-fitted to your teeth — made to order, reviewed before it ships.",
+        "upper_icon": "",
+        "lower_icon": "",
+        "both_icon": "",
+        "popular_badge": "Most Popular",
+        "bundle_save_text": "Save $600 vs. buying separately",
+        "stock_text": "In stock · Ships your impression kit within 48 hours",
+        "button_text": "Get Started",
+        "guarantee_text": "30-Day Money-Back Guarantee · Free Remakes Until It's Right"
+      }
     },
     "emotional-bridge": {
       "type": "emotional-bridge",
@@ -23,7 +73,14 @@
     },
     "real-stories": {
       "type": "real-stories",
-      "settings": {}
+      "settings": {
+        "section_id": "results",
+        "eyebrow": "Customer Stories",
+        "heading": "Real stories, arriving soon.",
+        "subheading": "We're filming unscripted first-impression reactions from our launch customers, no incentives, no edits.",
+        "note": "Video testimonials from our launch customers will appear here. We're recording real first-impression reactions, no scripts, no incentives.",
+        "button_label": "Start your smile"
+      }
     },
     "meet_designer_8TmEMk": {
       "type": "meet-designer",
@@ -491,7 +548,7 @@
     }
   },
   "order": [
-    "hero",
+    "hero_FdjPBd",
     "emotional-bridge",
     "real-stories",
     "meet_designer_8TmEMk",
