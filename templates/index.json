@@ -67,7 +67,7 @@
         "kit_item_iWcf7G": {
           "type": "kit_item",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z\"></path></svg>",
             "heading": "Upper & Lower Impression Trays",
             "text": "Pre-sized to fit most adult arches comfortably."
           }
