@@ -201,7 +201,7 @@
         "kit_title": "What's in Your Kit",
         "kit_note": "If your first impressions don't capture enough detail, we send a second kit free.",
         "includes_title": "Your Order Includes",
-        "guarantee_card_icon": "",
+        "guarantee_card_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
         "guarantee_card_heading": "Try It Risk-Free",
         "guarantee_card_subheading": "30-Day Money-Back Guarantee",
         "guarantee_card_text": "If your veneers arrive and you aren't satisfied, return them within 30 days for a full refund. If the fit isn't right, we remake them at no cost. Your money is protected.",
