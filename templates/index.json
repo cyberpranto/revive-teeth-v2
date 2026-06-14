@@ -15,7 +15,7 @@
         "hero_badge_ifTM7A": {
           "type": "hero_badge",
           "settings": {
-            "icon": "",
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
             "text": "Dentist-Designed"
           }
         },
