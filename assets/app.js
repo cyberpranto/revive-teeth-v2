@@ -102,21 +102,21 @@
   })();
   
   /* ============== CART ============== */
-  function bumpCart(){
-    const el = document.getElementById("cartCount");
-    el.textContent = (parseInt(el.textContent||"0",10)+1).toString();
-  }
-  document.getElementById("cta").addEventListener("click", bumpCart);
-  document.getElementById("sbCta").addEventListener("click",()=>{
-    const config = document.getElementById("config");
-    const y = config.getBoundingClientRect().top + window.scrollY - 96;
-    window.scrollTo({ top: y, behavior: "smooth" });
-    const cta = document.getElementById("cta");
-    setTimeout(()=>{ cta.classList.remove("pulsing"); void cta.offsetWidth; cta.classList.add("pulsing"); }, 650);
-  });
-  document.getElementById("sbInfo").addEventListener("click",()=>{
-    document.querySelector("#top").scrollIntoView({behavior:"smooth"});
-  });
+  // function bumpCart(){
+  //   const el = document.getElementById("cartCount");
+  //   el.textContent = (parseInt(el.textContent||"0",10)+1).toString();
+  // }
+  // document.getElementById("cta").addEventListener("click", bumpCart);
+  // document.getElementById("sbCta").addEventListener("click",()=>{
+  //   const config = document.getElementById("config");
+  //   const y = config.getBoundingClientRect().top + window.scrollY - 96;
+  //   window.scrollTo({ top: y, behavior: "smooth" });
+  //   const cta = document.getElementById("cta");
+  //   setTimeout(()=>{ cta.classList.remove("pulsing"); void cta.offsetWidth; cta.classList.add("pulsing"); }, 650);
+  // });
+  // document.getElementById("sbInfo").addEventListener("click",()=>{
+  //   document.querySelector("#top").scrollIntoView({behavior:"smooth"});
+  // });
   
   /* ============== NAV SCROLL ============== */
   const nav = document.getElementById("nav");

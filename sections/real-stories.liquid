@@ -1,142 +1,123 @@
-<section class="warm" id="results">
-    <div class="wrap">
-      <div class="sect-head center">
-        <div class="eyebrow">Customer Stories</div>
-        <h2 class="display" style="margin-top: 14px">
-          Real stories, arriving soon.
-        </h2>
-        <p class="sub">
-          We're filming unscripted first-impression reactions from our launch
-          customers, no incentives, no edits. Order today and yours could be
-          one of the first stories featured here.
-        </p>
+<style>
+  .tests-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .test-thumb {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Square */
+    overflow: hidden;
+    /* border-radius: 24px; */
+  }
+
+  .test-thumb img,
+  .test-thumb video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .test-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    z-index: 2;
+  }
+
+  .testimonial-play {
+    width: 72px;
+    height: 72px;
+    border: none;
+    border-radius: 999px;
+    background: #fff;
+    color: #111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonial-play svg {
+    width: 30px;
+    height: 30px;
+    display: block;
+  }
+</style>
+
+<section class="warm" id="{{ section.settings.section_id }}">
+  <div class="wrap">
+    <div class="sect-head center">
+      <div class="eyebrow">
+        {{ section.settings.eyebrow }}
       </div>
-      <div class="tests-grid">
-        <article class="test-card">
-          <div class="test-thumb">
-            <!-- PLACEHOLDER: Customer testimonial video #1. Placeholder shows abstract dental imagery. Will be replaced with real customer video thumbnail at launch. -->
-            <svg
-              class="ph"
-              viewBox="0 0 400 500"
-              preserveAspectRatio="xMidYMid slice"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="tg1" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#1B2D5C"></stop>
-                  <stop offset="1" stop-color="#0F1B38"></stop>
-                </linearGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#tg1)"></rect>
-              <circle
-                cx="200"
-                cy="200"
-                r="80"
-                fill="rgba(255,255,255,.07)"
-              ></circle>
-            </svg>
-            <span class="tag">Confidence</span> <span class="rule"></span>
-            <div class="play">
-              <button
-                class="play-btn disabled"
-                aria-label="Coming soon"
-                disabled=""
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 4l14 8-14 8z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="test-meta">Coming soon</div>
-        </article>
-        <article class="test-card">
-          <div class="test-thumb">
-            <!-- PLACEHOLDER: Customer testimonial video #2. Will be replaced with real customer video thumbnail at launch. -->
-            <svg
-              class="ph"
-              viewBox="0 0 400 500"
-              preserveAspectRatio="xMidYMid slice"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="tg2" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#15244A"></stop>
-                  <stop offset="1" stop-color="#1B2D5C"></stop>
-                </linearGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#tg2)"></rect>
-              <ellipse
-                cx="200"
-                cy="220"
-                rx="110"
-                ry="60"
-                fill="rgba(255,255,255,.05)"
-              ></ellipse>
-            </svg>
-            <span class="tag">Transformation</span> <span class="rule"></span>
-            <div class="play">
-              <button
-                class="play-btn disabled"
-                aria-label="Coming soon"
-                disabled=""
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 4l14 8-14 8z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="test-meta">Coming soon</div>
-        </article>
-        <article class="test-card">
-          <div class="test-thumb">
-            <!-- PLACEHOLDER: Customer testimonial video #3. Will be replaced with real customer video thumbnail at launch. -->
-            <svg
-              class="ph"
-              viewBox="0 0 400 500"
-              preserveAspectRatio="xMidYMid slice"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient id="tg3" x1="0" y1="0" x2="1" y2="1">
-                  <stop offset="0" stop-color="#0F1B38"></stop>
-                  <stop offset="1" stop-color="#1B2D5C"></stop>
-                </linearGradient>
-              </defs>
-              <rect width="400" height="500" fill="url(#tg3)"></rect>
-              <rect
-                x="120"
-                y="180"
-                width="160"
-                height="120"
-                rx="14"
-                fill="rgba(255,255,255,.06)"
-              ></rect>
-            </svg>
-            <span class="tag">The Process</span> <span class="rule"></span>
-            <div class="play">
-              <button
-                class="play-btn disabled"
-                aria-label="Coming soon"
-                disabled=""
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 4l14 8-14 8z"></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="test-meta">Coming soon</div>
-        </article>
-      </div>
-      <p class="tests-note">
-        Video testimonials from our launch customers will appear here. We're
-        recording real first-impression reactions, no scripts, no incentives.
+
+      <h2 class="display" style="margin-top:14px">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="sub">
+        {{ section.settings.subheading }}
       </p>
+    </div>
+
+    <div class="tests-grid">
+      {% for block in section.blocks %}
+        <article
+          class="test-card"
+          {{ block.shopify_attributes }}
+        >
+          <div class="test-thumb">
+            <video
+              class="testimonial-video"
+              preload="metadata"
+              playsinline
+              poster="{{ block.settings.thumbnail | image_url: width: 1200 }}"
+            >
+              {% for source in block.settings.video.sources %}
+                <source
+                  src="{{ source.url }}"
+                  type="{{ source.mime_type }}"
+                >
+              {% endfor %}
+            </video>
+
+            <div class="test-overlay">
+              <button class="testimonial-play">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"></path>
+                </svg>
+              </button>
+            </div>
+
+            <span class="tag">{{ block.settings.tag }}</span>
+            <span class="rule"></span>
+          </div>
+
+          <div class="test-meta">
+            {{ block.settings.meta }}
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <p class="tests-note">
+      {{ section.settings.note }}
+    </p>
+
+    {% if section.settings.button_label != blank %}
       <div class="sect-cta-row">
-        <button class="btn-primary scroll-buy">
-          Start your smile
+        <button
+          class="btn-primary scroll-buy"
+          type="button"
+        >
+          {{ section.settings.button_label }}
+
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -147,5 +128,138 @@
           </svg>
         </button>
       </div>
+    {% endif %}
+  </div>
+</section>
+{% comment %}
+  <div class="testimonial-modal" id="testimonialModal-{{ section.id }}">
+    <div class="tm-backdrop"></div>
+
+    <div class="tm-inner">
+      <button class="tm-close">×</button>
+
+      <video
+        id="testimonialVideo-{{ section.id }}"
+        controls
+        playsinline
+      ></video>
     </div>
-  </section>
+  </div>
+{% endcomment %}
+<script>
+  document.querySelectorAll('.testimonial-play').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.test-thumb');
+      const video = card.querySelector('.testimonial-video');
+      const overlay = card.querySelector('.test-overlay');
+
+      video.controls = true;
+      video.play();
+
+      overlay.style.opacity = '0';
+      overlay.style.pointerEvents = 'none';
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Real Stories",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_id",
+      "label": "Section ID",
+      "default": "results"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Customer Stories"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Real stories, arriving soon."
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "We're filming unscripted first-impression reactions from our launch customers, no incentives, no edits."
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Bottom Note",
+      "default": "Video testimonials from our launch customers will appear here. We're recording real first-impression reactions, no scripts, no incentives."
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button Text",
+      "default": "Start your smile"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story",
+      "name": "Story Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "thumbnail",
+          "label": "Thumbnail"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Video"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag",
+          "default": "Confidence"
+        },
+        {
+          "type": "text",
+          "id": "meta",
+          "label": "Meta",
+          "default": "Coming Soon"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Real Stories",
+      "blocks": [
+        {
+          "type": "story",
+          "settings": {
+            "tag": "Confidence",
+            "meta": "Coming Soon"
+          }
+        },
+        {
+          "type": "story",
+          "settings": {
+            "tag": "Transformation",
+            "meta": "Coming Soon"
+          }
+        },
+        {
+          "type": "story",
+          "settings": {
+            "tag": "The Process",
+            "meta": "Coming Soon"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
