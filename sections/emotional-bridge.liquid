@@ -1,24 +1,35 @@
 <section class="bridge">
-  <div class="wrap">
-    <span class="bridge-text">
-      {{ section.settings.content }}
-    </span>
+  <div class="bridge-grid">
+    <div class="bridge-media">
+      {% if section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url }}"
+          alt="{{ section.settings.image_alt }}"
+          width="100"
+          height="100"
+        >
+      {% endif %}
+    </div>
+    <div class="bridge-body">
+      <div class="bridge-body-inner">
+        {% if section.settings.content != blank %}
+          <div class="bridge-text">{{ section.settings.content }}</div>
+        {% endif %}
 
-    <a
-      href="{{ section.settings.button_link }}"
-      class="link-arrow bridge-cta"
-    >
-      {{ section.settings.button_text }}
-
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-      >
-        <path d="M5 12h14M13 6l6 6-6 6"></path>
-      </svg>
-    </a>
+        {% if section.settings.button_text != blank %}
+          <a
+            href="{{ section.settings.button_link | default: '#' }}"
+            class="link-arrow bridge-cta"
+            id="bridgeCta"
+          >
+            {{ section.settings.button_text }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        {% endif %}
+      </div>
+    </div>
   </div>
 </section>
 
@@ -27,28 +38,40 @@
   "name": "Emotional Bridge",
   "settings": [
     {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image alt text",
+      "default": "Dr. Brandon Turley standing in his dental practice in front of a wall of patient smile photos"
+    },
+    {
       "type": "richtext",
       "id": "content",
       "label": "Content",
-      "default": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You've looked into fixing it — $15,000 and a dental chair felt out of reach. <em>This is the other way.</em></p>"
+      "default": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You looked into fixing it, but $15,000 in a dental chair wasn't the answer.</p><p><em>So I designed one. This is the other way.</em></p>"
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Button Text",
+      "label": "Button text",
       "default": "See how it works"
     },
     {
       "type": "url",
       "id": "button_link",
-      "label": "Button Link"
+      "label": "Button link"
     }
   ],
   "presets": [
     {
       "name": "Emotional Bridge",
       "settings": {
-        "content": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You've looked into fixing it — $15,000 and a dental chair felt out of reach. <em>This is the other way.</em></p>",
+        "image_alt": "Dr. Brandon Turley standing in his dental practice in front of a wall of patient smile photos",
+        "content": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You looked into fixing it, but $15,000 in a dental chair wasn't the answer.</p><p><em>So I designed one. This is the other way.</em></p>",
         "button_text": "See how it works",
         "button_link": "#how"
       }

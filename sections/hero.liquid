@@ -1,6 +1,6 @@
 {% assign product = section.settings.product %}
 {% assign current_variant = product.selected_or_first_available_variant %}
-{% if product == blank %}
+{% if section.settings.product == blank %}
   <p>Please select a product.</p>
 
 {% else %}
@@ -113,17 +113,10 @@
           <div class="price-top">
             <div class="price-now" id="priceNow">{{ current_variant.price | money_without_trailing_zeros }}</div>
           </div>
-          <div class="price-pay">
-            or 3 interest-free payments of
-            <strong id="pricePay"> {{ current_variant.price | divided_by: 3 | money_without_trailing_zeros }}</strong>.
-            No fees, no credit check.
-          </div>
-          <div class="price-fine">A fraction of the cost of porcelain veneers — with none of the drilling.</div>
+          <div class="price-fine">A fraction of the cost of porcelain veneers, with none of the drilling.</div>
         </div>
         <div class="stock"><span class="pulse"></span> {{ section.settings.stock_text }}</div>
-        <!--
-          SHOPIFY DEVELOPER NOTE: Wire this button to push the selected variant ID to the Shopify cart. Selection is tracked via `current` ("upper" | "lower" | "both"). Map each to its Shopify variant ID. Replace bumpCart() with real cart logic.
-        -->
+
         <button
           class="cta"
           id="cta"
@@ -367,9 +360,9 @@
   HERO PRICE
   */
 
-      priceNow.textContent = formatMoney(price);
+      // priceNow.textContent = formatMoney(price);
 
-      pricePay.textContent = formatMoney(installment);
+      // pricePay.textContent = formatMoney(installment);
 
       /*
   HERO CTA

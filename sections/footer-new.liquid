@@ -29,6 +29,9 @@
               <p class="tag">
                 {{ block.settings.tagline }}
               </p>
+              <p class="tag">
+                {{ block.settings.address }}
+              </p>
             </div>
 
           {% when 'menu' %}
@@ -214,6 +217,12 @@
           "id": "tagline",
           "label": "Tagline",
           "default": "Cosmetic dentistry without the dental chair."
+        },
+        {
+          "type": "richtext",
+          "id": "address",
+          "label": "Address",
+          "default": "<p>Cosmetic dentistry without the dental chair.</p>"
         }
       ]
     },

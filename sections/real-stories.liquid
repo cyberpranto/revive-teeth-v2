@@ -1,149 +1,398 @@
 <style>
-
+  .tests-rail {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 8px;
+  }
+  @media (max-width: 1023px) {
+    .tests-rail {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (max-width: 767px) {
+    .tests-rail {
+      display: flex;
+      gap: 14px;
+      max-width: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding: 2px 20px 8px;
+      margin-left: calc(-1 * var(--gutter, 0px));
+      scrollbar-width: none;
+    }
+    .tests-rail::-webkit-scrollbar {
+      display: none;
+    }
+    .tests-rail .test-card {
+      flex: 0 0 80%;
+      scroll-snap-align: center;
+    }
+  }
+  .test-card {
+    background: #fff;
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 26px rgba(15, 27, 56, 0.08);
+  }
   .test-thumb {
     position: relative;
-    aspect-ratio: 1 / 1; /* Square */
+    aspect-ratio: 9/16;
+    background: var(--navy);
     overflow: hidden;
-    /* border-radius: 24px; */
   }
-
-  .test-thumb img,
-  .test-thumb video {
+  .test-thumb .test-video {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
+    background: var(--navy);
   }
-
-  .test-overlay {
+  .test-thumb .play {
     position: absolute;
     inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.05));
+    display: grid;
+    place-items: center;
+  }
+  .test-thumb .play.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .test-thumb .play .play-btn {
+    width: 62px;
+    height: 62px;
+  }
+  .test-thumb .play .play-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+  .test-thumb .play .play-btn.disabled {
+    background: rgba(255, 255, 255, 0.26);
+    box-shadow: none;
+    cursor: default;
+  }
+  .test-thumb .play .play-btn.disabled:hover {
+    transform: none;
+  }
+  .test-thumb .play .play-btn.disabled svg {
+    color: rgba(255, 255, 255, 0.55);
+  } /* placeholder thumb */
+  .test-thumb.is-placeholder {
+    background: linear-gradient(160deg, #15244a 0%, #0f1b38 100%);
+  }
+  .test-thumb.is-placeholder .ph-figure {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: rgba(255, 255, 255, 0.16);
+  }
+  .test-thumb.is-placeholder .ph-figure svg {
+    width: 84px;
+    height: 84px;
+  }
+  .test-thumb .ph-tag {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 11.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5);
     z-index: 2;
-  }
-
-  .testimonial-play {
-    width: 72px;
-    height: 72px;
-    border: none;
-    border-radius: 999px;
-    background: #fff;
-    color: #111;
-    cursor: pointer;
-    display: flex;
+  } /* verified badge */
+  .test-thumb .verified {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 3;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
+    gap: 5px;
+    white-space: nowrap;
+    padding: 5px 11px 5px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.94);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    box-shadow: 0 4px 14px rgba(15, 27, 56, 0.22);
   }
-
-  .testimonial-play svg {
-    width: 30px;
-    height: 30px;
-    display: block;
+  .test-thumb .verified svg {
+    width: 13px;
+    height: 13px;
+    color: var(--green);
+  } /* caption below */
+  .test-cap {
+    padding: 16px 18px 18px;
+  }
+  .test-quote {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 16.5px;
+    line-height: 1.38;
+    color: var(--ink);
+    letter-spacing: -0.01em;
+    text-wrap: pretty;
+  }
+  .test-name {
+    margin-top: 9px;
+    font-size: 13px;
+    color: var(--ink-3);
+    letter-spacing: 0.01em;
+  } /* quote-only tile (no video yet) — same card shape as video cards */
+  .test-thumb.is-quote {
+    display: grid;
+    place-items: center;
+    background: linear-gradient(165deg, #16264e 0%, #0f1b38 100%);
+  }
+  .test-thumb.is-quote .qc-mark {
+    width: 60px;
+    height: 60px;
+    color: var(--green);
+    opacity: 0.55;
+  } /* dots (mobile only) */
+  .tests-dots {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    .tests-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 18px;
+    }
+  }
+  .tests-dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 0;
+    background: var(--line);
+    padding: 0;
+    cursor: pointer;
+    transition: background 0.2s, width 0.2s;
+  }
+  .tests-dots button.active {
+    background: var(--green);
+    width: 22px;
+    border-radius: 4px;
+  }
+  .tests-note {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 13.5px;
+    color: var(--ink-3);
+    max-width: 62ch;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
   }
 </style>
 
 <section class="warm" id="{{ section.settings.section_id }}">
   <div class="wrap">
     <div class="sect-head center">
-      <div class="eyebrow">
-        {{ section.settings.eyebrow }}
-      </div>
-
-      <h2 class="display" style="margin-top:14px">
-        {{ section.settings.heading }}
-      </h2>
-
-      <p class="sub">
-        {{ section.settings.subheading }}
-      </p>
+      {% if section.settings.eyebrow != blank %}
+        <div class="eyebrow">{{ section.settings.eyebrow }}</div>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2 class="display" style="margin-top:14px">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="sub">{{ section.settings.subheading }}</p>
+      {% endif %}
     </div>
 
-    <div class="tests-grid">
+    <div class="tests-rail" id="testsRail-{{ section.id }}">
       {% for block in section.blocks %}
-        <article
-          class="test-card"
-          {{ block.shopify_attributes }}
-        >
-          <div class="test-thumb">
-            <video
-              class="testimonial-video"
-              preload="metadata"
-              playsinline
-              {% if block.settings.thumbnail != blank %}
-                poster="{{ block.settings.thumbnail | image_url: width: 1200 }}"
-              {% endif %}
-            >
+        {% if block.type == 'video_card' %}
+          {%- assign vid_id = 'video-' | append: block.id -%}
+          {%- assign overlay_id = 'overlay-' | append: block.id -%}
+
+          <article class="test-card" {{ block.shopify_attributes }}>
+            <div class="test-thumb">
               {% if block.settings.video != blank %}
-                {% for source in block.settings.video.sources %}
-                  <source
-                    src="{{ source.url }}"
-                    type="{{ source.mime_type }}"
-                  >
-                {% endfor %}
+                <video
+                  id="{{ vid_id }}"
+                  class="test-video"
+                  preload="metadata"
+                  playsinline
+                  src="{{ block.settings.video.sources[1].url }}#t=0.5"
+                ></video>
               {% endif %}
-            </video>
 
-            <div class="test-overlay">
-              <button class="testimonial-play">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M8 5v14l11-7z"></path>
-                </svg>
-              </button>
+              {% if block.settings.show_verified %}
+                <span class="verified">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                  {{ block.settings.verified_label | default: 'Verified customer' }}
+                </span>
+              {% endif %}
+
+              <div class="play" id="{{ overlay_id }}">
+                <button class="play-btn" aria-label="Play {{ block.settings.customer_name | escape }}'s testimonial">
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M6 4l14 8-14 8z"></path>
+                  </svg>
+                </button>
+              </div>
             </div>
+            <div class="test-cap">
+              {% if block.settings.quote != blank %}
+                <p class="test-quote">{{ block.settings.quote }}</p>
+              {% endif %}
+              {% if block.settings.customer_name != blank %}
+                <p class="test-name">{{ block.settings.customer_name }}</p>
+              {% endif %}
+            </div>
+          </article>
 
-            <span class="tag">{{ block.settings.tag }}</span>
-            <span class="rule"></span>
-          </div>
+          <script>
+            (function () {
+              var v = document.getElementById('{{ vid_id }}');
+              var overlay = document.getElementById('{{ overlay_id }}');
+              if (!v || !overlay) return;
+              overlay.addEventListener('click', function () {
+                v.play();
+              });
+              v.addEventListener('click', function () {
+                if (!v.paused) v.pause();
+              });
+              v.addEventListener('play', function () {
+                overlay.classList.add('hidden');
+              });
+              v.addEventListener('pause', function () {
+                overlay.classList.remove('hidden');
+              });
+              v.addEventListener('ended', function () {
+                overlay.classList.remove('hidden');
+                v.currentTime = 0;
+              });
+            })();
+          </script>
 
-          <div class="test-meta">
-            {{ block.settings.meta }}
-          </div>
-        </article>
+        {% elsif block.type == 'quote_card' %}
+          <article class="test-card" {{ block.shopify_attributes }}>
+            <div class="test-thumb is-quote">
+              <svg class="qc-mark" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H6.5A1.5 1.5 0 0 1 8 8.5V8a1 1 0 0 1 1-1zm10 0h-4a3 3 0 0 0-3 3v7h7v-7h-3.5A1.5 1.5 0 0 1 18 8.5V8a1 1 0 0 1 1-1z"></path>
+              </svg>
+              {% if block.settings.show_verified %}
+                <span class="verified">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                  {{ block.settings.verified_label | default: 'Verified customer' }}
+                </span>
+              {% endif %}
+            </div>
+            <div class="test-cap">
+              {% if block.settings.quote != blank %}
+                <p class="test-quote">{{ block.settings.quote }}</p>
+              {% endif %}
+              {% if block.settings.customer_name != blank %}
+                <p class="test-name">{{ block.settings.customer_name }}</p>
+              {% endif %}
+            </div>
+          </article>
+        {% endif %}
       {% endfor %}
     </div>
 
-    <p class="tests-note">
-      {{ section.settings.note }}
-    </p>
+    <div class="tests-dots" id="testsDots-{{ section.id }}" aria-hidden="true"></div>
 
     {% if section.settings.button_label != blank %}
       <div class="sect-cta-row">
-        <button
+        <a
+          href="{{ section.settings.button_link | default: '#' }}"
           class="btn-primary scroll-buy"
-          type="button"
         >
           {{ section.settings.button_label }}
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M13 6l6 6-6 6"></path>
           </svg>
-        </button>
+        </a>
       </div>
+    {% endif %}
+
+    {% if section.settings.note != blank %}
+      <p class="tests-note">{{ section.settings.note }}</p>
     {% endif %}
   </div>
 </section>
+
 <script>
-  document.querySelectorAll('.testimonial-play').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const card = btn.closest('.test-thumb');
-      const video = card.querySelector('.testimonial-video');
-      const overlay = card.querySelector('.test-overlay');
-
-      video.controls = true;
-      video.play();
-
-      overlay.style.opacity = '0';
-      overlay.style.pointerEvents = 'none';
+  (function () {
+    var rail = document.getElementById('testsRail-{{ section.id }}');
+    var dotsWrap = document.getElementById('testsDots-{{ section.id }}');
+    if (!rail || !dotsWrap) return;
+    var cards = Array.from(rail.querySelectorAll('.test-card'));
+    cards.forEach(function (card, i) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'Go to testimonial ' + (i + 1));
+      if (i === 0) b.classList.add('active');
+      b.addEventListener('click', function () {
+        card.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+      });
+      dotsWrap.appendChild(b);
     });
-  });
+    var dots = Array.from(dotsWrap.children);
+    var raf = null;
+    rail.addEventListener(
+      'scroll',
+      function () {
+        if (raf) return;
+        raf = requestAnimationFrame(function () {
+          raf = null;
+          var center = rail.scrollLeft + rail.clientWidth / 2;
+          var best = 0,
+            bestDist = Infinity;
+          cards.forEach(function (card, i) {
+            var mid = card.offsetLeft + card.offsetWidth / 2;
+            var d = Math.abs(mid - center);
+            if (d < bestDist) {
+              bestDist = d;
+              best = i;
+            }
+          });
+          dots.forEach(function (dot, i) {
+            dot.classList.toggle('active', i === best);
+          });
+        });
+      },
+      { passive: true }
+    );
+  })();
 </script>
 
 {% schema %}
@@ -166,53 +415,90 @@
       "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Real stories, arriving soon."
+      "default": "Real reactions, unscripted."
     },
     {
       "type": "textarea",
       "id": "subheading",
       "label": "Subheading",
-      "default": "We're filming unscripted first-impression reactions from our launch customers, no incentives, no edits."
-    },
-    {
-      "type": "textarea",
-      "id": "note",
-      "label": "Bottom Note",
-      "default": "Video testimonials from our launch customers will appear here. We're recording real first-impression reactions, no scripts, no incentives."
+      "default": "First-impression reactions from real customers. No scripts, no incentives, no edits."
     },
     {
       "type": "text",
       "id": "button_label",
-      "label": "Button Text",
+      "label": "Button text",
       "default": "Start your smile"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "Bottom note"
     }
   ],
   "blocks": [
     {
-      "type": "story",
-      "name": "Story Card",
+      "type": "video_card",
+      "name": "Video Card",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "thumbnail",
-          "label": "Thumbnail"
-        },
         {
           "type": "video",
           "id": "video",
           "label": "Video"
         },
         {
-          "type": "text",
-          "id": "tag",
-          "label": "Tag",
-          "default": "Confidence"
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
         },
         {
           "type": "text",
-          "id": "meta",
-          "label": "Meta",
-          "default": "Coming Soon"
+          "id": "customer_name",
+          "label": "Customer name"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified",
+          "label": "Show verified badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "verified_label",
+          "label": "Verified badge text",
+          "default": "Verified customer"
+        }
+      ]
+    },
+    {
+      "type": "quote_card",
+      "name": "Quote Card",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer name"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_verified",
+          "label": "Show verified badge",
+          "default": true
+        },
+        {
+          "type": "text",
+          "id": "verified_label",
+          "label": "Verified badge text",
+          "default": "Verified customer"
         }
       ]
     }
@@ -222,24 +508,35 @@
       "name": "Real Stories",
       "blocks": [
         {
-          "type": "story",
+          "type": "video_card",
           "settings": {
-            "tag": "Confidence",
-            "meta": "Coming Soon"
+            "customer_name": "Joshua",
+            "quote": "\"I'm in sales, so confidence is everything, now I can feel myself smiling without even trying.\"",
+            "show_verified": true
           }
         },
         {
-          "type": "story",
+          "type": "video_card",
           "settings": {
-            "tag": "Transformation",
-            "meta": "Coming Soon"
+            "customer_name": "Connie",
+            "quote": "\"I want to cry. I really do. I feel like I could go out and smile.\"",
+            "show_verified": true
           }
         },
         {
-          "type": "story",
+          "type": "quote_card",
           "settings": {
-            "tag": "The Process",
-            "meta": "Coming Soon"
+            "customer_name": "Michelle",
+            "quote": "\"I got so many compliments on my new smile, nobody could tell they were snap-in veneers. They look that natural.\"",
+            "show_verified": true
+          }
+        },
+        {
+          "type": "quote_card",
+          "settings": {
+            "customer_name": "Lindsay",
+            "quote": "\"I've never seen my teeth that straight. Is this a dream?\"",
+            "show_verified": true
           }
         }
       ]
