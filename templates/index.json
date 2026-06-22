@@ -348,7 +348,15 @@
     },
     "before-after": {
       "type": "before-after",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Before & After",
+        "heading": "See the difference, side by side.",
+        "subheading": "Real cases, photographed under the same lighting, no filters, no retouching.",
+        "placeholder_icon": "",
+        "bottom_text": "Until we have real customer photos to show, we'd rather leave these panels honest and empty than fake a result.",
+        "before_label": "Before",
+        "after_label": "After"
+      }
     },
     "the_protocols_FCBtDY": {
       "type": "the-protocols",
@@ -717,7 +725,7 @@
         "description": "<p>Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks</strong>, from <strong>$1,297</strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.<.p></p>",
         "button_label": "Start your smile",
         "button_target": "#buy",
-        "reassurance": "30-day money-back guarantee · Free remakes until it's right"
+        "reassurance": "30-day money-back guarantee · Free remakes if it isn't right"
       }
     }
   },
