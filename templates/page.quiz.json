@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "main": {
+            "type": "quiz-section",
+            "custom_css": [
+                ".cbb637f8eefbdba84160b001431fc2cfdaa302b46 {display: flex;}"
+            ],
+            "settings": {}
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

@@ -1,0 +1,1014 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8 " />
+    <meta name="viewport " content="width=device-width, initial-scale=1 " />
+    <!-- <script src="6fc9cd29-9010-45ad-88d1-fa5832ec4065 "></script>
+    <script src="8aaceba4-1034-4576-b49b-611531dcf4a7 "></script>
+    <script src="c20b4382-d19c-4a1f-b184-fc938fca3aa7 "></script> -->
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <!-- <x-dc> -->
+    <!-- <helmet>
+        <link rel="preconnect " href="https://fonts.googleapis.com " />
+        <link
+          rel="preconnect "
+          href="https://fonts.gstatic.com "
+          crossorigin=" "
+        /> -->
+    <style>
+      /* cyrillic-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("2b1f3b50-3fdb-40f6-a8eb-3798014c5b09 ") format("woff2");
+        unicode-range:
+          U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+          U+FE2E-FE2F;
+      } /* vietnamese */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("b857c2ec-e178-4e43-9f81-7b39bdc016b1 ") format("woff2");
+        unicode-range:
+          U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+          U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+          U+1EA0-1EF9, U+20AB;
+      } /* latin-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("170fab87-7cc9-4dac-a4a3-4d4a3d811b88 ") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      } /* latin */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url("36d5b095-13bb-4f49-8d1b-3be75c9c1a88 ") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      } /* cyrillic-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("2b1f3b50-3fdb-40f6-a8eb-3798014c5b09 ") format("woff2");
+        unicode-range:
+          U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+          U+FE2E-FE2F;
+      } /* vietnamese */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("b857c2ec-e178-4e43-9f81-7b39bdc016b1 ") format("woff2");
+        unicode-range:
+          U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+          U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+          U+1EA0-1EF9, U+20AB;
+      } /* latin-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("170fab87-7cc9-4dac-a4a3-4d4a3d811b88 ") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      } /* latin */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: url("36d5b095-13bb-4f49-8d1b-3be75c9c1a88 ") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      } /* cyrillic-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("2b1f3b50-3fdb-40f6-a8eb-3798014c5b09 ") format("woff2");
+        unicode-range:
+          U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+          U+FE2E-FE2F;
+      } /* vietnamese */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("b857c2ec-e178-4e43-9f81-7b39bdc016b1 ") format("woff2");
+        unicode-range:
+          U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+          U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+          U+1EA0-1EF9, U+20AB;
+      } /* latin-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("170fab87-7cc9-4dac-a4a3-4d4a3d811b88 ") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      } /* latin */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 600;
+        font-display: swap;
+        src: url("36d5b095-13bb-4f49-8d1b-3be75c9c1a88 ") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      } /* cyrillic-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("2b1f3b50-3fdb-40f6-a8eb-3798014c5b09 ") format("woff2");
+        unicode-range:
+          U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F,
+          U+FE2E-FE2F;
+      } /* vietnamese */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("b857c2ec-e178-4e43-9f81-7b39bdc016b1 ") format("woff2");
+        unicode-range:
+          U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1,
+          U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329,
+          U+1EA0-1EF9, U+20AB;
+      } /* latin-ext */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("170fab87-7cc9-4dac-a4a3-4d4a3d811b88 ") format("woff2");
+        unicode-range:
+          U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+          U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+          U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+      } /* latin */
+      @font-face {
+        font-family: "Hanken Grotesk";
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: url("36d5b095-13bb-4f49-8d1b-3be75c9c1a88 ") format("woff2");
+        unicode-range:
+          U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+          U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+          U+2212, U+2215, U+FEFF, U+FFFD;
+      }
+    </style>
+    <style>
+      :root {
+        --font-display: "Hanken Grotesk", system-ui, -apple-system, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: #f4f5f7;
+      }
+      body {
+        font-family:
+          "Hanken Grotesk",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #1a1a1a;
+      }
+      input::placeholder {
+        color: #9a9a9e;
+      }
+      input {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+      @keyframes screenIn {
+        from {
+          transform: translateY(10px);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      @keyframes popIn {
+        from {
+          transform: scale(0.6);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
+    <!-- </helmet> -->
+    <div
+      style="
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: #f4f5f7;
+        font-family:
+          &quot;Hanken Grotesk&quot;,
+          system-ui,
+          -apple-system,
+          sans-serif;
+        color: #1a1a1a;
+        -webkit-font-smoothing: antialiased;
+      "
+    >
+      <div
+        style="
+          background: #1b2d5c;
+          color: #e7eaf2;
+          text-align: center;
+          padding: 9px 18px;
+          font-size: 11.5px;
+          line-height: 1.4;
+          letter-spacing: 0.01em;
+          font-weight: 500;
+          flex-shrink: 0;
+        "
+      >
+        Designed by cosmetic dentist Dr. Brandon Turley, DDS
+      </div>
+      <header
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px 20px 16px;
+          flex-shrink: 0;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1;
+          "
+        >
+          <span
+            style="
+              font-weight: 800;
+              font-size: 25px;
+              letter-spacing: 0.01em;
+              color: #0b3e88;
+            "
+            >REViVE</span
+          >
+          <span
+            style="
+              font-weight: 700;
+              font-size: 10px;
+              letter-spacing: 0.4em;
+              color: #2fa6f2;
+              margin-top: 3px;
+              padding-left: 0.4em;
+            "
+            >TEETH</span
+          >
+        </div>
+      </header>
+      <sc-if value="{{ showProgress }} " hint-placeholder-val="{{ false }} ">
+        <div
+          style="height: 5px; width: 100%; background: #e4e5ea; flex-shrink: 0"
+        >
+          <div
+            style="height:100%; background:#1B2D5C; border-radius:0 6px 6px 0; transition:width .5s cubic-bezier(.4,0,.2,1); width: {{ progressWidth }}; "
+          ></div>
+        </div>
+      </sc-if>
+      <main
+        style="
+          flex: 1;
+          width: 100%;
+          max-width: 460px;
+          margin: 0 auto;
+          padding: 6px 22px 48px;
+        "
+      >
+        <div
+          key="{{ screen }} "
+          style="animation: screenIn 0.45s cubic-bezier(0.2, 0.7, 0.2, 1) both"
+        >
+          <sc-if value="{{ isIntro }} " hint-placeholder-val="{{ true }} ">
+            <div style="padding-top: 38px">
+              <div
+                style="
+                  width: 54px;
+                  height: 54px;
+                  border-radius: 16px;
+                  background: #edeff5;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  margin-bottom: 26px;
+                "
+              >
+                <svg width="26 " height="26 " viewBox="0 0 24 24 " fill="none ">
+                  <path
+                    d="M20 6L9 17l-5-5 "
+                    stroke="#1B2D5C "
+                    stroke-width="2.6 "
+                    stroke-linecap="round "
+                    stroke-linejoin="round "
+                  ></path>
+                </svg>
+              </div>
+              <h1
+                style="
+                  font-family: var(--font-display);
+                  font-size: 44px;
+                  line-height: 1.04;
+                  font-weight: 700;
+                  letter-spacing: -0.03em;
+                  margin: 0 0 18px;
+                  color: #1a1a1a;
+                "
+              >
+                The Smile Quiz
+              </h1>
+              <p
+                style="
+                  font-size: 17px;
+                  line-height: 1.55;
+                  color: #57585b;
+                  margin: 0 0 34px;
+                  max-width: 31ch;
+                  font-weight: 400;
+                "
+              >
+                Answer a few quick questions to see if Revive is a strong fit
+                for your smile, and unlock your $100 quiz credit.
+              </p>
+              <button
+                onclick="{{ onStart }} "
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                  width: 100%;
+                  padding: 18px 22px;
+                  border: none;
+                  border-radius: 12px;
+                  background: #0f7a57;
+                  color: #ffffff;
+                  font-family: inherit;
+                  font-size: 17px;
+                  font-weight: 600;
+                  letter-spacing: -0.01em;
+                  cursor: pointer;
+                  box-shadow: 0 8px 22px rgba(15, 122, 87, 0.24);
+                "
+                style-hover="background:#0C6446; "
+              >
+                Start the Quiz
+                <svg width="18 " height="18 " viewBox="0 0 24 24 " fill="none ">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6 "
+                    stroke="#FFFFFF "
+                    stroke-width="2.2 "
+                    stroke-linecap="round "
+                    stroke-linejoin="round "
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isQuestion }} " hint-placeholder-val="{{ false }} ">
+            <div style="padding-top: 16px">
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: 27px;
+                  line-height: 1.18;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                  margin: 0 0 24px;
+                  text-wrap: pretty;
+                  color: #1a1a1a;
+                "
+              >
+                {{ qText }}
+              </h2>
+              <div style="display: flex; flex-direction: column; gap: 12px">
+                <sc-for
+                  list="{{ qCards }} "
+                  as="card "
+                  hint-placeholder-count="4 "
+                >
+                  <button
+                    onclick="{{ card.onClick }} "
+                    style="{{ card.cardStyle }} "
+                  >
+                    <span style="flex: 1; text-align: left"
+                      >{{ card.label }}</span
+                    >
+                    <sc-if
+                      value="{{ card.isSelected }} "
+                      hint-placeholder-val="{{ false }} "
+                    >
+                      <span
+                        style="
+                          display: inline-flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 24px;
+                          height: 24px;
+                          border-radius: 999px;
+                          background: #0f7a57;
+                          flex-shrink: 0;
+                          animation: popIn 0.25s ease both;
+                        "
+                      >
+                        <svg
+                          width="13 "
+                          height="13 "
+                          viewBox="0 0 24 24 "
+                          fill="none "
+                        >
+                          <path
+                            d="M20 6L9 17l-5-5 "
+                            stroke="#FFFFFF "
+                            stroke-width="2.8 "
+                            stroke-linecap="round "
+                            stroke-linejoin="round "
+                          ></path>
+                        </svg>
+                      </span>
+                    </sc-if>
+                  </button>
+                </sc-for>
+              </div>
+              <sc-if
+                value="{{ showContinue }} "
+                hint-placeholder-val="{{ false }} "
+              >
+                <button
+                  onclick="{{ onContinue }} "
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 100%;
+                    margin-top: 18px;
+                    padding: 17px 22px;
+                    border: none;
+                    border-radius: 12px;
+                    background: #0f7a57;
+                    color: #ffffff;
+                    font-family: inherit;
+                    font-size: 16px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    box-shadow: 0 8px 22px rgba(15, 122, 87, 0.24);
+                  "
+                  style-hover="background:#0C6446; "
+                >
+                  Continue
+                  <svg
+                    width="18 "
+                    height="18 "
+                    viewBox="0 0 24 24 "
+                    fill="none "
+                  >
+                    <path
+                      d="M5 12h14M13 6l6 6-6 6 "
+                      stroke="#FFFFFF "
+                      stroke-width="2.2 "
+                      stroke-linecap="round "
+                      stroke-linejoin="round "
+                    ></path>
+                  </svg>
+                </button>
+              </sc-if>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isLead }} " hint-placeholder-val="{{ false }} ">
+            <div style="padding-top: 18px">
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: 28px;
+                  line-height: 1.12;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                  margin: 0 0 9px;
+                  text-wrap: pretty;
+                  color: #1a1a1a;
+                "
+              >
+                Your Smile Quiz results are ready.
+              </h2>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.5;
+                  color: #57585b;
+                  margin: 0 0 26px;
+                  font-weight: 400;
+                "
+              >
+                Enter your details to see your result and unlock your $100 quiz
+                credit.
+              </p>
+              <form
+                onsubmit="{{ onSubmit }} "
+                data-sms-consent="{{ smsConsent }} "
+              >
+                <div style="margin-bottom: 16px">
+                  <label
+                    style="
+                      display: block;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: #1a1a1a;
+                      margin: 0 0 7px;
+                    "
+                    >First name</label
+                  >
+                  <input
+                    type="text "
+                    autocomplete="given-name "
+                    value="{{ firstName }} "
+                    onchange="{{ onFirstName }} "
+                    placeholder="Jane "
+                    style="
+                      width: 100%;
+                      padding: 14px 15px;
+                      border-radius: 11px;
+                      border: 1.5px solid #e4e5ea;
+                      background: #fcfcfc;
+                      font-family: inherit;
+                      font-size: 16px;
+                      font-weight: 400;
+                      color: #1a1a1a;
+                      outline: none;
+                    "
+                    style-focus="border-color:#1B2D5C; box-shadow:0 0 0 3px rgba(27,45,92,0.12); "
+                  />
+                  <sc-if
+                    value="{{ nameError }} "
+                    hint-placeholder-val="{{ false }} "
+                  >
+                    <p
+                      style="font-size: 12.5px; color: #b42318; margin: 7px 0 0"
+                    >
+                      Please enter your first name.
+                    </p>
+                  </sc-if>
+                </div>
+                <div style="margin-bottom: 16px">
+                  <label
+                    style="
+                      display: block;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: #1a1a1a;
+                      margin: 0 0 7px;
+                    "
+                    >Email</label
+                  >
+                  <input
+                    type="email "
+                    inputmode="email "
+                    autocomplete="email "
+                    value="{{ email }} "
+                    onchange="{{ onEmail }} "
+                    placeholder="you@email.com "
+                    style="
+                      width: 100%;
+                      padding: 14px 15px;
+                      border-radius: 11px;
+                      border: 1.5px solid #e4e5ea;
+                      background: #fcfcfc;
+                      font-family: inherit;
+                      font-size: 16px;
+                      font-weight: 400;
+                      color: #1a1a1a;
+                      outline: none;
+                    "
+                    style-focus="border-color:#1B2D5C; box-shadow:0 0 0 3px rgba(27,45,92,0.12); "
+                  />
+                  <sc-if
+                    value="{{ emailError }} "
+                    hint-placeholder-val="{{ false }} "
+                  >
+                    <p
+                      style="font-size: 12.5px; color: #b42318; margin: 7px 0 0"
+                    >
+                      Please enter a valid email address.
+                    </p>
+                  </sc-if>
+                </div>
+                <div style="margin-bottom: 4px">
+                  <label
+                    style="
+                      display: block;
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: #1a1a1a;
+                      margin: 0 0 7px;
+                    "
+                    >Mobile phone
+                    <span style="color: #9a9a9e; font-weight: 500"
+                      >(optional)</span
+                    ></label
+                  >
+                  <input
+                    type="tel "
+                    inputmode="tel "
+                    autocomplete="tel "
+                    value="{{ phone }} "
+                    onchange="{{ onPhone }} "
+                    placeholder="(555) 555 5555 "
+                    style="
+                      width: 100%;
+                      padding: 14px 15px;
+                      border-radius: 11px;
+                      border: 1.5px solid #e4e5ea;
+                      background: #fcfcfc;
+                      font-family: inherit;
+                      font-size: 16px;
+                      font-weight: 400;
+                      color: #1a1a1a;
+                      outline: none;
+                    "
+                    style-focus="border-color:#1B2D5C; box-shadow:0 0 0 3px rgba(27,45,92,0.12); "
+                  />
+                </div>
+                <label
+                  style="
+                    display: flex;
+                    gap: 11px;
+                    align-items: flex-start;
+                    cursor: pointer;
+                    margin: 18px 0 6px;
+                    user-select: none;
+                  "
+                >
+                  <span
+                    style="
+                      position: relative;
+                      flex-shrink: 0;
+                      width: 22px;
+                      height: 22px;
+                      margin-top: 1px;
+                    "
+                  >
+                    <input
+                      type="checkbox "
+                      checked="{{ sms }} "
+                      onchange="{{ onToggleSms }} "
+                      style="
+                        appearance: none;
+                        -webkit-appearance: none;
+                        margin: 0;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 6px;
+                        border: 1.6px solid #c2c6ce;
+                        background: #fcfcfc;
+                        cursor: pointer;
+                        display: block;
+                      "
+                      style-focus="border-color:#1B2D5C; box-shadow:0 0 0 3px rgba(27,45,92,0.28); outline:none; "
+                    />
+                    <sc-if
+                      value="{{ sms }} "
+                      hint-placeholder-val="{{ false }} "
+                    >
+                      <span
+                        aria-hidden="true "
+                        style="
+                          position: absolute;
+                          inset: 0;
+                          border-radius: 6px;
+                          background: #0f7a57;
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          pointer-events: none;
+                        "
+                      >
+                        <svg
+                          width="12 "
+                          height="12 "
+                          viewBox="0 0 24 24 "
+                          fill="none "
+                        >
+                          <path
+                            d="M20 6L9 17l-5-5 "
+                            stroke="#FFFFFF "
+                            stroke-width="2.8 "
+                            stroke-linecap="round "
+                            stroke-linejoin="round "
+                          ></path>
+                        </svg>
+                      </span>
+                    </sc-if>
+                  </span>
+                  <span
+                    style="
+                      font-size: 12px;
+                      line-height: 1.5;
+                      color: #57585b;
+                      font-weight: 400;
+                    "
+                    >I agree to receive recurring automated marketing text
+                    messages (such as order updates and promotions) from Revive
+                    Teeth at the number provided. Consent is not a condition of
+                    purchase. Msg and data rates may apply. Msg frequency
+                    varies. Reply STOP to unsubscribe or HELP for help. View our
+                    Privacy Policy and Terms.</span
+                  >
+                </label>
+                <button
+                  type="submit "
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    width: 100%;
+                    margin-top: 18px;
+                    padding: 18px 22px;
+                    border: none;
+                    border-radius: 12px;
+                    background: #0f7a57;
+                    color: #ffffff;
+                    font-family: inherit;
+                    font-size: 17px;
+                    font-weight: 600;
+                    letter-spacing: -0.01em;
+                    cursor: pointer;
+                    box-shadow: 0 8px 22px rgba(15, 122, 87, 0.24);
+                  "
+                  style-hover="background:#0C6446; "
+                >
+                  Show my results
+                  <svg
+                    width="18 "
+                    height="18 "
+                    viewBox="0 0 24 24 "
+                    fill="none "
+                  >
+                    <path
+                      d="M5 12h14M13 6l6 6-6 6 "
+                      stroke="#FFFFFF "
+                      stroke-width="2.2 "
+                      stroke-linecap="round "
+                      stroke-linejoin="round "
+                    ></path>
+                  </svg>
+                </button>
+                <p
+                  style="
+                    font-size: 11.5px;
+                    line-height: 1.45;
+                    color: #86868a;
+                    margin: 13px 0 0;
+                    text-align: center;
+                    font-weight: 400;
+                  "
+                >
+                  By continuing, you agree to receive emails from Revive Teeth.
+                  Unsubscribe anytime.
+                </p>
+              </form>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isResult }} " hint-placeholder-val="{{ false }} ">
+            <div style="padding-top: 24px">
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: 30px;
+                  line-height: 1.1;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                  margin: 0 0 18px;
+                  text-wrap: pretty;
+                  color: #1a1a1a;
+                "
+              >
+                {{ resultHeadline }}
+              </h2>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.6;
+                  color: #3d3d40;
+                  margin: 0 0 14px;
+                  font-weight: 400;
+                "
+              >
+                Based on your answers, your teeth are healthy and your goals are
+                cosmetic, which is exactly what Revive was built for.
+              </p>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.6;
+                  color: #3d3d40;
+                  margin: 0 0 22px;
+                  font-weight: 400;
+                "
+              >
+                Your set is made to your impressions and built to Dr. Turley's
+                7-Point Smile Design Protocol, shaped to your mouth, not off a
+                shelf. No drilling, no dental chair, no $15,000. Just a
+                natural-looking smile, mailed to your door.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 11px;
+                  align-items: flex-start;
+                  padding: 15px 16px;
+                  border-radius: 13px;
+                  background: #edeff5;
+                  border: 1px solid #d6dae6;
+                  margin: 0 0 26px;
+                "
+              >
+                <span
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 8px;
+                    background: #1b2d5c;
+                    flex-shrink: 0;
+                  "
+                >
+                  <svg
+                    width="14 "
+                    height="14 "
+                    viewBox="0 0 24 24 "
+                    fill="none "
+                  >
+                    <path
+                      d="M20 6L9 17l-5-5 "
+                      stroke="#FFFFFF "
+                      stroke-width="2.8 "
+                      stroke-linecap="round "
+                      stroke-linejoin="round "
+                    ></path>
+                  </svg>
+                </span>
+                <span
+                  style="
+                    font-size: 15px;
+                    line-height: 1.5;
+                    font-weight: 600;
+                    color: #1b2d5c;
+                  "
+                  >And because you finished the quiz, your $100 credit is
+                  already applied to your custom set.</span
+                >
+              </div>
+              <a
+                href="{{ claimHref }} "
+                style="
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 10px;
+                  width: 100%;
+                  padding: 18px 22px;
+                  border: none;
+                  border-radius: 12px;
+                  background: #0f7a57;
+                  color: #ffffff;
+                  font-family: inherit;
+                  font-size: 17px;
+                  font-weight: 600;
+                  letter-spacing: -0.01em;
+                  cursor: pointer;
+                  box-shadow: 0 8px 22px rgba(15, 122, 87, 0.24);
+                  text-decoration: none;
+                "
+                style-hover="background:#0C6446; "
+              >
+                Claim My $100 Credit
+                <svg width="18 " height="18 " viewBox="0 0 24 24 " fill="none ">
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6 "
+                    stroke="#FFFFFF "
+                    stroke-width="2.2 "
+                    stroke-linecap="round "
+                    stroke-linejoin="round "
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </sc-if>
+          <sc-if value="{{ isDQ }} " hint-placeholder-val="{{ false }} ">
+            <div style="padding-top: 30px">
+              <sc-if
+                value="{{ hasEyebrow }} "
+                hint-placeholder-val="{{ false }} "
+              >
+                <div
+                  style="
+                    font-size: 12.5px;
+                    font-weight: 700;
+                    letter-spacing: 0.14em;
+                    color: #57585b;
+                    margin: 0 0 14px;
+                  "
+                >
+                  {{ dqEyebrow }}
+                </div>
+              </sc-if>
+              <h2
+                style="
+                  font-family: var(--font-display);
+                  font-size: 28px;
+                  line-height: 1.14;
+                  font-weight: 700;
+                  letter-spacing: -0.02em;
+                  margin: 0 0 18px;
+                  text-wrap: pretty;
+                  color: #1a1a1a;
+                "
+              >
+                {{ dqHeadline }}
+              </h2>
+              <p
+                style="
+                  font-size: 16px;
+                  line-height: 1.62;
+                  color: #3d3d40;
+                  margin: 0 0 22px;
+                  font-weight: 400;
+                "
+              >
+                {{ dqBody }}
+              </p>
+              <sc-if
+                value="{{ hasSignature }} "
+                hint-placeholder-val="{{ false }} "
+              >
+                <div
+                  style="
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #1a1a1a;
+                    margin: 0 0 28px;
+                  "
+                >
+                  {{ dqSignature }}
+                </div>
+              </sc-if>
+            </div>
+          </sc-if>
+        </div>
+      </main>
+    </div>
+    <!-- </x-dc> -->
+  </body>
+</html>

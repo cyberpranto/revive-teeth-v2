@@ -8,6 +8,16 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+    "name": "Theme settings",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon"
+      }
+    ]
+  },
+  {
     "name": "t:general.typography",
     "settings": [
       {

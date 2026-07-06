@@ -1,6 +1,6 @@
 <!-- ============== NAV ============== -->
 
-  <style>
+<style>
     #shopify-section-{{section.id}} {
     position: sticky;
     top: 0;
@@ -22,11 +22,12 @@
     border-bottom-color: var(--line);
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.02);
   }
-  </style>
+</style>
+
 <header class="nav" id="nav">
   <div class="wrap nav-inner">
     <a
-      href="{{ section.settings.logo_link }}"
+      href="{{ shop.url }}"
       class="brand"
       aria-label="{{ shop.name }}"
     >
@@ -66,7 +67,8 @@
     </nav>
 
     <div class="nav-right">
-      <button
+      <a
+        href="/checkout"
         class="cart-btn"
         aria-label="Cart"
       >
@@ -92,7 +94,7 @@
         >
           {{ cart.item_count }}
         </span>
-      </button>
+      </a>
     </div>
   </div>
 </header>

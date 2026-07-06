@@ -5,17 +5,18 @@
         {{ section.settings.eyebrow }}
       </div>
 
-      <p class="founder-quote">"{{ section.settings.quote }}"</p>
+      <p class="founder-quote">{{ section.settings.quote }}</p>
 
       <div class="founder-body">
         {{ section.settings.body_content }}
+        <p class="founder-clarify">{{ section.settings.founder_clarity }}</p>
       </div>
 
       <div class="sig-wrap">
         {% if section.settings.signature_image %}
           <img
             src="{{ section.settings.signature_image | image_url: width: 600 }}"
-            alt="{{ section.settings.doctor_name }}"
+            alt="{{ section.settings.signature_image.alt }}"
             class="sig-img"
             loading="lazy"
             height="100"
@@ -112,6 +113,12 @@
       "type": "richtext",
       "id": "body_content",
       "label": "Content"
+    },
+    {
+      "type": "text",
+      "id": "founder_clarity",
+      "label": "Founder Clarity",
+      "default": "I'm a cosmetic dentist, but I'm not your dentist. I designed a product."
     },
     {
       "type": "image_picker",

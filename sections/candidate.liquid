@@ -40,10 +40,10 @@
         {{ section.settings.nudge_text }}
       </div>
 
-      <button
+      <a
         href="{{ section.settings.cta_target }}"
         class="cta"
-        id="openQuiz"
+        {% comment %} id="openQuiz" {% endcomment %}
         style="width:100%"
       >
         {{ section.settings.cta_text }}
@@ -58,7 +58,7 @@
         >
           <path d="M5 12h14M13 6l6 6-6 6"></path>
         </svg>
-      </button>
+      </a>
     </div>
 
     <p class="cand-disclaimer">
@@ -95,10 +95,9 @@
       "default": "Take the 30-Second Smile Quiz"
     },
     {
-      "type": "text",
+      "type": "url",
       "id": "cta_target",
-      "label": "CTA Target",
-      "default": "#quiz"
+      "label": "CTA Target"
     },
     {
       "type": "richtext",

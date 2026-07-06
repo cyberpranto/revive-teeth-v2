@@ -96,9 +96,9 @@
                   {{ variant.title }}
                 </div>
 
-                <div class="opt-price">
+                {% comment %} <div class="opt-price">
                   {{ variant.price | money_without_trailing_zeros }}
-                </div>
+                </div> {% endcomment %}
 
                 {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
                   <div class="save">
@@ -113,10 +113,19 @@
           <div class="price-top">
             <div class="price-now" id="priceNow">{{ current_variant.price | money_without_trailing_zeros }}</div>
           </div>
+          {% comment %}
+            <div class="price-pay">
+              or 3 interest-free payments of
+              <strong id="pricePay"> {{ current_variant.price | divided_by: 3 | money_without_trailing_zeros }}</strong>.
+              No fees, no credit check.
+            </div>
+          {% endcomment %}
           <div class="price-fine">A fraction of the cost of porcelain veneers, with none of the drilling.</div>
         </div>
         <div class="stock"><span class="pulse"></span> {{ section.settings.stock_text }}</div>
-
+        <!--
+          SHOPIFY DEVELOPER NOTE: Wire this button to push the selected variant ID to the Shopify cart. Selection is tracked via `current` ("upper" | "lower" | "both"). Map each to its Shopify variant ID. Replace bumpCart() with real cart logic.
+        -->
         <button
           class="cta"
           id="cta"
@@ -156,7 +165,12 @@
                 class="pay-pill"
                 {{ block.shopify_attributes }}
               >
-                {{ block.settings.label }}
+                <img
+                  src="{{ block.settings.Payment_logo | image_url }}"
+                  alt="{{ block.settings.Payment_logo.alt }}"
+                  height="100"
+                  width="100"
+                >
               </span>
             {% endif %}
           {% endfor %}
@@ -360,9 +374,9 @@
   HERO PRICE
   */
 
-      // priceNow.textContent = formatMoney(price);
+      priceNow.textContent = formatMoney(price);
 
-      // pricePay.textContent = formatMoney(installment);
+      {% comment %} pricePay.textContent = formatMoney(installment); {% endcomment %}
 
       /*
   HERO CTA
@@ -376,8 +390,8 @@
 
       const sbCta = document.getElementById('sbCta');
       const sbL1 = document.getElementById('sbL1');
-      const sbL2 = document.getElementById('sbL2');
-      const sbPay = document.getElementById('sbPay');
+      {% comment %} const sbL2 = document.getElementById('sbL2'); {% endcomment %}
+      {% comment %} const sbPay = document.getElementById('sbPay'); {% endcomment %}
 
       if (sbCta) {
         sbCta.dataset.variantId = variantId;
@@ -389,13 +403,13 @@
 
       const paymentText = `or 3 payments of ${formatMoney(installment)}, interest-free`;
 
-      if (sbL2) {
+      {% comment %} if (sbL2) {
         sbL2.textContent = paymentText;
-      }
+      } {% endcomment %}
 
-      if (sbPay) {
+      {% comment %} if (sbPay) {
         sbPay.textContent = paymentText;
-      }
+      } {% endcomment %}
     });
   });
 
@@ -554,10 +568,9 @@
       "name": "Payment Method",
       "settings": [
         {
-          "type": "text",
-          "id": "label",
-          "label": "Payment Label",
-          "default": "VISA"
+          "type": "image_picker",
+          "id": "Payment_logo",
+          "label": "Payment Label"
         }
       ]
     },
@@ -652,30 +665,6 @@
           "type": "hero_badge",
           "settings": {
             "text": "Designed in the USA"
-          }
-        },
-        {
-          "type": "payment_method",
-          "settings": {
-            "label": "VISA"
-          }
-        },
-        {
-          "type": "payment_method",
-          "settings": {
-            "label": "Mastercard"
-          }
-        },
-        {
-          "type": "payment_method",
-          "settings": {
-            "label": "AMEX"
-          }
-        },
-        {
-          "type": "payment_method",
-          "settings": {
-            "label": "Apple Pay"
           }
         },
         {

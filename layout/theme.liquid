@@ -11,10 +11,10 @@
       3. Additional variants load on-demand via @font-face
     {% endcomment %}
     {% comment %} {% unless settings.type_primary_font.system? %} {% endcomment %}
-      {% comment %} <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin> {% endcomment %}
+    {% comment %} <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin> {% endcomment %}
 
-      {% comment %} Preload the base font variant for initial page render {% endcomment %}
-      {% comment %} {{ settings.type_primary_font | font_url | preload_tag: as: 'font', crossorigin: 'anonymous' }} {% endcomment %}
+    {% comment %} Preload the base font variant for initial page render {% endcomment %}
+    {% comment %} {{ settings.type_primary_font | font_url | preload_tag: as: 'font', crossorigin: 'anonymous' }} {% endcomment %}
     {% comment %} {% endunless %} {% endcomment %}
 
     {% # Load and preload the critical CSS %}
@@ -25,20 +25,44 @@
     {% render 'meta-tags' %}
 
     {{ content_for_header }}
+    {% if settings.favicon %}
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
+      >
+
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="{{ settings.favicon | image_url: width: 16, height: 16 }}"
+      >
+
+      <link
+        rel="apple-touch-icon"
+        href="{{ settings.favicon | image_url: width: 180, height: 180 }}"
+      >
+    {% endif %}
   </head>
   <body>
-    {% sections 'header-group' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' %}
+      {% sections 'header-group' %}
+    {% endunless %}
 
     {{ content_for_layout }}
 
-    {% sections 'footer-group' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' %}
+      {% sections 'footer-group' %}
+    {% endunless %}
 
     {% comment %} {% render 'quiz-modal' %} {% endcomment %}
     {% comment %} {% render 'exit-intent-modal' %} {% endcomment %}
 
     {% comment %} {% render 'sticky-bars' %} {% endcomment %}
-     {% render 'quiz-modal' %}
-     {% render 'exit-modal' %}
+    {% render 'quiz-modal' %}
+    {% render 'exit-modal' %}
 
     <script src="{{ 'app.js' | asset_url }}" defer></script>
   </body>
