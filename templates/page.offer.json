@@ -1,11 +1,21 @@
 {
     "sections": {
-        "main": {
-            "type": "quiz-section",
+        "header-top": {
+            "type": "post-quiz-header-top",
+            "settings": {}
+        },
+        "banner": {
+            "type": "post-quiz-banner",
+            "settings": {}
+        },
+        "founder-story": {
+            "type": "post-quiz-founder-story",
             "settings": {}
         }
     },
     "order": [
-        "main"
+        "header-top",
+        "banner",
+        "founder-story"
     ]
 }

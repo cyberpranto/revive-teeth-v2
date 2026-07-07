@@ -1,0 +1,77 @@
+<header class="funnel-top">
+  <div class="wrap">
+    {% if section.settings.logo != blank %}
+      <img
+        class="fl-logo"
+        src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+        alt="{{ section.settings.logo.alt | default: shop.name }}"
+        width="{{ section.settings.logo_width }}"
+        height="auto"
+      >
+    {% else %}
+      <img
+        class="fl-logo"
+        src="{{ 'post-quiz-logo.png' | asset_url }}"
+        alt="{{ shop.name }}"
+        width="{{ section.settings.logo_width }}"
+        height="auto"
+      >
+    {% endif %}
+
+    <span class="fl-secure">
+      {% if section.settings.show_icon %}
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+        </svg>
+      {% endif %}
+
+      {{ section.settings.secure_text }}
+    </span>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Post Quiz Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "range",
+      "id": "logo_width",
+      "label": "Logo Width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "default": 120
+    },
+    {
+      "type": "text",
+      "id": "secure_text",
+      "label": "Secure Text",
+      "default": "Secure checkout"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_icon",
+      "label": "Show Lock Icon",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Header"
+    }
+  ]
+}
+{% endschema %}

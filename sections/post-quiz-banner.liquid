@@ -1,0 +1,265 @@
+<section class="hero sec-cream" id="hero" data-screen-label="Hero" style="z-index: 100;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy reveal">
+        <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+        <h1 class="dxl">
+          {{ section.settings.heading }}
+        </h1>
+
+        <p class="lead">
+          {{ section.settings.description }}
+        </p>
+
+        <div class="chip-row">
+          {% for block in section.blocks %}
+            {% if block.type == 'chip' %}
+              <span class="chip" {{ block.shopify_attributes }}>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.6"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg>
+
+                {{ block.settings.text }}
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <a
+          href="{{ section.settings.button_link | default: '#offer' }}"
+          class="btn scroll-buy"
+        >
+          {{ section.settings.button_text }}
+
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        </a>
+      </div>
+
+      <div class="hero-anchor reveal" data-delay="120">
+        <div class="qr-card">
+          <div class="qr-head">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+              <path d="M8.5 12.5l2.5 2.5L16 10"></path>
+            </svg>
+            <span>
+              {{ section.settings.card_title }}
+
+              <span class="qh-sub">
+                {{ section.settings.card_subtitle }}
+              </span>
+            </span>
+          </div>
+
+          <div class="qr-body">
+            <ul class="qr-list">
+              {% for block in section.blocks %}
+                {% if block.type == 'reason' %}
+                  <li {{ block.shopify_attributes }}>
+                    <span class="ck">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12l5 5 9-11"></path>
+                      </svg>
+                    </span>
+
+                    {{ block.settings.text }}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+
+            <div class="qr-credit">
+              <span class="gift">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                  <path d="M5 12v9h14v-9"></path>
+                  <path d="M12 8v13"></path>
+                  <path
+                    d="M12 8S10.5 3.5 8 4.5 8.5 8 12 8Zm0 0s1.5-4.5 4-3.5S15.5 8 12 8Z"
+                  ></path>
+                </svg>
+              </span>
+              <div>
+                <div class="t">
+                  {{ section.settings.credit_title }}
+                </div>
+
+                <div class="s">
+                  {{ section.settings.credit_description }}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Your Smile Quiz Results"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Dr. Turley, a cosmetic dentist, designed Revive to look like real teeth, not a plastic cover."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Secure My $100 Credit & View My Set"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "card_title",
+      "label": "Card Title",
+      "default": "Strong fit"
+    },
+    {
+      "type": "text",
+      "id": "card_subtitle",
+      "label": "Card Subtitle",
+      "default": "Based on your Smile Quiz answers"
+    },
+    {
+      "type": "text",
+      "id": "credit_title",
+      "label": "Credit Title",
+      "default": "$100 quiz credit"
+    },
+    {
+      "type": "text",
+      "id": "credit_description",
+      "label": "Credit Description",
+      "default": "Applied automatically at checkout"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "chip",
+      "name": "Feature Chip",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Chip Text"
+        }
+      ]
+    },
+    {
+      "type": "reason",
+      "name": "Fit Reason",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Reason"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Banner",
+      "blocks": [
+        {
+          "type": "chip",
+          "settings": {
+            "text": "30-Day Fit Remake"
+          }
+        },
+        {
+          "type": "chip",
+          "settings": {
+            "text": "Dentist-Designed"
+          }
+        },
+        {
+          "type": "chip",
+          "settings": {
+            "text": "Free Shipping Both Ways"
+          }
+        },
+        {
+          "type": "chip",
+          "settings": {
+            "text": "Designed in the USA"
+          }
+        },
+        {
+          "type": "reason",
+          "settings": {
+            "text": "Generally healthy teeth and gums"
+          }
+        },
+        {
+          "type": "reason",
+          "settings": {
+            "text": "Cosmetic goals, not dental treatment"
+          }
+        },
+        {
+          "type": "reason",
+          "settings": {
+            "text": "A full upper or lower arch to work with"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -18,8 +18,14 @@
     {% comment %} {% endunless %} {% endcomment %}
 
     {% # Load and preload the critical CSS %}
-    {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {% if template.name == 'index' %}
+      {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
+      {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {% endif %}
+
+    {% if template.suffix == 'offer' %}
+      {{ 'post-quiz-style.css' | asset_url | stylesheet_tag }}
+    {% endif %}
 
     {% # Social, title, etc. %}
     {% render 'meta-tags' %}
@@ -61,9 +67,17 @@
     {% comment %} {% render 'exit-intent-modal' %} {% endcomment %}
 
     {% comment %} {% render 'sticky-bars' %} {% endcomment %}
-    {% render 'quiz-modal' %}
-    {% render 'exit-modal' %}
+    {% if template.name == 'index' %}
+      {% render 'quiz-modal' %}
+      {% render 'exit-modal' %}
+    {% endif %}
 
-    <script src="{{ 'app.js' | asset_url }}" defer></script>
+    {% if template.name == 'index' %}
+      <script src="{{ 'app.js' | asset_url }}" defer></script>
+    {% endif %}
+
+    {% if template.suffix == 'offer' %}
+      <script src="{{ 'post-quiz-script.js' | asset_url }}" defer></script>
+    {% endif %}
   </body>
 </html>
