@@ -1,21 +1,136 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "header-top": {
-            "type": "post-quiz-header-top",
-            "settings": {}
-        },
-        "banner": {
-            "type": "post-quiz-banner",
-            "settings": {}
-        },
-        "founder-story": {
-            "type": "post-quiz-founder-story",
-            "settings": {}
-        }
+  "sections": {
+    "header-top": {
+      "type": "post-quiz-header-top",
+      "settings": {
+        "logo_width": 120,
+        "secure_text": "Secure checkout",
+        "show_icon": true
+      }
     },
-    "order": [
-        "header-top",
-        "banner",
-        "founder-story"
-    ]
+    "post_quiz_banner_Gmwam4": {
+      "type": "post-quiz-banner",
+      "blocks": {
+        "chip_4QHp39": {
+          "type": "chip",
+          "settings": {
+            "text": "30-Day Fit Remake"
+          }
+        },
+        "chip_CLdFMM": {
+          "type": "chip",
+          "settings": {
+            "text": "Dentist-Designed"
+          }
+        },
+        "chip_yLn7z9": {
+          "type": "chip",
+          "settings": {
+            "text": "Free Shipping Both Ways"
+          }
+        },
+        "chip_6YKTUH": {
+          "type": "chip",
+          "settings": {
+            "text": "Designed in the USA"
+          }
+        },
+        "reason_gGTWwi": {
+          "type": "reason",
+          "settings": {
+            "text": "Generally healthy teeth and gums"
+          }
+        },
+        "reason_BDWmq3": {
+          "type": "reason",
+          "settings": {
+            "text": "Cosmetic goals, not dental treatment"
+          }
+        },
+        "reason_YKpfQr": {
+          "type": "reason",
+          "settings": {
+            "text": "A full upper or lower arch to work with"
+          }
+        }
+      },
+      "block_order": [
+        "chip_4QHp39",
+        "chip_CLdFMM",
+        "chip_yLn7z9",
+        "chip_6YKTUH",
+        "reason_gGTWwi",
+        "reason_BDWmq3",
+        "reason_YKpfQr"
+      ],
+      "name": "Post Quiz Banner",
+      "settings": {
+        "eyebrow": "Your Smile Quiz Results",
+        "heading": "Dr. Turley, a cosmetic dentist, designed Revive to look like real teeth, not a plastic cover.",
+        "description": "",
+        "button_text": "Secure My $100 Credit & View My Set",
+        "button_link": "",
+        "card_title": "Strong fit",
+        "card_subtitle": "Based on your Smile Quiz answers",
+        "credit_title": "$100 quiz credit",
+        "credit_description": "Applied automatically at checkout"
+      }
+    },
+    "post_quiz_founder_story_Tfz3xw": {
+      "type": "post-quiz-founder-story",
+      "blocks": {
+        "credential_dTywHx": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "12+ Years Experience"
+          }
+        },
+        "credential_EKTxRL": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "Cosmetic Dentist"
+          }
+        },
+        "credential_TygC3F": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "Creator of the 7-Point Protocol"
+          }
+        }
+      },
+      "block_order": [
+        "credential_dTywHx",
+        "credential_EKTxRL",
+        "credential_TygC3F"
+      ],
+      "name": "Post Quiz Founder Story",
+      "settings": {
+        "eyebrow": "What I kept watching.",
+        "quote": "I have sat across from patients who cover their mouths when they laugh. It is the hardest thing to watch as a dentist.",
+        "story": "<p>In my practice, I hear the same story every week. A patient comes in. They hate their smile. They have stopped being in photos with their kids. They want it fixed, but the clinical reality is brutal: traditional porcelain veneers mean hours in my chair, permanently drilling down healthy enamel, and a bill between ten and twenty thousand dollars.</p><p>For most hardworking people, that is not an option.</p><p>So they go online and buy a cheap plastic snap-on for a couple hundred dollars. A few weeks later, they are sitting in my chair again, showing me what arrived. It is always the same. The appliance is stamped from a single mold. The gingival margin, the gumline, is a straight, thick plastic ridge. The teeth look like identical white piano keys. They put it in, realize everyone can immediately tell it is fake, and throw it in a drawer.</p><p>They paid good money to feel worse than when they started. And the companies selling these things keep selling them anyway, because the customer is too embarrassed to complain publicly.</p><p>I got tired of seeing it. I know exactly what makes a tooth look real. It is not magic. It is proportion, translucency, and how the edge meets the gum. I knew those clinical standards could be engineered into a removable appliance if someone actually did the work. So I did.</p><p>Every Revive case is produced against the 7-Point Smile Design Protocol I built. If a case does not pass my standard, it does not ship.</p>",
+        "shield": "Let me be clear about one thing. I am a cosmetic dentist, but I am not your dentist, and Revive is not dental treatment. I designed a product.",
+        "bottom_story": "<p>I designed the standard behind it too, so a more natural-looking appliance could be made for people who had almost given up on their smile.</p>",
+        "founder_name": "Dr. Brandon Turley, DDS",
+        "founder_designation": "Doctor of Dental Surgery · Founder, Revive Teeth",
+        "video_label": "[ Video · Dr. Turley ]"
+      }
+    }
+  },
+  "order": [
+    "header-top",
+    "post_quiz_banner_Gmwam4",
+    "post_quiz_founder_story_Tfz3xw"
+  ]
 }
