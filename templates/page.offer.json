@@ -76,7 +76,7 @@
       "settings": {
         "eyebrow": "Your Smile Quiz Results",
         "heading": "Dr. Turley, a cosmetic dentist, designed Revive to look like real teeth, not a plastic cover.",
-        "description": "",
+        "description": "Your quiz says your teeth are healthy and your goals are cosmetic, so you're exactly who he built Revive for. Your recommended set is below, made to your impressions and finished against his 7-Point Smile Design Protocol, with your $100 credit already applied.",
         "button_text": "Secure My $100 Credit & View My Set",
         "button_link": "",
         "card_title": "Strong fit",
@@ -91,7 +91,7 @@
         "credential_dTywHx": {
           "type": "credential",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
             "text": "12+ Years Experience"
           }
         },
