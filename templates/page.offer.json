@@ -258,8 +258,126 @@
         "description": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
       }
     },
-    "post-quiz-different": {
+    "post_quiz_different_hVrQkV": {
       "type": "post-quiz-different",
+      "blocks": {
+        "left_item_96qWfK": {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Often stamped from a single, one-size-fits-all mold."
+          }
+        },
+        "left_item_JA3Nqj": {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Can leave a visible gap at the gumline."
+          }
+        },
+        "left_item_AANwDV": {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Teeth are rarely individually shaped."
+          }
+        },
+        "left_item_AFUp7D": {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Produced without custom design work."
+          }
+        },
+        "left_item_pmJMcd": {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Rarely involves an experienced cosmetic dentist in the product design."
+          }
+        },
+        "right_item_XWpHtm": {
+          "type": "right_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Thin and individually shaped, tooth by tooth."
+          }
+        },
+        "right_item_QiNCjq": {
+          "type": "right_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Gumline contoured to your own anatomy."
+          }
+        },
+        "right_item_3QkVhL": {
+          "type": "right_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Natural proportions and translucent edges, tooth by tooth."
+          }
+        },
+        "right_item_NTE4Uw": {
+          "type": "right_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "7 design checkpoints, and 14 to 21 days production time."
+          }
+        },
+        "right_item_RtUwym": {
+          "type": "right_item",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Built to Dr. Turley's 7-Point Smile Design Protocol. Every case."
+          }
+        },
+        "spectrum_EhwcbG": {
+          "type": "spectrum",
+          "settings": {
+            "highlight": false,
+            "badge": "You are here",
+            "title": "Porcelain veneers at a dentist",
+            "price": "$10k to $20k or more",
+            "description": "Per arch. Multiple visits, drilling, and permanent removal of natural enamel."
+          }
+        },
+        "spectrum_Y9FYj7": {
+          "type": "spectrum",
+          "settings": {
+            "highlight": true,
+            "badge": "You are here",
+            "title": "Revive Veneers",
+            "price": "$1,297 to $1,994",
+            "description": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+          }
+        },
+        "spectrum_acXYRw": {
+          "type": "spectrum",
+          "settings": {
+            "highlight": false,
+            "badge": "You are here",
+            "title": "Generic snap-ons online",
+            "price": "$200 to $400",
+            "description": "One-size mold, no dentist involved, the look most people quietly stop wearing."
+          }
+        }
+      },
+      "block_order": [
+        "left_item_96qWfK",
+        "left_item_JA3Nqj",
+        "left_item_AANwDV",
+        "left_item_AFUp7D",
+        "left_item_pmJMcd",
+        "right_item_XWpHtm",
+        "right_item_QiNCjq",
+        "right_item_3QkVhL",
+        "right_item_NTE4Uw",
+        "right_item_RtUwym",
+        "spectrum_EhwcbG",
+        "spectrum_Y9FYj7",
+        "spectrum_acXYRw"
+      ],
+      "name": "Post Quiz Different",
       "settings": {
         "eyebrow": "What Makes It Different",
         "heading": "The snap-on you'll find everywhere, and the one a dentist made.",
@@ -337,7 +455,7 @@
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",
-    "post-quiz-different",
+    "post_quiz_different_hVrQkV",
     "post-quiz-your-fit",
     "post-quiz-promise",
     "post-quiz-faq",
