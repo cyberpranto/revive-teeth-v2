@@ -128,44 +128,173 @@
         "video_label": "[ Video · Dr. Turley ]"
       }
     },
-    "post-quiz-protocols": {
+    "post_quiz_protocols_3C37xq": {
       "type": "post-quiz-protocols",
-      "settings": {}
+      "blocks": {
+        "protocol_KJWbEt": {
+          "type": "protocol",
+          "settings": {
+            "number": "01",
+            "title": "Smile Architecture",
+            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and arch width dictate the shape, ensuring the final result actually belongs on your face.</p>"
+          }
+        },
+        "protocol_D6FzPj": {
+          "type": "protocol",
+          "settings": {
+            "number": "02",
+            "title": "Bite Alignment",
+            "content": "<p>If the appliance fights your natural bite, you will not wear it. We engineer the alignment so your upper and lower teeth meet correctly, making the set comfortable enough for daily use.</p>"
+          }
+        },
+        "protocol_4xFtay": {
+          "type": "protocol",
+          "settings": {
+            "number": "03",
+            "title": "Tooth-by-Tooth Proportions",
+            "content": "<p>Natural teeth are not identical tiles. We size and shape each tooth individually in proportion to the ones next to it. That slight, deliberate variation is what makes a smile look real.</p>"
+          }
+        },
+        "protocol_qA7kmM": {
+          "type": "protocol",
+          "settings": {
+            "number": "04",
+            "title": "Gumline Precision",
+            "content": "<p>This is where cheap snap-ons fail. We contour the edge where the veneer meets your gum exactly to your anatomy. It eliminates the thick plastic line that instantly gives away a fake appliance.</p>"
+          }
+        },
+        "protocol_eBnXBk": {
+          "type": "protocol",
+          "settings": {
+            "number": "05",
+            "title": "Natural Translucency",
+            "content": "<p>Real enamel is slightly see-through at the incisal edge. We replicate that translucency so your teeth catch light naturally.</p>"
+          }
+        },
+        "protocol_4TBk4B": {
+          "type": "protocol",
+          "settings": {
+            "number": "06",
+            "title": "Shade Matching",
+            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion.</p>"
+          }
+        },
+        "protocol_kkDiUF": {
+          "type": "protocol",
+          "settings": {
+            "number": "07",
+            "title": "Final Inspection",
+            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. If the case misses on any checkpoint, it does not go out.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "protocol_KJWbEt",
+        "protocol_D6FzPj",
+        "protocol_4xFtay",
+        "protocol_qA7kmM",
+        "protocol_eBnXBk",
+        "protocol_4TBk4B",
+        "protocol_kkDiUF"
+      ],
+      "name": "Post Quiz Protocols",
+      "settings": {
+        "doctor_name": "Dr. Brandon Turley, DDS",
+        "doctor_credential": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol",
+        "eyebrow": "The Protocol",
+        "heading": "Seven checkpoints that make them look like your own teeth.",
+        "description": "Every Revive case is designed against a 7-point protocol I built, and it has to pass all seven before it leaves the facility. Tap any point to see what it decides.",
+        "bottom_text": "If it does not pass all seven, it does not leave the facility.",
+        "button_text": "Start My Custom Smile Design",
+        "button_link": ""
+      }
     },
     "post-quiz-how-it-works": {
       "type": "post-quiz-how-it-works",
-      "settings": {}
+      "settings": {
+        "eyebrow": "How It Works",
+        "heading": "Three steps. No dental office required.",
+        "description": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
+      }
     },
     "post-quiz-different": {
       "type": "post-quiz-different",
-      "settings": {}
+      "settings": {
+        "eyebrow": "What Makes It Different",
+        "heading": "The snap-on you'll find everywhere, and the one a dentist made.",
+        "description": "Same category. Completely different product.",
+        "left_label": "Generic snap-on",
+        "right_label": "Revive",
+        "left_title": "Generic Snap-Ons",
+        "left_subtitle": "What you find for $200 to $400 online",
+        "right_title": "Revive Veneers",
+        "right_subtitle": "Custom-built to Dr. Turley's protocol",
+        "spectrum_label": "Where Revive sits on the smile-upgrade spectrum."
+      }
     },
     "post-quiz-your-fit": {
       "type": "post-quiz-your-fit",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Find Your Fit",
+        "heading": "Is Revive right for you?",
+        "description": "Your quiz answers point to a strong fit. Here is the full picture.",
+        "note": "If anything has changed since your quiz, our team is one email away at",
+        "link": "",
+        "email": "support@reviveteeth.com",
+        "disclaimer": "Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."
+      }
     },
     "post-quiz-promise": {
       "type": "post-quiz-promise",
-      "settings": {}
+      "settings": {
+        "banner_alt": "A couple relaxing at home together, laughing and at ease",
+        "eyebrow": "Our Promise",
+        "heading": "Here is exactly what we stand behind.",
+        "content": "<p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p><p>When your veneers arrive, wear them. If the fit is not right, tell us. <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not consider it finished until it fits.</p><p><strong>You can cancel for a full refund any time before we begin production.</strong> Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change of mind, the same as any custom-made product.</p><p>Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit until it is right. That is the promise a custom product can stand behind.</p>"
+      }
     },
     "post-quiz-faq": {
       "type": "post-quiz-faq",
-      "settings": {}
+      "settings": {
+        "eyebrow": "Common Questions",
+        "heading": "What people ask before ordering.",
+        "description": "Anything else, we are one email away.",
+        "help_title": "Still have questions?",
+        "help_text": "Our team responds within one business day.",
+        "link_text": "Contact us",
+        "link": ""
+      }
     },
     "post-quiz-closer": {
       "type": "post-quiz-closer",
-      "settings": {}
+      "settings": {
+        "heading": "Your smile is next.",
+        "content": "<p>I have had patients tell me they have not smiled in a photo in five years. The smile is the point, and everything else is just how we get you there.</p><p>The smile is ready. The only thing left is the decision.</p>",
+        "button_link": "",
+        "button_text": "Begin My Transformation Now",
+        "button_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg>"
+      }
     },
     "post-quiz-footer": {
       "type": "post-quiz-footer",
-      "settings": {}
+      "settings": {
+        "tagline": "A natural-looking smile, without the dental chair.",
+        "support_heading": "Support",
+        "support_link": "",
+        "support_email": "support@reviveteeth.com",
+        "support_text": "Pay in full at checkout, from $1,197.",
+        "policy_heading": "Policies",
+        "policy_menu": "",
+        "copyright": "© 2026 Revive Teeth. All rights reserved.",
+        "disclaimer": "Dr. Brandon Turley, DDS designed Revive Veneers. He is not your treating dentist and does not provide dental care. Revive Veneers is a cosmetic product, not a substitute for professional dental care."
+      }
     }
   },
   "order": [
     "header-top",
     "post_quiz_banner_Gmwam4",
     "post_quiz_founder_story_Tfz3xw",
-    "post-quiz-protocols",
+    "post_quiz_protocols_3C37xq",
     "post-quiz-how-it-works",
     "post-quiz-different",
     "post-quiz-your-fit",
