@@ -209,8 +209,49 @@
         "button_link": ""
       }
     },
-    "post-quiz-how-it-works": {
+    "post_quiz_how_it_works_jVqMry": {
       "type": "post-quiz-how-it-works",
+      "blocks": {
+        "step_RErk76": {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-1.jfif",
+            "step": "Step 01",
+            "title": "Order your impression kit",
+            "description": "Pick your arches and check out. Your kit ships free within 48 hours, with extra putty included.",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13l-4-4M18 12l-4 4\"></path></svg>",
+            "timing": "Ships in 48 hours"
+          }
+        },
+        "step_YaeryQ": {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-2.jfif",
+            "step": "Step 02",
+            "title": "Take impressions at home",
+            "description": "Follow Dr. Turley's video walkthrough. It takes about five minutes. Drop the prepaid mailer in the mail to send them back free.",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
+            "timing": "About 5 minutes"
+          }
+        },
+        "step_N4UNxn": {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-3.jfif",
+            "step": "Step 03",
+            "title": "Receive your custom smile",
+            "description": "Your veneers are made to your impressions and built to Dr. Turley's protocol. They arrive ready to wear.",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"></rect><path d=\"M4 10h16M9 3v4M15 3v4\"></path></svg>",
+            "timing": "About 2 to 3 weeks"
+          }
+        }
+      },
+      "block_order": [
+        "step_RErk76",
+        "step_YaeryQ",
+        "step_N4UNxn"
+      ],
+      "name": "Post Quiz How It Works",
       "settings": {
         "eyebrow": "How It Works",
         "heading": "Three steps. No dental office required.",
@@ -295,7 +336,7 @@
     "post_quiz_banner_Gmwam4",
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
-    "post-quiz-how-it-works",
+    "post_quiz_how_it_works_jVqMry",
     "post-quiz-different",
     "post-quiz-your-fit",
     "post-quiz-promise",
