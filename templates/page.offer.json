@@ -449,8 +449,61 @@
         "content": "<p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p><p>When your veneers arrive, wear them. If the fit is not right, tell us. <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not consider it finished until it fits.</p><p><strong>You can cancel for a full refund any time before we begin production.</strong> Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change of mind, the same as any custom-made product.</p><p>Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit until it is right. That is the promise a custom product can stand behind.</p>"
       }
     },
-    "post-quiz-faq": {
+    "post_quiz_faq_KBXDLX": {
       "type": "post-quiz-faq",
+      "blocks": {
+        "faq_wBkQH3": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        },
+        "faq_w7PnNF": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        },
+        "faq_H9cy8p": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        },
+        "faq_HBpF6m": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        },
+        "faq_j6BbPU": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        },
+        "faq_GHAf9e": {
+          "type": "faq",
+          "settings": {
+            "question": "Frequently Asked Question",
+            "answer": "<p>Write your answer here.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_wBkQH3",
+        "faq_w7PnNF",
+        "faq_H9cy8p",
+        "faq_HBpF6m",
+        "faq_j6BbPU",
+        "faq_GHAf9e"
+      ],
+      "name": "Post Quiz FAQ",
       "settings": {
         "eyebrow": "Common Questions",
         "heading": "What people ask before ordering.",
@@ -495,7 +548,7 @@
     "post_quiz_different_hVrQkV",
     "post_quiz_your_fit_yHPgdy",
     "post-quiz-promise",
-    "post-quiz-faq",
+    "post_quiz_faq_KBXDLX",
     "post-quiz-closer",
     "post-quiz-footer"
   ]
