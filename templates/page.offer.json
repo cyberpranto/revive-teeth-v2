@@ -126,11 +126,51 @@
         "founder_designation": "Doctor of Dental Surgery · Founder, Revive Teeth",
         "video_label": "[ Video · Dr. Turley ]"
       }
+    },
+    "post-quiz-protocols": {
+      "type": "post-quiz-protocols",
+      "settings": {}
+    },
+    "post-quiz-how-it-works": {
+      "type": "post-quiz-how-it-works",
+      "settings": {}
+    },
+    "post-quiz-different": {
+      "type": "post-quiz-different",
+      "settings": {}
+    },
+    "post-quiz-your-fit": {
+      "type": "post-quiz-your-fit",
+      "settings": {}
+    },
+    "post-quiz-promise": {
+      "type": "post-quiz-promise",
+      "settings": {}
+    },
+    "post-quiz-faq": {
+      "type": "post-quiz-faq",
+      "settings": {}
+    },
+    "post-quiz-closer": {
+      "type": "post-quiz-closer",
+      "settings": {}
+    },
+    "post-quiz-footer": {
+      "type": "post-quiz-footer",
+      "settings": {}
     }
   },
   "order": [
     "header-top",
     "post_quiz_banner_Gmwam4",
-    "post_quiz_founder_story_Tfz3xw"
+    "post_quiz_founder_story_Tfz3xw",
+    "post-quiz-protocols",
+    "post-quiz-how-it-works",
+    "post-quiz-different",
+    "post-quiz-your-fit",
+    "post-quiz-promise",
+    "post-quiz-faq",
+    "post-quiz-closer",
+    "post-quiz-footer"
   ]
 }

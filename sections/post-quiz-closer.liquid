@@ -1,0 +1,77 @@
+<section class="closer" id="footer" data-screen-label="Closer">
+  <div class="wrap">
+    <div class="sec-intro center reveal">
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+    </div>
+
+    <div class="closer-body reveal">
+      {{ section.settings.content }}
+    </div>
+
+    <div class="reveal" style="display: flex; justify-content: center">
+      <a href="{{ section.settings.button_link }}" class="btn btn-lg btn-invert scroll-buy">
+        {{ section.settings.button_text }}
+        {% if section.settings.button_icon != blank %}
+          {{ section.settings.button_icon }}
+        {% else %}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
+          </svg>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Closer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your smile is next."
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>I have had patients tell me they have not smiled in a photo in five years. The smile is the point, and everything else is just how we get you there.</p><p>The smile is ready. The only thing left is the decision.</p>"
+    },
+
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Begin My Transformation Now"
+    },
+    {
+      "type": "textarea",
+      "id": "button_icon",
+      "label": "Button SVG",
+      "default": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg>"
+    }
+  ]
+}
+{% endschema %}

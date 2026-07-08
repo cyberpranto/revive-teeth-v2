@@ -1,0 +1,386 @@
+<section
+  class="sec-navy proto-split"
+  id="protocol"
+  data-screen-label="Protocol"
+>
+  <div class="proto-split-grid">
+    <div class="proto-split-media">
+      {% if section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 900 }}"
+          alt="{{ section.settings.doctor_name }}"
+          width="900"
+          height="auto"
+        >
+      {% else %}
+        <img
+          src="{{ 'founder-image-2.jfif' | asset_url }}"
+          alt="{{ section.settings.doctor_name }}"
+          width="900"
+          height="auto"
+        >
+      {% endif %}
+      <div class="proto-nameplate">
+        {% if section.settings.signature != blank %}
+          <img
+            src="{{ section.settings.signature | image_url: width: 250 }}"
+            alt="{{ section.settings.doctor_name }}"
+            class="sig-img"
+            width="250"
+            height="auto"
+          >
+        {% else %}
+          <img
+            src="{{ 'signature-3.png' | asset_url }}"
+            alt="{{ section.settings.doctor_name }}"
+            class="sig-img"
+            width="250"
+            height="auto"
+          >
+        {% endif %}
+        <div class="pname">
+          {{ section.settings.doctor_name }}
+        </div>
+
+        <div class="pcred">
+          {{ section.settings.doctor_credential }}
+        </div>
+      </div>
+    </div>
+
+    <div class="proto-split-content">
+      <div class="proto-split-inner">
+        <div class="sec-intro reveal">
+          {% comment %}
+            <span class="eyebrow">The Protocol</span>
+            <h2 class="dl">Seven checkpoints that make them look like your own teeth.</h2>
+
+            <p class="lead">
+              Every Revive case is designed against a 7-point protocol I built, and it has to pass all seven before it
+              leaves the facility. Tap any point to see what it decides.
+            </p>
+          {% endcomment %}
+
+          <span class="eyebrow">
+            {{ section.settings.eyebrow }}
+          </span>
+
+          <h2 class="dl">
+            {{ section.settings.heading }}
+          </h2>
+
+          <p class="lead">
+            {{ section.settings.description }}
+          </p>
+        </div>
+
+        <div class="proto-acc reveal" id="protoAcc">
+          {% comment %}
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">01</span><span class="pt">Smile Architecture</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    We map the design to your specific facial proportions, not a template. Your lip line and arch width
+                    dictate the shape, ensuring the final result actually belongs on your face.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">02</span><span class="pt">Bite Alignment</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    If the appliance fights your natural bite, you will not wear it. We engineer the alignment so your
+                    upper and lower teeth meet correctly, making the set comfortable enough for daily use.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">03</span><span class="pt">Tooth-by-Tooth Proportions</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    Natural teeth are not identical tiles. We size and shape each tooth individually in proportion to the
+                    ones next to it. That slight, deliberate variation is what makes a smile look real.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">04</span><span class="pt">Gumline Precision</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    This is where cheap snap-ons fail. We contour the edge where the veneer meets your gum exactly to your
+                    anatomy. It eliminates the thick plastic line that instantly gives away a fake appliance.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">05</span><span class="pt">Natural Translucency</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    Real enamel is slightly see-through at the incisal edge (the biting edge). We replicate that
+                    translucency so your teeth catch light naturally, rather than looking like a solid block of white
+                    plastic.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">06</span><span class="pt">Shade Matching</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    The color must be bright but believable. We select a shade that looks natural for your complexion,
+                    avoiding the fluorescent white that tells everyone you are wearing something artificial.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pacc">
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">07</span><span class="pt">Final Inspection</span
+                ><span class="plus" aria-hidden="true"></span>
+              </button>
+              <div class="pacc-a">
+                <div>
+                  <p>
+                    Before anything ships, the finished case is checked against the six design decisions above. With this
+                    final inspection, that is seven checkpoints in total. If the case misses on any of them, it does not
+                    go out. That is the point of putting my name on it.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {% endcomment %}
+
+          {% for block in section.blocks %}
+            <div class="pacc" {{ block.shopify_attributes }}>
+              <button class="pacc-q" aria-expanded="false">
+                <span class="pn">
+                  {{ block.settings.number }}
+                </span>
+
+                <span class="pt">
+                  {{ block.settings.title }}
+                </span>
+
+                <span class="plus" aria-hidden="true"></span>
+              </button>
+
+              <div class="pacc-a">
+                <div>
+                  {{ block.settings.content }}
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <p class="proto-close reveal">{{ section.settings.bottom_text }}</p>
+
+        <div class="proto-cta reveal">
+          <a
+            href="{{ section.settings.button_link | default: '#offer' }}"
+            class="btn btn-invert scroll-buy"
+          >
+            {{ section.settings.button_text }}
+
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Protocols",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Doctor Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "signature",
+      "label": "Signature Image"
+    },
+    {
+      "type": "text",
+      "id": "doctor_name",
+      "label": "Doctor Name",
+      "default": "Dr. Brandon Turley, DDS"
+    },
+    {
+      "type": "text",
+      "id": "doctor_credential",
+      "label": "Credential",
+      "default": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "default": "The Protocol",
+      "label": "Eyebrow"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "default": "Seven checkpoints that make them look like your own teeth.",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "Every Revive case is designed against a 7-point protocol I built, and it has to pass all seven before it leaves the facility. Tap any point to see what it decides.",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "default": "If it does not pass all seven, it does not leave the facility.",
+      "label": "Bottom Text"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "default": "Start My Custom Smile Design",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "protocol",
+      "name": "Protocol Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Smile Architecture"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Protocol description.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Protocols",
+      "blocks": [
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "01",
+            "title": "Smile Architecture",
+            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and arch width dictate the shape, ensuring the final result actually belongs on your face.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "02",
+            "title": "Bite Alignment",
+            "content": "<p>If the appliance fights your natural bite, you will not wear it. We engineer the alignment so your upper and lower teeth meet correctly, making the set comfortable enough for daily use.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "03",
+            "title": "Tooth-by-Tooth Proportions",
+            "content": "<p>Natural teeth are not identical tiles. We size and shape each tooth individually in proportion to the ones next to it. That slight, deliberate variation is what makes a smile look real.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "04",
+            "title": "Gumline Precision",
+            "content": "<p>This is where cheap snap-ons fail. We contour the edge where the veneer meets your gum exactly to your anatomy. It eliminates the thick plastic line that instantly gives away a fake appliance.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "05",
+            "title": "Natural Translucency",
+            "content": "<p>Real enamel is slightly see-through at the incisal edge. We replicate that translucency so your teeth catch light naturally.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "06",
+            "title": "Shade Matching",
+            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion.</p>"
+          }
+        },
+        {
+          "type": "protocol",
+          "settings": {
+            "number": "07",
+            "title": "Final Inspection",
+            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. If the case misses on any checkpoint, it does not go out.</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

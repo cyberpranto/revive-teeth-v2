@@ -1,0 +1,587 @@
+<section class="sec-navy" data-screen-label="Comparison">
+  <div class="wrap">
+    <div class="sec-intro center reveal">
+      <span class="eyebrow">
+        {{ section.settings.eyebrow }}
+      </span>
+
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="lead">
+        {{ section.settings.description }}
+      </p>
+    </div>
+
+    <div class="diff-photos reveal">
+      <div class="diff-tile lose">
+        {% if section.settings.left_image != blank %}
+          <img
+            src="{{ section.settings.left_image | image_url: width: 800 }}"
+            alt="{{ section.settings.left_label }}"
+            width="800"
+            height="auto"
+          >
+        {% else %}
+          <img
+            src="{{ 'comparison-left.jfif' | asset_url }}"
+            alt="{{ section.settings.left_label }}"
+            width="800"
+            height="auto"
+          >
+        {% endif %}
+        <span class="lbl">{{ section.settings.left_label }}</span>
+      </div>
+
+      <div class="diff-tile win">
+        {% if section.settings.right_image != blank %}
+          <img
+            src="{{ section.settings.right_image | image_url: width: 800 }}"
+            alt="{{ section.settings.right_label }}"
+            width="800"
+            height="auto"
+          >
+        {% else %}
+          <img
+            src="{{ 'comparison-right.jfif' | asset_url }}"
+            alt="{{ section.settings.right_label }}"
+            width="800"
+            height="auto"
+          >
+        {% endif %}
+        <span class="lbl"> {{ section.settings.right_label }}</span>
+      </div>
+    </div>
+
+    <div class="cmp-cols">
+      <div class="cmp-col lose reveal">
+        <div class="cc-h">{{ section.settings.left_title }}</div>
+
+        <div class="cc-sub">{{ section.settings.left_subtitle }}</div>
+
+        <ul>
+          {% comment %}
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                >
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg></span
+              >Often stamped from a single, one-size-fits-all mold.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                >
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg></span
+              >Can leave a visible gap at the gumline.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                >
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg></span
+              >Teeth are rarely individually shaped.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                >
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg></span
+              >Produced without custom design work.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                >
+                  <path d="M6 6l12 12M18 6L6 18"></path>
+                </svg></span
+              >Rarely involves an experienced cosmetic dentist in the product design.
+            </li>
+          {% endcomment %}
+          {% for block in section.blocks %}
+            {% if block.type == 'left_item' %}
+              <li {{ block.shopify_attributes }}>
+                <span class="ic">
+                  {{ block.settings.icon_svg }}
+                </span>
+
+                {{ block.settings.text }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="cmp-col win reveal" data-delay="80">
+        <div class="cc-h">{{ section.settings.right_title }}</div>
+
+        <div class="cc-sub">{{ section.settings.right_subtitle }}</div>
+
+        <ul>
+          {% comment %}
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg></span
+              >Thin and individually shaped, tooth by tooth.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg></span
+              >Gumline contoured to your own anatomy.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg></span
+              >Natural proportions and translucent edges, tooth by tooth.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg></span
+              >7 design checkpoints, and 14 to 21 days production time.
+            </li>
+
+            <li>
+              <span class="ic">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"></path>
+                </svg></span
+              >Built to Dr. Turley's 7-Point Smile Design Protocol. Every case.
+            </li>
+          {% endcomment %}
+
+          {% for block in section.blocks %}
+            {% if block.type == 'right_item' %}
+              <li {{ block.shopify_attributes }}>
+                <span class="ic">
+                  {{ block.settings.icon_svg }}
+                </span>
+
+                {{ block.settings.text }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <p class="spectrum-label reveal">{{ section.settings.spectrum_label }}</p>
+
+    <div class="spectrum" data-stagger="">
+      {% comment %}
+        <div class="sp-card reveal">
+          <div class="sp-name">Porcelain veneers at a dentist</div>
+
+          <div class="sp-price">$10k to $20k or more</div>
+
+          <div class="sp-note">Per arch. Multiple visits, drilling, and permanent removal of natural enamel.</div>
+        </div>
+
+        <div class="sp-card here reveal">
+          <span class="sp-flag">You are here</span>
+          <div class="sp-name">Revive Veneers</div>
+
+          <div class="sp-price">$1,297 to $1,994</div>
+
+          <div class="sp-note">Dentist-designed and custom-fit. Removable, no drilling, mailed to your door.</div>
+        </div>
+
+        <div class="sp-card reveal">
+          <div class="sp-name">Generic snap-ons online</div>
+
+          <div class="sp-price">$200 to $400</div>
+
+          <div class="sp-note">One-size mold, no dentist involved, the look most people quietly stop wearing.</div>
+        </div>
+      {% endcomment %}
+
+      {% for block in section.blocks %}
+        {% if block.type == 'spectrum' %}
+          <div
+            class="sp-card {% if block.settings.highlight %}here{% endif %} reveal"
+            {{ block.shopify_attributes }}
+          >
+            {% if block.settings.highlight %}
+              <span class="sp-flag">
+                {{ block.settings.badge }}
+              </span>
+            {% endif %}
+
+            <div class="sp-name">
+              {{ block.settings.title }}
+            </div>
+
+            <div class="sp-price">
+              {{ block.settings.price }}
+            </div>
+
+            <div class="sp-note">
+              {{ block.settings.description }}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Different",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "What Makes It Different"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The snap-on you'll find everywhere, and the one a dentist made."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Same category. Completely different product."
+    },
+
+    {
+      "type": "header",
+      "content": "Comparison Images"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "left_image",
+      "label": "Left Image"
+    },
+    {
+      "type": "text",
+      "id": "left_label",
+      "label": "Left Image Label",
+      "default": "Generic snap-on"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Image"
+    },
+    {
+      "type": "text",
+      "id": "right_label",
+      "label": "Right Image Label",
+      "default": "Revive"
+    },
+
+    {
+      "type": "header",
+      "content": "Left Comparison Column"
+    },
+
+    {
+      "type": "text",
+      "id": "left_title",
+      "label": "Left Title",
+      "default": "Generic Snap-Ons"
+    },
+    {
+      "type": "text",
+      "id": "left_subtitle",
+      "label": "Left Subtitle",
+      "default": "What you find for $200 to $400 online"
+    },
+
+    {
+      "type": "header",
+      "content": "Right Comparison Column"
+    },
+
+    {
+      "type": "text",
+      "id": "right_title",
+      "label": "Right Title",
+      "default": "Revive Veneers"
+    },
+    {
+      "type": "text",
+      "id": "right_subtitle",
+      "label": "Right Subtitle",
+      "default": "Custom-built to Dr. Turley's protocol"
+    },
+
+    {
+      "type": "header",
+      "content": "Spectrum"
+    },
+
+    {
+      "type": "text",
+      "id": "spectrum_label",
+      "label": "Spectrum Label",
+      "default": "Where Revive sits on the smile-upgrade spectrum."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "left_item",
+      "name": "Left Comparison Item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Often stamped from a single, one-size-fits-all mold."
+        }
+      ]
+    },
+    {
+      "type": "right_item",
+      "name": "Right Comparison Item",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Thin and individually shaped, tooth by tooth."
+        }
+      ]
+    },
+    {
+      "type": "spectrum",
+      "name": "Spectrum Card",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "Highlight Card",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge Text",
+          "default": "You are here"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Revive Veneers"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "$1,297 to $1,994"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Different",
+      "blocks": [
+        {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Often stamped from a single, one-size-fits-all mold."
+          }
+        },
+        {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Can leave a visible gap at the gumline."
+          }
+        },
+        {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Teeth are rarely individually shaped."
+          }
+        },
+        {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Produced without custom design work."
+          }
+        },
+        {
+          "type": "left_item",
+          "settings": {
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\"><path d=\"M6 6l12 12M18 6L6 18\"></path></svg>",
+            "text": "Rarely involves an experienced cosmetic dentist in the product design."
+          }
+        },
+        {
+  "type": "right_item",
+  "settings": {
+    "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+    "text": "Thin and individually shaped, tooth by tooth."
+  }
+},
+{
+  "type": "right_item",
+  "settings": {
+    "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+    "text": "Gumline contoured to your own anatomy."
+  }
+},
+{
+  "type": "right_item",
+  "settings": {
+    "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+    "text": "Natural proportions and translucent edges, tooth by tooth."
+  }
+},
+{
+  "type": "right_item",
+  "settings": {
+    "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+    "text": "7 design checkpoints, and 14 to 21 days production time."
+  }
+},
+{
+  "type": "right_item",
+  "settings": {
+    "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+    "text": "Built to Dr. Turley's 7-Point Smile Design Protocol. Every case."
+  }
+},
+{
+  "type": "spectrum",
+  "settings": {
+    "highlight": false,
+    "badge": "You are here",
+    "title": "Porcelain veneers at a dentist",
+    "price": "$10k to $20k or more",
+    "description": "Per arch. Multiple visits, drilling, and permanent removal of natural enamel."
+  }
+},
+{
+  "type": "spectrum",
+  "settings": {
+    "highlight": true,
+    "badge": "You are here",
+    "title": "Revive Veneers",
+    "price": "$1,297 to $1,994",
+    "description": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+  }
+},
+{
+  "type": "spectrum",
+  "settings": {
+    "highlight": false,
+    "badge": "You are here",
+    "title": "Generic snap-ons online",
+    "price": "$200 to $400",
+    "description": "One-size mold, no dentist involved, the look most people quietly stop wearing."
+  }
+}
+      ]
+    }
+  ]
+}
+{% endschema %}

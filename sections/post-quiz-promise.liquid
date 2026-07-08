@@ -1,0 +1,106 @@
+<section class="promise" data-screen-label="Our promise">
+  <div class="promise-banner reveal">
+    {% assign banner = section.settings.banner_image %}
+
+    {% if banner != blank %}
+      <img
+        src="{{ banner | image_url: width: 1800 }}"
+        alt="{{ section.settings.banner_alt | escape }}"
+        width="1800"
+        height="900"
+        loading="lazy"
+      >
+    {% else %}
+      <img
+        src="{{ 'full-width-image.jfif' | asset_url }}"
+        alt="{{ section.settings.banner_alt | escape }}"
+        width="1800"
+        height="900"
+        loading="lazy"
+      >
+    {% endif %}
+    <div class="promise-banner-text">
+      <div class="pb-inner">
+        <span class="eyebrow">
+          {{ section.settings.eyebrow }}
+        </span>
+
+        <h2 class="dl">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="promise-body prose reveal">
+      {{ section.settings.content }}
+      {% comment %}
+        <p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p>
+
+        <p>
+          When your veneers arrive, wear them. If the fit is not right, tell us.
+          <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not
+          consider it finished until it fits.
+        </p>
+
+        <p>
+          <strong>You can cancel for a full refund any time before we begin production.</strong>
+          Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change
+          of mind, the same as any custom-made product.
+        </p>
+
+        <p>
+          Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit
+          until it is right. That is the promise a custom product can stand behind.
+        </p>
+      {% endcomment %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Promise",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "text",
+      "id": "banner_alt",
+      "label": "Banner Image Alt",
+      "default": "A couple relaxing at home together, laughing and at ease"
+    },
+
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Our Promise"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Here is exactly what we stand behind."
+    },
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Content",
+      "default": "<p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p><p>When your veneers arrive, wear them. If the fit is not right, tell us. <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not consider it finished until it fits.</p><p><strong>You can cancel for a full refund any time before we begin production.</strong> Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change of mind, the same as any custom-made product.</p><p>Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit until it is right. That is the promise a custom product can stand behind.</p>"
+    }
+  ]
+}
+{% endschema %}

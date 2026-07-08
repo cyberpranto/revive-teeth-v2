@@ -1,0 +1,160 @@
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-cols">
+      <div>
+        {% if section.settings.logo != blank %}
+          <img
+            class="foot-logo"
+            src="{{ section.settings.logo | image_url: width: 300 }}"
+            alt="{{ shop.name }}"
+            width="200"
+            height="200"
+          >
+
+        {% else %}
+          <img
+            class="foot-logo"
+            src="{{ 'post-quiz-footer-logo.png' | asset_url }}"
+            alt="{{ shop.name }}"
+            width="200"
+            height="200"
+          >
+        {% endif %}
+        <p class="foot-tag">
+          {{ section.settings.tagline }}
+        </p>
+      </div>
+
+      <div>
+        <h5>{{ section.settings.support_heading }}</h5>
+
+        <ul>
+          {% if section.settings.support_email != blank %}
+            <li class="foot-email">
+              <a href="{{ section.settings.support_link }}">
+                {{ section.settings.support_email }}
+              </a>
+            </li>
+          {% endif %}
+
+          {% if section.settings.support_text != blank %}
+            <li>{{ section.settings.support_text }}</li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div>
+        <h5>{{ section.settings.policy_heading }}</h5>
+
+        {% if section.settings.policy_menu != blank %}
+          <ul>
+            {% for link in section.settings.policy_menu.links %}
+              <li>
+                <a href="{{ link.url }}">
+                  {{ link.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      {{ section.settings.copyright }}
+      <p class="foot-disclaimer">
+        {{ section.settings.disclaimer }}
+      </p>
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Post Quiz Footer",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Brand"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Tagline",
+      "default": "A natural-looking smile, without the dental chair."
+    },
+
+    {
+      "type": "header",
+      "content": "Support"
+    },
+    {
+      "type": "text",
+      "id": "support_heading",
+      "label": "Heading",
+      "default": "Support"
+    },
+    {
+      "type": "url",
+      "id": "support_link",
+      "label": "Support Link"
+    },
+    {
+      "type": "text",
+      "id": "support_email",
+      "label": "Support Email",
+      "default": "support@reviveteeth.com"
+    },
+    {
+      "type": "text",
+      "id": "support_text",
+      "label": "Support Text",
+      "default": "Pay in full at checkout, from $1,197."
+    },
+
+    {
+      "type": "header",
+      "content": "Policies"
+    },
+    {
+      "type": "text",
+      "id": "policy_heading",
+      "label": "Heading",
+      "default": "Policies"
+    },
+    {
+      "type": "link_list",
+      "id": "policy_menu",
+      "label": "Policy Menu"
+    },
+
+    {
+      "type": "header",
+      "content": "Footer Bottom"
+    },
+    {
+      "type": "text",
+      "id": "copyright",
+      "label": "Copyright",
+      "default": "© 2026 Revive Teeth. All rights reserved."
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "Dr. Brandon Turley, DDS designed Revive Veneers. He is not your treating dentist and does not provide dental care. Revive Veneers is a cosmetic product, not a substitute for professional dental care."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Footer",
+      "category": "Post Quiz"
+    }
+  ]
+}
+{% endschema %}

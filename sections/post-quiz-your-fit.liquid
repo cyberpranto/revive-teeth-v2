@@ -1,0 +1,316 @@
+<section class="sec-alt" id="fit" data-screen-label="Find your fit">
+  <div class="wrap">
+    <div class="sec-intro reveal">
+      <span class="eyebrow">
+        {{ section.settings.eyebrow }}
+      </span>
+
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="lead">
+        {{ section.settings.description }}
+      </p>
+    </div>
+
+    <div class="honesty-grid" data-stagger="">
+      {% comment %}
+        <div class="hcard ideal reveal">
+          <div class="hc-t"><span class="hc-dot"></span>Designed for you if</div>
+
+          <ul>
+            <li>You have generally healthy teeth and gums</li>
+
+            <li>You want to improve the look of stained, slightly gapped, or worn teeth</li>
+
+            <li>You have all of your upper or all of your lower teeth</li>
+          </ul>
+        </div>
+
+        <div class="hcard longer reveal">
+          <div class="hc-t"><span class="hc-dot"></span>Works for you, with a longer design timeline</div>
+
+          <ul>
+            <li>Minor bite differences (slight overbite or underbite)</li>
+
+            <li>Worn or short teeth from grinding</li>
+
+            <li>One or two missing teeth, not at the end of the arch</li>
+          </ul>
+        </div>
+
+        <div class="hcard consult reveal">
+          <div class="hc-t"><span class="hc-dot"></span>Check with your own dentist first if</div>
+
+          <ul>
+            <li>You have active gum disease or significant gum recession</li>
+
+            <li>You have a severe bite misalignment</li>
+
+            <li>You have had major dental work in the last 3 months</li>
+
+            <li>You are missing several teeth, or teeth at the end of the arch</li>
+          </ul>
+        </div>
+
+        <div class="hcard not reveal">
+          <div class="hc-t"><span class="hc-dot"></span>Revive is not the right fit if</div>
+
+          <ul>
+            <li>You have no remaining teeth in the arch you want covered</li>
+
+            <li>You currently wear full dentures</li>
+
+            <li>You have an active oral infection or untreated gum disease</li>
+          </ul>
+        </div>
+      {% endcomment %}
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'ideal' %}
+            <div class="hcard ideal reveal" {{ block.shopify_attributes }}>
+              <div class="hc-t">
+                <span class="hc-dot"></span>
+
+                {{ block.settings.title }}
+              </div>
+
+              <ul>
+                {% assign items = block.settings.items | newline_to_br | split: '<br />' %}
+
+                {% for item in items %}
+                  {% if item != blank %}
+                    <li>{{ item }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+          {% when 'longer' %}
+            <div class="hcard longer reveal" {{ block.shopify_attributes }}>
+              <div class="hc-t">
+                <span class="hc-dot"></span>
+
+                {{ block.settings.title }}
+              </div>
+
+              <ul>
+                {% assign items = block.settings.items | newline_to_br | split: '<br />' %}
+
+                {% for item in items %}
+                  {% if item != blank %}
+                    <li>{{ item }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+          {% when 'consult' %}
+            <div class="hcard consult reveal" {{ block.shopify_attributes }}>
+              <div class="hc-t">
+                <span class="hc-dot"></span>
+
+                {{ block.settings.title }}
+              </div>
+
+              <ul>
+                {% assign items = block.settings.items | newline_to_br | split: '<br />' %}
+
+                {% for item in items %}
+                  {% if item != blank %}
+                    <li>{{ item }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+          {% when 'not_fit' %}
+            <div class="hcard not reveal" {{ block.shopify_attributes }}>
+              <div class="hc-t">
+                <span class="hc-dot"></span>
+
+                {{ block.settings.title }}
+              </div>
+
+              <ul>
+                {% assign items = block.settings.items | newline_to_br | split: '<br />' %}
+
+                {% for item in items %}
+                  {% if item != blank %}
+                    <li>{{ item }}</li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <p class="honesty-note">
+      {{ section.settings.note }}
+      <a
+        class="link-navy"
+        href="{{ section.settings.link }}"
+      >
+        {{ section.settings.email }} </a
+      >.
+    </p>
+
+    <p class="honesty-disclaimer">
+      {{ section.settings.disclaimer }}
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Your Fit",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Find Your Fit"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Is Revive right for you?"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Your quiz answers point to a strong fit. Here is the full picture."
+    },
+
+    {
+      "type": "header",
+      "content": "Support"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "Support Note",
+      "default": "If anything has changed since your quiz, our team is one email away at"
+    },
+    {
+      "type": "url",
+      "id": "link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "Support Email",
+      "default": "support@reviveteeth.com"
+    },
+
+    {
+      "type": "header",
+      "content": "Disclaimer"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ideal",
+      "name": "Designed For You",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Designed for you if"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "List Items (One per line)",
+          "default": "You have generally healthy teeth and gums\nYou want to improve the look of stained, slightly gapped, or worn teeth\nYou have all of your upper or all of your lower teeth"
+        }
+      ]
+    },
+    {
+      "type": "longer",
+      "name": "Longer Timeline",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Works for you, with a longer design timeline"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "List Items (One per line)",
+          "default": "Minor bite differences (slight overbite or underbite)\nWorn or short teeth from grinding\nOne or two missing teeth, not at the end of the arch"
+        }
+      ]
+    },
+    {
+      "type": "consult",
+      "name": "Consult Your Dentist",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Check with your own dentist first if"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "List Items (One per line)",
+          "default": "You have active gum disease or significant gum recession\nYou have a severe bite misalignment\nYou have had major dental work in the last 3 months\nYou are missing several teeth, or teeth at the end of the arch"
+        }
+      ]
+    },
+    {
+      "type": "not_fit",
+      "name": "Not The Right Fit",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Revive is not the right fit if"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "List Items (One per line)",
+          "default": "You have no remaining teeth in the arch you want covered\nYou currently wear full dentures\nYou have an active oral infection or untreated gum disease"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz Your Fit",
+      "blocks": [
+        {
+          "type": "ideal"
+        },
+        {
+          "type": "longer"
+        },
+        {
+          "type": "consult"
+        },
+        {
+          "type": "not_fit"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

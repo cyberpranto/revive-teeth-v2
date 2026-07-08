@@ -1,0 +1,284 @@
+<section class="sec-alt" id="how" data-screen-label="How it works">
+  <div class="wrap">
+    <div class="sec-intro center reveal">
+      <span class="eyebrow">
+        {{ section.settings.eyebrow }}
+      </span>
+
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="lead">
+        {{ section.settings.description }}
+      </p>
+    </div>
+
+    <div class="hiw-grid" data-stagger="">
+      {% comment %}
+        <div class="hiw-card reveal">
+          <div class="hiw-media">
+            <img
+              src="b09a77c6-4815-4a1e-8e7c-73e88adba482"
+              alt="The Revive Teeth impression kit opened, with impression tray and base and catalyst putty packets"
+              height="100"
+              width="100"
+            >
+          </div>
+
+          <div class="hiw-body">
+            <span class="step-eyebrow">Step 01</span>
+            <h3>Order your impression kit</h3>
+
+            <p>Pick your arches and check out. Your kit ships free within 48 hours, with extra putty included.</p>
+
+            <span class="timing-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12h13l-4-4M18 12l-4 4"></path>
+              </svg>
+              Ships in 48 hours</span
+            >
+          </div>
+        </div>
+
+        <div class="hiw-card reveal">
+          <div class="hiw-media">
+            <img
+              src="f0d9da3a-16ca-46fe-8a8a-feb921f37f43"
+              alt="A woman at her kitchen table holding the Revive impression tray, with the kit box and base and catalyst putty in front of her"
+              height="100"
+              width="100"
+            >
+          </div>
+
+          <div class="hiw-body">
+            <span class="step-eyebrow">Step 02</span>
+            <h3>Take impressions at home</h3>
+
+            <p>
+              Follow Dr. Turley's video walkthrough. It takes about five minutes. Drop the prepaid mailer in the mail to
+              send them back free.
+            </p>
+
+            <span class="timing-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l3 2"></path>
+              </svg>
+              About 5 minutes</span
+            >
+          </div>
+        </div>
+
+        <div class="hiw-card reveal">
+          <div class="hiw-media">
+            <img
+              src="0eb95ea6-5ac3-465e-8abb-3afed550d435"
+              alt="A woman at home holding her finished Revive veneers beside their open case"
+              height="100"
+              width="100"
+            >
+          </div>
+
+          <div class="hiw-body">
+            <span class="step-eyebrow">Step 03</span>
+            <h3>Receive your custom smile</h3>
+
+            <p>
+              Your veneers are made to your impressions and built to Dr. Turley's protocol. They arrive ready to wear.
+            </p>
+
+            <span class="timing-pill">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="6" width="16" height="14" rx="2"></rect>
+                <path d="M4 10h16M9 3v4M15 3v4"></path>
+              </svg>
+              About 2 to 3 weeks</span
+            >
+          </div>
+        </div>
+      {% endcomment %}
+
+      {% for block in section.blocks %}
+        {% if block.type == 'step' %}
+          <div class="hiw-card reveal" {{ block.shopify_attributes }}>
+            <div class="hiw-media">
+              {% if block.settings.image != blank %}
+                <img
+                  src="{{ block.settings.image | image_url: width: 700 }}"
+                  alt="{{ block.settings.title }}"
+                  width="700"
+                  height="auto"
+                >
+              {% elsif block.settings.fallback_image != blank %}
+                <img
+                  src="{{ block.settings.fallback_image | asset_url }}"
+                  alt="{{ block.settings.title }}"
+                  width="700"
+                  height="auto"
+                >
+              {% endif %}
+            </div>
+
+            <div class="hiw-body">
+              <span class="step-eyebrow">
+                {{ block.settings.step }}
+              </span>
+
+              <h3>
+                {{ block.settings.title }}
+              </h3>
+
+              <p>
+                {{ block.settings.description }}
+              </p>
+
+              <span class="timing-pill">
+                {% if block.settings.icon_svg != blank %}
+                  {{ block.settings.icon_svg }}
+                {% endif %}
+
+                {{ block.settings.timing }}
+              </span>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz How It Works",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "How It Works"
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Three steps. No dental office required."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "fallback_image",
+          "label": "Fallback Asset Image",
+          "default": "hiw-step-1.jpg"
+        },
+        {
+          "type": "text",
+          "id": "step",
+          "label": "Step",
+          "default": "Step 01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Order your impression kit"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Pick your arches and check out. Your kit ships free within 48 hours, with extra putty included."
+        },
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "timing",
+          "label": "Timing",
+          "default": "Ships in 48 hours"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Post Quiz How It Works",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-1.jfif",
+            "step": "Step 01",
+            "title": "Order your impression kit",
+            "description": "Pick your arches and check out. Your kit ships free within 48 hours, with extra putty included.",
+            "timing": "Ships in 48 hours",
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13l-4-4M18 12l-4 4\"></path></svg>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-2.jfif",
+            "step": "Step 02",
+            "title": "Take impressions at home",
+            "description": "Follow Dr. Turley's video walkthrough. It takes about five minutes. Drop the prepaid mailer in the mail to send them back free.",
+            "timing": "About 5 minutes",
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "fallback_image": "hiw-step-3.jfif",
+            "step": "Step 03",
+            "title": "Receive your custom smile",
+            "description": "Your veneers are made to your impressions and built to Dr. Turley's protocol. They arrive ready to wear.",
+            "timing": "About 2 to 3 weeks",
+            "icon_svg": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"></rect><path d=\"M4 10h16M9 3v4M15 3v4\"></path></svg>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
