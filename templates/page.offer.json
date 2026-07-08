@@ -76,7 +76,7 @@
       "settings": {
         "eyebrow": "Your Smile Quiz Results",
         "heading": "Dr. Turley, a cosmetic dentist, designed Revive to look like real teeth, not a plastic cover.",
-        "description": "",
+        "description": "Your quiz says your teeth are healthy and your goals are cosmetic, so you're exactly who he built Revive for. Your recommended set is below, made to your impressions and finished against his 7-Point Smile Design Protocol, with your $100 credit already applied.",
         "button_text": "Secure My $100 Credit & View My Set",
         "button_link": "",
         "card_title": "Strong fit",
@@ -91,21 +91,21 @@
         "credential_dTywHx": {
           "type": "credential",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
             "text": "12+ Years Experience"
           }
         },
         "credential_EKTxRL": {
           "type": "credential",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z\"></path></svg>",
             "text": "Cosmetic Dentist"
           }
         },
         "credential_TygC3F": {
           "type": "credential",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
             "text": "Creator of the 7-Point Protocol"
           }
         }
