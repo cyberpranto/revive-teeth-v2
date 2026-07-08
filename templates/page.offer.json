@@ -391,8 +391,45 @@
         "spectrum_label": "Where Revive sits on the smile-upgrade spectrum."
       }
     },
-    "post-quiz-your-fit": {
+    "post_quiz_your_fit_yHPgdy": {
       "type": "post-quiz-your-fit",
+      "blocks": {
+        "ideal_ftRHYn": {
+          "type": "ideal",
+          "settings": {
+            "title": "Designed for you if",
+            "items": "You have generally healthy teeth and gums\nYou want to improve the look of stained, slightly gapped, or worn teeth\nYou have all of your upper or all of your lower teeth"
+          }
+        },
+        "longer_JB66rd": {
+          "type": "longer",
+          "settings": {
+            "title": "Works for you, with a longer design timeline",
+            "items": "Minor bite differences (slight overbite or underbite)\nWorn or short teeth from grinding\nOne or two missing teeth, not at the end of the arch"
+          }
+        },
+        "consult_AHAXJJ": {
+          "type": "consult",
+          "settings": {
+            "title": "Check with your own dentist first if",
+            "items": "You have active gum disease or significant gum recession\nYou have a severe bite misalignment\nYou have had major dental work in the last 3 months\nYou are missing several teeth, or teeth at the end of the arch"
+          }
+        },
+        "not_fit_nBYpqA": {
+          "type": "not_fit",
+          "settings": {
+            "title": "Revive is not the right fit if",
+            "items": "You have no remaining teeth in the arch you want covered\nYou currently wear full dentures\nYou have an active oral infection or untreated gum disease"
+          }
+        }
+      },
+      "block_order": [
+        "ideal_ftRHYn",
+        "longer_JB66rd",
+        "consult_AHAXJJ",
+        "not_fit_nBYpqA"
+      ],
+      "name": "Post Quiz Your Fit",
       "settings": {
         "eyebrow": "Find Your Fit",
         "heading": "Is Revive right for you?",
@@ -456,7 +493,7 @@
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",
     "post_quiz_different_hVrQkV",
-    "post-quiz-your-fit",
+    "post_quiz_your_fit_yHPgdy",
     "post-quiz-promise",
     "post-quiz-faq",
     "post-quiz-closer",
