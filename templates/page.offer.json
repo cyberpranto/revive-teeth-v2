@@ -123,9 +123,11 @@
         "story_hkLiC7": {
           "type": "story",
           "settings": {
-            "customer_name": "Joshua",
+            "customer_name": "Lindsay",
             "quote": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.",
             "badge": "Verified customer",
+            "video": "shopify://files/videos/LindseyFinalVideo4.mp4",
+            "poster": "shopify://shop_images/Lindsay_2.png",
             "video_label": ""
           }
         }
