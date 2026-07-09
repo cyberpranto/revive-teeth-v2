@@ -92,21 +92,21 @@
           "type": "story",
           "settings": {
             "customer_name": "Joshua",
-            "quote": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.",
+            "quote": "“I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.\"",
             "badge": "Verified customer",
             "video": "shopify://files/videos/Video 1- Joshua With Outro.mp4",
             "poster": "shopify://shop_images/Joshua_2.png",
-            "video_label": "[ Video · Joshua ]"
+            "video_label": ""
           }
         },
         "story_4qa7Rc": {
           "type": "story",
           "settings": {
             "customer_name": "Connie",
-            "quote": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.",
+            "quote": "“I want to cry. I really do. I feel like I could go out and smile.”",
             "badge": "Verified customer",
             "video": "shopify://files/videos/Video 2 Connie Without Outro .mp4",
-            "video_label": "[ Video · Connine]"
+            "video_label": ""
           }
         },
         "story_mUeMPx": {
