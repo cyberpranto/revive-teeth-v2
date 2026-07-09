@@ -119,27 +119,7 @@ document.querySelectorAll(".claim-cta").forEach((btn) => {
 });
 
 /* ---------- VIDEO PLAYERS (wires only when a real <video> is present) ---------- */
-function wireVideo(videoId, overlayId) {
-  const v = document.getElementById(videoId);
-  const overlay = document.getElementById(overlayId);
-  if (!v || !overlay) return;
-  overlay.addEventListener("click", () => {
-    const p = v.play();
-    if (p && p.catch) p.catch(() => {});
-  });
-  v.addEventListener("click", () => {
-    if (!v.paused) v.pause();
-  });
-  v.addEventListener("play", () => overlay.classList.add("hidden"));
-  v.addEventListener("pause", () => overlay.classList.remove("hidden"));
-  v.addEventListener("ended", () => {
-    overlay.classList.remove("hidden");
-    v.currentTime = 0;
-  });
-}
-["joshua", "connie", "michelle", "lindsay", "turley"].forEach((n) => {
-  wireVideo(n + "Video", n + "Overlay");
-});
+
 
 /* ---------- FAQ ACCORDION ---------- */
 document.querySelectorAll(".faq-item").forEach((item) => {

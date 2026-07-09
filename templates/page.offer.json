@@ -85,6 +85,10 @@
         "credit_description": "Applied automatically at checkout"
       }
     },
+    "post-quiz-testimonials": {
+      "type": "post-quiz-testimonials",
+      "settings": {}
+    },
     "post_quiz_founder_story_Tfz3xw": {
       "type": "post-quiz-founder-story",
       "blocks": {
@@ -542,6 +546,7 @@
   "order": [
     "header-top",
     "post_quiz_banner_Gmwam4",
+    "post-quiz-testimonials",
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",

@@ -1,0 +1,464 @@
+<section
+  class="sec-alt"
+  id="results"
+  data-screen-label="Testimonials"
+>
+  <div class="wrap">
+    <div class="sec-intro center reveal">
+      <span class="eyebrow">
+        {{ section.settings.eyebrow }}
+      </span>
+
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="lead">
+        {{ section.settings.description }}
+      </p>
+    </div>
+
+    <div class="stories-grid" data-stagger="">
+      {% comment %}
+        <article class="story-card reveal">
+        <div class="sc-media">
+        <span class="vlabel">[ Video · Joshua ]</span>
+        <div class="sc-play" id="joshuaOverlay">
+        <span class="pbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 4l14 8-14 8z"></path>
+        </svg>
+        </span>
+        </div>
+        </div>
+        <div class="sc-cap">
+        <p class="q">
+        “I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.”
+        </p>
+        <div class="nm">Joshua</div>
+        <div class="vf">
+        <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M5 12l5 5 9-11"></path>
+        </svg>
+        Verified customer
+        </div>
+        </div>
+        </article>
+        <article class="story-card reveal">
+        <div class="sc-media">
+        <span class="vlabel">[ Video · Connie ]</span>
+        <div class="sc-play" id="connieOverlay">
+        <span class="pbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 4l14 8-14 8z"></path>
+        </svg>
+        </span>
+        </div>
+        </div>
+        <div class="sc-cap">
+        <p class="q">“I want to cry. I really do. I feel like I could go out and smile.”</p>
+        <div class="nm">Connie</div>
+        <div class="vf">
+        <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M5 12l5 5 9-11"></path>
+        </svg>
+        Verified customer
+        </div>
+        </div>
+        </article>
+        <article class="story-card reveal">
+        <div class="sc-media">
+        <span class="vlabel">[ Video · Michelle ]</span>
+        <div class="sc-play" id="michelleOverlay">
+        <span class="pbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 4l14 8-14 8z"></path>
+        </svg>
+        </span>
+        </div>
+        </div>
+        <div class="sc-cap">
+        <p class="q">
+        “I got so many compliments on my new smile, nobody could tell they were snap-on veneers. They look that
+        natural.”
+        </p>
+        <div class="nm">Michelle</div>
+        <div class="vf">
+        <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M5 12l5 5 9-11"></path>
+        </svg>
+        Verified customer
+        </div>
+        </div>
+        </article>
+        <article class="story-card reveal">
+        <div class="sc-media">
+        <span class="vlabel">[ Video · Lindsay ]</span>
+        <div class="sc-play" id="lindsayOverlay">
+        <span class="pbtn">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+        <path d="M6 4l14 8-14 8z"></path>
+        </svg>
+        </span>
+        </div>
+        </div>
+        <div class="sc-cap">
+        <p class="q">“I've never seen my teeth that straight. Is this a dream?”</p>
+        <div class="nm">Lindsay</div>
+        <div class="vf">
+        <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.6"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        >
+        <path d="M5 12l5 5 9-11"></path>
+        </svg>
+        Verified customer
+        </div>
+        </div>
+        </article>
+      {% endcomment %}
+
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'story' %}
+            <article class="story-card reveal" {{ block.shopify_attributes }}>
+              <div class="sc-media">
+                {% if block.settings.video_label != blank %}
+                  <span class="vlabel">
+                    {{ block.settings.video_label }}
+                  </span>
+                {% endif %}
+
+                {% assign video_id = 'video-' | append: block.id %}
+                {% assign overlay_id = 'overlay-' | append: block.id %}
+
+                {% if block.settings.video != blank %}
+                  {% if block.settings.poster != blank %}
+                    {% assign poster_image = block.settings.poster | image_url: width: 800 %}
+                  {% else %}
+                    {% assign poster_image = block.settings.video.preview_image | image_url: width: 800 %}
+                  {% endif %}
+
+                  {{
+                    block.settings.video
+                    | video_tag:
+                      id: video_id,
+                      image_size: '800x',
+                      poster: poster_image,
+                      controls: false,
+                      autoplay: false,
+                      loop: false,
+                      muted: false
+                  }}
+
+                {% elsif block.settings.poster != blank %}
+                  <img
+                    src="{{ block.settings.poster | image_url: width: 800 }}"
+                    alt="{{ block.settings.customer_name | escape }}"
+                    width="800"
+                    height="800"
+                  >
+
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+
+                <div class="sc-play" id="{{ overlay_id }}">
+                  <span class="pbtn">
+                    {% if section.settings.play_icon != blank %}
+                      {{ section.settings.play_icon }}
+                    {% else %}
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M6 4l14 8-14 8z" />
+                      </svg>
+                    {% endif %}
+                  </span>
+                </div>
+              </div>
+
+              <div class="sc-cap">
+                <p class="q">
+                  {{ block.settings.quote }}
+                </p>
+
+                <div class="nm">
+                  {{ block.settings.customer_name }}
+                </div>
+
+                <div class="vf">
+                  {% if section.settings.check_icon != blank %}
+                    {{ section.settings.check_icon }}
+                  {% else %}
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12l5 5 9-11" />
+                    </svg>
+                  {% endif %}
+
+                  {{ block.settings.badge }}
+                </div>
+              </div>
+            </article>
+        {% endcase %}
+      {% endfor %}
+    </div>
+
+    <div class="mid-cta reveal">
+      <a href="{{section.settings.button_link}}" class="btn btn-ghost scroll-buy">
+        {{ section.settings.button_text }}
+
+        {% if section.settings.button_icon != blank %}
+          {{ section.settings.button_icon }}
+
+        {% else %}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M5 12h14M13 6l6 6-6 6" />
+          </svg>
+        {% endif %}
+      </a>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+
+    function wireVideo(videoId, overlayId) {
+
+      const v = document.getElementById(videoId);
+      const overlay = document.getElementById(overlayId);
+
+      if (!v || !overlay) return;
+
+      overlay.addEventListener('click', () => {
+
+        const p = v.play();
+
+        if (p && p.catch) p.catch(() => {});
+
+      });
+
+      v.addEventListener('click', () => {
+
+        if (!v.paused) {
+
+          v.pause();
+
+        } else {
+
+          v.play();
+
+        }
+
+      });
+
+      v.addEventListener('play', () => {
+
+        overlay.classList.add('hidden');
+
+      });
+
+      v.addEventListener('pause', () => {
+
+        overlay.classList.remove('hidden');
+
+      });
+
+      v.addEventListener('ended', () => {
+
+        overlay.classList.remove('hidden');
+
+        v.currentTime = 0;
+
+      });
+
+    }
+
+    {% for block in section.blocks %}
+
+      {% if block.type == 'story' %}
+
+        wireVideo(
+          "video-{{ block.id }}",
+          "overlay-{{ block.id }}"
+        );
+
+      {% endif %}
+
+    {% endfor %}
+
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Post Quiz Testimonials",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "Real Stories"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "The moment they stopped hiding."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Real people, seeing their Revive smile for the first time. You can see the exact second it changes something."
+    },
+    {
+      "type": "header",
+      "content": "CTA Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "See Your Custom Set"
+    },
+    {
+      "type": "textarea",
+      "id": "button_icon",
+      "label": "Button SVG (Optional)"
+    },
+    {
+      "type": "header",
+      "content": "Icons"
+    },
+    {
+      "type": "textarea",
+      "id": "play_icon",
+      "label": "Play Button SVG (Optional)"
+    },
+    {
+      "type": "textarea",
+      "id": "check_icon",
+      "label": "Verified Icon SVG (Optional)",
+      "default": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "story",
+      "name": "Story",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Customer"
+        },
+        {
+          "type": "text",
+          "id": "customer_name",
+          "label": "Customer Name",
+          "default": "Joshua"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying."
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge",
+          "default": "Verified customer"
+        },
+        {
+          "type": "header",
+          "content": "Media"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Shopify Hosted Video"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Poster Image (Fallback)"
+        },
+        {
+          "type": "text",
+          "id": "video_label",
+          "label": "Video Label",
+          "default": "[ Video · Joshua ]"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+
+  "presets": [
+    {
+      "name": "Post Quiz Testimonials",
+      "category": "Post Quiz",
+      "blocks": [
+        {
+          "type": "story"
+        },
+        {
+          "type": "story"
+        },
+        {
+          "type": "story"
+        },
+        {
+          "type": "story"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
