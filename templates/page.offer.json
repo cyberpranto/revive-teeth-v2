@@ -102,10 +102,11 @@
         "story_4qa7Rc": {
           "type": "story",
           "settings": {
-            "customer_name": "Joshua",
+            "customer_name": "Connie",
             "quote": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.",
             "badge": "Verified customer",
-            "video_label": "[ Video · Joshua ]"
+            "video": "shopify://files/videos/Video 2 Connie Without Outro .mp4",
+            "video_label": "[ Video · Connine]"
           }
         },
         "story_mUeMPx": {
