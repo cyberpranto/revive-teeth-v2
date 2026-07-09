@@ -112,10 +112,12 @@
         "story_mUeMPx": {
           "type": "story",
           "settings": {
-            "customer_name": "Joshua",
+            "customer_name": "Michelle",
             "quote": "I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.",
             "badge": "Verified customer",
-            "video_label": "[ Video · Joshua ]"
+            "video": "shopify://files/videos/MichelleFinalVideo3.mp4",
+            "poster": "shopify://shop_images/Michelle_2.png",
+            "video_label": "[ Video · michelle]"
           }
         },
         "story_hkLiC7": {
