@@ -118,9 +118,6 @@ document.querySelectorAll(".claim-cta").forEach((btn) => {
   });
 });
 
-/* ---------- VIDEO PLAYERS (wires only when a real <video> is present) ---------- */
-
-
 /* ---------- FAQ ACCORDION ---------- */
 document.querySelectorAll(".faq-item").forEach((item) => {
   const q = item.querySelector(".faq-q");

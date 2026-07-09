@@ -1,3 +1,62 @@
+<style>
+  .founder-video {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #000;
+  }
+  .founder-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .fv-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(13, 27, 42, 0.15), rgba(13, 27, 42, 0.5));
+    transition: opacity 0.3s ease;
+  }
+  .fv-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .fv-play {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 0.15s;
+  }
+  .fv-overlay:hover .fv-play {
+    transform: scale(1.07);
+  }
+  .fv-play svg {
+    width: 27px;
+    height: 27px;
+    color: #0d1b2a;
+    margin-left: 4px;
+  }
+  .fv-cap {
+    position: relative;
+    z-index: 1;
+    margin-top: 18px;
+    text-align: center;
+    font-size: 13px;
+    color: #8b97b8;
+    letter-spacing: 0.01em;
+  }
+</style>
+
 <section class="sec-cream" id="designer">
   <div class="wrap">
     <div class="founder-grid">
@@ -45,9 +104,31 @@
 
       <div class="founder-media reveal" data-delay="100">
         <div class="founder-video">
-          <span class="vlabel">[ Video · Dr. Turley ]</span>
-          <div class="sc-play" id="turleyOverlay">
-            <span class="pbtn">
+          {% assign video = section.settings.video %}
+          {% assign poster = section.settings.video_poster %}
+
+          {% if video != blank %}
+            <video
+              id="founderVideo-{{ section.id }}"
+              preload="metadata"
+              playsinline
+              {% if poster != blank %}
+                poster="{{ poster | image_url: width: 1200 }}"
+              {% elsif video.preview_image %}
+                poster="{{ video.preview_image | image_url: width: 1200 }}"
+              {% else %}
+                poster="{{ 'founder-image.jfif' | asset_url }}"
+              {% endif %}
+            >
+              <source
+                src="{{ video.sources.first.url }}"
+                type="{{ video.sources.first.mime_type }}"
+              >
+            </video>
+          {% endif %}
+
+          <div class="fv-overlay" id="fvOverlay-{{ section.id }}">
+            <span class="fv-play" aria-label="Play founder video">
               <svg viewBox="0 0 24 24" fill="currentColor">
                 <path d="M6 4l14 8-14 8z"></path>
               </svg>
@@ -73,7 +154,34 @@
     </div>
   </div>
 </section>
+<script>
+  /* ============== FOUNDER VIDEO ============== */
+  (function () {
+    const v = document.getElementById('founderVideo-{{ section.id }}');
+    const overlay = document.getElementById('fvOverlay-{{ section.id }}');
+    if (!v || !overlay) return;
+    overlay.addEventListener('click', () => {
+      const playPromise = v.play();
 
+      if (playPromise) {
+        playPromise.catch(() => {});
+      }
+    });
+    v.addEventListener('click', () => {
+      if (v.paused) {
+        v.play();
+      } else {
+        v.pause();
+      }
+    });
+    v.addEventListener('play', () => overlay.classList.add('hidden'));
+    v.addEventListener('pause', () => overlay.classList.remove('hidden'));
+    v.addEventListener('ended', () => {
+      overlay.classList.remove('hidden');
+      v.currentTime = 0;
+    });
+  })();
+</script>
 {% schema %}
 {
   "name": "Post Quiz Founder Story",
@@ -130,6 +238,16 @@
       "id": "video_label",
       "label": "Video Label",
       "default": "[ Video · Dr. Turley ]"
+    },
+    {
+      "type": "video",
+      "id": "video",
+      "label": "Founder Video"
+    },
+    {
+      "type": "image_picker",
+      "id": "video_poster",
+      "label": "Video Poster"
     }
   ],
   "blocks": [
