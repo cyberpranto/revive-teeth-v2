@@ -190,7 +190,8 @@
         "signature_image": "shopify://shop_images/update-signature.png",
         "founder_name": "Dr. Brandon Turley, DDS",
         "founder_designation": "Doctor of Dental Surgery · Founder, Revive Teeth",
-        "video_label": "[ Video · Dr. Turley ]"
+        "video_label": "[ Video · Dr. Turley ]",
+        "video": "shopify://files/videos/Dr T Intro V2.mp4"
       }
     },
     "post_quiz_protocols_3C37xq": {
