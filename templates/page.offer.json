@@ -85,9 +85,70 @@
         "credit_description": "Applied automatically at checkout"
       }
     },
-    "post-quiz-testimonials": {
+    "post_quiz_testimonials_fzPW3L": {
       "type": "post-quiz-testimonials",
-      "settings": {}
+      "blocks": {
+        "story_RrkXDw": {
+          "type": "story",
+          "settings": {
+            "customer_name": "Joshua",
+            "quote": "“I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.\"",
+            "badge": "Verified customer",
+            "video": "shopify://files/videos/Video 1- Joshua With Outro.mp4",
+            "poster": "shopify://shop_images/Joshua_2.png",
+            "video_label": ""
+          }
+        },
+        "story_4qa7Rc": {
+          "type": "story",
+          "settings": {
+            "customer_name": "Connie",
+            "quote": "“I want to cry. I really do. I feel like I could go out and smile.”",
+            "badge": "Verified customer",
+            "video": "shopify://files/videos/Video 2 Connie Without Outro .mp4",
+            "video_label": ""
+          }
+        },
+        "story_mUeMPx": {
+          "type": "story",
+          "settings": {
+            "customer_name": "Michelle",
+            "quote": "“I got so many compliments on my new smile, nobody could tell they were snap-on veneers. They look that natural.”",
+            "badge": "Verified customer",
+            "video": "shopify://files/videos/MichelleFinalVideo3.mp4",
+            "poster": "shopify://shop_images/Michelle_2.png",
+            "video_label": ""
+          }
+        },
+        "story_hkLiC7": {
+          "type": "story",
+          "settings": {
+            "customer_name": "Lindsay",
+            "quote": "“I've never seen my teeth that straight. Is this a dream?”",
+            "badge": "Verified customer",
+            "video": "shopify://files/videos/LindseyFinalVideo4.mp4",
+            "poster": "shopify://shop_images/Lindsay_2.png",
+            "video_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "story_RrkXDw",
+        "story_4qa7Rc",
+        "story_mUeMPx",
+        "story_hkLiC7"
+      ],
+      "name": "Post Quiz Testimonials",
+      "settings": {
+        "eyebrow": "Real Stories",
+        "heading": "The moment they stopped hiding.",
+        "description": "Real people, seeing their Revive smile for the first time. You can see the exact second it changes something.",
+        "button_link": "",
+        "button_text": "See Your Custom Set",
+        "button_icon": "",
+        "play_icon": "",
+        "check_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>"
+      }
     },
     "post_quiz_founder_story_Tfz3xw": {
       "type": "post-quiz-founder-story",
@@ -546,7 +607,7 @@
   "order": [
     "header-top",
     "post_quiz_banner_Gmwam4",
-    "post-quiz-testimonials",
+    "post_quiz_testimonials_fzPW3L",
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",
