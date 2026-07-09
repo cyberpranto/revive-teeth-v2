@@ -2394,6 +2394,9 @@ body.pad-sticky {
     padding: 12px 14px;
     font-size: 13.5px;
   }
+  .btn {
+    font-size: 13.5px;
+  }
 }
 @media (max-width: 700px) {
   input,
