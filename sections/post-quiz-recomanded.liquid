@@ -82,120 +82,121 @@
               role="radiogroup"
               aria-label="Configuration"
             >
-              <button
-                class="arch-opt"
-                role="radio"
-                aria-checked="false"
-                data-key="upper"
-                tabindex="0"
-              >
-                <span class="ao-check">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12l5 5 9-11"></path>
-                  </svg>
-                </span>
-                <svg
-                  class="arch-ico"
-                  viewBox="0 0 60 32"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+              {% for variant in product.variants %}
+                {% assign title = variant.title | downcase %}
+
+                {% if title contains 'upper & lower' or title contains 'both' %}
+                  {% assign arch = 'both' %}
+                {% elsif title contains 'upper' %}
+                  {% assign arch = 'upper' %}
+                {% elsif title contains 'lower' %}
+                  {% assign arch = 'lower' %}
+                {% endif %}
+                <button
+                  class="arch-opt {% if forloop.first %}sel{% endif %}"
+                  role="radio"
+                  data-key="{{ variant.title | handle }}"
+                  aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
+                  data-variant-id="{{ variant.id }}"
+                  data-price="{{ variant.price }}"
+                  data-title="{{ variant.title }}"
+                  tabindex="0"
+                  data-arch="{{ arch }}"
                 >
-                  <path d="M4 22 C 8 6, 52 6, 56 22"></path>
-                  <path
-                    d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
-                    stroke-width="1.6"
-                  ></path>
-                </svg>
-                <div class="ao-name">Upper Arch</div>
+                  <span class="ao-check">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12l5 5 9-11"></path>
+                    </svg>
+                  </span>
 
-                <div class="ao-price"><s>$1,297</s>$1,197</div>
-              </button>
-              <button
-                class="arch-opt"
-                role="radio"
-                aria-checked="false"
-                data-key="lower"
-                tabindex="0"
-              >
-                <span class="ao-check">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12l5 5 9-11"></path>
-                  </svg>
-                </span>
-                <svg
-                  class="arch-ico"
-                  viewBox="0 0 60 32"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 10 C 8 26, 52 26, 56 10"></path>
-                  <path
-                    d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
-                    stroke-width="1.6"
-                  ></path>
-                </svg>
-                <div class="ao-name">Lower Arch</div>
+                  {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
+                    <span class="ao-badge">Most Popular</span>
 
-                <div class="ao-price"><s>$1,297</s>$1,197</div>
-              </button>
-              <button
-                class="arch-opt sel"
-                role="radio"
-                aria-checked="true"
-                data-key="both"
-                tabindex="0"
-              >
-                <span class="ao-badge">Most Popular</span>
-                <span class="ao-check">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12l5 5 9-11"></path>
-                  </svg>
-                </span>
-                <svg
-                  class="arch-ico"
-                  viewBox="0 0 60 40"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 16 C 8 0, 52 0, 56 16"></path>
-                  <path d="M4 24 C 8 40, 52 40, 56 24"></path>
-                </svg>
-                <div class="ao-name">Upper &amp; Lower</div>
+                    <svg
+                      class="arch-ico"
+                      viewBox="0 0 60 40"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 16 C 8 0, 52 0, 56 16"></path>
+                      <path d="M4 24 C 8 40, 52 40, 56 24"></path>
+                    </svg>
 
-                <div class="ao-price"><s>$1,994</s>$1,894</div>
+                  {% elsif title contains 'upper' %}
+                    <svg
+                      class="arch-ico"
+                      viewBox="0 0 60 32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 22 C 8 6, 52 6, 56 22"></path>
+                      <path
+                        d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
+                        stroke-width="1.6"
+                      ></path>
+                    </svg>
 
-                <div class="ao-save">Save $600 vs. two single arches at regular price.</div>
-              </button>
+                  {% elsif title contains 'lower' %}
+                    <svg
+                      class="arch-ico"
+                      viewBox="0 0 60 32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                      <path
+                        d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                        stroke-width="1.6"
+                      ></path>
+                    </svg>
+
+                  {% else %}
+                    <svg
+                      class="arch-ico"
+                      viewBox="0 0 60 32"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                      <path
+                        d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                        stroke-width="1.6"
+                      ></path>
+                    </svg>
+                  {% endif %}
+
+                  <div>
+                    <div class="ao-name">{{ variant.title }}</div>
+                    <div class="ao-price">
+                      <s>{{ variant.price | money_without_trailing_zeros }}</s>
+                      {{- variant.price | minus: 10000 | money_without_trailing_zeros }}
+                    </div>
+
+                    {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
+                      <div class="ao-save">Save $600 vs. two single arches at regular price.</div>
+                    {% endif %}
+                  </div>
+                </button>
+              {% endfor %}
             </div>
             <div class="price-anchor">
               <p>
@@ -241,11 +242,7 @@
 
             <div class="buy-stock"><span class="dot"></span>{{ section.settings.stock_text }}</div>
 
-            <!--
-              SHOPIFY DEV NOTE: wire to selected variant + auto-applied $100 quiz discount (non-stackable). current = "upper"|"lower"|"both". Struck price is always the real price ($1,297 or $1,994), never inflated. Pass ?arch=upper|lower|both from the quiz to pre-select.
-            -->
-
-            <button class="btn btn-full claim-cta">
+            <button class="btn btn-full claim-cta" data-variant-id="" id="claimCTA">
               {{ section.settings.button_text }}
 
               {% if section.settings.button_icon != blank %}
@@ -275,71 +272,6 @@
               </svg>
               Made to your mouth. We remake the fit free, up to twice. Full refund any time before production begins.
             </div>
-
-            {% comment %}
-              <div class="trust-pills">
-                <span class="tp">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
-                    <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-                  </svg>
-                  30-Day Fit Remake</span
-                >
-                <span class="tp">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="8" r="4"></circle>
-                    <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-                  </svg>
-                  Dentist-Designed</span
-                >
-                <span class="tp">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <rect x="1" y="7" width="14" height="10" rx="1.5"></rect>
-                    <path d="M15 10h4l3 3v4h-7z"></path>
-                    <circle cx="6" cy="18" r="2"></circle>
-                    <circle cx="18" cy="18" r="2"></circle>
-                  </svg>
-                  Free Shipping Both Ways</span
-                >
-                <span class="tp">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.9"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 21V4"></path>
-                    <path
-                      d="M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0"
-                    ></path>
-                  </svg>
-                  Designed in the USA</span
-                >
-              </div>
-            {% endcomment %}
             <div class="trust-pills">
               {% for block in section.blocks %}
                 {% case block.type %}
@@ -367,26 +299,6 @@
                 {% endcase %}
               {% endfor %}
             </div>
-            {% comment %}
-              <div class="pay-row">
-                <span class="pay-pill">VISA</span>
-                <span class="pay-pill">Mastercard</span>
-                <span class="pay-pill">AMEX</span>
-                <span class="pay-pill">Apple Pay</span>
-                <span class="pay-secure">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                  >
-                    <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                  </svg>
-                  Secure checkout</span
-                >
-              </div>
-            {% endcomment %}
 
             <div class="pay-row">
               {% for block in section.blocks %}
@@ -833,43 +745,88 @@
     </div>
   </section>
 {% endif %}
+
+<div class="sticky-bar" id="stickyBar" role="region" aria-label="Buy bar">
+  <div class="sticky-inner">
+    <div class="sb-info">
+      <span id="sbInfoText">Upper &amp; Lower · $1,894</span>
+      <span class="sb-sub">Revive Veneers · $100 quiz credit applied</span>
+    </div>
+
+    <button class="sb-cta scroll-buy">Reserve My Impression Kit</button>
+  </div>
+</div>
 <script>
-  /* ---------- ARCH SELECTOR (buy box, $100 credit pricing) ---------- */
-  const CONFIGS = {
-    upper: { label: 'Upper Arch', real: 1297, price: 1197 },
-    lower: { label: 'Lower Arch', real: 1297, price: 1197 },
-    both: { label: 'Upper & Lower', real: 1994, price: 1894 },
-  };
-  let current = 'both';
-  function fmt(n) {
-    return '$' + n.toLocaleString('en-US');
+  function formatMoney(cents) {
+    return '$' + (cents / 100).toLocaleString('en-US');
   }
-  function applyConfig(key) {
-    if (!CONFIGS[key]) return;
-    current = key;
-    const c = CONFIGS[key];
-    document.querySelectorAll('.arch-opt').forEach((o) => {
-      const sel = o.dataset.key === key;
-      o.classList.toggle('sel', sel);
-      o.setAttribute('aria-checked', sel ? 'true' : 'false');
+
+  function applyConfig(button) {
+    document.querySelectorAll('.arch-opt').forEach((opt) => {
+      opt.classList.remove('sel');
+      opt.setAttribute('aria-checked', 'false');
     });
-    const now = document.getElementById('bpNow');
-    const was = document.getElementById('bpWas');
-    if (now) now.textContent = fmt(c.price);
-    if (was) was.textContent = fmt(c.real);
-    const sb = document.getElementById('sbInfoText');
-    if (sb) sb.textContent = c.label + ' Â· ' + fmt(c.price);
+
+    button.classList.add('sel');
+    button.setAttribute('aria-checked', 'true');
+
+    const realPrice = parseInt(button.dataset.price);
+
+    document.getElementById('bpWas').textContent = formatMoney(realPrice);
+    document.getElementById('bpNow').textContent = formatMoney(realPrice - 10000);
+
+    const cta = document.getElementById('claimCTA');
+
+    if (cta) {
+      cta.dataset.variantId = button.dataset.variantId;
+    }
+
+      // Sticky Bar Update
+  const sbInfo = document.getElementById('sbInfoText');
+
+if (sbInfo) {
+  sbInfo.textContent =
+    `${button.dataset.title} · ${formatMoney(realPrice - 10000)}`;
+}
   }
-  document.querySelectorAll('.arch-opt').forEach((o) => {
-    o.addEventListener('click', () => applyConfig(o.dataset.key));
-    o.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        applyConfig(o.dataset.key);
-      }
+  document.querySelectorAll('.arch-opt').forEach((button) => {
+    button.addEventListener('click', () => {
+      applyConfig(button);
+      const url = new URL(window.location);
+
+      url.searchParams.set('arch', button.dataset.arch);
+
+      history.replaceState({}, '', url);
     });
   });
-  applyConfig('both');
+
+  const params = new URLSearchParams(window.location.search);
+  const arch = params.get('arch');
+
+  if (arch) {
+    const button = document.querySelector(`.arch-opt[data-arch="${arch}"]`);
+
+    if (button) {
+      applyConfig(button);
+    }
+
+    const offerSection = document.getElementById('offer');
+
+    if (offerSection) {
+      offerSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
+
+  const claimCTA = document.getElementById('claimCTA');
+
+  claimCTA.addEventListener('click', function () {
+    const variantId = this.dataset.variantId;
+
+    window.location.href = `/cart/${variantId}:1`;
+  });
 </script>
 
 {% schema %}
