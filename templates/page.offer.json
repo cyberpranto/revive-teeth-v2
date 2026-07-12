@@ -364,19 +364,19 @@
         "payment_method_BEHqer": {
           "type": "payment_method",
           "settings": {
-            "title": "VISA"
+            "title": "MasterCard"
           }
         },
         "payment_method_yngHe3": {
           "type": "payment_method",
           "settings": {
-            "title": "VISA"
+            "title": "AMEX"
           }
         },
         "payment_method_bhjEQ4": {
           "type": "payment_method",
           "settings": {
-            "title": "VISA"
+            "title": "Apple Pay"
           }
         },
         "kit_item_tdEWw6": {
