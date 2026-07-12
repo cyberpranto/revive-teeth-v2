@@ -54,42 +54,7 @@
   items.forEach((el) => io.observe(el));
 })();
 
-/* ---------- ARCH SELECTOR (buy box, $100 credit pricing) ---------- */
-const CONFIGS = {
-  upper: { label: "Upper Arch", real: 1297, price: 1197 },
-  lower: { label: "Lower Arch", real: 1297, price: 1197 },
-  both: { label: "Upper & Lower", real: 1994, price: 1894 },
-};
-let current = "both";
-function fmt(n) {
-  return "$" + n.toLocaleString("en-US");
-}
-function applyConfig(key) {
-  if (!CONFIGS[key]) return;
-  current = key;
-  const c = CONFIGS[key];
-  document.querySelectorAll(".arch-opt").forEach((o) => {
-    const sel = o.dataset.key === key;
-    o.classList.toggle("sel", sel);
-    o.setAttribute("aria-checked", sel ? "true" : "false");
-  });
-  const now = document.getElementById("bpNow");
-  const was = document.getElementById("bpWas");
-  if (now) now.textContent = fmt(c.price);
-  if (was) was.textContent = fmt(c.real);
-  const sb = document.getElementById("sbInfoText");
-  if (sb) sb.textContent = c.label + " Â· " + fmt(c.price);
-}
-document.querySelectorAll(".arch-opt").forEach((o) => {
-  o.addEventListener("click", () => applyConfig(o.dataset.key));
-  o.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" || e.key === " ") {
-      e.preventDefault();
-      applyConfig(o.dataset.key);
-    }
-  });
-});
-applyConfig("both");
+
 
 /* ---------- SMOOTH SCROLL TO BUY BOX ---------- */
 function scrollToBuy() {

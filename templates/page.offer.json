@@ -324,6 +324,10 @@
         "description": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
       }
     },
+    "post-quiz-recomanded": {
+      "type": "post-quiz-recomanded",
+      "settings": {}
+    },
     "post_quiz_different_hVrQkV": {
       "type": "post-quiz-different",
       "blocks": {
@@ -612,6 +616,7 @@
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",
+    "post-quiz-recomanded",
     "post_quiz_different_hVrQkV",
     "post_quiz_your_fit_yHPgdy",
     "post-quiz-promise",
