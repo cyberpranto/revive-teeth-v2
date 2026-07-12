@@ -324,9 +324,200 @@
         "description": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
       }
     },
-    "post-quiz-recomanded": {
+    "post_quiz_recomanded_XrXkQ4": {
       "type": "post-quiz-recomanded",
-      "settings": {}
+      "blocks": {
+        "trust_pill_VpmN3d": {
+          "type": "trust_pill",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
+            "text": "30-Day Fit Remake"
+          }
+        },
+        "trust_pill_dMbKBz": {
+          "type": "trust_pill",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"></path></svg>",
+            "text": "Dentist-Designed"
+          }
+        },
+        "trust_pill_WK7Uqi": {
+          "type": "trust_pill",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"7\" width=\"14\" height=\"10\" rx=\"1.5\"></rect><path d=\"M15 10h4l3 3v4h-7z\"></path><circle cx=\"6\" cy=\"18\" r=\"2\"></circle><circle cx=\"18\" cy=\"18\" r=\"2\"></circle></svg>",
+            "text": "Free Shipping Both Ways"
+          }
+        },
+        "trust_pill_TGrUFK": {
+          "type": "trust_pill",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4\"></path><path d=\"M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0\"></path></svg>",
+            "text": "Designed in the USA"
+          }
+        },
+        "payment_method_Vnqed4": {
+          "type": "payment_method",
+          "settings": {
+            "title": "VISA"
+          }
+        },
+        "payment_method_BEHqer": {
+          "type": "payment_method",
+          "settings": {
+            "title": "MasterCard"
+          }
+        },
+        "payment_method_yngHe3": {
+          "type": "payment_method",
+          "settings": {
+            "title": "AMEX"
+          }
+        },
+        "payment_method_bhjEQ4": {
+          "type": "payment_method",
+          "settings": {
+            "title": "Apple Pay"
+          }
+        },
+        "kit_item_tdEWw6": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "kit_item_mPbDGR": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "kit_item_KfAFf9": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "kit_item_MhgHCa": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "kit_item_ykcUKi": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "include_item_3aqmJf": {
+          "type": "include_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "include_item_rMjr6Q": {
+          "type": "include_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "include_item_LchtzQ": {
+          "type": "include_item",
+          "settings": {
+            "icon": "",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "start_step_JNHCAJ": {
+          "type": "start_step",
+          "settings": {
+            "number": "01",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "start_step_ccUVYk": {
+          "type": "start_step",
+          "settings": {
+            "number": "01",
+            "heading": "",
+            "text": ""
+          }
+        },
+        "start_step_NFnHCQ": {
+          "type": "start_step",
+          "settings": {
+            "number": "01",
+            "heading": "",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "trust_pill_VpmN3d",
+        "trust_pill_dMbKBz",
+        "trust_pill_WK7Uqi",
+        "trust_pill_TGrUFK",
+        "payment_method_Vnqed4",
+        "payment_method_BEHqer",
+        "payment_method_yngHe3",
+        "payment_method_bhjEQ4",
+        "kit_item_tdEWw6",
+        "kit_item_mPbDGR",
+        "kit_item_KfAFf9",
+        "kit_item_MhgHCa",
+        "kit_item_ykcUKi",
+        "include_item_3aqmJf",
+        "include_item_rMjr6Q",
+        "include_item_LchtzQ",
+        "start_step_JNHCAJ",
+        "start_step_ccUVYk",
+        "start_step_NFnHCQ"
+      ],
+      "name": "Post Quiz Recommended",
+      "settings": {
+        "eyebrow": "Your Recommended Set",
+        "heading": "You qualified, and your $100 credit is already applied.",
+        "description": "Your Smile Quiz confirmed a strong fit, and the $100 credit below reflects that qualification, applied automatically to your custom set.",
+        "badge_icon": "",
+        "badge_text": "Strong fit · Your recommended set",
+        "configuration_title": "Configuration",
+        "configuration_subtitle": "· Choose one",
+        "quote": "\"I have seen people pay twenty thousand dollars for porcelain veneers. Multiple visits, healthy enamel drilled down for good. For years, that was the only way I had to give someone that smile. It isn't anymore.\"",
+        "quote_author": "Dr. Brandon Turley, DDS",
+        "credit_text": "$100 quiz credit applied",
+        "credit_icon": "",
+        "fine_text": "It's the look you'd chase in a $20,000 dentist's chair...",
+        "stock_text": "In stock. Ships your impression kit within 48 hours.",
+        "button_text": "Apply My $100 Credit at Checkout",
+        "button_icon": "",
+        "secure_text": "Secure checkout",
+        "secure_icon": "",
+        "how_to_start_note": "Cancel for a full refund any time before we begin production.",
+        "kit_title": "What's in Your Kit",
+        "kit_note": "If your first impressions don't capture enough detail, we send a second kit free.",
+        "includes_title": "Your Order Includes",
+        "guarantee_card_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
+        "guarantee_card_heading": "Try It Risk-Free",
+        "guarantee_card_subheading": "30-Day Money-Back Guarantee",
+        "guarantee_card_text": "If your veneers do not fit or look right, we remake them free (up to twice) within 30 days of delivery, with a prepaid label. Because each set is custom-made to your mouth, finished veneers cannot be refunded for a change of mind, the same as any custom-made product. You can cancel for a full refund any time before we begin production.",
+        "how_to_start_title": "How to Start"
+      }
     },
     "post_quiz_different_hVrQkV": {
       "type": "post-quiz-different",
@@ -616,7 +807,7 @@
     "post_quiz_founder_story_Tfz3xw",
     "post_quiz_protocols_3C37xq",
     "post_quiz_how_it_works_jVqMry",
-    "post-quiz-recomanded",
+    "post_quiz_recomanded_XrXkQ4",
     "post_quiz_different_hVrQkV",
     "post_quiz_your_fit_yHPgdy",
     "post-quiz-promise",
