@@ -330,15 +330,15 @@
         "trust_pill_VpmN3d": {
           "type": "trust_pill",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
             "text": "30-Day Fit Remake"
           }
         },
         "trust_pill_dMbKBz": {
           "type": "trust_pill",
           "settings": {
-            "icon_svg": "",
-            "text": "30-Day Fit Remake"
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"></path></svg>",
+            "text": "Dentist-Designed"
           }
         },
         "trust_pill_WK7Uqi": {
