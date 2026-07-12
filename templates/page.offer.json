@@ -491,6 +491,7 @@
       ],
       "name": "Post Quiz Recommended",
       "settings": {
+        "product": "revive-veneers",
         "eyebrow": "Your Recommended Set",
         "heading": "You qualified, and your $100 credit is already applied.",
         "description": "Your Smile Quiz confirmed a strong fit, and the $100 credit below reflects that qualification, applied automatically to your custom set.",
