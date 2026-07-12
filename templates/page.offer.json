@@ -344,8 +344,8 @@
         "trust_pill_WK7Uqi": {
           "type": "trust_pill",
           "settings": {
-            "icon_svg": "",
-            "text": "30-Day Fit Remake"
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"7\" width=\"14\" height=\"10\" rx=\"1.5\"></rect><path d=\"M15 10h4l3 3v4h-7z\"></path><circle cx=\"6\" cy=\"18\" r=\"2\"></circle><circle cx=\"18\" cy=\"18\" r=\"2\"></circle></svg>",
+            "text": "Free Shipping Both Ways"
           }
         },
         "trust_pill_TGrUFK": {
