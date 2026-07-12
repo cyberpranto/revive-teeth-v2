@@ -1,92 +1,268 @@
-<section class="sec-cream" id="order" data-screen-label="Buy box">
-  <div class="wrap">
-    <div class="sec-intro center reveal">
-      {% if section.settings.eyebrow != blank %}
-        <span class="eyebrow">
-          {{ section.settings.eyebrow }}
-        </span>
-      {% endif %}
-      {% if section.settings.heading != blank %}
-        <h2 class="dl">
-          {{ section.settings.heading }}
-        </h2>
-      {% endif %}
+{% assign product = section.settings.product %}
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% if section.settings.product == blank %}
+  <p>Please select a product.</p>
 
-      {% if section.settings.description != blank %}
-        <p class="lead">
-          {{ section.settings.description }}
-        </p>
-      {% endif %}
-    </div>
+{% else %}
+  <section class="sec-cream" id="order" data-screen-label="Buy box">
+    <div class="wrap">
+      <div class="sec-intro center reveal">
+        {% if section.settings.eyebrow != blank %}
+          <span class="eyebrow">
+            {{ section.settings.eyebrow }}
+          </span>
+        {% endif %}
+        {% if section.settings.heading != blank %}
+          <h2 class="dl">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
 
-    <div class="reveal">
-      <div class="pdp">
-        <div class="pdp-gallery">
-          <div class="gallery-main" id="galMain">
-            <img
-              src="{{ 'gallery-img-1.png' |  asset_url }}"
-              alt="Revive Veneers, front view"
-              width="100"
-              height="100"
-            >
+        {% if section.settings.description != blank %}
+          <p class="lead">
+            {{ section.settings.description }}
+          </p>
+        {% endif %}
+      </div>
+
+      <div class="reveal">
+        <div class="pdp">
+          <div class="pdp-gallery">
+            <div class="gallery-main" id="galMain">
+              <img
+                src="{{ product.featured_image | image_url: width: 1200 }}"
+                alt="{{ product.featured_image.alt }}"
+                width="100"
+                height="100"
+              >
+            </div>
+
+            <div class="thumbs" id="thumbs">
+              {% for image in product.images %}
+                <button
+                  class="thumb {% if forloop.first %}active{% endif %}"
+                  data-image="{{ image | image_url: width: 1200 }}"
+                  data-alt="{{ image.alt | escape }}"
+                  aria-label="{{ image.alt | escape }}"
+                >
+                  <img
+                    src="{{ image | image_url: width: 200 }}"
+                    alt="{{ image.alt | escape }}"
+                    width="100"
+                    height="100"
+                  >
+                </button>
+              {% endfor %}
+            </div>
           </div>
+          <div class="pdp-panel">
+            <div class="rec-badge">
+              {% if section.settings.badge_icon != blank %}
+                {{ section.settings.badge_icon }}
+              {% else %}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 12l5 5 9-11"/>
+                </svg>
+              {% endif %}
 
-          <div class="thumbs" id="thumbs">
-            <button
-              class="thumb active"
-              data-alt="front view"
-              aria-label="Front view"
+              {{ section.settings.badge_text }}
+            </div>
+
+            <div class="buy-label">Configuration <span>· Choose one</span></div>
+
+            <div
+              class="arch-opts"
+              role="radiogroup"
+              aria-label="Configuration"
             >
-              <img
-                src="{{ 'gallery-img-1.png' |  asset_url }}"
-                alt="Revive Veneers, front view"
-                width="100"
-                height="100"
+              <button
+                class="arch-opt"
+                role="radio"
+                aria-checked="false"
+                data-key="upper"
+                tabindex="0"
               >
-            </button>
-            <button
-              class="thumb"
-              data-alt="three-quarter angle"
-              aria-label="Three-quarter angle"
-            >
-              <img
-                src="{{ 'galery-img-2.png' |  asset_url }}"
-                alt="Revive Veneers, three-quarter angle"
-                width="100"
-                height="100"
+                <span class="ao-check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                </span>
+                <svg
+                  class="arch-ico"
+                  viewBox="0 0 60 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 22 C 8 6, 52 6, 56 22"></path>
+                  <path
+                    d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
+                    stroke-width="1.6"
+                  ></path>
+                </svg>
+                <div class="ao-name">Upper Arch</div>
+
+                <div class="ao-price"><s>$1,297</s>$1,197</div>
+              </button>
+              <button
+                class="arch-opt"
+                role="radio"
+                aria-checked="false"
+                data-key="lower"
+                tabindex="0"
               >
-            </button>
-            <button
-              class="thumb"
-              data-alt="top-down arch"
-              aria-label="Top-down arch"
-            >
-              <img
-                src="{{ 'galery-img-3.png' |  asset_url }}"
-                alt="Revive Veneers, top-down arch"
-                width="100"
-                height="100"
+                <span class="ao-check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                </span>
+                <svg
+                  class="arch-ico"
+                  viewBox="0 0 60 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                  <path
+                    d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                    stroke-width="1.6"
+                  ></path>
+                </svg>
+                <div class="ao-name">Lower Arch</div>
+
+                <div class="ao-price"><s>$1,297</s>$1,197</div>
+              </button>
+              <button
+                class="arch-opt sel"
+                role="radio"
+                aria-checked="true"
+                data-key="both"
+                tabindex="0"
               >
+                <span class="ao-badge">Most Popular</span>
+                <span class="ao-check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                </span>
+                <svg
+                  class="arch-ico"
+                  viewBox="0 0 60 40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 16 C 8 0, 52 0, 56 16"></path>
+                  <path d="M4 24 C 8 40, 52 40, 56 24"></path>
+                </svg>
+                <div class="ao-name">Upper &amp; Lower</div>
+
+                <div class="ao-price"><s>$1,994</s>$1,894</div>
+
+                <div class="ao-save">Save $600 vs. two single arches at regular price.</div>
+              </button>
+            </div>
+            <div class="price-anchor">
+              <p>
+                {{ section.settings.quote }}
+              </p>
+
+              <span class="pa-attr">
+                {{ section.settings.quote_author }}
+              </span>
+            </div>
+
+            <div class="buy-price">
+              <div class="bp-line">
+                <span class="bp-was" id="bpWas">$1,994</span>
+                <span class="bp-now" id="bpNow">$1,894</span>
+              </div>
+
+              <div class="bp-credit">
+                {% if section.settings.credit_icon != blank %}
+                  {{ section.settings.credit_icon }}
+                {% else %}
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                    <path d="M5 12v9h14v-9"></path>
+                    <path d="M12 8v13"></path>
+                  </svg>
+                {% endif %}
+
+                {{ section.settings.credit_text }}
+              </div>
+
+              <div class="bp-fine">
+                {{ section.settings.fine_text }}
+              </div>
+            </div>
+
+            <div class="buy-stock"><span class="dot"></span>{{ section.settings.stock_text }}</div>
+
+            <!--
+              SHOPIFY DEV NOTE: wire to selected variant + auto-applied $100 quiz discount (non-stackable). current = "upper"|"lower"|"both". Struck price is always the real price ($1,297 or $1,994), never inflated. Pass ?arch=upper|lower|both from the quiz to pre-select.
+            -->
+
+            <button class="btn btn-full claim-cta">
+              {{ section.settings.button_text }}
+
+              {% if section.settings.button_icon != blank %}
+                {{ section.settings.button_icon }}
+
+              {% else %}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6"></path>
+                </svg>
+              {% endif %}
             </button>
-            <button
-              class="thumb"
-              data-alt="in protective case"
-              aria-label="In protective case"
-            >
-              <img
-                src="{{ 'galery-img-4.png' |  asset_url }}"
-                alt="Revive Veneers in their protective case"
-                width="100"
-                height="100"
-              >
-            </button>
-          </div>
-        </div>
-        <div class="pdp-panel">
-          <div class="rec-badge">
-            {% if section.settings.badge_icon != blank %}
-              {{ section.settings.badge_icon }}
-            {% else %}
+            <div class="buy-reassure">
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
@@ -95,726 +271,383 @@
                 stroke-linecap="round"
                 stroke-linejoin="round"
               >
-                <path d="M5 12l5 5 9-11"/>
+                <path d="M5 12l5 5 9-11"></path>
               </svg>
-            {% endif %}
-
-            {{ section.settings.badge_text }}
-          </div>
-
-          <div class="buy-label">Configuration <span>· Choose one</span></div>
-
-          <div
-            class="arch-opts"
-            role="radiogroup"
-            aria-label="Configuration"
-          >
-            <button
-              class="arch-opt"
-              role="radio"
-              aria-checked="false"
-              data-key="upper"
-              tabindex="0"
-            >
-              <span class="ao-check">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg>
-              </span>
-              <svg
-                class="arch-ico"
-                viewBox="0 0 60 32"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 22 C 8 6, 52 6, 56 22"></path>
-                <path
-                  d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
-                  stroke-width="1.6"
-                ></path>
-              </svg>
-              <div class="ao-name">Upper Arch</div>
-
-              <div class="ao-price"><s>$1,297</s>$1,197</div>
-            </button>
-            <button
-              class="arch-opt"
-              role="radio"
-              aria-checked="false"
-              data-key="lower"
-              tabindex="0"
-            >
-              <span class="ao-check">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg>
-              </span>
-              <svg
-                class="arch-ico"
-                viewBox="0 0 60 32"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 10 C 8 26, 52 26, 56 10"></path>
-                <path
-                  d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
-                  stroke-width="1.6"
-                ></path>
-              </svg>
-              <div class="ao-name">Lower Arch</div>
-
-              <div class="ao-price"><s>$1,297</s>$1,197</div>
-            </button>
-            <button
-              class="arch-opt sel"
-              role="radio"
-              aria-checked="true"
-              data-key="both"
-              tabindex="0"
-            >
-              <span class="ao-badge">Most Popular</span>
-              <span class="ao-check">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg>
-              </span>
-              <svg
-                class="arch-ico"
-                viewBox="0 0 60 40"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M4 16 C 8 0, 52 0, 56 16"></path>
-                <path d="M4 24 C 8 40, 52 40, 56 24"></path>
-              </svg>
-              <div class="ao-name">Upper &amp; Lower</div>
-
-              <div class="ao-price"><s>$1,994</s>$1,894</div>
-
-              <div class="ao-save">Save $600 vs. two single arches at regular price.</div>
-            </button>
-          </div>
-          <div class="price-anchor">
-            <p>
-              {{ section.settings.quote }}
-            </p>
-
-            <span class="pa-attr">
-              {{ section.settings.quote_author }}
-            </span>
-          </div>
-
-          <div class="buy-price">
-            <div class="bp-line">
-              <span class="bp-was" id="bpWas">$1,994</span>
-              <span class="bp-now" id="bpNow">$1,894</span>
+              Made to your mouth. We remake the fit free, up to twice. Full refund any time before production begins.
             </div>
 
-            <div class="bp-credit">
-              {% if section.settings.credit_icon != blank %}
-                {{ section.settings.credit_icon }}
-              {% else %}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+            {% comment %}
+              <div class="trust-pills">
+                <span class="tp">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+                    <path d="M8.5 12.5l2.5 2.5L16 10"></path>
+                  </svg>
+                  30-Day Fit Remake</span
                 >
-                  <rect x="3" y="8" width="18" height="4" rx="1"></rect>
-                  <path d="M5 12v9h14v-9"></path>
-                  <path d="M12 8v13"></path>
-                </svg>
-              {% endif %}
-
-              {{ section.settings.credit_text }}
-            </div>
-
-            <div class="bp-fine">
-              {{ section.settings.fine_text }}
-            </div>
-          </div>
-
-          <div class="buy-stock"><span class="dot"></span>{{ section.settings.stock_text }}</div>
-
-          <!--
-            SHOPIFY DEV NOTE: wire to selected variant + auto-applied $100 quiz discount (non-stackable). current = "upper"|"lower"|"both". Struck price is always the real price ($1,297 or $1,994), never inflated. Pass ?arch=upper|lower|both from the quiz to pre-select.
-          -->
-
-          <button class="btn btn-full claim-cta">
-            {{ section.settings.button_text }}
-
-            {% if section.settings.button_icon != blank %}
-              {{ section.settings.button_icon }}
-
-            {% else %}
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M5 12h14M13 6l6 6-6 6"></path>
-              </svg>
-            {% endif %}
-          </button>
-          <div class="buy-reassure">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2.4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12l5 5 9-11"></path>
-            </svg>
-            Made to your mouth. We remake the fit free, up to twice. Full refund any time before production begins.
-          </div>
-
-          {% comment %}
+                <span class="tp">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="8" r="4"></circle>
+                    <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
+                  </svg>
+                  Dentist-Designed</span
+                >
+                <span class="tp">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <rect x="1" y="7" width="14" height="10" rx="1.5"></rect>
+                    <path d="M15 10h4l3 3v4h-7z"></path>
+                    <circle cx="6" cy="18" r="2"></circle>
+                    <circle cx="18" cy="18" r="2"></circle>
+                  </svg>
+                  Free Shipping Both Ways</span
+                >
+                <span class="tp">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.9"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 21V4"></path>
+                    <path
+                      d="M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0"
+                    ></path>
+                  </svg>
+                  Designed in the USA</span
+                >
+              </div>
+            {% endcomment %}
             <div class="trust-pills">
-              <span class="tp">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
-                  <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-                </svg>
-                30-Day Fit Remake</span
-              >
-              <span class="tp">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="8" r="4"></circle>
-                  <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-                </svg>
-                Dentist-Designed</span
-              >
-              <span class="tp">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <rect x="1" y="7" width="14" height="10" rx="1.5"></rect>
-                  <path d="M15 10h4l3 3v4h-7z"></path>
-                  <circle cx="6" cy="18" r="2"></circle>
-                  <circle cx="18" cy="18" r="2"></circle>
-                </svg>
-                Free Shipping Both Ways</span
-              >
-              <span class="tp">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.9"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M5 21V4"></path>
-                  <path
-                    d="M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0"
-                  ></path>
-                </svg>
-                Designed in the USA</span
-              >
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'trust_pill' %}
+                    <span class="tp" {{ block.shopify_attributes }}>
+                      {% if block.settings.icon_svg != blank %}
+                        {{ block.settings.icon_svg }}
+
+                      {% else %}
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
+                          <path d="M8.5 12.5l2.5 2.5L16 10"></path>
+                        </svg>
+                      {% endif %}
+
+                      {{ block.settings.text }}
+                    </span>
+                {% endcase %}
+              {% endfor %}
             </div>
-          {% endcomment %}
-          <div class="trust-pills">
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'trust_pill' %}
-                  <span class="tp" {{ block.shopify_attributes }}>
-                    {% if block.settings.icon_svg != blank %}
-                      {{ block.settings.icon_svg }}
+            {% comment %}
+              <div class="pay-row">
+                <span class="pay-pill">VISA</span>
+                <span class="pay-pill">Mastercard</span>
+                <span class="pay-pill">AMEX</span>
+                <span class="pay-pill">Apple Pay</span>
+                <span class="pay-secure">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                  </svg>
+                  Secure checkout</span
+                >
+              </div>
+            {% endcomment %}
 
-                    {% else %}
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="1.9"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
-                        <path d="M8.5 12.5l2.5 2.5L16 10"></path>
-                      </svg>
-                    {% endif %}
-
-                    {{ block.settings.text }}
-                  </span>
-              {% endcase %}
-            {% endfor %}
-          </div>
-          {% comment %}
             <div class="pay-row">
-              <span class="pay-pill">VISA</span>
-              <span class="pay-pill">Mastercard</span>
-              <span class="pay-pill">AMEX</span>
-              <span class="pay-pill">Apple Pay</span>
+              {% for block in section.blocks %}
+                {% case block.type %}
+                  {% when 'payment_method' %}
+                    <span class="pay-pill" {{ block.shopify_attributes }}>
+                      {{ block.settings.title }}
+                    </span>
+                {% endcase %}
+              {% endfor %}
+
               <span class="pay-secure">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-                  <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                </svg>
-                Secure checkout</span
-              >
-            </div>
-          {% endcomment %}
+                {% if section.settings.secure_icon != blank %}
+                  {{ section.settings.secure_icon }}
 
-          <div class="pay-row">
-            {% for block in section.blocks %}
-              {% case block.type %}
-                {% when 'payment_method' %}
-                  <span class="pay-pill" {{ block.shopify_attributes }}>
-                    {{ block.settings.title }}
-                  </span>
-              {% endcase %}
-            {% endfor %}
+                {% else %}
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                    <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                  </svg>
+                {% endif %}
 
-            <span class="pay-secure">
-              {% if section.settings.secure_icon != blank %}
-                {{ section.settings.secure_icon }}
-
-              {% else %}
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-                  <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-                </svg>
-              {% endif %}
-
-              {{ section.settings.secure_text }}
-            </span>
-          </div>
-
-          <div class="drops" id="drops">
-            <div class="drop">
-              <button class="drop-q" aria-expanded="false">
-                What's in Your Kit
-                <span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="drop-a">
-                <div>
-                  <div class="drop-inner">
-                    <div class="kit-list">
-                      <div class="kit-row">
-                        <span class="kit-ico">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path
-                              d="M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z"
-                            ></path>
-                            <path
-                              d="M5 14 C 9 11, 23 11, 27 14"
-                            ></path>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Upper &amp; Lower Impression Trays</h5>
-                          <p>For taking your impressions at home.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                          >
-                            <circle cx="12" cy="16" r="6"></circle>
-                            <circle cx="21" cy="16" r="6"></circle>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Dental Putty (two batches)</h5>
-                          <p>Extra putty included so you have room for error.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                          >
-                            <rect
-                              x="5"
-                              y="8"
-                              width="22"
-                              height="16"
-                              rx="2"
-                            ></rect>
-                            <rect x="8" y="11" width="3" height="10"></rect>
-                            <rect
-                              x="13"
-                              y="11"
-                              width="3"
-                              height="10"
-                            ></rect>
-                            <rect
-                              x="18"
-                              y="11"
-                              width="3"
-                              height="10"
-                            ></rect>
-                            <rect
-                              x="23"
-                              y="11"
-                              width="1.5"
-                              height="10"
-                            ></rect>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Shade Matching Card</h5>
-                          <p>A reference strip to capture your actual tooth color.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                            stroke-linejoin="round"
-                          >
-                            <path
-                              d="M4 10 L16 4 L28 10 L28 24 L4 24 Z"
-                            ></path>
-                            <path d="M4 10 L16 16 L28 10"></path>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Prepaid Return Mailer</h5>
-                          <p>Drop it in any mailbox. No postage required.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico">
-                          <svg
-                            viewBox="0 0 32 32"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.6"
-                          >
-                            <circle cx="16" cy="16" r="11"></circle>
-                            <path
-                              d="M13 11l8 5-8 5z"
-                              fill="currentColor"
-                              stroke="none"
-                            ></path>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Video Instructions</h5>
-                          <p>A QR code to Dr. Turley's step-by-step walkthrough.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="drop-note">
-                      If your first impressions do not capture enough detail, we send a second kit free.
-                    </div>
-                  </div>
-                </div>
-              </div>
+                {{ section.settings.secure_text }}
+              </span>
             </div>
 
-            <div class="drop">
-              <button class="drop-q" aria-expanded="false">
-                Your Order Includes
-                <span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="drop-a">
-                <div>
-                  <div class="drop-inner">
-                    <div class="incl-grid">
-                      <div class="incl-cell">
-                        <span class="ic">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.9"
-                          >
-                            <circle cx="12" cy="8" r="4"></circle>
-                            <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Designed by Dr. Turley</h5>
-                          <p>
-                            Every case is produced against the 7-Point Smile Design Protocol he created as a cosmetic
-                            dentist.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="incl-cell">
-                        <span class="ic">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.9"
-                            stroke-linejoin="round"
-                          >
-                            <path
-                              d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
-                            ></path>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>30-Day Fit Remake (up to 2)</h5>
-                          <p>
-                            If the fit or look is not right, we remake it free within 30 days, with prepaid shipping
-                            both ways.
-                          </p>
-                        </div>
-                      </div>
-
-                      <div class="incl-cell">
-                        <span class="ic">
-                          <svg
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="1.9"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <rect
-                              x="1"
-                              y="7"
-                              width="14"
-                              height="10"
-                              rx="1.5"
-                            ></rect>
-                            <path d="M15 10h4l3 3v4h-7z"></path>
-                            <circle cx="6" cy="18" r="2"></circle>
-                            <circle cx="18" cy="18" r="2"></circle>
-                          </svg>
-                        </span>
-                        <div>
-                          <h5>Free Shipping Both Ways</h5>
-                          <p>We cover your kit, your return, and your veneers.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="guarantee-card">
-                      <div class="gc-h">
-                        {{ section.settings.guarantee_card_icon }}
-                        {{ section.settings.guarantee_card_subheading }}
-                      </div>
-
-                      <p>
-                        {{ section.settings.guarantee_card_text }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="drop">
-              <button class="drop-q" aria-expanded="false">
-                How to Start
-                <span class="plus" aria-hidden="true"></span>
-              </button>
-              <div class="drop-a">
-                <div>
-                  <div class="drop-inner">
-                    <div class="kit-list">
-                      <div class="kit-row">
-                        <span class="kit-ico kit-num">1</span>
-                        <div>
-                          <h5>Order your impression kit</h5>
-                          <p>Pick your arches and check out. Your kit ships free within 48 hours.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico kit-num">2</span>
-                        <div>
-                          <h5>Take impressions at home</h5>
-                          <p>Follow Dr. Turley's video walkthrough, about five minutes, then mail them back free.</p>
-                        </div>
-                      </div>
-
-                      <div class="kit-row">
-                        <span class="kit-ico kit-num">3</span>
-                        <div>
-                          <h5>Receive your custom smile</h5>
-                          <p>
-                            Your veneers are built to the 7-Point Smile Design Protocol and arrive 2 to 3 weeks after we
-                            receive your impressions.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {% if section.settings.how_to_start_note != blank %}
-                      <div class="drop-note">
-                        {{ section.settings.how_to_start_note }}
-                      </div>
-                    {% endif %}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- ===== BELOW-CTA DROPDOWNS ===== -->
-          {% comment %}
             <div class="drops" id="drops">
               <div class="drop">
                 <button class="drop-q" aria-expanded="false">
-                  {{ section.settings.kit_title -}}
+                  What's in Your Kit
                   <span class="plus" aria-hidden="true"></span>
                 </button>
                 <div class="drop-a">
                   <div>
                     <div class="drop-inner">
                       <div class="kit-list">
-                        {% for block in section.blocks %}
-                          {% if block.type == 'kit_item' %}
-                            <div class="kit-row" {{ block.shopify_attributes }}>
-                              <span class="kit-ico">
-                                {{ block.settings.icon }}
-                              </span>
+                        <div class="kit-row">
+                          <span class="kit-ico">
+                            <svg
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.6"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z"
+                              ></path>
+                              <path
+                                d="M5 14 C 9 11, 23 11, 27 14"
+                              ></path>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Upper &amp; Lower Impression Trays</h5>
+                            <p>For taking your impressions at home.</p>
+                          </div>
+                        </div>
 
-                              <div>
-                                <h5>
-                                  {{ block.settings.heading }}
-                                </h5>
+                        <div class="kit-row">
+                          <span class="kit-ico">
+                            <svg
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.6"
+                            >
+                              <circle cx="12" cy="16" r="6"></circle>
+                              <circle cx="21" cy="16" r="6"></circle>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Dental Putty (two batches)</h5>
+                            <p>Extra putty included so you have room for error.</p>
+                          </div>
+                        </div>
 
-                                <p>
-                                  {{ block.settings.text }}
-                                </p>
-                              </div>
-                            </div>
-                          {% endif %}
-                        {% endfor %}
+                        <div class="kit-row">
+                          <span class="kit-ico">
+                            <svg
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.6"
+                            >
+                              <rect
+                                x="5"
+                                y="8"
+                                width="22"
+                                height="16"
+                                rx="2"
+                              ></rect>
+                              <rect x="8" y="11" width="3" height="10"></rect>
+                              <rect
+                                x="13"
+                                y="11"
+                                width="3"
+                                height="10"
+                              ></rect>
+                              <rect
+                                x="18"
+                                y="11"
+                                width="3"
+                                height="10"
+                              ></rect>
+                              <rect
+                                x="23"
+                                y="11"
+                                width="1.5"
+                                height="10"
+                              ></rect>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Shade Matching Card</h5>
+                            <p>A reference strip to capture your actual tooth color.</p>
+                          </div>
+                        </div>
+
+                        <div class="kit-row">
+                          <span class="kit-ico">
+                            <svg
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.6"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M4 10 L16 4 L28 10 L28 24 L4 24 Z"
+                              ></path>
+                              <path d="M4 10 L16 16 L28 10"></path>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Prepaid Return Mailer</h5>
+                            <p>Drop it in any mailbox. No postage required.</p>
+                          </div>
+                        </div>
+
+                        <div class="kit-row">
+                          <span class="kit-ico">
+                            <svg
+                              viewBox="0 0 32 32"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.6"
+                            >
+                              <circle cx="16" cy="16" r="11"></circle>
+                              <path
+                                d="M13 11l8 5-8 5z"
+                                fill="currentColor"
+                                stroke="none"
+                              ></path>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Video Instructions</h5>
+                            <p>A QR code to Dr. Turley's step-by-step walkthrough.</p>
+                          </div>
+                        </div>
                       </div>
+
                       <div class="drop-note">
-                        {{ section.settings.kit_note }}
+                        If your first impressions do not capture enough detail, we send a second kit free.
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+
               <div class="drop">
                 <button class="drop-q" aria-expanded="false">
-                  {{ section.settings.includes_title }}
+                  Your Order Includes
                   <span class="plus" aria-hidden="true"></span>
                 </button>
                 <div class="drop-a">
                   <div>
                     <div class="drop-inner">
                       <div class="incl-grid">
-                        {% for block in section.blocks %}
-                          {% if block.type == 'include_item' %}
-                            <div
-                              class="incl-cell"
-                              {{ block.shopify_attributes }}
+                        <div class="incl-cell">
+                          <span class="ic">
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.9"
                             >
-                              <span class="ic">
-                                {{ block.settings.icon }}
-                              </span>
+                              <circle cx="12" cy="8" r="4"></circle>
+                              <path d="M4 21c0-4 4-6 8-6s8 2 8 6"></path>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Designed by Dr. Turley</h5>
+                            <p>
+                              Every case is produced against the 7-Point Smile Design Protocol he created as a cosmetic
+                              dentist.
+                            </p>
+                          </div>
+                        </div>
 
-                              <div>
-                                <h5>
-                                  {{ block.settings.heading }}
-                                </h5>
+                        <div class="incl-cell">
+                          <span class="ic">
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.9"
+                              stroke-linejoin="round"
+                            >
+                              <path
+                                d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"
+                              ></path>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>30-Day Fit Remake (up to 2)</h5>
+                            <p>
+                              If the fit or look is not right, we remake it free within 30 days, with prepaid shipping
+                              both ways.
+                            </p>
+                          </div>
+                        </div>
 
-                                <p>
-                                  {{ block.settings.text }}
-                                </p>
-                              </div>
-                            </div>
-                          {% endif %}
-                        {% endfor %}
+                        <div class="incl-cell">
+                          <span class="ic">
+                            <svg
+                              viewBox="0 0 24 24"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="1.9"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            >
+                              <rect
+                                x="1"
+                                y="7"
+                                width="14"
+                                height="10"
+                                rx="1.5"
+                              ></rect>
+                              <path d="M15 10h4l3 3v4h-7z"></path>
+                              <circle cx="6" cy="18" r="2"></circle>
+                              <circle cx="18" cy="18" r="2"></circle>
+                            </svg>
+                          </span>
+                          <div>
+                            <h5>Free Shipping Both Ways</h5>
+                            <p>We cover your kit, your return, and your veneers.</p>
+                          </div>
+                        </div>
                       </div>
-
                       <div class="guarantee-card">
                         <div class="gc-h">
                           {{ section.settings.guarantee_card_icon }}
-
-                          {{ section.settings.guarantee_card_heading }}
-                        </div>
-
-                        <div class="gc-sub">
                           {{ section.settings.guarantee_card_subheading }}
                         </div>
 
@@ -826,40 +659,180 @@
                   </div>
                 </div>
               </div>
+
               <div class="drop">
                 <button class="drop-q" aria-expanded="false">
-                  {{ section.settings.how_to_start_title }}
+                  How to Start
                   <span class="plus" aria-hidden="true"></span>
                 </button>
                 <div class="drop-a">
                   <div>
                     <div class="drop-inner">
                       <div class="kit-list">
-                        {% for block in section.blocks %}
-                          {% if block.type == 'start_step' %}
-                            <div class="kit-row" {{ block.shopify_attributes }}>
-                              <span class="kit-ico kit-num"> {{ block.settings.number }}</span>
-                              <div>
-                                <h5>{{ block.settings.heading }}</h5>
-                                <p>{{ block.settings.text }}</p>
-                              </div>
-                            </div>
-                          {% endif %}
-                        {% endfor %}
-                        <div class="drop-note">Cancel for a full refund any time before we begin production.</div>
+                        <div class="kit-row">
+                          <span class="kit-ico kit-num">1</span>
+                          <div>
+                            <h5>Order your impression kit</h5>
+                            <p>Pick your arches and check out. Your kit ships free within 48 hours.</p>
+                          </div>
+                        </div>
+
+                        <div class="kit-row">
+                          <span class="kit-ico kit-num">2</span>
+                          <div>
+                            <h5>Take impressions at home</h5>
+                            <p>Follow Dr. Turley's video walkthrough, about five minutes, then mail them back free.</p>
+                          </div>
+                        </div>
+
+                        <div class="kit-row">
+                          <span class="kit-ico kit-num">3</span>
+                          <div>
+                            <h5>Receive your custom smile</h5>
+                            <p>
+                              Your veneers are built to the 7-Point Smile Design Protocol and arrive 2 to 3 weeks after
+                              we receive your impressions.
+                            </p>
+                          </div>
+                        </div>
                       </div>
+
+                      {% if section.settings.how_to_start_note != blank %}
+                        <div class="drop-note">
+                          {{ section.settings.how_to_start_note }}
+                        </div>
+                      {% endif %}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          {% endcomment %}
+
+            <!-- ===== BELOW-CTA DROPDOWNS ===== -->
+            {% comment %}
+              <div class="drops" id="drops">
+                <div class="drop">
+                  <button class="drop-q" aria-expanded="false">
+                    {{ section.settings.kit_title -}}
+                    <span class="plus" aria-hidden="true"></span>
+                  </button>
+                  <div class="drop-a">
+                    <div>
+                      <div class="drop-inner">
+                        <div class="kit-list">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'kit_item' %}
+                              <div class="kit-row" {{ block.shopify_attributes }}>
+                                <span class="kit-ico">
+                                  {{ block.settings.icon }}
+                                </span>
+
+                                <div>
+                                  <h5>
+                                    {{ block.settings.heading }}
+                                  </h5>
+
+                                  <p>
+                                    {{ block.settings.text }}
+                                  </p>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+                        <div class="drop-note">
+                          {{ section.settings.kit_note }}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="drop">
+                  <button class="drop-q" aria-expanded="false">
+                    {{ section.settings.includes_title }}
+                    <span class="plus" aria-hidden="true"></span>
+                  </button>
+                  <div class="drop-a">
+                    <div>
+                      <div class="drop-inner">
+                        <div class="incl-grid">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'include_item' %}
+                              <div
+                                class="incl-cell"
+                                {{ block.shopify_attributes }}
+                              >
+                                <span class="ic">
+                                  {{ block.settings.icon }}
+                                </span>
+
+                                <div>
+                                  <h5>
+                                    {{ block.settings.heading }}
+                                  </h5>
+
+                                  <p>
+                                    {{ block.settings.text }}
+                                  </p>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                        </div>
+
+                        <div class="guarantee-card">
+                          <div class="gc-h">
+                            {{ section.settings.guarantee_card_icon }}
+
+                            {{ section.settings.guarantee_card_heading }}
+                          </div>
+
+                          <div class="gc-sub">
+                            {{ section.settings.guarantee_card_subheading }}
+                          </div>
+
+                          <p>
+                            {{ section.settings.guarantee_card_text }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="drop">
+                  <button class="drop-q" aria-expanded="false">
+                    {{ section.settings.how_to_start_title }}
+                    <span class="plus" aria-hidden="true"></span>
+                  </button>
+                  <div class="drop-a">
+                    <div>
+                      <div class="drop-inner">
+                        <div class="kit-list">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'start_step' %}
+                              <div class="kit-row" {{ block.shopify_attributes }}>
+                                <span class="kit-ico kit-num"> {{ block.settings.number }}</span>
+                                <div>
+                                  <h5>{{ block.settings.heading }}</h5>
+                                  <p>{{ block.settings.text }}</p>
+                                </div>
+                              </div>
+                            {% endif %}
+                          {% endfor %}
+                          <div class="drop-note">Cancel for a full refund any time before we begin production.</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endcomment %}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
+{% endif %}
 <script>
   /* ---------- ARCH SELECTOR (buy box, $100 credit pricing) ---------- */
   const CONFIGS = {
@@ -904,6 +877,11 @@
   "name": "Post Quiz Recommended",
   "class": "section-post-quiz-recommended",
   "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
     {
       "type": "text",
       "id": "eyebrow",
