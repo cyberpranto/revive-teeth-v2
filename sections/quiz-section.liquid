@@ -74,7 +74,7 @@
     </div>
   </div>
   <script src="https://app.octaneai.com/kz8jedy05hhkuuz3/quiz.js" defer></script>
-  {% comment %} <script>
+ <script>
     document.addEventListener('octane.quiz.completed', async function (event) {
       if (sessionStorage.getItem('quiz_session')) {
         return;
@@ -103,33 +103,5 @@
         console.error('Quiz Session Error:', error);
       }
     });
-  </script> {% endcomment %}
-  {% comment %} <script>
-    document.addEventListener('octane.quiz.completed', function (event) {
-
-    console.log('Quiz completed!', event.detail);
-
-    setTimeout(async () => {
-
-        try {
-
-            const response = await fetch(
-                'https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/session',
-                {
-                    method: 'POST',
-                }
-            );
-
-            const data = await response.json();
-
-            sessionStorage.setItem('quiz_session', data.session);
-
-        } catch (err) {
-            console.error(err);
-        }
-
-    }, 1500);
-
-});
-  </script> {% endcomment %}
+  </script> 
 </div>
