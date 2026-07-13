@@ -112,7 +112,7 @@ class Component extends DCLogic {
       body: "Revive is designed for adults 18 and older, so we are not able to set you up with a custom set right now. If you are interested down the road, we will be here. In the meantime, your own dentist is the best person to talk to about your smile.",
     },
     B: {
-      headline: "Let's get your dental health sorted first. ",
+      headline: "Let's get your dental health sorted first.",
       body: "From your answers, it sounds like something may need a dentist's attention before a cosmetic product would be right. Revive sits over a healthy, settled mouth, so the best first step is to see your own dentist and get any pain or infection taken care of. Once things are healthy and stable, come back any time. We would be glad to help you then. ",
     },
     C: {

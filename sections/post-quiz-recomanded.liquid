@@ -93,10 +93,10 @@
                   {% assign arch = 'lower' %}
                 {% endif %}
                 <button
-                  class="arch-opt {% if forloop.first %}sel{% endif %}"
+                  class="arch-opt {% if forloop.last %}sel{% endif %}"
                   role="radio"
                   data-key="{{ variant.title | handle }}"
-                  aria-checked="{% if forloop.first %}true{% else %}false{% endif %}"
+                  aria-checked="{% if forloop.last %}true{% else %}false{% endif %}"
                   data-variant-id="{{ variant.id }}"
                   data-price="{{ variant.price }}"
                   data-title="{{ variant.title }}"
@@ -781,13 +781,12 @@
       cta.dataset.variantId = button.dataset.variantId;
     }
 
-      // Sticky Bar Update
-  const sbInfo = document.getElementById('sbInfoText');
+    // Sticky Bar Update
+    const sbInfo = document.getElementById('sbInfoText');
 
-if (sbInfo) {
-  sbInfo.textContent =
-    `${button.dataset.title} · ${formatMoney(realPrice - 10000)}`;
-}
+    if (sbInfo) {
+      sbInfo.textContent = `${button.dataset.title} · ${formatMoney(realPrice - 10000)}`;
+    }
   }
   document.querySelectorAll('.arch-opt').forEach((button) => {
     button.addEventListener('click', () => {
@@ -822,10 +821,57 @@ if (sbInfo) {
 
   const claimCTA = document.getElementById('claimCTA');
 
-  claimCTA.addEventListener('click', function () {
+  // claimCTA.addEventListener('click', function () {
+  //   const variantId = this.dataset.variantId;
+
+  //   window.location.href = `/cart/${variantId}:1`;
+
+  // window.location.href = `/discount/QUIZ100?redirect=/cart/${variantId}:1`;
+
+  //     const response = await fetch("https://your-worker.workers.dev/checkout", {
+  //   method: "POST",
+  //   body: JSON.stringify({
+  //     variantId
+  //   })
+  // });
+
+  // const data = await response.json();
+
+  // window.location.href = data.checkoutUrl;
+  // });
+
+  claimCTA.addEventListener('click', async function () {
     const variantId = this.dataset.variantId;
 
-    window.location.href = `/cart/${variantId}:1`;
+    this.disabled = true;
+    this.textContent = 'Preparing Checkout...';
+
+    try {
+      const res = await fetch('https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          variantId,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!data.success) {
+        throw new Error('Checkout failed');
+      }
+
+      window.location.href = data.redirectUrl;
+    } catch (err) {
+      console.error(err);
+
+      this.disabled = false;
+      this.textContent = 'Buy Now';
+
+      alert('Something went wrong.');
+    }
   });
 </script>
 
