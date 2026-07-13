@@ -823,23 +823,12 @@
 
   claimCTA.addEventListener('click', async function () {
     const variantId = this.dataset.variantId;
+    const session = sessionStorage.getItem('quiz_session');
 
     this.disabled = true;
     this.textContent = 'Preparing Checkout...';
 
     try {
-      // const res = await fetch('https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/checkout', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json',
-      //   },
-      //   body: JSON.stringify({
-      //     variantId,
-      //   }),
-      // });
-      {% comment %} const session = new URLSearchParams(window.location.search).get('quiz_session'); {% endcomment %}
-
-      const session = sessionStorage.getItem('quiz_session');
       console.log('Session:', session);
       console.log('Variant:', variantId);
       const res = await fetch('https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/checkout', {
