@@ -6,9 +6,14 @@
                 ".cbb637f8eefbdba84160b001431fc2cfdaa302b46 {display: flex;}"
             ],
             "settings": {}
+        },
+        "quiz-header": {
+            "type": "quiz-page-header",
+            "settings": {}
         }
     },
     "order": [
-        "main"
+        "quiz-header",
+        "main",
     ]
 }

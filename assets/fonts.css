@@ -1,0 +1,164 @@
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Inter-Regular.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Inter-Medium.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./Inter-SemiBold.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./InterTight-Regular.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./InterTight-Medium.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/cdn/shop/t/4/assets/InterTight-SemiBold.ttf") format("truetype");
+}
+
+/* cyrillic-ext */
+@font-face {
+  font-family: "Inter Tight";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./InterTight-Bold.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./Newsreader-Italic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Newsreader";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./Newsreader-MediumItalic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./PlayfairDisplay-MediumItalic.ttf") format("truetype");
+}
+
+/* vietnamese */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./PlayfairDisplay-SemiBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("./HankenGrotesk-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("./HankenGrotesk-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./HankenGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./HankenGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./HankenGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./HankenGrotesk-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./HankenGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./HankenGrotesk-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./HankenGrotesk-Black.ttf") format("truetype");
+}

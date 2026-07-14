@@ -23,6 +23,8 @@
       {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {% endif %}
 
+    {{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
+
     {% if template.suffix == 'offer' %}
       {{ 'post-quiz-style.css' | asset_url | stylesheet_tag }}
     {% endif %}

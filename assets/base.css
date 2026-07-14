@@ -97,6 +97,72 @@
   src: url("./PlayfairDisplay-SemiBoldItalic.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url("./HankenGrotesk-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url("./HankenGrotesk-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("./HankenGrotesk-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("./HankenGrotesk-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("./HankenGrotesk-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("./HankenGrotesk-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./HankenGrotesk-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("./HankenGrotesk-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Hanken Grotesk";
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("./HankenGrotesk-Black.ttf") format("truetype");
+}
+
 :root {
   --navy: #1b2d5c;
   --navy-700: #15244a;
@@ -534,7 +600,7 @@ h2.display {
   font-variant-numeric: tabular-nums;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   .opt .opt-price {
     display: none;
   }
@@ -701,9 +767,9 @@ h2.display {
   background: #fff;
   font-family: var(--display);
 }
-.pay-pill img{
+.pay-pill img {
   max-width: 24px;
-    height: 100%;
+  height: 100%;
 }
 .pay-secure {
   display: inline-flex;
@@ -1055,25 +1121,25 @@ section.dark .sub {
 .on-dark .link-arrow {
   color: #fff;
 }
- /* -------------- LIFESTYLE BANNER -------------- */
-      .lifestyle-band {
-        width: 100%;
-        height: clamp(280px, 32vw, 440px);
-        overflow: hidden;
-        background: var(--navy);
-      }
-      @media screen and (max-width: 767px){
-              .lifestyle-band {
-        height: 100%;
-      }
-      }
-      .lifestyle-band img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 60% 28%;
-        display: block;
-      }
+/* -------------- LIFESTYLE BANNER -------------- */
+.lifestyle-band {
+  width: 100%;
+  height: clamp(280px, 32vw, 440px);
+  overflow: hidden;
+  background: var(--navy);
+}
+@media screen and (max-width: 767px) {
+  .lifestyle-band {
+    height: 100%;
+  }
+}
+.lifestyle-band img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 60% 28%;
+  display: block;
+}
 /* -------------- EMOTIONAL BRIDGE -------------- */
 .bridge {
   background: var(--cream);
@@ -1182,14 +1248,14 @@ section.dark .sub {
   color: #e7ebf6;
   font-weight: 600;
 }
-      .founder-clarify {
-        color: #e7ebf6 !important;
-        font-weight: 600;
-        font-style: italic;
-        border-left: 2px solid var(--green);
-        padding-left: 16px;
-        margin-top: 20px !important;
-      }
+.founder-clarify {
+  color: #e7ebf6 !important;
+  font-weight: 600;
+  font-style: italic;
+  border-left: 2px solid var(--green);
+  padding-left: 16px;
+  margin-top: 20px !important;
+}
 .sig-wrap {
   margin-top: 30px;
   padding-top: 26px;
