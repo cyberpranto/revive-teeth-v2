@@ -10,6 +10,7 @@
     gap: 16px;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
   .update-parts {
     display: flex;
@@ -27,7 +28,7 @@
 
   .content-container h2,
   .content-container h2 span {
-    font-size: clamp(20px, 3.4vw, 32px);
+    font-size: clamp(20px, 3.4vw, 28px);
     font-family: var(--display);
     font-weight: 600;
     letter-spacing: -0.02em;
@@ -37,6 +38,7 @@
   }
   .content-container h3,
   .content-container h3 span {
+    font-size: clamp(18px, 2.6vw, 24px);
     font-family: var(--display);
     font-weight: 600;
     font-size: 20px;
@@ -45,6 +47,7 @@
     margin-bottom: 8px;
   }
   .content-container h4 {
+    font-size: clamp(17px, 1.4vw, 20px);
   }
   .content-container h5. .content-container h5 span {
     font-family: var(--display);
@@ -70,23 +73,28 @@
     line-height: 1.55;
     text-decoration: underline;
   }
+  .content-container strong {
+    color: var(--navy);
+  }
 </style>
 
-{% assign policy = page.metafields.custom.policy_information.value %}
+{% assign effective_date = page.metafields.custom.effective_date.value %}
+{% assign last_updated = page.metafields.custom.last_updated.value %}
+
 <section>
   <div class="wrap policy-section">
     <div class="main-header">
-      <h1 class="main-tile display">{{ page.title }}</h1>
+      <h1 class="main-tile display" style="text-transform: uppercase;">{{ page.title }}</h1>
       <div class="update-parts">
         <div class="update-part update-part-1 price-fine">
           <p>
-            Effective Date: <span> {{ policy.effective_date | date: '%B %d, %Y' }}</span>
+            Effective Date: <span> {{ effective_date | date: '%B %d, %Y' }}</span>
           </p>
         </div>
 
         <div class="update-part update-part-2 price-fine">
           <p>
-            Last Updated: <span> {{ policy.last_updated | date: '%B %d, %Y' }}</span>
+            Last Updated: <span> {{ last_updated | date: '%B %d, %Y' }}</span>
           </p>
         </div>
       </div>
