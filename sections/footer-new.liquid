@@ -42,8 +42,9 @@
 
               <ul>
                 {% for link in block.settings.menu.links %}
+                  {% assign first = link.url | slice: 0, 1 %}
                   <li>
-                    <a href="{{ link.url }}">
+                    <a href="{% if first == '#' %}{{ routes.root_url }}{{ link.url }}{% else %}{{ link.url }}{% endif %}">
                       {{ link.title }}
                     </a>
                   </li>

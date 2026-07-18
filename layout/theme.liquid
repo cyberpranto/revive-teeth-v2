@@ -18,10 +18,10 @@
     {% comment %} {% endunless %} {% endcomment %}
 
     {% # Load and preload the critical CSS %}
-    {% if template.name == 'index' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' %}
       {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {% endif %}
+    {% endunless %}
 
     {{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
 

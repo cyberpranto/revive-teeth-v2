@@ -55,9 +55,10 @@
       aria-label="Primary"
     >
       {% for block in section.blocks %}
+        {% assign first = block.settings.link | slice: 0, 1 %}
         {% if block.type == 'menu_item' %}
           <a
-            href="{{ block.settings.link }}"
+            href="{% if first == '#' %}{{ routes.root_url }}{{ block.settings.link }}{% else %}{{ block.settings.link }}{% endif %}"
             {{ block.shopify_attributes }}
           >
             {{ block.settings.label }}
@@ -133,10 +134,9 @@
           "label": "Menu Label"
         },
         {
-          "type": "text",
+          "type": "url",
           "id": "link",
-          "label": "Anchor / URL",
-          "default": "#"
+          "label": "Anchor / URL"
         }
       ]
     }
