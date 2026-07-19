@@ -85,34 +85,50 @@
     </div>
   </div>
   <script src="https://app.octaneai.com/kz8jedy05hhkuuz3/quiz.js" defer></script>
- <script>
+  <script>
     document.addEventListener('octane.quiz.completed', async function (event) {
-      if (sessionStorage.getItem('quiz_session')) {
-        return;
-      }
       try {
         console.log('Quiz completed!', event.detail);
 
-        const response = await fetch('https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/session', {
+        // ⚠️ Octane er event.detail e email thik kon path e ase seta
+        // console.log(event.detail) kore browser console e check kore nao,
+        // niche 3 ta common path try korlam - tomar quiz er structure onujayi
+        // thik path ta rekhe baki gulo delete kore dio
+        const email = event.detail?.email || event.detail?.contact?.email || event.detail?.answers?.email;
+
+        if (!email) {
+          console.error('Quiz Session Error: email not found in event.detail', event.detail);
+          return;
+        }
+
+        // localStorage - browser bondho korleo thakbe (sessionStorage na,
+        // karon sessionStorage tab close korle mucchhe jay)
+        localStorage.setItem('quiz_email', email);
+
+        const response = await fetch('https://quiz-funnel-worker.quiz-funnel-worker.workers.dev/quiz-complete', {
           method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email }),
         });
 
         if (!response.ok) {
-          throw new Error('Failed to create session');
+          throw new Error('Failed to create discount');
         }
 
         const data = await response.json();
 
         if (!data.success) {
-          throw new Error('Session creation failed');
+          throw new Error('Discount creation failed');
         }
 
-        sessionStorage.setItem('quiz_session', data.session);
+        localStorage.setItem('quiz_credit_code', data.code);
+        localStorage.setItem('quiz_offer_url', data.offerUrl);
 
-        console.log('Quiz Session:', data.session);
+        console.log('Quiz Discount Code:', data.code);
+        console.log('Offer URL:', data.offerUrl);
       } catch (error) {
         console.error('Quiz Session Error:', error);
       }
     });
-  </script> 
+  </script>
 </div>
