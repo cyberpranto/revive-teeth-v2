@@ -290,12 +290,12 @@
             <textarea
               id="contact-body"
               name="contact[body]"
-              hidden
+              style="display:none;"
             ></textarea>
           </div>
           <!-- Submit Button -->
 
-          <button type="submit" class="privacy-form__submit" aria-disabled>Submit request</button>
+          <button type="submit" class="privacy-form__submit">Submit request</button>
           {% if form.posted_successfully? %}
             <script>
               document.addEventListener('DOMContentLoaded', () => {

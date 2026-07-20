@@ -112,7 +112,7 @@ function cacheElements() {
     elements.details = document.getElementById("pr-details");
     elements.requestTypes =
         document.querySelectorAll(
-            'input[name="contact[Request Type][]"]'
+            'input[name="request_type"]'
         );
     elements.submitButton =
         document.querySelector(
@@ -194,8 +194,9 @@ function handleFormSubmit(event) {
         return;
     }
 
-    const requestTypes = [...elements.requestTypes]
-        .filter(item => item.checked)
+    const requestTypes = [...document.querySelectorAll(
+        'input[name="request_type"]:checked'
+    )]
         .map(item => "• " + item.value)
         .join("\n");
 
@@ -218,12 +219,16 @@ ${requestTypes}
 Additional Details:
 ${elements.details.value.trim()}
 
-Submitted From:
+Page:
 ${window.location.href}
 
-Submitted At:
+Submitted:
 ${new Date().toLocaleString()}
 `;
+
+    console.log(
+        document.getElementById("contact-body").value
+    );
 
 }
 
@@ -354,3 +359,6 @@ function validateForm() {
 
     return valid;
 }
+
+
+console.log(document.getElementById("contact-body").value);
