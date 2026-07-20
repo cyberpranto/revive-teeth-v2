@@ -186,7 +186,7 @@
             </label>
 
             <div class="privacy-form__select-wrapper">
-              <select id="pr-state" name="contact[State]" class="privacy-form__select" aria-required="true">
+              <select id="pr-state" name="state" class="privacy-form__select" aria-required="true">
                 <option value="" selected disabled>Select your state</option>
 
                 <!-- Add your state options here -->
@@ -213,7 +213,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="contact[Request Type][]"
+                  name="request_type"
                   value="Opt out of the sale or sharing of my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -224,7 +224,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="contact[Request Type][]"
+                  name="request_type"
                   value="Access a copy of my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -235,7 +235,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="contact[Request Type][]"
+                  name="request_type"
                   value="Correct my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -246,7 +246,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="contact[Request Type][]"
+                  name="request_type"
                   value="Delete my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -256,7 +256,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="contact[Request Type][]"
+                  name="request_type"
                   value="Withdraw consent for the collection or sharing of my consumer health data (Washington residents)"
                   class="privacy-form__checkbox-input"
                 >
@@ -283,10 +283,15 @@
 
             <textarea
               id="pr-details"
-              name="contact[body]"
               rows="4"
               class="privacy-form__textarea"
-            >{{ form.body }}</textarea>
+            ></textarea>
+
+            <textarea
+              id="contact-body"
+              name="contact[body]"
+              hidden
+            ></textarea>
           </div>
           <!-- Submit Button -->
 

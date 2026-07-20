@@ -190,22 +190,40 @@ function handleOptOut(event) {
 function handleFormSubmit(event) {
 
     if (!validateForm()) {
-
         event.preventDefault();
-
-        const firstError = document.querySelector(
-            ".privacy-form__error:not([hidden])"
-        );
-
-        if (firstError) {
-            firstError.scrollIntoView({
-                behavior: "smooth",
-                block: "center"
-            });
-        }
-
         return;
     }
+
+    const requestTypes = [...elements.requestTypes]
+        .filter(item => item.checked)
+        .map(item => "• " + item.value)
+        .join("\n");
+
+    document.getElementById("contact-body").value =
+
+        `Privacy Request
+
+Name:
+${elements.name.value.trim()}
+
+Email:
+${elements.email.value.trim()}
+
+State:
+${elements.state.value}
+
+Request Type:
+${requestTypes}
+
+Additional Details:
+${elements.details.value.trim()}
+
+Submitted From:
+${window.location.href}
+
+Submitted At:
+${new Date().toLocaleString()}
+`;
 
 }
 
