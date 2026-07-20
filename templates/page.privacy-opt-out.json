@@ -1,0 +1,10 @@
+{
+    "sections": {
+        "main": {
+            "type": "privacy-opt-out"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

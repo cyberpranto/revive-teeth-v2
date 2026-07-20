@@ -40,21 +40,18 @@
                 Using a privacy-enabled browser?
               </h2>
 
-              <sc-if value="{{ gpcActive }}" hint-placeholder-val="{{ false }}">
+              <div>
                 <span class="privacy-badge privacy-badge--active">
                   <span class="privacy-badge__dot"></span>
                   Signal detected, opt out applied
                 </span>
-              </sc-if>
+              </div>
 
-              <sc-if
-                value="{{ gpcNotActive }}"
-                hint-placeholder-val="{{ true }}"
-              >
+              <div>
                 <span class="privacy-badge privacy-badge--default">
                   GPC supported
                 </span>
-              </sc-if>
+              </div>
             </div>
 
             <p class="privacy-card__text">
@@ -76,13 +73,17 @@
           </h2>
 
           <!-- Show when: showDevice -->
-          <div class="privacy-device__content">
+          <div id="optout-content" class="privacy-device__content">
             <p class="privacy-device__description">
               Click below to opt out of the sharing of data collected by cookies
               and advertising pixels in this browser.
             </p>
 
-            <button type="button" class="privacy-device__button">
+            <button
+              id="optout-button"
+              type="button"
+              class="privacy-device__button"
+            >
               Opt out of sale or sharing
             </button>
 
@@ -134,7 +135,7 @@
               Fields marked with an asterisk are required.
             </p>
           </div>
-          <form class="privacy-form">
+          <form class="privacy-form" id="privacy-request-form">
             <!-- Full Name -->
             <div class="privacy-form__group">
               <label for="pr-name" class="privacy-form__label">
