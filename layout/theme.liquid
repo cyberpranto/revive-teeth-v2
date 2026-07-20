@@ -18,7 +18,7 @@
     {% comment %} {% endunless %} {% endcomment %}
 
     {% # Load and preload the critical CSS %}
-    {% unless template == 'page.quiz' or template == 'page.offer' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' or template == 'privacy-opt-out' %}
       {{ 'critical.css' | asset_url | stylesheet_tag: preload: true }}
       {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
     {% endunless %}
@@ -55,13 +55,13 @@
     {% endif %}
   </head>
   <body>
-    {% unless template == 'page.quiz' or template == 'page.offer' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' or template == 'privacy-opt-out' %}
       {% sections 'header-group' %}
     {% endunless %}
 
     {{ content_for_layout }}
 
-    {% unless template == 'page.quiz' or template == 'page.offer' %}
+    {% unless template == 'page.quiz' or template == 'page.offer' or template == 'privacy-opt-out' %}
       {% sections 'footer-group' %}
     {% endunless %}
 
