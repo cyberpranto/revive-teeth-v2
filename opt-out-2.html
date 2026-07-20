@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/privacy-opt-out.css" />
+  </head>
+  <body>
+    <div class="body-container">
+      <header class="privacy-header">
+        <div class="privacy-header__container">
+          <a href="/" class="privacy-header__logo" aria-label="Revive Home">
+            REVIVE
+          </a>
+        </div>
+      </header>
+      <main>
+        <section class="privacy-content">
+          <h1 class="privacy-content__title">
+            Do Not Sell or Share My Personal Information
+          </h1>
+
+          <p class="privacy-content__description">
+            Revive Teeth does not sell your personal information for money. We
+            do share certain data with advertising partners, including Meta, for
+            advertising purposes, which may be considered a "sale" or "share"
+            under some state privacy laws. This page lets you opt out of that
+            sharing and exercise your other privacy rights.
+          </p>
+        </section>
+        <div class="privacy-divider" aria-hidden="true"></div>
+
+        <section class="privacy-card-section" aria-labelledby="gpc-heading">
+          <span class="privacy-card-section__label"> Automatic </span>
+
+          <div class="privacy-card">
+            <div class="privacy-card__header">
+              <h2 id="gpc-heading" class="privacy-card__title">
+                Using a privacy-enabled browser?
+              </h2>
+
+              <sc-if value="{{ gpcActive }}" hint-placeholder-val="{{ false }}">
+                <span class="privacy-badge privacy-badge--active">
+                  <span class="privacy-badge__dot"></span>
+                  Signal detected, opt out applied
+                </span>
+              </sc-if>
+
+              <sc-if
+                value="{{ gpcNotActive }}"
+                hint-placeholder-val="{{ true }}"
+              >
+                <span class="privacy-badge privacy-badge--default">
+                  GPC supported
+                </span>
+              </sc-if>
+            </div>
+
+            <p class="privacy-card__text">
+              We honor Global Privacy Control (GPC) signals. If your browser
+              sends a GPC signal, your opt-out from the sale or sharing of data
+              collected by cookies and pixels on this site is applied
+              automatically. No form needed.
+            </p>
+          </div>
+        </section>
+
+        <div class="privacy-divider" aria-hidden="true"></div>
+
+        <section class="privacy-device" aria-labelledby="device-heading">
+          <span class="privacy-device__label"> This browser </span>
+
+          <h2 id="device-heading" class="privacy-device__title">
+            Opt out on this device
+          </h2>
+
+          <!-- Show when: showDevice -->
+          <div class="privacy-device__content">
+            <p class="privacy-device__description">
+              Click below to opt out of the sharing of data collected by cookies
+              and advertising pixels in this browser.
+            </p>
+
+            <button type="button" class="privacy-device__button">
+              Opt out of sale or sharing
+            </button>
+
+            <p class="privacy-device__note">
+              This applies to this browser and device. If you use another
+              browser or clear cookies, repeat this step or submit the form
+              below.
+            </p>
+          </div>
+
+          <!-- Show when: showOptedOut -->
+          <div
+            id="optout-confirm"
+            class="privacy-device__success"
+            tabindex="-1"
+            role="status"
+            aria-live="polite"
+          >
+            <div class="privacy-device__success-icon" aria-hidden="true">✓</div>
+
+            <h3 class="privacy-device__success-title">
+              You're opted out on this browser.
+            </h3>
+
+            <p class="privacy-device__success-text">
+              This applies to this browser and device. If you use another
+              browser or clear cookies, repeat this step or submit the form
+              below.
+            </p>
+          </div>
+        </section>
+
+        <div class="privacy-divider" aria-hidden="true"></div>
+        <section aria-labelledby="form-heading">
+          <span class="privacy-form__label"> Your account and order data </span>
+
+          <h2 id="form-heading" class="privacy-form__title">
+            Submit a privacy request
+          </h2>
+
+          <div class="privacy-form__content">
+            <p class="privacy-form__description">
+              To opt out of sharing tied to your customer record, or to exercise
+              your other rights, submit this form. We respond to verifiable
+              requests within 45 days.
+            </p>
+
+            <p class="privacy-form__required-note">
+              Fields marked with an asterisk are required.
+            </p>
+          </div>
+          <form class="privacy-form">
+            <!-- Full Name -->
+            <div class="privacy-form__group">
+              <label for="pr-name" class="privacy-form__label">
+                Full name
+                <span class="privacy-form__required" aria-hidden="true">*</span>
+              </label>
+
+              <input
+                id="pr-name"
+                name="full_name"
+                type="text"
+                autocomplete="name"
+                aria-required="true"
+                class="privacy-form__input"
+              />
+
+              <!-- Show only when there is an error -->
+              <p
+                id="pr-name-err"
+                class="privacy-form__error"
+                role="alert"
+                hidden
+              >
+                Full name is required.
+              </p>
+            </div>
+
+            <!-- Email -->
+            <div class="privacy-form__group">
+              <label for="pr-email" class="privacy-form__label">
+                Email address
+                <span class="privacy-form__required" aria-hidden="true">*</span>
+              </label>
+
+              <input
+                id="pr-email"
+                name="email"
+                type="email"
+                inputmode="email"
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="pr-email-help"
+                class="privacy-form__input"
+              />
+
+              <p id="pr-email-help" class="privacy-form__help">
+                Use the email associated with your order, if you have one.
+              </p>
+
+              <!-- Show only when there is an error -->
+              <p
+                id="pr-email-err"
+                class="privacy-form__error"
+                role="alert"
+                hidden
+              >
+                Please enter a valid email address.
+              </p>
+            </div>
+
+            <!-- State -->
+            <div class="privacy-form__group">
+              <label for="pr-state" class="privacy-form__label">
+                State of residence
+                <span class="privacy-form__required" aria-hidden="true">*</span>
+              </label>
+
+              <div class="privacy-form__select-wrapper">
+                <select
+                  id="pr-state"
+                  name="state"
+                  class="privacy-form__select"
+                  aria-required="true"
+                >
+                  <option value="" selected disabled>Select your state</option>
+
+                  <!-- Add your state options here -->
+                </select>
+
+                <span class="privacy-form__select-arrow" aria-hidden="true">
+                  ▼
+                </span>
+              </div>
+
+              <!-- Show only when there is an error -->
+              <p
+                id="pr-state-err"
+                class="privacy-form__error"
+                role="alert"
+                hidden
+              >
+                Please select your state.
+              </p>
+            </div>
+
+            <!-- Request Type -->
+            <fieldset
+              class="privacy-form__fieldset"
+              aria-describedby="pr-types-err"
+            >
+              <legend class="privacy-form__legend">
+                Request type
+                <span class="privacy-form__required" aria-hidden="true">*</span>
+              </legend>
+
+              <p class="privacy-form__help">Select at least one.</p>
+
+              <div class="privacy-form__checkbox-list">
+                <!-- Repeat this label for each request type -->
+                <label class="privacy-form__checkbox">
+                  <input
+                    type="checkbox"
+                    name="request_type"
+                    value=""
+                    class="privacy-form__checkbox-input"
+                  />
+
+                  <span class="privacy-form__checkbox-label">
+                    Request Type
+                  </span>
+                </label>
+
+                <!-- Repeat as needed -->
+              </div>
+
+              <p
+                id="pr-types-err"
+                class="privacy-form__error"
+                role="alert"
+                hidden
+              >
+                Please select at least one request type.
+              </p>
+            </fieldset>
+
+            <!-- Additional Details -->
+
+            <div class="privacy-form__group">
+              <label for="pr-details" class="privacy-form__label">
+                Additional details
+
+                <span class="privacy-form__optional"> (optional) </span>
+              </label>
+
+              <textarea
+                id="pr-details"
+                name="details"
+                rows="4"
+                class="privacy-form__textarea"
+              ></textarea>
+            </div>
+            <!-- Submit Button -->
+
+            <button type="submit" class="privacy-form__submit">
+              Submit request
+            </button>
+          </form>
+
+          <div
+            id="form-confirm"
+            class="privacy-form__success"
+            tabindex="-1"
+            role="status"
+            aria-live="polite"
+          >
+            <div class="privacy-form__success-icon" aria-hidden="true">✓</div>
+
+            <h3 class="privacy-form__success-title">Request received</h3>
+
+            <p class="privacy-form__success-text">
+              Your request has been received. We will verify and respond within
+              45 days to the email you provided. If we need more time as
+              permitted by law, we will let you know within that window.
+            </p>
+          </div>
+        </section>
+
+        <div class="privacy-divider" aria-hidden="true"></div>
+
+        <p class="privacy-request">
+          Requests can also be made by emailing
+          <a href="mailto:support@reviveteeth.com">support@reviveteeth.com</a>.
+          For full details on what we collect, how we use it, and your rights,
+          see our <a href="/pages/privacy-policy">Privacy Policy</a>. Exercising
+          your privacy rights will never affect your order, pricing, or the
+          service you receive.
+        </p>
+      </main>
+      <footer class="privacy-footer">
+        <nav class="privacy-footer__nav" aria-label="Policies">
+          <a href="/pages/privacy-policy" class="privacy-footer__link">
+            Privacy Policy
+          </a>
+
+          <a href="/pages/terms-of-service" class="privacy-footer__link">
+            Terms of Service
+          </a>
+
+          <a
+            href="/pages/refund-remake-returns-policy"
+            class="privacy-footer__link"
+          >
+            Refund, Remake and Returns Policy
+          </a>
+
+          <a href="/pages/shipping-policy" class="privacy-footer__link">
+            Shipping Policy
+          </a>
+
+          <a href="/pages/disclaimer" class="privacy-footer__link">
+            Disclaimer
+          </a>
+
+          <a
+            href="/pages/privacy-opt-out"
+            class="privacy-footer__link"
+            aria-current="page"
+          >
+            Do Not Sell or Share My Personal Information
+          </a>
+        </nav>
+      </footer>
+    </div>
+  </body>
+</html>

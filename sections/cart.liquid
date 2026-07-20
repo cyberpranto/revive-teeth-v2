@@ -29,6 +29,15 @@
   <input type="submit" name="checkout" value="{{ 'cart.checkout' | t }}">
 </form>
 
+<script>
+  (function () {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('autocheckout') === '1') {
+      window.location.href = '/checkout';
+    }
+  })();
+</script>
+
 {% schema %}
 {
   "name": "t:general.cart",

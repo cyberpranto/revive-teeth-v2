@@ -1,0 +1,1001 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8 " />
+    <meta name="viewport " content="width=device-width, initial-scale=1 " />
+    <script src="1506f58f-7f46-4c95-b2a0-4d328c870076"></script>
+  </head>
+  <body>
+    <x-dc>
+      <helmet>
+        <link rel="preconnect " href="https://fonts.googleapis.com " />
+        <link
+          rel="preconnect "
+          href="https://fonts.gstatic.com "
+          crossorigin=" "
+        />
+      </helmet>
+      <div
+        style="
+          min-height: 100vh;
+          background: #f4f5f7;
+          display: flex;
+          flex-direction: column;
+        "
+      >
+        <header style="border-bottom: 1px solid #e2e4e0; background: #f4f5f7">
+          <div style="max-width: 688px; margin: 0 auto; padding: 20px 24px">
+            <a
+              href="/ "
+              aria-label="Revive home "
+              style="
+                display: inline-block;
+                font:
+                  600 15px/1 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: 0.24em;
+                text-transform: uppercase;
+                color: #1a211e;
+                text-decoration: none;
+              "
+              >REVIVE</a
+            >
+          </div>
+        </header>
+        <main
+          style="
+            flex: 1 0 auto;
+            width: 100%;
+            max-width: 688px;
+            margin: 0 auto;
+            padding: clamp(30px, 5vw, 52px) 24px 64px;
+          "
+        >
+          <h1
+            style="
+              font:
+                600 clamp(29px, 7vw, 40px)/1.12 &quot;Hanken Grotesk&quot;,
+                sans-serif;
+              letter-spacing: -0.02em;
+              color: #1a211e;
+              margin: 0 0 20px;
+              text-wrap: balance;
+            "
+          >
+            Do Not Sell or Share My Personal Information
+          </h1>
+          <p
+            style="
+              font:
+                400 clamp(16px, 4vw, 17px)/1.6 &quot;Hanken Grotesk&quot;,
+                sans-serif;
+              color: #2c332f;
+              margin: 0;
+              text-wrap: pretty;
+              max-width: 60ch;
+            "
+          >
+            Revive Teeth does not sell your personal information for money. We
+            do share certain data with advertising partners, including Meta, for
+            advertising purposes, which may be considered a 'sale' or 'share'
+            under some state privacy laws. This page lets you opt out of that
+            sharing and exercise your other privacy rights.
+          </p>
+          <div
+            aria-hidden="true "
+            style="height: 1px; background: #e2e4e0; margin: 36px 0"
+          ></div>
+          <section aria-labelledby="gpc-heading ">
+            <span
+              style="
+                display: block;
+                font:
+                  600 12px/1 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: #1b2d5c;
+                margin: 0 0 12px;
+              "
+              >Automatic</span
+            >
+            <div
+              style="
+                background: #ffffff;
+                border: 1px solid #e2e4e0;
+                border-radius: 12px;
+                padding: 22px;
+                box-shadow: 0 1px 2px rgba(20, 33, 28, 0.04);
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  align-items: center;
+                  justify-content: space-between;
+                  gap: 10px;
+                  margin-bottom: 12px;
+                "
+              >
+                <h2
+                  id="gpc-heading "
+                  style="
+                    font:
+                      600 20px/1.3 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    letter-spacing: -0.01em;
+                    color: #1a211e;
+                    margin: 0;
+                  "
+                >
+                  Using a privacy-enabled browser?
+                </h2>
+                <sc-if
+                  value="{{ gpcActive }} "
+                  hint-placeholder-val="{{ false }} "
+                >
+                  <span
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 7px;
+                      font:
+                        500 12px/1 &quot;Hanken Grotesk&quot;,
+                        sans-serif;
+                      color: #12213f;
+                      background: #eaeef6;
+                      border: 1px solid #c7d3e8;
+                      border-radius: 999px;
+                      padding: 6px 11px;
+                    "
+                  >
+                    <span
+                      style="
+                        width: 7px;
+                        height: 7px;
+                        border-radius: 999px;
+                        background: #1b2d5c;
+                        flex: none;
+                      "
+                    ></span
+                    >Signal detected, opt out applied</span
+                  >
+                </sc-if>
+                <sc-if
+                  value="{{ gpcNotActive }} "
+                  hint-placeholder-val="{{ true }} "
+                >
+                  <span
+                    style="
+                      display: inline-flex;
+                      align-items: center;
+                      gap: 7px;
+                      font:
+                        500 12px/1 &quot;Hanken Grotesk&quot;,
+                        sans-serif;
+                      color: #656b67;
+                      background: transparent;
+                      border: 1px solid #d3d6d1;
+                      border-radius: 999px;
+                      padding: 6px 11px;
+                    "
+                  >
+                    GPC supported</span
+                  >
+                </sc-if>
+              </div>
+              <p
+                style="
+                  font:
+                    400 15px/1.6 &quot;Hanken Grotesk&quot;,
+                    sans-serif;
+                  color: #353b37;
+                  margin: 0;
+                  max-width: 62ch;
+                "
+              >
+                We honor Global Privacy Control (GPC) signals. If your browser
+                sends a GPC signal, your opt-out from the sale or sharing of
+                data collected by cookies and pixels on this site is applied
+                automatically. No form needed.
+              </p>
+            </div>
+          </section>
+          <div
+            aria-hidden="true "
+            style="height: 1px; background: #e2e4e0; margin: 36px 0"
+          ></div>
+          <section aria-labelledby="device-heading ">
+            <span
+              style="
+                display: block;
+                font:
+                  600 12px/1 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: #1b2d5c;
+                margin: 0 0 12px;
+              "
+              >This browser</span
+            >
+            <h2
+              id="device-heading "
+              style="
+                font:
+                  600 21px/1.3 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: -0.01em;
+                color: #1a211e;
+                margin: 0 0 12px;
+              "
+            >
+              Opt out on this device
+            </h2>
+            <sc-if value="{{ showDevice }} " hint-placeholder-val="{{ true }} ">
+              <div>
+                <p
+                  style="
+                    font:
+                      400 16px/1.6 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #353b37;
+                    margin: 0 0 18px;
+                    max-width: 60ch;
+                  "
+                >
+                  Click below to opt out of the sharing of data collected by
+                  cookies and advertising pixels in this browser.
+                </p>
+                <button
+                  type="button "
+                  sc-camel-on-click="{{ onOptOut }} "
+                  style="
+                    appearance: none;
+                    width: 100%;
+                    max-width: 420px;
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    font:
+                      600 16px/1 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #ffffff;
+                    background: #1b2d5c;
+                    border: 1px solid #1b2d5c;
+                    border-radius: 8px;
+                    padding: 16px 24px;
+                    cursor: pointer;
+                    transition:
+                      background 0.15s ease,
+                      transform 0.06s ease;
+                  "
+                  style-hover="{ background:'#24386E', borderColor:'#24386E' } "
+                  style-active="{ transform:'translateY(1px)' } "
+                >
+                  Opt out of sale or sharing
+                </button>
+                <p
+                  style="
+                    font:
+                      400 13px/1.55 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #656b67;
+                    margin: 12px 0 0;
+                    max-width: 60ch;
+                  "
+                >
+                  This applies to this browser and device. If you use another
+                  browser or clear cookies, repeat this step or submit the form
+                  below.
+                </p>
+              </div>
+            </sc-if>
+            <sc-if
+              value="{{ showOptedOut }} "
+              hint-placeholder-val="{{ false }} "
+            >
+              <div
+                id="optout-confirm "
+                tabindex="-1 "
+                role="status "
+                aria-live="polite "
+                style="
+                  background: #eaeef6;
+                  border: 1px solid #c7d3e8;
+                  border-radius: 12px;
+                  padding: 22px;
+                  animation: revEnter 0.25s ease both;
+                  outline: none;
+                "
+              >
+                <div
+                  aria-hidden="true "
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 999px;
+                    background: #1b2d5c;
+                    color: #ffffff;
+                    font:
+                      700 15px/1 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    margin-bottom: 12px;
+                  "
+                >
+                  ✓
+                </div>
+                <h3
+                  style="
+                    font:
+                      600 18px/1.3 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #1a211e;
+                    margin: 0 0 8px;
+                  "
+                >
+                  You're opted out on this browser.
+                </h3>
+                <p
+                  style="
+                    font:
+                      400 15px/1.6 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #353b37;
+                    margin: 0;
+                    max-width: 60ch;
+                  "
+                >
+                  This applies to this browser and device. If you use another
+                  browser or clear cookies, repeat this step or submit the form
+                  below.
+                </p>
+              </div>
+            </sc-if>
+          </section>
+          <div
+            aria-hidden="true "
+            style="height: 1px; background: #e2e4e0; margin: 36px 0"
+          ></div>
+          <section aria-labelledby="form-heading ">
+            <span
+              style="
+                display: block;
+                font:
+                  600 12px/1 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: 0.16em;
+                text-transform: uppercase;
+                color: #1b2d5c;
+                margin: 0 0 12px;
+              "
+              >Your account and order data</span
+            >
+            <h2
+              id="form-heading "
+              style="
+                font:
+                  600 21px/1.3 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                letter-spacing: -0.01em;
+                color: #1a211e;
+                margin: 0 0 12px;
+              "
+            >
+              Submit a privacy request
+            </h2>
+            <sc-if value="{{ showForm }} " hint-placeholder-val="{{ true }} ">
+              <div>
+                <p
+                  style="
+                    font:
+                      400 16px/1.6 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #353b37;
+                    margin: 0 0 6px;
+                    max-width: 60ch;
+                  "
+                >
+                  To opt out of sharing tied to your customer record, or to
+                  exercise your other rights, submit this form. We respond to
+                  verifiable requests within 45 days.
+                </p>
+                <p
+                  style="
+                    font:
+                      400 13px/1.5 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #656b67;
+                    margin: 0 0 22px;
+                  "
+                >
+                  Fields marked with an asterisk are required.
+                </p>
+                <form
+                  sc-camel-no-validate="{{ yes }} "
+                  sc-camel-on-submit="{{ onSubmit }} "
+                >
+                  <div style="margin-bottom: 20px">
+                    <label
+                      for="pr-name "
+                      style="
+                        display: block;
+                        font:
+                          600 14px/1.35 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        margin: 0 0 7px;
+                      "
+                      >Full name
+                      <span aria-hidden="true " style="color: #1b2d5c"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      id="pr-name "
+                      name="full_name "
+                      type="text "
+                      autocomplete="name "
+                      aria-required="true "
+                      aria-invalid="{{ ariaName }} "
+                      aria-describedby="pr-name-err "
+                      value="{{ nameVal }} "
+                      sc-camel-on-change="{{ onName }} "
+                      style="
+                        display: block;
+                        width: 100%;
+                        font:
+                          400 16px/1.4 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        background: #ffffff;
+                        border: 1px solid #cfd3ce;
+                        border-radius: 8px;
+                        padding: 13px 14px;
+                      "
+                      style-focus="{ borderColor:'#1B2D5C', boxShadow:'0 0 0 3px rgba(27,45,92,0.18)' } "
+                    />
+                    <sc-if
+                      value="{{ errName }} "
+                      hint-placeholder-val="{{ false }} "
+                      ><p
+                        id="pr-name-err "
+                        role="alert "
+                        style="
+                          font:
+                            500 13px/1.45 &quot;Hanken Grotesk&quot;,
+                            sans-serif;
+                          color: #b42318;
+                          margin: 7px 0 0;
+                        "
+                      >
+                        {{ errName }}
+                      </p></sc-if
+                    >
+                  </div>
+                  <div style="margin-bottom: 20px">
+                    <label
+                      for="pr-email "
+                      style="
+                        display: block;
+                        font:
+                          600 14px/1.35 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        margin: 0 0 7px;
+                      "
+                      >Email address
+                      <span aria-hidden="true " style="color: #1b2d5c"
+                        >*</span
+                      ></label
+                    >
+                    <input
+                      id="pr-email "
+                      name="email "
+                      type="email "
+                      inputmode="email "
+                      autocomplete="email "
+                      aria-required="true "
+                      aria-invalid="{{ ariaEmail }} "
+                      aria-describedby="pr-email-help pr-email-err "
+                      value="{{ emailVal }} "
+                      sc-camel-on-change="{{ onEmail }} "
+                      style="
+                        display: block;
+                        width: 100%;
+                        font:
+                          400 16px/1.4 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        background: #ffffff;
+                        border: 1px solid #cfd3ce;
+                        border-radius: 8px;
+                        padding: 13px 14px;
+                      "
+                      style-focus="{ borderColor:'#1B2D5C', boxShadow:'0 0 0 3px rgba(27,45,92,0.18)' } "
+                    />
+                    <p
+                      id="pr-email-help "
+                      style="
+                        font:
+                          400 13px/1.45 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #656b67;
+                        margin: 7px 0 0;
+                      "
+                    >
+                      Use the email associated with your order, if you have one.
+                    </p>
+                    <sc-if
+                      value="{{ errEmail }} "
+                      hint-placeholder-val="{{ false }} "
+                      ><p
+                        id="pr-email-err "
+                        role="alert "
+                        style="
+                          font:
+                            500 13px/1.45 &quot;Hanken Grotesk&quot;,
+                            sans-serif;
+                          color: #b42318;
+                          margin: 7px 0 0;
+                        "
+                      >
+                        {{ errEmail }}
+                      </p></sc-if
+                    >
+                  </div>
+                  <div style="margin-bottom: 20px">
+                    <label
+                      for="pr-state "
+                      style="
+                        display: block;
+                        font:
+                          600 14px/1.35 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        margin: 0 0 7px;
+                      "
+                      >State of residence
+                      <span aria-hidden="true " style="color: #1b2d5c"
+                        >*</span
+                      ></label
+                    >
+                    <div style="position: relative">
+                      <sc-raw-select
+                        id="pr-state "
+                        name="state "
+                        aria-required="true "
+                        aria-invalid="{{ ariaState }} "
+                        aria-describedby="pr-state-err "
+                        value="{{ stateVal }} "
+                        sc-camel-on-change="{{ onState }} "
+                        style="
+                          display: block;
+                          width: 100%;
+                          font:
+                            400 16px/1.4 &quot;Hanken Grotesk&quot;,
+                            sans-serif;
+                          color: #1a211e;
+                          background: #ffffff;
+                          border: 1px solid #cfd3ce;
+                          border-radius: 8px;
+                          padding: 13px 40px 13px 14px;
+                          appearance: none;
+                          -webkit-appearance: none;
+                          cursor: pointer;
+                        "
+                        style-focus="{ borderColor:'#1B2D5C', boxShadow:'0 0 0 3px rgba(27,45,92,0.18)' } "
+                      >
+                        <option value=" " disabled=" ">
+                          Select your state
+                        </option>
+                        <sc-for
+                          list="{{ states }} "
+                          as="st "
+                          hint-placeholder-count="6 "
+                          ><option value="{{ st.name }} ">
+                            {{ st.name }}
+                          </option></sc-for
+                        >
+                      </sc-raw-select>
+                      <span
+                        aria-hidden="true "
+                        style="
+                          position: absolute;
+                          right: 15px;
+                          top: 50%;
+                          transform: translateY(-50%);
+                          color: #565c58;
+                          font-size: 11px;
+                          pointer-events: none;
+                        "
+                        >▼</span
+                      >
+                    </div>
+                    <sc-if
+                      value="{{ errState }} "
+                      hint-placeholder-val="{{ false }} "
+                      ><p
+                        id="pr-state-err "
+                        role="alert "
+                        style="
+                          font:
+                            500 13px/1.45 &quot;Hanken Grotesk&quot;,
+                            sans-serif;
+                          color: #b42318;
+                          margin: 7px 0 0;
+                        "
+                      >
+                        {{ errState }}
+                      </p></sc-if
+                    >
+                  </div>
+                  <fieldset
+                    aria-describedby="pr-types-err "
+                    style="
+                      border: 0;
+                      margin: 0 0 20px;
+                      padding: 0;
+                      min-width: 0;
+                    "
+                  >
+                    <legend
+                      style="
+                        display: block;
+                        font:
+                          600 14px/1.35 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        margin: 0 0 2px;
+                        padding: 0;
+                      "
+                    >
+                      Request type
+                      <span aria-hidden="true " style="color: #1b2d5c">*</span>
+                    </legend>
+                    <p
+                      style="
+                        font:
+                          400 13px/1.45 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #656b67;
+                        margin: 0 0 10px;
+                      "
+                    >
+                      Select at least one.
+                    </p>
+                    <div
+                      style="display: flex; flex-direction: column; gap: 8px"
+                    >
+                      <sc-for
+                        list="{{ requestTypes }} "
+                        as="rt "
+                        hint-placeholder-count="5 "
+                      >
+                        <label
+                          for="{{ rt.id }} "
+                          style="
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 12px;
+                            padding: 13px 14px;
+                            border: 1px solid #e2e4e0;
+                            border-radius: 8px;
+                            background: #ffffff;
+                            cursor: pointer;
+                            transition:
+                              border-color 0.12s ease,
+                              background 0.12s ease;
+                          "
+                          style-hover="{ borderColor:'#CFD3CE', background:'#FBFBFA' } "
+                        >
+                          <input
+                            type="checkbox "
+                            id="{{ rt.id }} "
+                            name="request_type "
+                            value="{{ rt.id }} "
+                            checked="{{ rt.checked }} "
+                            sc-camel-on-change="{{ rt.onToggle }} "
+                            style="
+                              width: 20px;
+                              height: 20px;
+                              margin: 1px 0 0;
+                              accent-color: #1b2d5c;
+                              flex: none;
+                              cursor: pointer;
+                            "
+                          />
+                          <span
+                            style="
+                              font:
+                                400 15px/1.45 &quot;Hanken Grotesk&quot;,
+                                sans-serif;
+                              color: #1a211e;
+                            "
+                            >{{ rt.label }}</span
+                          >
+                        </label>
+                      </sc-for>
+                    </div>
+                    <sc-if
+                      value="{{ errTypes }} "
+                      hint-placeholder-val="{{ false }} "
+                      ><p
+                        id="pr-types-err "
+                        role="alert "
+                        style="
+                          font:
+                            500 13px/1.45 &quot;Hanken Grotesk&quot;,
+                            sans-serif;
+                          color: #b42318;
+                          margin: 10px 0 0;
+                        "
+                      >
+                        {{ errTypes }}
+                      </p></sc-if
+                    >
+                  </fieldset>
+                  <div style="margin-bottom: 26px">
+                    <label
+                      for="pr-details "
+                      style="
+                        display: block;
+                        font:
+                          600 14px/1.35 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        margin: 0 0 7px;
+                      "
+                      >Additional details
+                      <span
+                        style="
+                          font-weight: 400;
+                          color: #8a908c;
+                          font-size: 13px;
+                        "
+                        >(optional)</span
+                      ></label
+                    >
+                    <textarea
+                      id="pr-details "
+                      name="details "
+                      rows="4 "
+                      value="{{ detailsVal }} "
+                      sc-camel-on-change="{{ onDetails }} "
+                      style="
+                        display: block;
+                        width: 100%;
+                        font:
+                          400 16px/1.5 &quot;Hanken Grotesk&quot;,
+                          sans-serif;
+                        color: #1a211e;
+                        background: #ffffff;
+                        border: 1px solid #cfd3ce;
+                        border-radius: 8px;
+                        padding: 13px 14px;
+                        min-height: 112px;
+                        resize: vertical;
+                      "
+                      style-focus="{ borderColor:'#1B2D5C', boxShadow:'0 0 0 3px rgba(27,45,92,0.18)' } "
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit "
+                    style="
+                      appearance: none;
+                      width: 100%;
+                      max-width: 420px;
+                      display: inline-flex;
+                      align-items: center;
+                      justify-content: center;
+                      gap: 8px;
+                      font:
+                        600 16px/1 &quot;Hanken Grotesk&quot;,
+                        sans-serif;
+                      color: #ffffff;
+                      background: #1b2d5c;
+                      border: 1px solid #1b2d5c;
+                      border-radius: 8px;
+                      padding: 16px 24px;
+                      cursor: pointer;
+                      transition:
+                        background 0.15s ease,
+                        transform 0.06s ease;
+                    "
+                    style-hover="{ background:'#24386E', borderColor:'#24386E' } "
+                    style-active="{ transform:'translateY(1px)' } "
+                  >
+                    Submit request
+                  </button>
+                </form>
+              </div>
+            </sc-if>
+            <sc-if
+              value="{{ showSubmitted }} "
+              hint-placeholder-val="{{ false }} "
+            >
+              <div
+                id="form-confirm "
+                tabindex="-1 "
+                role="status "
+                aria-live="polite "
+                style="
+                  background: #eaeef6;
+                  border: 1px solid #c7d3e8;
+                  border-radius: 12px;
+                  padding: 22px;
+                  animation: revEnter 0.25s ease both;
+                  outline: none;
+                "
+              >
+                <div
+                  aria-hidden="true "
+                  style="
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 999px;
+                    background: #1b2d5c;
+                    color: #ffffff;
+                    font:
+                      700 15px/1 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    margin-bottom: 12px;
+                  "
+                >
+                  ✓
+                </div>
+                <h3
+                  style="
+                    font:
+                      600 18px/1.3 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #1a211e;
+                    margin: 0 0 8px;
+                  "
+                >
+                  Request received
+                </h3>
+                <p
+                  style="
+                    font:
+                      400 15px/1.6 &quot;Hanken Grotesk&quot;,
+                      sans-serif;
+                    color: #353b37;
+                    margin: 0;
+                    max-width: 60ch;
+                  "
+                >
+                  Your request has been received. We will verify and respond
+                  within 45 days to the email you provided. If we need more time
+                  as permitted by law, we will let you know within that window.
+                </p>
+              </div>
+            </sc-if>
+          </section>
+          <div
+            aria-hidden="true "
+            style="height: 1px; background: #e2e4e0; margin: 36px 0 24px"
+          ></div>
+          <p
+            style="
+              font:
+                400 14px/1.65 &quot;Hanken Grotesk&quot;,
+                sans-serif;
+              color: #565c58;
+              margin: 0;
+              max-width: 64ch;
+            "
+          >
+            Requests can also be made by emailing
+            <a href="mailto:support@reviveteeth.com ">support@reviveteeth.com</a
+            >. For full details on what we collect, how we use it, and your
+            rights, see our <a href="/pages/privacy-policy ">Privacy Policy</a>.
+            Exercising your privacy rights will never affect your order,
+            pricing, or the service you receive.
+          </p>
+        </main>
+        <footer style="border-top: 1px solid #e2e4e0; background: #f4f5f7">
+          <nav
+            aria-label="Policies "
+            style="
+              max-width: 688px;
+              margin: 0 auto;
+              padding: 24px 24px 40px;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 12px 22px;
+            "
+          >
+            <a
+              href="/pages/privacy-policy "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              style-hover="{ color:'#12213F' } "
+              >Privacy Policy</a
+            >
+            <a
+              href="/pages/terms-of-service "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              style-hover="{ color:'#12213F' } "
+              >Terms of Service</a
+            >
+            <a
+              href="/pages/refund-remake-returns-policy "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              style-hover="{ color:'#12213F' } "
+              >Refund, Remake and Returns Policy</a
+            >
+            <a
+              href="/pages/shipping-policy "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              style-hover="{ color:'#12213F' } "
+              >Shipping Policy</a
+            >
+            <a
+              href="/pages/disclaimer "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              style-hover="{ color:'#12213F' } "
+              >Disclaimer</a
+            >
+            <a
+              href="/pages/privacy-opt-out "
+              aria-current="page "
+              style="
+                font:
+                  400 13px/1.4 &quot;Hanken Grotesk&quot;,
+                  sans-serif;
+                color: #1b2d5c;
+                text-decoration: none;
+              "
+              >Do Not Sell or Share My Personal Information</a
+            >
+          </nav>
+        </footer>
+      </div>
+    </x-dc>
+    <script
+      type="text/x-dc "
+      data-dc-script=" "
+      data-props='{   "previewState": { "editor": "enum", "default": "Default", "options": ["Default", "Opted out on this browser", "Request submitted"], "tsType": "string", "section": "Review states", "label": "Preview state" },   "gpcDetected": { "editor": "boolean", "default": false, "tsType": "boolean", "section": "Review states", "label": "Simulate GPC signal" },   "showErrorsDemo": { "editor": "boolean", "default": false, "tsType": "boolean", "section": "Review states", "label": "Preview form errors" } } '
+    >
+      class Component extends DCLogic {   state = {     optedOut: false,     submitted: false,     attempted: false,     fullName: '',     email: '',     stateRes: '',     details: '',     types: { sale: false, access: false, correct: false, del: false, health: false },   };    US_STATES = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];    TYPE_DEFS = [     { key: 'sale', label: 'Opt out of the sale or sharing of my personal information' },     { key: 'access', label: 'Access a copy of my personal information' },     { key: 'correct', label: 'Correct my personal information' },     { key: 'del', label: 'Delete my personal information' },     { key: 'health', label: 'Withdraw consent for the collection or sharing of my consumer health data (Washington residents)' },   ];    validate() {     const e = {};     if (!this.state.fullName.trim()) e.name = 'Please enter your full name.';     const em = this.state.email.trim();     if (!em) e.email = 'Please enter your email address.';     else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(em)) e.email = 'Please enter a valid email address.';     if (!this.state.stateRes) e.stateRes = 'Please select your state of residence.';     if (!Object.values(this.state.types).some(Boolean)) e.types = 'Please select at least one request type.';     return e;   }    handleOptOut = () => {     this.setState({ optedOut: true }, () => {       const el = document.getElementById('optout-confirm');       if (el) el.focus();     });   };    handleSubmit = (ev) => {     if (ev && ev.preventDefault) ev.preventDefault();     const errors = this.validate();     this.setState({ attempted: true }, () => {       if (Object.keys(errors).length === 0) {         this.setState({ submitted: true }, () => {           const el = document.getElementById('form-confirm');           if (el) el.focus();         });       } else {         const order = ['name', 'email', 'stateRes', 'types'];         const idMap = { name: 'pr-name', email: 'pr-email', stateRes: 'pr-state', types: 'pr-type-sale' };         const first = order.find((k) => errors[k]);         const el = first && document.getElementById(idMap[first]);         if (el) el.focus();       }     });   };    renderVals() {     const p = this.props || {};     const preview = p.previewState || 'Default';     const optedOut = preview === 'Opted out on this browser' || this.state.optedOut;     const submitted = preview === 'Request submitted' || this.state.submitted;     const attempted = this.state.attempted || !!p.showErrorsDemo;     const errors = attempted ? this.validate() : {};     const gpcActive = !!p.gpcDetected;      const states = this.US_STATES.map((s) => ({ name: s }));     const requestTypes = this.TYPE_DEFS.map((t) => ({       id: 'pr-type-' + t.key,       label: t.label,       checked: !!this.state.types[t.key],       onToggle: () => this.setState((st) => ({ types: { ...st.types, [t.key]: !st.types[t.key] } })),     }));      return {       yes: true,       states,       requestTypes,       nameVal: this.state.fullName,       emailVal: this.state.email,       stateVal: this.state.stateRes,       detailsVal: this.state.details,       onName: (e) => this.setState({ fullName: e.target.value }),       onEmail: (e) => this.setState({ email: e.target.value }),       onState: (e) => this.setState({ stateRes: e.target.value }),       onDetails: (e) => this.setState({ details: e.target.value }),       onOptOut: this.handleOptOut,       onSubmit: this.handleSubmit,       errName: errors.name || '',       errEmail: errors.email || '',       errState: errors.stateRes || '',       errTypes: errors.types || '',       ariaName: errors.name ? 'true' : 'false',       ariaEmail: errors.email ? 'true' : 'false',       ariaState: errors.stateRes ? 'true' : 'false',       showDevice: !optedOut,       showOptedOut: optedOut,       showForm: !submitted,       showSubmitted: submitted,       gpcActive,       gpcNotActive: !gpcActive,     };   } }
+    </script>
+  </body>
+</html>

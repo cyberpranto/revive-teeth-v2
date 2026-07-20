@@ -1,0 +1,854 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+}
+body {
+  background: #f4f5f7;
+  color: #1a211e;
+  font-family:
+    "Hanken Grotesk",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+a {
+  color: #1b2d5c;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: #12213f;
+}
+:focus-visible {
+  outline: 2px solid #1b2d5c;
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+@keyframes revEnter {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.body-container {
+  min-height: 100vh;
+  background: #f4f5f7;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  max-width: 688px;
+  margin: 0 auto;
+  padding: clamp(30px, 5vw, 52px) 24px 64px;
+}
+/* header  */
+
+/* ==========================================
+   Privacy Header
+========================================== */
+
+.privacy-header {
+  background: #f4f5f7;
+  border-bottom: 1px solid #e2e4e0;
+}
+
+.privacy-header__container {
+  max-width: 688px;
+  margin: 0 auto;
+  padding: 20px 24px;
+}
+
+.privacy-header__logo {
+  display: inline-block;
+  color: #1a211e;
+  text-decoration: none;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+
+  transition: opacity 0.25s ease;
+}
+
+.privacy-header__logo:hover,
+.privacy-header__logo:focus-visible {
+  opacity: 0.8;
+}
+
+/* ==========================================
+   Privacy Content
+========================================== */
+
+.privacy-content__title {
+  margin: 0 0 20px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: clamp(29px, 7vw, 40px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+
+  text-wrap: balance;
+}
+
+.privacy-content__description {
+  max-width: 60ch;
+  margin: 0;
+
+  color: #2c332f;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: clamp(16px, 4vw, 17px);
+  font-weight: 400;
+  line-height: 1.6;
+
+  text-wrap: pretty;
+}
+
+.privacy-divider {
+  height: 1px;
+  margin: 36px 0;
+  background: #e2e4e0;
+}
+
+/* ==========================================
+     Card Section
+  ========================================== */
+
+.privacy-card-section__label {
+  display: block;
+  margin-bottom: 12px;
+
+  color: #1b2d5c;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.privacy-card {
+  padding: 22px;
+
+  background: #ffffff;
+  border: 1px solid #e2e4e0;
+  border-radius: 12px;
+
+  box-shadow: 0 1px 2px rgba(20, 33, 28, 0.04);
+}
+
+.privacy-card__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.privacy-card__title {
+  margin: 0;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+.privacy-card__text {
+  max-width: 62ch;
+  margin: 0;
+
+  color: #353b37;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* ==========================================
+     Badge
+  ========================================== */
+
+.privacy-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px 11px;
+  border-radius: 999px;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.privacy-badge__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* Active */
+
+.privacy-badge--active {
+  color: #12213f;
+  background: #eaeef6;
+  border: 1px solid #c7d3e8;
+}
+
+.privacy-badge--active .privacy-badge__dot {
+  background: #1b2d5c;
+}
+
+/* Default */
+
+.privacy-badge--default {
+  color: #656b67;
+  background: transparent;
+  border: 1px solid #d3d6d1;
+}
+
+.privacy-device__label {
+  display: block;
+  margin: 0 0 12px;
+
+  color: #1b2d5c;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.privacy-device__title {
+  margin: 0 0 12px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  letter-spacing: -0.01em;
+}
+
+.privacy-device__description {
+  max-width: 60ch;
+  margin: 0 0 18px;
+
+  color: #353b37;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.privacy-device__button {
+  appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 16px 24px;
+
+  border: 1px solid #1b2d5c;
+  border-radius: 8px;
+
+  background: #1b2d5c;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+
+  transition:
+    background 0.15s ease,
+    transform 0.06s ease;
+}
+
+.privacy-device__note {
+  max-width: 60ch;
+  margin: 12px 0 0;
+
+  color: #656b67;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.55;
+}
+
+.privacy-device__success {
+  padding: 22px;
+
+  background: #eaeef6;
+  border: 1px solid #c7d3e8;
+  border-radius: 12px;
+
+  animation: revEnter 0.25s ease both;
+  outline: none;
+}
+
+.privacy-device__success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 12px;
+
+  border-radius: 999px;
+
+  background: #1b2d5c;
+  color: #ffffff;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.privacy-device__success-title {
+  margin: 0 0 8px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.privacy-device__success-text {
+  max-width: 60ch;
+  margin: 0;
+
+  color: #353b37;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.privacy-request {
+  max-width: 64ch;
+  margin: 0;
+  color: #565c58;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.65;
+}
+
+.privacy-form__label {
+  display: block;
+  margin: 0 0 12px;
+
+  color: #1b2d5c;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.privacy-form__title {
+  margin: 0 0 12px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  letter-spacing: -0.01em;
+}
+
+.privacy-form__description {
+  max-width: 60ch;
+  margin: 0 0 6px;
+
+  color: #353b37;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.privacy-form__required-note {
+  margin: 0 0 22px;
+
+  color: #656b67;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.privacy-form__success {
+  padding: 22px;
+
+  background: #eaeef6;
+  border: 1px solid #c7d3e8;
+  border-radius: 12px;
+
+  animation: revEnter 0.25s ease both;
+  outline: none;
+}
+
+.privacy-form__success-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 12px;
+
+  border-radius: 999px;
+
+  background: #1b2d5c;
+  color: #ffffff;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.privacy-form__success-title {
+  margin: 0 0 8px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.privacy-form__success-text {
+  max-width: 60ch;
+  margin: 0;
+
+  color: #353b37;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Form */
+
+.privacy-form__group {
+  margin-bottom: 20px;
+}
+
+/* Label */
+
+.privacy-form__label {
+  display: block;
+  margin: 0 0 7px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.privacy-form__required {
+  color: #1b2d5c;
+}
+
+/* Input */
+
+.privacy-form__input,
+.privacy-form__select {
+  display: block;
+  width: 100%;
+
+  padding: 13px 14px;
+
+  background: #fff;
+  border: 1px solid #cfd3ce;
+  border-radius: 8px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.privacy-form__input:focus,
+.privacy-form__select:focus {
+  outline: none;
+  border-color: #1b2d5c;
+  box-shadow: 0 0 0 3px rgba(27, 45, 92, 0.18);
+}
+
+/* Select */
+
+.privacy-form__select-wrapper {
+  position: relative;
+}
+
+.privacy-form__select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 40px;
+}
+
+.privacy-form__select-arrow {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  pointer-events: none;
+
+  color: #565c58;
+  font-size: 11px;
+}
+
+/* Help */
+
+.privacy-form__help {
+  margin: 7px 0 0;
+
+  color: #656b67;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+/* Error */
+
+.privacy-form__error {
+  margin: 7px 0 0;
+
+  color: #b42318;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+/* Fieldset */
+
+.privacy-form__fieldset {
+  border: 0;
+  margin: 0 0 20px;
+  padding: 0;
+  min-width: 0;
+}
+
+/* Legend */
+
+.privacy-form__legend {
+  margin: 0 0 2px;
+  padding: 0;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+/* Checkbox List */
+
+.privacy-form__checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Checkbox Item */
+
+.privacy-form__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  padding: 13px 14px;
+
+  background: #fff;
+  border: 1px solid #e2e4e0;
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.12s ease,
+    background 0.12s ease;
+}
+
+.privacy-form__checkbox:hover {
+  border-color: #cfd3ce;
+  background: #fbfbfa;
+}
+
+/* Checkbox */
+
+.privacy-form__checkbox-input {
+  width: 20px;
+  height: 20px;
+
+  margin: 1px 0 0;
+
+  flex: none;
+
+  cursor: pointer;
+
+  accent-color: #1b2d5c;
+}
+
+/* Checkbox Text */
+
+.privacy-form__checkbox-label {
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+}
+
+/* Optional */
+
+.privacy-form__optional {
+  color: #8a908c;
+
+  font-size: 13px;
+  font-weight: 400;
+}
+
+/* Textarea */
+
+.privacy-form__textarea {
+  display: block;
+  width: 100%;
+
+  min-height: 112px;
+
+  padding: 13px 14px;
+
+  resize: vertical;
+
+  background: #fff;
+  border: 1px solid #cfd3ce;
+  border-radius: 8px;
+
+  color: #1a211e;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.privacy-form__textarea:focus {
+  outline: none;
+  border-color: #1b2d5c;
+  box-shadow: 0 0 0 3px rgba(27, 45, 92, 0.18);
+}
+
+/* Submit Button */
+
+.privacy-form__submit {
+  appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  max-width: 420px;
+
+  padding: 16px 24px;
+
+  border: 1px solid #1b2d5c;
+  border-radius: 8px;
+
+  background: #1b2d5c;
+  color: #ffffff;
+
+  cursor: pointer;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    transform 0.06s ease;
+}
+
+.privacy-form__submit:hover {
+  background: #24386e;
+  border-color: #24386e;
+}
+
+.privacy-form__submit:active {
+  transform: translateY(1px);
+}
+
+.privacy-form__submit:focus-visible {
+  outline: none;
+  border-color: #24386e;
+  box-shadow: 0 0 0 3px rgba(27, 45, 92, 0.18);
+}
+
+#optout-button {
+  appearance: none;
+  width: 100%;
+  max-width: 420px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family:
+    Hanken Grotesk,
+    sans-serif;
+  color: #ffffff;
+  background: #1b2d5c;
+  border: 1px solid #1b2d5c;
+  border-radius: 8px;
+  padding: 16px 24px;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    transform 0.06s ease;
+}
+
+#optout-button:hover {
+  background: #24386e;
+  border-color: #24386e;
+}
+#optout-button:active {
+  transform: translateY(1px);
+}
+
+/* footer  */
+.privacy-footer {
+  background: #f4f5f7;
+  border-top: 1px solid #e2e4e0;
+}
+
+.privacy-footer__nav {
+  max-width: 688px;
+  margin: 0 auto;
+  padding: 24px 24px 40px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 22px;
+}
+
+.privacy-footer__link {
+  font-family:
+    Hanken Grotesk,
+    sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #1b2d5c;
+  text-decoration: none;
+}
+
+.privacy-footer__link:hover {
+  color: #12213f;
+}
+
+@media (max-width: 767px) {
+  .privacy-footer__nav {
+    flex-direction: column;
+    gap: 14px;
+    padding: 24px 20px 32px;
+  }
+}
