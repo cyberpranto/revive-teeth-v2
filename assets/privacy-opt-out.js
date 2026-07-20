@@ -200,15 +200,17 @@ function handleFormSubmit(event) {
         .map(item => "• " + item.value)
         .join("\n");
 
-    document.getElementById("contact-body").value =
+    const body = document.getElementById("contact-body");
 
-        `Privacy Request
+body.value = `
+
+Privacy Request
 
 Name:
-${elements.name.value.trim()}
+${elements.name.value}
 
 Email:
-${elements.email.value.trim()}
+${elements.email.value}
 
 State:
 ${elements.state.value}
