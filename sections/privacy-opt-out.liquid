@@ -21,13 +21,9 @@
     </header>
     <main>
       <section class="privacy-content">
-        <h1 class="privacy-content__title">Do Not Sell or Share My Personal Information</h1>
+        <h1 class="privacy-content__title">{{ section.settings.page_title }}</h1>
 
-        <p class="privacy-content__description">
-          Revive Teeth does not sell your personal information for money. We do share certain data with advertising
-          partners, including Meta, for advertising purposes, which may be considered a "sale" or "share" under some
-          state privacy laws. This page lets you opt out of that sharing and exercise your other privacy rights.
-        </p>
+        <p class="privacy-content__description">{{ section.settings.page_description }}</p>
       </section>
       <div class="privacy-divider" aria-hidden="true"></div>
 
@@ -331,11 +327,10 @@
         >
           <div class="privacy-form__success-icon" aria-hidden="true">✓</div>
 
-          <h3 class="privacy-form__success-title">Request received</h3>
+          <h3 class="privacy-form__success-title">{{ section.settings.success_title }}</h3>
 
           <p class="privacy-form__success-text">
-            Your request has been received. We will verify and respond within 45 days to the email you provided. If we
-            need more time as permitted by law, we will let you know within that window.
+            {{ section.settings.success_description }}
           </p>
         </div>
       </section>
@@ -350,18 +345,19 @@
       </p>
     </main>
     <footer class="privacy-footer">
+      {% assign footer_menu = linklists[section.settings.footer_menu] %}
       <nav class="privacy-footer__nav" aria-label="Policies">
-        <a href="/pages/privacy-policy" class="privacy-footer__link"> Privacy Policy </a>
-
-        <a href="/pages/terms-of-service" class="privacy-footer__link"> Terms of Service </a>
-
-        <a href="/pages/refund-remake-returns-policy" class="privacy-footer__link">
-          Refund, Remake and Returns Policy
-        </a>
-
-        <a href="/pages/shipping-policy" class="privacy-footer__link"> Shipping Policy </a>
-
-        <a href="/pages/disclaimer" class="privacy-footer__link"> Disclaimer </a>
+        {% for link in footer_menu.links %}
+          <a
+            href="{{ link.url }}"
+            class="privacy-footer__link"
+            {% if link.current %}
+              aria-current="page"
+            {% endif %}
+          >
+            {{ link.title }}
+          </a>
+        {% endfor %}
 
         <a href="/pages/privacy-opt-out" class="privacy-footer__link" aria-current="page">
           Do Not Sell or Share My Personal Information
@@ -374,6 +370,36 @@
 {% schema %}
 {
   "name": "Privacy Opt Out",
-  "settings": []
+  "settings": [
+    {
+      "type": "text",
+      "id": "page_title",
+      "label": "Page Title",
+      "default": "Do Not Sell or Share My Personal Information"
+    },
+    {
+      "type": "text",
+      "id": "page_description",
+      "label": "Page Description",
+      "default": "Revive Teeth does not sell your personal information for money. We do share certain data with advertising partners, including Meta, for advertising purposes, which may be considered a 'sale' or 'share' under some state privacy laws. This page lets you opt out of that sharing and exercise your other privacy rights."
+    },
+    {
+      "type": "text",
+      "id": "success_title",
+      "label": "Request Rescieved  Title",
+      "default": "Request received"
+    },
+    {
+      "type": "textarea",
+      "id": "success_description",
+      "label": "Request Rescieved  Description",
+      "default": "Your request has been received. We will verify and respond within 45 days to the email you provided. If we need more time as permitted by law, we will let you know within that window."
+    },
+    {
+      "type": "link_list",
+      "id": "footer_menu",
+      "label": "Footer Menu"
+    }
+  ]
 }
 {% endschema %}
