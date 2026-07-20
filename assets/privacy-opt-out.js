@@ -6,7 +6,76 @@
 // class Component extends DCLogic { state = { optedOut: false, submitted: false, attempted: false, fullName: '', email: '', stateRes: '', details: '', types: { sale: false, access: false, correct: false, del: false, health: false }, }; US_STATES = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'District of Columbia', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont', 'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']; TYPE_DEFS = [{ key: 'sale', label: 'Opt out of the sale or sharing of my personal information' }, { key: 'access', label: 'Access a copy of my personal information' }, { key: 'correct', label: 'Correct my personal information' }, { key: 'del', label: 'Delete my personal information' }, { key: 'health', label: 'Withdraw consent for the collection or sharing of my consumer health data (Washington residents)' },]; validate() { const e = {}; if (!this.state.fullName.trim()) e.name = 'Please enter your full name.'; const em = this.state.email.trim(); if (!em) e.email = 'Please enter your email address.'; else if (!/^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(em)) e.email = 'Please enter a valid email address.'; if (!this.state.stateRes) e.stateRes = 'Please select your state of residence.'; if (!Object.values(this.state.types).some(Boolean)) e.types = 'Please select at least one request type.'; return e; } handleOptOut = () => { this.setState({ optedOut: true }, () => { const el = document.getElementById('optout-confirm'); if (el) el.focus(); }); }; handleSubmit = (ev) => { if (ev && ev.preventDefault) ev.preventDefault(); const errors = this.validate(); this.setState({ attempted: true }, () => { if (Object.keys(errors).length === 0) { this.setState({ submitted: true }, () => { const el = document.getElementById('form-confirm'); if (el) el.focus(); }); } else { const order = ['name', 'email', 'stateRes', 'types']; const idMap = { name: 'pr-name', email: 'pr-email', stateRes: 'pr-state', types: 'pr-type-sale' }; const first = order.find((k) => errors[k]); const el = first && document.getElementById(idMap[first]); if (el) el.focus(); } }); }; renderVals() { const p = this.props || {}; const preview = p.previewState || 'Default'; const optedOut = preview === 'Opted out on this browser' || this.state.optedOut; const submitted = preview === 'Request submitted' || this.state.submitted; const attempted = this.state.attempted || !!p.showErrorsDemo; const errors = attempted ? this.validate() : {}; const gpcActive = !!p.gpcDetected; const states = this.US_STATES.map((s) => ({ name: s })); const requestTypes = this.TYPE_DEFS.map((t) => ({ id: 'pr-type-' + t.key, label: t.label, checked: !!this.state.types[t.key], onToggle: () => this.setState((st) => ({ types: { ...st.types, [t.key]: !st.types[t.key] } })), })); return { yes: true, states, requestTypes, nameVal: this.state.fullName, emailVal: this.state.email, stateVal: this.state.stateRes, detailsVal: this.state.details, onName: (e) => this.setState({ fullName: e.target.value }), onEmail: (e) => this.setState({ email: e.target.value }), onState: (e) => this.setState({ stateRes: e.target.value }), onDetails: (e) => this.setState({ details: e.target.value }), onOptOut: this.handleOptOut, onSubmit: this.handleSubmit, errName: errors.name || '', errEmail: errors.email || '', errState: errors.stateRes || '', errTypes: errors.types || '', ariaName: errors.name ? 'true' : 'false', ariaEmail: errors.email ? 'true' : 'false', ariaState: errors.stateRes ? 'true' : 'false', showDevice: !optedOut, showOptedOut: optedOut, showForm: !submitted, showSubmitted: submitted, gpcActive, gpcNotActive: !gpcActive, }; } }
 //  </script> 
 
+const US_STATES = [
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Delaware",
+    "District of Columbia",
+    "Florida",
+    "Georgia",
+    "Hawaii",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Kansas",
+    "Kentucky",
+    "Louisiana",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Pennsylvania",
+    "Rhode Island",
+    "South Carolina",
+    "South Dakota",
+    "Tennessee",
+    "Texas",
+    "Utah",
+    "Vermont",
+    "Virginia",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming"
+];
+function populateStates() {
 
+    if (!elements.state) return;
+
+    US_STATES.forEach(state => {
+
+        const option = document.createElement("option");
+
+        option.value = state;
+
+        option.textContent = state;
+
+        elements.state.appendChild(option);
+
+    });
+
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     initPrivacyPage();
@@ -14,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function initPrivacyPage() {
     cacheElements();
+    populateStates();
     bindEvents();
     loadCustomerPrivacyAPI();
 }
@@ -42,15 +112,15 @@ function cacheElements() {
     elements.details = document.getElementById("pr-details");
     elements.requestTypes =
         document.querySelectorAll(
-            'input[name="request_type"]'
+            'input[name="contact[Request Type][]"]'
         );
     elements.submitButton =
         document.querySelector(
             ".privacy-form__submit"
         );
-    elements.gpcDefault = document.getElementById(
-        "gpc-default"
-    );
+    // elements.gpcDefault = document.getElementById(
+    //     "gpc-default"
+    // );
     elements.nameError =
         document.getElementById("pr-name-err");
 
@@ -117,10 +187,26 @@ function handleOptOut(event) {
     );
 }
 
-function handleFormSubmit(e) {
-    e.preventDefault();
+function handleFormSubmit(event) {
 
-    if (!validateForm()) return;
+    if (!validateForm()) {
+
+        event.preventDefault();
+
+        const firstError = document.querySelector(
+            ".privacy-form__error:not([hidden])"
+        );
+
+        if (firstError) {
+            firstError.scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+        }
+
+        return;
+    }
+
 }
 
 function loadCustomerPrivacyAPI() {
@@ -154,30 +240,31 @@ function loadCustomerPrivacyAPI() {
 
 function detectGPC() {
 
+    const gpcEnabled =
+        navigator.globalPrivacyControl === true;
+
+    if (gpcEnabled) {
+
+        show(elements.gpcActive);
+
+    }
+
 }
 
 function checkExistingConsent() {
 
     if (!window.Shopify?.customerPrivacy) return;
 
-    const consent = window.Shopify.customerPrivacy.getTrackingConsent();
+    if (!window.Shopify.customerPrivacy.saleOfDataAllowed()) {
 
-    console.log("Current Consent:", consent);
-
-    if (consent === "no_interaction") {
-        show(elements.optOutContent);
-        hide(elements.optOutConfirm);
-    }
-
-    if (consent === "yes") {
         hide(elements.optOutContent);
         show(elements.optOutConfirm);
+
+        return;
     }
 
-    if (consent === "no") {
-        hide(elements.optOutContent);
-        show(elements.optOutConfirm);
-    }
+    show(elements.optOutContent);
+    hide(elements.optOutConfirm);
 }
 
 function show(element) {
@@ -212,11 +299,21 @@ function validateForm() {
     }
 
     // Email
-    if (!elements.email.value.trim()) {
+    const email = elements.email.value.trim();
+
+    const emailRegex =
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailRegex.test(email)) {
+
         show(elements.emailError);
+
         valid = false;
+
     } else {
+
         hide(elements.emailError);
+
     }
 
     // State

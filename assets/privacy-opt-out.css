@@ -852,3 +852,28 @@ main {
     padding: 24px 20px 32px;
   }
 }
+
+
+.privacy-form__error-summary{
+
+  margin-bottom:24px;
+
+  padding:16px;
+
+  border-radius:8px;
+
+  background:#FEECEC;
+
+  color:#B42318;
+
+  border:1px solid #FDA29B;
+
+}
+
+.privacy-form__error-summary ul{
+
+  margin:0;
+
+  padding-left:20px;
+
+}

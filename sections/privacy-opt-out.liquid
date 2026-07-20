@@ -71,7 +71,13 @@
             Click below to opt out of the sharing of data collected by cookies and advertising pixels in this browser.
           </p>
 
-          <button id="optout-button" type="button" class="privacy-device__button" data-action="privacy-optout">
+          <button
+            id="optout-button"
+            type="button"
+            class="privacy-device__button"
+            data-action="privacy-optout"
+            aria-disabled
+          >
             Opt out of sale or sharing
           </button>
 
@@ -108,7 +114,22 @@
 
           <p class="privacy-form__required-note">Fields marked with an asterisk are required.</p>
         </div>
-        <form class="privacy-form" id="privacy-request-form" data-form="privacy">
+        {% form 'contact', id: 'privacy-request-form', class: 'privacy-form' %}
+          <input
+            type="hidden"
+            name="contact[Subject]"
+            value="Privacy Request"
+          />
+          <input
+            type="hidden"
+            name="contact[Page]"
+            value="{{ request.path }}"
+          >
+          <input
+            type="hidden"
+            name="contact[Submitted]"
+            value="{{ 'now' | date: '%Y-%m-%d %H:%M:%S' }}"
+          >
           <!-- Full Name -->
           <div class="privacy-form__group">
             <label for="pr-name" class="privacy-form__label">
@@ -118,11 +139,12 @@
 
             <input
               id="pr-name"
-              name="full_name"
+              name="contact[name]"
               type="text"
               autocomplete="name"
               aria-required="true"
               class="privacy-form__input"
+              value="{{ form.name }}"
             />
 
             <!-- Show only when there is an error -->
@@ -138,13 +160,14 @@
 
             <input
               id="pr-email"
-              name="email"
+              name="contact[email]"
               type="email"
               inputmode="email"
               autocomplete="email"
               aria-required="true"
               aria-describedby="pr-email-help"
               class="privacy-form__input"
+              value="{{ form.email }}"
             />
 
             <p id="pr-email-help" class="privacy-form__help">
@@ -163,7 +186,7 @@
             </label>
 
             <div class="privacy-form__select-wrapper">
-              <select id="pr-state" name="state" class="privacy-form__select" aria-required="true">
+              <select id="pr-state" name="contact[State]" class="privacy-form__select" aria-required="true">
                 <option value="" selected disabled>Select your state</option>
 
                 <!-- Add your state options here -->
@@ -190,7 +213,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="request_type"
+                  name="contact[Request Type][]"
                   value="Opt out of the sale or sharing of my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -201,7 +224,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="request_type"
+                  name="contact[Request Type][]"
                   value="Access a copy of my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -212,7 +235,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="request_type"
+                  name="contact[Request Type][]"
                   value="Correct my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -223,7 +246,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="request_type"
+                  name="contact[Request Type][]"
                   value="Delete my personal information"
                   class="privacy-form__checkbox-input"
                 >
@@ -233,7 +256,7 @@
               <label class="privacy-form__checkbox">
                 <input
                   type="checkbox"
-                  name="request_type"
+                  name="contact[Request Type][]"
                   value="Withdraw consent for the collection or sharing of my consumer health data (Washington residents)"
                   class="privacy-form__checkbox-input"
                 >
@@ -255,15 +278,42 @@
             <label for="pr-details" class="privacy-form__label">
               Additional details
 
-              <span class="privacy-form__optional"> (optional) </span>
+              <span class="privacy-form__optional">(optional)</span>
             </label>
 
-            <textarea id="pr-details" name="details" rows="4" class="privacy-form__textarea"></textarea>
+            <textarea
+              id="pr-details"
+              name="contact[body]"
+              rows="4"
+              class="privacy-form__textarea"
+            >{{ form.body }}</textarea>
           </div>
           <!-- Submit Button -->
 
-          <button type="submit" class="privacy-form__submit">Submit request</button>
-        </form>
+          <button type="submit" class="privacy-form__submit" aria-disabled>Submit request</button>
+          {% if form.posted_successfully? %}
+            <script>
+              document.addEventListener('DOMContentLoaded', () => {
+                const success = document.getElementById('form-confirm');
+
+                success.removeAttribute('hidden');
+
+                success.scrollIntoView({
+                  behavior: 'smooth',
+
+                  block: 'center',
+                });
+
+                success.focus();
+              });
+            </script>
+          {% endif %}
+          {% if form.errors %}
+            <div class="privacy-form__error-summary">
+              {{ form.errors | default_errors }}
+            </div>
+          {% endif %}
+        {% endform %}
 
         <div
           id="form-confirm"
