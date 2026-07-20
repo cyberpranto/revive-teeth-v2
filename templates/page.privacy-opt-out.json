@@ -11,7 +11,13 @@
   "sections": {
     "main": {
       "type": "privacy-opt-out",
-      "settings": {}
+      "settings": {
+        "page_title": "Do Not Sell or Share My Personal Information",
+        "page_description": "Revive Teeth does not sell your personal information for money. We do share certain data with advertising partners, including Meta, for advertising purposes, which may be considered a 'sale' or 'share' under some state privacy laws. This page lets you opt out of that sharing and exercise your other privacy rights.",
+        "success_title": "Request received",
+        "success_description": "Your request has been received. We will verify and respond within 45 days to the email you provided. If we need more time as permitted by law, we will let you know within that window.",
+        "footer_menu": "legal-pages"
+      }
     }
   },
   "order": [
