@@ -85,18 +85,20 @@
     </div>
   </div>
   <script src="https://app.octaneai.com/kz8jedy05hhkuuz3/quiz.js" defer></script>
-<script>
-  document.addEventListener('octane.quiz.completed', function (event) {
-    console.log('Quiz completed!', event.detail);
+  <script>
+    document.addEventListener('octane.quiz.completed', function (event) {
+      console.log('Quiz completed!', event.detail);
 
-    const email = event.detail?.email || event.detail?.contact?.email || event.detail?.answers?.email;
+      const email = event.detail?.email || event.detail?.contact?.email || event.detail?.answers?.email;
+      const arch = event.detail?.arch_choice || event.detail?.answers?.arch_choice || event.detail?.arch;
 
-    if (!email) {
-      console.error('Quiz Session Error: email not found in event.detail', event.detail);
-      return;
-    }
+      if (!email) {
+        console.error('Quiz Session Error: email not found in event.detail', event.detail);
+        return;
+      }
 
-    localStorage.setItem('quiz_email', email);
-  });
-</script>
+      localStorage.setItem('quiz_email', email);
+      if (arch) localStorage.setItem('quiz_arch', arch);
+    });
+  </script>
 </div>
