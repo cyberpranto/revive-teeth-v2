@@ -240,7 +240,38 @@
             </div>
 
             <div class="buy-stock"><span class="dot"></span>{{ section.settings.stock_text }}</div>
+<div class="terms-agreement">
+  <label class="terms-label">
+    <input
+      type="checkbox"
+      id="termsAgreement"
+      name="termsAgreement"
+    >
 
+    <span>
+      I have read and agree to the
+      <a href="/policies/terms-of-service" target="_blank" rel="noopener">
+        Terms of Service
+      </a>,
+      including the Binding Arbitration Agreement and Class Action Waiver in
+      Section 15, the
+      <a href="/pages/privacy-policy" target="_blank" rel="noopener">
+        Privacy Policy
+      </a>,
+      and the
+      <a href="/policies/refund-policy" target="_blank" rel="noopener">
+        Refund, Remake & Returns Policy
+      </a>.
+    </span>
+  </label>
+
+  <p
+    id="termsError"
+    style="display:none;color:#d32f2f;font-size:14px;margin-top:8px;"
+  >
+    Please accept the terms before continuing.
+  </p>
+</div>
             <button class="btn btn-full claim-cta" data-variant-id="" id="claimCTA">
               {{ section.settings.button_text }}
 
