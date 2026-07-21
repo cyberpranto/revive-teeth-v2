@@ -921,8 +921,8 @@
   if (!checkbox.checked) {
     console.log('STOPPED');
     document.getElementById('termsError').style.display = 'block';
-    e.preventDefault();
-    e.stopPropagation();
+    {% comment %} e.preventDefault();
+    e.stopPropagation(); {% endcomment %}
     return;
   }
 
