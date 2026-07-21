@@ -2465,7 +2465,6 @@ footer {
   color: #8b97b8;
 }
 .foot-bottom .legal {
-  width: 72%;
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
