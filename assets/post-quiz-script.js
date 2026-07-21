@@ -25,13 +25,7 @@
 
 
 
-  (function () {
-    var hasSession = !!localStorage.getItem('quiz_email');
 
-    if (!hasSession) {
-      window.location.replace('/pages/quiz?from=offer');
-    }
-  })();
 
 
 /* ---------- SCROLL REVEAL (IntersectionObserver + stagger) ---------- */
