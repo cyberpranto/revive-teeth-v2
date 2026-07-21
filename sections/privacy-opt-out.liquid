@@ -354,14 +354,15 @@
             {% if link.current %}
               aria-current="page"
             {% endif %}
+            target="_blank"
           >
             {{ link.title }}
           </a>
         {% endfor %}
 
-        <a href="/pages/privacy-opt-out" class="privacy-footer__link" aria-current="page">
+        {% comment %} <a href="/pages/privacy-opt-out" class="privacy-footer__link" aria-current="page">
           Do Not Sell or Share My Personal Information
-        </a>
+        </a> {% endcomment %}
       </nav>
     </footer>
   </div>
