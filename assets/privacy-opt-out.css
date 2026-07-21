@@ -49,6 +49,9 @@ textarea:focus {
   }
 }
 
+ul {list-style-type: circle;}
+
+
 .body-container {
   min-height: 100vh;
   background: #f4f5f7;
