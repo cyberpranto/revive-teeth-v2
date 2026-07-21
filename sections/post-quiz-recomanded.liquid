@@ -901,9 +901,9 @@
   const claimCTA = document.getElementById('claimCTA');
 
   claimCTA.addEventListener('click', async function () {
-    const checkbox = document.getElementById('termsAgreement');
-    const originalText = this.innerHTML;
 
+    const originalText = this.innerHTML;
+    const checkbox = document.getElementById('termsAgreement');
     if (!checkbox.checked) {
       document.getElementById('termsError').style.display = 'block';
       checkbox.focus();
@@ -921,7 +921,7 @@
     }
 
     this.disabled = true;
-    this.textContent = 'Preparing Checkout...';
+    this.innerHTML  = 'Preparing Checkout...';
 
     try {
       // 1. AGE cart e item add koro — discount link hit korar age
