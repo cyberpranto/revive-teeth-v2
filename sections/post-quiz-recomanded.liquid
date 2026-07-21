@@ -1,25 +1,23 @@
 <style>
-  .terms-label {
-  display: flex;
-  gap:16px;
-  justify-content:flex-start;
-  align-items: flex-start;
-  margin-top:16px;
-}
-
-.buy-reassure-2 {
-    text-align: left;
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.5;
+    .terms-label {
     display: flex;
-    gap: 8px;
+    gap:16px;
+    justify-content:flex-start;
     align-items: flex-start;
-    justify-content: center;
+    margin-top:16px;
   }
+
+  .buy-reassure-2 {
+      text-align: left;
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.5;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      justify-content: center;
+    }
 </style>
-
-
 
 {% assign product = section.settings.product %}
 {% if section.settings.product == blank %}
@@ -272,12 +270,15 @@
                 >
 
                 <span class="buy-reassure-2">
-                  <p>I have read and agree to the
-                  <a href="/policies/terms-of-service" target="_blank" rel="noopener"> Terms of Service </a>, including
-                  the Binding Arbitration Agreement and Class Action Waiver in Section 15, the
-                  <a href="/pages/privacy-policy" target="_blank" rel="noopener"> Privacy Policy </a>, and the
-                  <a href="/policies/refund-policy" target="_blank" rel="noopener"> Refund, Remake & Returns Policy </a
-                  >.</p>
+                  <p>
+                    I have read and agree to the
+                    <a href="/policies/terms-of-service" target="_blank" rel="noopener"> Terms of Service </a>,
+                    including the Binding Arbitration Agreement and Class Action Waiver in Section 15, the
+                    <a href="/pages/privacy-policy" target="_blank" rel="noopener"> Privacy Policy </a>, and the
+                    <a href="/policies/refund-policy" target="_blank" rel="noopener">
+                      Refund, Remake & Returns Policy </a
+                    >.
+                  </p>
                 </span>
               </label>
 
@@ -902,14 +903,30 @@
 
   claimCTA.addEventListener('click', async function () {
 
-      console.log('CLICK');
+      {% comment %} console.log('CLICK');
     const originalText = this.innerHTML;
     const checkbox = document.getElementById('termsAgreement');
     if (!checkbox.checked) {
       document.getElementById('termsError').style.display = 'block';
       checkbox.focus();
       return;
-    }
+    } {% endcomment %}
+
+    Console.log('CLICK');
+
+  const checkbox = document.getElementById('termsAgreement');
+
+  console.log('Checked:', checkbox.checked);
+
+  if (!checkbox.checked) {
+    console.log('STOPPED');
+    document.getElementById('termsError').style.display = 'block';
+    e.preventDefault();
+    e.stopPropagation();
+    return;
+  }
+
+  console.log('CONTINUE');
 
     document.getElementById('termsError').style.display = 'none';
 
