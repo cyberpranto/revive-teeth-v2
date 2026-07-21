@@ -902,67 +902,27 @@
     }
   });
 
+
+
   // ⬇️ claimCTA — session/sessionStorage বাদ দিয়ে email দিয়ে কাজ করবে
   const claimCTA = document.getElementById('claimCTA');
 
-  claimCTA.addEventListener('click', async function () {
-
-    const checkbox = document.getElementById('termsAgreement');
-const claimCTA = document.getElementById('claimCTA');
-
-console.log(checkbox);
-console.log(claimCTA);
-
-checkbox.addEventListener('change', function () {
-  console.log('Changed:', this.checked);
-
-  claimCTA.disabled = !this.checked;
-});
-{% comment %} const checkbox = document.getElementById('termsAgreement');
+  const checkbox = document.getElementById('termsAgreement');
 const termsError = document.getElementById('termsError');
 
-
-console.log(checkbox);
-console.log(claimCTA);
-
-// শুরুতে button disabled থাকবে
+// শুরুতে disable
 claimCTA.disabled = true;
 
-// Checkbox check/uncheck অনুযায়ী button enable/disable হবে
+// Checkbox change
 checkbox.addEventListener('change', function () {
-  claimCTA.disabled = !this.checked;
+    claimCTA.disabled = !this.checked;
 
-  if (this.checked) {
-    termsError.style.display = 'none';
-  }
-}); {% endcomment %}
-      {% comment %} console.log('CLICK');
-    const originalText = this.innerHTML;
-    const checkbox = document.getElementById('termsAgreement');
-    if (!checkbox.checked) {
-      document.getElementById('termsError').style.display = 'block';
-      checkbox.focus();
-      return;
-    } {% endcomment %}
+    if (this.checked) {
+        termsError.style.display = 'none';
+    }
+});
 
-    {% comment %} console.log('CLICK');
-
-  const checkbox = document.getElementById('termsAgreement');
-
-  console.log('Checked:', checkbox.checked);
-
-  if (!checkbox.checked) {
-    console.log('STOPPED');
-    document.getElementById('termsError').style.display = 'block';
-    {% comment %} e.preventDefault();
-    e.stopPropagation(); {% endcomment %}
-    return;
-  }
-
-  console.log('CONTINUE'); {% endcomment %}
-
-    document.getElementById('termsError').style.display = 'none';
-
+  claimCTA.addEventListener('click', async function () {
     const variantId = this.dataset.variantId;
     const email = localStorage.getItem('quiz_email');
 
