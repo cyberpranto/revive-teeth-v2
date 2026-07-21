@@ -912,7 +912,7 @@
       return;
     } {% endcomment %}
 
-    console.log('CLICK');
+    {% comment %} console.log('CLICK');
 
   const checkbox = document.getElementById('termsAgreement');
 
@@ -926,7 +926,7 @@
     return;
   }
 
-  console.log('CONTINUE');
+  console.log('CONTINUE'); {% endcomment %}
 
     document.getElementById('termsError').style.display = 'none';
 
@@ -986,14 +986,8 @@
     } catch (err) {
       console.error(err);
 
-if (!checkbox.checked) {
-    document.getElementById('termsError').style.display = 'block';
-
-    this.disabled = false;
-    this.innerHTML = 'BUTTON SHOULD NOT CHANGE';
-
-    return;
-}
+      this.disabled = false;
+      this.innerHTML = originalText;
 
       alert('Something went wrong.');
     }
