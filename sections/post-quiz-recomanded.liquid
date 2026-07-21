@@ -924,6 +924,8 @@ checkbox.addEventListener('change', function () {
 
   claimCTA.addEventListener('click', async function () {
     const variantId = this.dataset.variantId;
+
+    console.log("Variant ID:", variantId);
     const email = localStorage.getItem('quiz_email');
 
     if (!email) {
@@ -948,6 +950,8 @@ checkbox.addEventListener('change', function () {
       const cart = await fetch('/cart.js').then(r => r.json());
 
 console.log(cart);
+console.log(cart.item_count);
+console.log(cart.items);
 
 
 
