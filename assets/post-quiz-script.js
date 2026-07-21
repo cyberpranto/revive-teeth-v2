@@ -24,7 +24,7 @@
 //   })();
 
 
-<script>
+
   (function () {
     var hasSession = !!localStorage.getItem('quiz_email');
 
@@ -32,7 +32,7 @@
       window.location.replace('/pages/quiz?from=offer');
     }
   })();
-</script>
+
 
 /* ---------- SCROLL REVEAL (IntersectionObserver + stagger) ---------- */
 (function () {
