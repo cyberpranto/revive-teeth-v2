@@ -890,7 +890,6 @@
 
     const variantId = this.dataset.variantId;
     const email = localStorage.getItem('quiz_email');
-    const acceptedAt = new Date().toISOString();
 
     if (!email) {
       alert('Something went wrong — please retake the quiz.');
@@ -908,6 +907,23 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           items: [{ id: variantId, quantity: 1 }],
+        }),
+      });
+
+      const acceptedAt = new Date().toISOString();
+
+      await fetch('/cart/update.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          attributes: {
+            terms_accepted: 'Yes',
+            terms_accepted_at: acceptedAt,
+            customer_email: email,
+            accepted_from: 'Offer Page',
+          },
         }),
       });
 
