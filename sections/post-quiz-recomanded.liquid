@@ -902,6 +902,7 @@
 
   claimCTA.addEventListener('click', async function () {
     const checkbox = document.getElementById('termsAgreement');
+    const originalText = this.innerHTML;
 
     if (!checkbox.checked) {
       document.getElementById('termsError').style.display = 'block';
