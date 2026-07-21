@@ -390,11 +390,11 @@ function startQuiz() {
   renderQuestion();
   openModal("quizModal");
 }
-document.getElementById("openQuiz").addEventListener("click", startQuiz);
-document.getElementById("exitTakeQuiz").addEventListener("click", () => {
-  closeModal("exitModal");
-  startQuiz();
-});
+// document.getElementById("openQuiz").addEventListener("click", startQuiz);
+// document.getElementById("exitTakeQuiz").addEventListener("click", () => {
+//   closeModal("exitModal");
+//   startQuiz();
+// });
 
 /* ============== EXIT INTENT ============== */
 let exitShown = false;
