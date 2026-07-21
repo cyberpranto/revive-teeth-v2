@@ -986,8 +986,14 @@
     } catch (err) {
       console.error(err);
 
-      this.disabled = false;
-      this.innerHTML = originalText;
+if (!checkbox.checked) {
+    document.getElementById('termsError').style.display = 'block';
+
+    this.disabled = false;
+    this.innerHTML = 'BUTTON SHOULD NOT CHANGE';
+
+    return;
+}
 
       alert('Something went wrong.');
     }
