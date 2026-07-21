@@ -826,11 +826,11 @@
     document.getElementById('bpWas').textContent = formatMoney(realPrice);
     document.getElementById('bpNow').textContent = formatMoney(realPrice - 10000);
 
-    {% comment %} const cta = document.getElementById('claimCTA');
+    const cta = document.getElementById('claimCTA');
 
     if (cta) {
       cta.dataset.variantId = button.dataset.variantId;
-    } {% endcomment %}
+    } 
 
     // Sticky Bar Update
     const sbInfo = document.getElementById('sbInfoText');
