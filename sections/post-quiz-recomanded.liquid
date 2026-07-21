@@ -902,7 +902,20 @@
   const claimCTA = document.getElementById('claimCTA');
 
   claimCTA.addEventListener('click', async function () {
+const checkbox = document.getElementById('termsAgreement');
+const termsError = document.getElementById('termsError');
 
+// শুরুতে button disabled থাকবে
+claimCTA.disabled = true;
+
+// Checkbox check/uncheck অনুযায়ী button enable/disable হবে
+checkbox.addEventListener('change', function () {
+  claimCTA.disabled = !this.checked;
+
+  if (this.checked) {
+    termsError.style.display = 'none';
+  }
+});
       {% comment %} console.log('CLICK');
     const originalText = this.innerHTML;
     const checkbox = document.getElementById('termsAgreement');
