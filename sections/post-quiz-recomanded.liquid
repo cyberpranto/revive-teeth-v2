@@ -906,7 +906,19 @@
   const claimCTA = document.getElementById('claimCTA');
 
   claimCTA.addEventListener('click', async function () {
-const checkbox = document.getElementById('termsAgreement');
+
+    const checkbox = document.getElementById('termsAgreement');
+const claimCTA = document.getElementById('claimCTA');
+
+console.log(checkbox);
+console.log(claimCTA);
+
+checkbox.addEventListener('change', function () {
+  console.log('Changed:', this.checked);
+
+  claimCTA.disabled = !this.checked;
+});
+{% comment %} const checkbox = document.getElementById('termsAgreement');
 const termsError = document.getElementById('termsError');
 
 
@@ -923,7 +935,7 @@ checkbox.addEventListener('change', function () {
   if (this.checked) {
     termsError.style.display = 'none';
   }
-});
+}); {% endcomment %}
       {% comment %} console.log('CLICK');
     const originalText = this.innerHTML;
     const checkbox = document.getElementById('termsAgreement');
