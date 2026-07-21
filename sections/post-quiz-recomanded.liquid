@@ -981,6 +981,8 @@ console.log(cart.items);
 
       const data = await res.json();
 
+      console.log(data.redirectUrl);
+
       if (!data.success) {
         throw new Error('Checkout failed');
       }
