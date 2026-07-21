@@ -44,12 +44,6 @@
             "text": "Designed in the USA"
           }
         },
-        "reason_gGTWwi": {
-          "type": "reason",
-          "settings": {
-            "text": "Generally healthy teeth and gums"
-          }
-        },
         "reason_BDWmq3": {
           "type": "reason",
           "settings": {
@@ -68,7 +62,6 @@
         "chip_CLdFMM",
         "chip_yLn7z9",
         "chip_6YKTUH",
-        "reason_gGTWwi",
         "reason_BDWmq3",
         "reason_YKpfQr"
       ],
