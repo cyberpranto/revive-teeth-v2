@@ -890,6 +890,7 @@
 
     const variantId = this.dataset.variantId;
     const email = localStorage.getItem('quiz_email');
+    const acceptedAt = new Date().toISOString();
 
     if (!email) {
       alert('Something went wrong — please retake the quiz.');
