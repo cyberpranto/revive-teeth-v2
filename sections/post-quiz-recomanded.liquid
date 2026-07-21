@@ -945,6 +945,12 @@ checkbox.addEventListener('change', function () {
         }),
       });
 
+      const cart = await fetch('/cart.js').then(r => r.json());
+
+console.log(cart);
+
+
+
       const acceptedAt = new Date().toISOString();
 
       await fetch('/cart/update.js', {
