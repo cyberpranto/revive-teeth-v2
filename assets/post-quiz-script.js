@@ -23,6 +23,17 @@
 //     }
 //   })();
 
+
+<script>
+  (function () {
+    var hasSession = !!localStorage.getItem('quiz_email');
+
+    if (!hasSession) {
+      window.location.replace('/pages/quiz?from=offer');
+    }
+  })();
+</script>
+
 /* ---------- SCROLL REVEAL (IntersectionObserver + stagger) ---------- */
 (function () {
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
