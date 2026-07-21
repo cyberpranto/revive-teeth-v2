@@ -1,31 +1,31 @@
 <style>
-    .terms-label {
-    display: flex;
-    gap:16px;
-    justify-content:flex-start;
-    align-items: flex-start;
-    margin-top:16px;
-  }
-
-  .buy-reassure-2 {
-      text-align: left;
-      font-size: 13px;
-      color: var(--muted);
-      line-height: 1.5;
+      .terms-label {
       display: flex;
-      gap: 8px;
+      gap:16px;
+      justify-content:flex-start;
       align-items: flex-start;
-      justify-content: center;
+      margin-top:16px;
     }
 
-    .buy-reassure-2  a {
-      text-decoration: underline;
-      color: (--ink);
-    }
-    #claimCTA:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
+    .buy-reassure-2 {
+        text-align: left;
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.5;
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        justify-content: center;
+      }
+
+      .buy-reassure-2  a {
+        text-decoration: underline;
+        color: (--ink);
+      }
+      #claimCTA:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 </style>
 
 {% assign product = section.settings.product %}
@@ -281,10 +281,10 @@
                 <span class="buy-reassure-2">
                   <p>
                     I have read and agree to the
-                    <a href="/policies/terms-of-service" target="_blank" rel="noopener"> Terms of Service </a>,
-                    including the Binding Arbitration Agreement and Class Action Waiver in Section 15, the
+                    <a href="/pages/terms-of-service" target="_blank" rel="noopener"> Terms of Service </a>, including
+                    the Binding Arbitration Agreement and Class Action Waiver in Section 15, the
                     <a href="/pages/privacy-policy" target="_blank" rel="noopener"> Privacy Policy </a>, and the
-                    <a href="/policies/refund-policy" target="_blank" rel="noopener">
+                    <a href="/pages/refund-remake-returns-policy" target="_blank" rel="noopener">
                       Refund, Remake & Returns Policy </a
                     >.
                   </p>
@@ -835,7 +835,7 @@
 
     if (cta) {
       cta.dataset.variantId = button.dataset.variantId;
-    } 
+    }
 
     // Sticky Bar Update
     const sbInfo = document.getElementById('sbInfoText');
@@ -907,30 +907,28 @@
     }
   });
 
-
-
   // ⬇️ claimCTA — session/sessionStorage বাদ দিয়ে email দিয়ে কাজ করবে
   const claimCTA = document.getElementById('claimCTA');
 
   const checkbox = document.getElementById('termsAgreement');
-const termsError = document.getElementById('termsError');
+  const termsError = document.getElementById('termsError');
 
-// শুরুতে disable
-claimCTA.disabled = true;
+  // শুরুতে disable
+  claimCTA.disabled = true;
 
-// Checkbox change
-checkbox.addEventListener('change', function () {
+  // Checkbox change
+  checkbox.addEventListener('change', function () {
     claimCTA.disabled = !this.checked;
 
     if (this.checked) {
-        termsError.style.display = 'none';
+      termsError.style.display = 'none';
     }
-});
+  });
 
   claimCTA.addEventListener('click', async function () {
     const variantId = this.dataset.variantId;
 
-    console.log("Variant ID:", variantId);
+    console.log('Variant ID:', variantId);
     const email = localStorage.getItem('quiz_email');
 
     if (!email) {
@@ -939,7 +937,7 @@ checkbox.addEventListener('change', function () {
     }
 
     this.disabled = true;
-    this.innerHTML  = 'Preparing Checkout...';
+    this.innerHTML = 'Preparing Checkout...';
 
     try {
       // 1. AGE cart e item add koro — discount link hit korar age
@@ -952,13 +950,11 @@ checkbox.addEventListener('change', function () {
         }),
       });
 
-      const cart = await fetch('/cart.js').then(r => r.json());
+      const cart = await fetch('/cart.js').then((r) => r.json());
 
-console.log(cart);
-console.log(cart.item_count);
-console.log(cart.items);
-
-
+      console.log(cart);
+      console.log(cart.item_count);
+      console.log(cart.items);
 
       const acceptedAt = new Date().toISOString();
 
