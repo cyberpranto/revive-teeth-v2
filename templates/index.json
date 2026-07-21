@@ -1,1 +1,775 @@
-{"sections":{"hero_NFhTYw":{"type":"hero","blocks":{"hero_badge_ndYnjU":{"type":"hero_badge","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"><\/path><\/svg>","text":"Dentist-Designed"}},"hero_badge_eA6qMi":{"type":"hero_badge","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"><\/path><\/svg>","text":"30-Day Fit Guarantee"}},"hero_badge_9N4UVT":{"type":"hero_badge","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"><\/path><path d=\"M21 4v4h-4\"><\/path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"><\/path><path d=\"M3 20v-4h4\"><\/path><\/svg>","text":"Free Remakes (up to 2)"}},"hero_badge_LDFrNF":{"type":"hero_badge","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4\"><\/path><path d=\"M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0\"><\/path><\/svg>","text":"Designed in the USA"}},"payment_method_gpUrhM":{"type":"payment_method","settings":{"Payment_logo":"shopify:\/\/shop_images\/visa.svg"}},"payment_method_znbFKH":{"type":"payment_method","settings":{"Payment_logo":"shopify:\/\/shop_images\/mastercard.svg"}},"payment_method_xFw4ND":{"type":"payment_method","settings":{"Payment_logo":"shopify:\/\/shop_images\/amex-svgrepo-com.svg"}},"payment_method_nAr8HP":{"type":"payment_method","settings":{"Payment_logo":"shopify:\/\/shop_images\/apple-pay_66beef56-08cf-43a3-bc41-8e8ada211754.svg"}},"kit_item_iWcf7G":{"type":"kit_item","settings":{"icon":"<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z\"><\/path><\/svg>","heading":"Upper & Lower Impression Trays","text":"Pre-sized to fit most adult arches comfortably."}},"kit_item_wJEktJ":{"type":"kit_item","settings":{"icon":"<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"16\" r=\"6\"><\/circle><circle cx=\"21\" cy=\"16\" r=\"6\"><\/circle><\/svg>","heading":"Dental Putty (×2 batches)","text":"A backup batch is included so you have room for error."}},"kit_item_bCTC3k":{"type":"kit_item","settings":{"icon":"<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"5\" y=\"8\" width=\"22\" height=\"16\" rx=\"2\"><\/rect><rect x=\"8\" y=\"11\" width=\"3\" height=\"10\"><\/rect><rect x=\"13\" y=\"11\" width=\"3\" height=\"10\"><\/rect><rect x=\"18\" y=\"11\" width=\"3\" height=\"10\"><\/rect><rect x=\"23\" y=\"11\" width=\"1.5\" height=\"10\"><\/rect><\/svg>","heading":"Shade Matching Card","text":"A reference strip to capture your actual tooth color."}},"kit_item_N7a6at":{"type":"kit_item","settings":{"icon":"<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"><path d=\"M4 10 L16 4 L28 10 L28 24 L4 24 Z\"><\/path><path d=\"M4 10 L16 16 L28 10\"><\/path><\/svg>","heading":"Prepaid Return Mailer","text":"Drop it in any USPS box. No postage required."}},"kit_item_4kR7xA":{"type":"kit_item","settings":{"icon":"<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"16\" cy=\"16\" r=\"11\"><\/circle><path d=\"M13 11l8 5-8 5z\" fill=\"currentColor\" stroke=\"none\"><\/path><\/svg>","heading":"Video Instructions","text":"QR code to Dr. Turley's step-by-step walkthrough."}},"include_item_ipJViR":{"type":"include_item","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\"><circle cx=\"12\" cy=\"8\" r=\"4\"><\/circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"><\/path><\/svg>","heading":"Designed by Dr. Turley","text":"Every case is made to the 7-Point Smile Design Protocol he designed as a practicing cosmetic dentist."}},"include_item_Ew6NKG":{"type":"include_item","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"><\/path><\/svg>","heading":"30-Day Fit Guarantee","text":"If the fit or look isn't right, we remake it free within 30 days."}},"include_item_UCCVmw":{"type":"include_item","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"><\/path><path d=\"M21 4v4h-4\"><\/path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"><\/path><path d=\"M3 20v-4h4\"><\/path><\/svg>","heading":"Free Remakes (up to 2)","text":"If the fit isn't perfect, we remake it at no cost to you."}},"include_item_h9qL9R":{"type":"include_item","settings":{"icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"7\" width=\"14\" height=\"10\" rx=\"1.5\"><\/rect><path d=\"M15 10h4l3 3v4h-7z\"><\/path><circle cx=\"6\" cy=\"18\" r=\"2\"><\/circle><circle cx=\"18\" cy=\"18\" r=\"2\"><\/circle><\/svg>","heading":"Free Shipping Both Ways","text":"We cover your kit, your return, and your veneers."}},"start_step_77GKJD":{"type":"start_step","settings":{"number":"01","heading":"Order today","text":"Your impression kit ships within 48 hours."}},"start_step_9e8Pbq":{"type":"start_step","settings":{"number":"02","heading":"Take impressions at home","text":"A simple 5-minute process. Video instructions included. Mail them back free."}},"start_step_XTLapb":{"type":"start_step","settings":{"number":"03","heading":"Receive your custom smile","text":"Your case is designed against Dr. Turley's 7-Point Smile Design Protocol. Your veneers arrive ready to wear in 2–3 weeks."}}},"block_order":["hero_badge_ndYnjU","hero_badge_eA6qMi","hero_badge_9N4UVT","hero_badge_LDFrNF","payment_method_gpUrhM","payment_method_znbFKH","payment_method_xFw4ND","payment_method_nAr8HP","kit_item_iWcf7G","kit_item_wJEktJ","kit_item_bCTC3k","kit_item_N7a6at","kit_item_4kR7xA","include_item_ipJViR","include_item_Ew6NKG","include_item_UCCVmw","include_item_h9qL9R","start_step_77GKJD","start_step_9e8Pbq","start_step_XTLapb"],"name":"Hero Section","settings":{"product":"revive-veneers","eyebrow":"Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years","heading":"The snap-on veneer a cosmetic dentist actually designed.","description":"Designed by a cosmetic dentist and custom-fitted to your teeth, made to order and quality-checked before it ships.","upper_icon":"<svg class=\"arch-icon\" viewBox=\"0 0 60 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 22 C 8 6, 52 6, 56 22\"><\/path>\n            <path d=\"M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19\" stroke-width=\"1.6\"><\/path>\n          <\/svg>","lower_icon":"<svg class=\"arch-icon\" viewBox=\"0 0 60 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 10 C 8 26, 52 26, 56 10\"><\/path>\n            <path d=\"M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13\" stroke-width=\"1.6\"><\/path>\n          <\/svg>","both_icon":"<svg class=\"arch-icon\" viewBox=\"0 0 60 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 16 C 8 0, 52 0, 56 16\"><\/path>\n            <path d=\"M4 24 C 8 40, 52 40, 56 24\"><\/path>\n          <\/svg>","popular_badge":"Most Popular","bundle_save_text":"Save $600 vs. buying separately","stock_text":"In stock · Ships your impression kit within 48 hours","button_text":"Add to Cart","guarantee_text":"30-Day Money-Back Guarantee · Free Remakes (up to 2)","secure_checkout_text":"Secure checkout","kit_title":"What's in Your Kit","kit_note":"If your first impressions don't capture enough detail, we send a second kit free.","includes_title":"Your Order Includes","guarantee_card_icon":"<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"><\/path><path d=\"M8.5 12.5l2.5 2.5L16 10\"><\/path><\/svg>","guarantee_card_heading":"30-Day Fit Guarantee: Free Remakes If It's Not Right","guarantee_card_subheading":"","guarantee_card_text":"If your veneers don't fit or look right, we remake them free (up to twice) within 30 days of delivery, with a prepaid label. Because each set is custom-made to your mouth, finished veneers aren't eligible for a change-of-mind or satisfaction refund. You can cancel for a full refund any time before we begin production.","how_to_start_title":"How to Start"}},"emotional_bridge_7fkkrq":{"type":"emotional-bridge","name":"Emotional Bridge","settings":{"image":"shopify:\/\/shop_images\/founder-image.jpg","image_alt":"Dr. Brandon Turley standing in his dental practice in front of a wall of patient smile photos","content":"<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You looked into fixing it, but $15,000 in a dental chair wasn't the answer.<br\/><br\/><em>So I designed one. This is the other way.<\/em><\/p>","button_text":"See how it works","button_link":"#how"}},"real_stories_KyEcp6":{"type":"real-stories","blocks":{"video_card_FEifGb":{"type":"video_card","settings":{"video":"shopify:\/\/files\/videos\/Video 1- Joshua With Outro.mp4","thumbnail":"shopify:\/\/shop_images\/Joshua_2.png","quote":"\"I'm in sales, so confidence is everything, now I can feel myself smiling without even trying.\"","customer_name":"Joshua","show_verified":true,"verified_label":"Verified customer"}},"video_card_fed474":{"type":"video_card","settings":{"video":"shopify:\/\/files\/videos\/Video 2 Connie Without Outro .mp4","thumbnail":"shopify:\/\/shop_images\/Connie_2.png","quote":"\"I want to cry. I really do. I feel like I could go out and smile.\"","customer_name":"Connie","show_verified":true,"verified_label":"Verified customer"}},"video_card_7W3YbA":{"type":"video_card","settings":{"video":"shopify:\/\/files\/videos\/MichelleFinalVideo3.mp4","thumbnail":"shopify:\/\/shop_images\/Michelle_2.png","quote":"\"I got so many compliments on my new smile, nobody could tell they were snap-in veneers. They look that natural.\"","customer_name":"Michelle","show_verified":true,"verified_label":"Verified customer"}},"video_card_9VQ6V8":{"type":"video_card","settings":{"video":"shopify:\/\/files\/videos\/LindseyFinalVideo4.mp4","thumbnail":"shopify:\/\/shop_images\/Lindsay_2.png","quote":"\"I've never seen my teeth that straight. Is this a dream?\"","customer_name":"Lindsay","show_verified":true,"verified_label":"Verified customer"}}},"block_order":["video_card_FEifGb","video_card_fed474","video_card_7W3YbA","video_card_9VQ6V8"],"name":"Real Stories","settings":{"section_id":"results","eyebrow":"Customer Stories","heading":"Real reactions, unscripted.","subheading":"First-impression reactions from real customers. No scripts, no incentives, no edits.","button_label":"Start your smile","button_link":"","note":""}},"meet_designer_8TmEMk":{"type":"meet-designer","blocks":{"badge_fUhHqz":{"type":"badge","settings":{"svg_icon":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"><\/circle><path d=\"M12 7v5l3 2\"><\/path><\/svg>","title":"12+ Years Practice"}},"badge_UWKWKf":{"type":"badge","settings":{"svg_icon":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z\"><\/path><\/svg>","title":"Cosmetic Dentist"}},"badge_VaYMPk":{"type":"badge","settings":{"svg_icon":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"><\/path><path d=\"M8.5 12.5l2.5 2.5L16 10\"><\/path><\/svg>","title":"7-Point Protocol Creator"}}},"block_order":["badge_fUhHqz","badge_UWKWKf","badge_VaYMPk"],"name":"Meet Your Designer","settings":{"eyebrow":"Why I Built Revive.","quote":"Most snap-on veneers are an embarrassment. I built one that isn't.","body_content":"<p>Most snap-on veneers are cheaply manufactured plastic, shipped from factories by companies without a practicing dentist on the team.<\/p><p>Patients walk into my practice wearing them. Within a month, they stop. They're embarrassed by something they paid for.<\/p><p>That's the gap Revive fills. Every case is designed against my 7-Point Smile Design Protocol. <strong>If it doesn't pass, it doesn't ship.<\/strong> If it arrives and isn't right, we remake it. My name is on this because I built it.<\/p>","founder_clarity":"I'm a cosmetic dentist, but I'm not your dentist. I designed a product.","doctor_name":"Dr. Brandon Turley, DDS","doctor_title":"Doctor of Dental Surgery · Founder, Revive Teeth","video":"shopify:\/\/files\/videos\/Dr T Intro V2.mp4","video_poster":"shopify:\/\/shop_images\/thumbnail.png","video_caption":"Dr. Brandon Turley, DDS · 1 min 52 sec"}},"how_it_works_wH89jW":{"type":"how-it-works","blocks":{"step_NkQzJK":{"type":"step","settings":{"step_icon_svg":"<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\">\n              <path d=\"M4 11 L16 5 L28 11 L28 25 L4 25 Z\"><\/path>\n              <path d=\"M4 11 L16 17 L28 11\"><\/path>\n              <path d=\"M16 17 L16 27\"><\/path>\n            <\/svg>","step_title":"Order your impression kit","step_description":"Pick your arches and check out. Your kit ships free within 48 hours, with everything you need and a backup batch of putty.","step_time_icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <path d=\"M5 12h13l-4-4M18 12l-4 4\"><\/path>\n              <\/svg>","step_time_text":"Ships in 48 hours"}},"step_PUANi9":{"type":"step","settings":{"step_icon_svg":"<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M5 13 C 7 6, 25 6, 27 13 L25 22 H7 Z\"><\/path>\n              <path d=\"M5 13 C 9 10, 23 10, 27 13\"><\/path>\n            <\/svg>","step_title":"Take impressions at home","step_description":"Follow Dr. Turley's video walkthrough, about five minutes. Drop the prepaid mailer in any USPS box to send them back, free.","step_time_icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <circle cx=\"12\" cy=\"12\" r=\"9\"><\/circle>\n                <path d=\"M12 7v5l3 2\"><\/path>\n              <\/svg>","step_time_text":"About 5 minutes"}},"step_dnkK6M":{"type":"step","settings":{"step_icon_svg":"<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M6 13 C 10 24, 22 24, 26 13\"><\/path>\n              <path d=\"M6 13 C 9 11, 23 11, 26 13\"><\/path>\n              <path d=\"M11 12.5 L11 15 M16 12.5 L16 15.5 M21 12.5 L21 15\"><\/path>\n            <\/svg>","step_title":"Receive your custom smile","step_description":"Your veneers are made to your impressions and designed against Dr. Turley's 7-point protocol.","step_time_icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"><\/rect>\n                <path d=\"M4 10h16M9 3v4M15 3v4\"><\/path>\n              <\/svg>","step_time_text":"2-3 weeks"}}},"block_order":["step_NkQzJK","step_PUANi9","step_dnkK6M"],"name":"How It Works","settings":{"section_id":"how","eyebrow":"How It Works","heading":"A better smile, mailed to your door.","description":"No dental chair, no drilling, no multiple visits. Three simple steps, mostly from your couch. Every case is designed to Dr. Turley's 7-Point Smile Design Protocol along the way.","button_text":"Start your smile","button_link":""}},"full_width_image_YnYMxB":{"type":"full-width-image","name":"Full Width Image","settings":{"image":"shopify:\/\/shop_images\/full-width-image.jpg","image_alt":"","margin_top":0,"margin_bottom":0,"loading":"lazy"}},"the_protocols_FCBtDY":{"type":"the-protocols","blocks":{"protocol_item_EDbKxR":{"type":"protocol_item","settings":{"number":"01","title":"Smile Architecture","description":"Your veneers are shaped to suit your face, not a template. Your lip line and facial proportions guide the design.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13C33 13 24 30 24 49c0 21 13 38 26 38s26-17 26-38C76 30 67 13 50 13Z\"><\/path><line x1=\"50\" y1=\"16\" x2=\"50\" y2=\"84\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"><\/line><line x1=\"27\" y1=\"40\" x2=\"73\" y2=\"40\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"><\/line><line x1=\"27\" y1=\"60\" x2=\"73\" y2=\"60\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"><\/line><path d=\"M37 63c5 7 21 7 26 0\" stroke-width=\"1.8\"><\/path><path d=\"M41 65h18\" stroke-width=\"1\" opacity=\".5\"><\/path><\/svg>"}},"protocol_item_AUXJwf":{"type":"protocol_item","settings":{"number":"02","title":"Bite Alignment","description":"Your upper and lower teeth should meet naturally. Your bite is mapped so nothing feels off when you close.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 36C32 22 68 22 84 36\"><\/path><path d=\"M24 37v9M34 35v12M45 34v13M55 34v13M66 35v12M76 37v9\" stroke-width=\"1.1\"><\/path><path d=\"M16 64C32 78 68 78 84 64\"><\/path><path d=\"M24 63v-9M34 65v-12M45 66v-13M55 66v-13M66 65v-12M76 63v-9\" stroke-width=\"1.1\"><\/path><line x1=\"14\" y1=\"50\" x2=\"86\" y2=\"50\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"><\/line><\/svg>"}},"protocol_item_mPbBXk":{"type":"protocol_item","settings":{"number":"03","title":"Tooth-by-Tooth Proportions","description":"Each tooth is sized individually, no uniform chiclet look. The side teeth sit slightly smaller than the front ones, the way real teeth do.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 31C38 25 62 25 88 31\" stroke-width=\"1\" opacity=\".5\"><\/path><path d=\"M13.5 36Q13.5 33 18.5 33Q23.5 33 23.5 36L22.5 53Q18.5 57 14.5 53Z\"><\/path><path d=\"M26.5 35Q26.5 32 31 32Q35.5 32 35.5 35L34.5 55Q31 59 27.5 55Z\"><\/path><path d=\"M38.5 34Q38.5 31 44 31Q49.5 31 49.5 34L48.5 60Q44 65 39.5 60Z\"><\/path><path d=\"M50.5 34Q50.5 31 56 31Q61.5 31 61.5 34L60.5 60Q56 65 51.5 60Z\"><\/path><path d=\"M64.5 35Q64.5 32 69 32Q73.5 32 73.5 35L72.5 55Q69 59 65.5 55Z\"><\/path><path d=\"M76.5 36Q76.5 33 81.5 33Q86.5 33 86.5 36L85.5 53Q81.5 57 77.5 53Z\"><\/path><path d=\"M38.5 70v3M61.5 70v3M38.5 71.5H61.5\" stroke-width=\"1\" opacity=\".55\"><\/path><\/svg>"}},"protocol_item_x96bxm":{"type":"protocol_item","settings":{"number":"04","title":"Gumline Precision","description":"The edge where veneer meets gum is where cheap snap-ons give themselves away. Yours is contoured to your own gumline so it doesn't look applied.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 42C33 30 67 30 82 42\" stroke-width=\"1\" opacity=\".5\"><\/path><path d=\"M34 40Q34 31 50 31Q66 31 66 40L62 73Q50 81 38 73Z\"><\/path><path d=\"M34 40Q50 34 66 40\" stroke-width=\"2.2\"><\/path><line x1=\"66\" y1=\"39\" x2=\"82\" y2=\"31\" stroke-width=\"1\" opacity=\".5\"><\/line><circle cx=\"83\" cy=\"30\" r=\"1.7\" fill=\"currentColor\" stroke=\"none\"><\/circle><\/svg>"}},"protocol_item_DGM9PW":{"type":"protocol_item","settings":{"number":"05","title":"Natural Translucency","description":"Real teeth aren't flat white. The biting edges are built with graduated translucency so they catch light the way enamel does.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"pe\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".42\"><\/stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".03\"><\/stop><\/lineargradient><\/defs><path d=\"M33 20Q33 14 50 14Q67 14 67 20L71 72Q50 84 29 72Z\" fill=\"url(#pe)\" stroke=\"currentColor\"><\/path><path d=\"M29 72Q50 84 71 72\" stroke-width=\"2.2\"><\/path><path d=\"M32 64Q50 73 68 64\" stroke-width=\"1\" stroke-dasharray=\"2 2\" opacity=\".5\"><\/path><line x1=\"50\" y1=\"90\" x2=\"50\" y2=\"97\" stroke-width=\"1\" opacity=\".5\"><\/line><line x1=\"41\" y1=\"89\" x2=\"38\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"><\/line><line x1=\"59\" y1=\"89\" x2=\"62\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"><\/line><\/svg>"}},"protocol_item_DU6nHQ":{"type":"protocol_item","settings":{"number":"06","title":"Shade Matching","description":"Your shade card is matched against a professional shade guide, calibrated to your natural teeth, not a generic Hollywood white.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"ps\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".5\"><\/stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".06\"><\/stop><\/lineargradient><\/defs><path d=\"M16 32Q16 28 22 28Q28 28 28 32L27 56Q22 60 17 56Z\"><\/path><path d=\"M44 31Q44 27 50 27Q56 27 56 31L55 57Q50 61 45 57Z\" stroke-width=\"1.9\"><\/path><path d=\"M72 32Q72 28 78 28Q84 28 84 32L83 56Q78 60 73 56Z\"><\/path><rect x=\"16\" y=\"68\" width=\"68\" height=\"8\" rx=\"4\" fill=\"url(#ps)\" stroke=\"currentColor\" stroke-width=\"1\"><\/rect><path d=\"M50 62l3.5 4.5h-7Z\" fill=\"currentColor\" stroke=\"none\"><\/path><\/svg>"}},"protocol_item_hxd8xY":{"type":"protocol_item","settings":{"number":"07","title":"Final Inspection","description":"Every finished case is checked against the first six points. If anything is off, it's remade before it ships, at our cost, not yours.","svg_code":"<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13L75 22V46C75 64 64 77 50 85C36 77 25 64 25 46V22Z\"><\/path><path d=\"M39 47L47 56L62 37\" stroke-width=\"2.4\"><\/path><\/svg>"}}},"block_order":["protocol_item_EDbKxR","protocol_item_AUXJwf","protocol_item_mPbBXk","protocol_item_x96bxm","protocol_item_DGM9PW","protocol_item_DU6nHQ","protocol_item_hxd8xY"],"name":"7 Point Protocol","settings":{"eyebrow":"The Protocol","heading":"Seven decisions that make them look like your own teeth.","description":"Every case is designed against Dr. Turley's 7-Point Smile Design Protocol before it ships. Here's what that means for how yours looks.","footer_text":"Every case is designed against Dr. Turley's 7-Point Smile Design Protocol, the standard set by a practicing cosmetic dentist with 12+ years of experience. Nothing ships until it passes the protocol.","button_text":"See how it works","button_target":"#how"}},"comparison_JP6KmX":{"type":"comparison","blocks":{"comparison_card_cbkYFT":{"type":"comparison_card","settings":{"card_style":"lose","tag":"What you find elsewhere","title":"Generic Snap-Ons","price":"What you find for $200–$400 online","feature_1":"One mold. Every customer gets the same shape.","feature_2":"Visible gap where plastic meets the gum.","feature_3":"Every tooth identical. No individual shaping.","feature_4":"Ships in days because no one designed it.","feature_5":"No dentist involved, no design, no inspection."}},"comparison_card_76Uphr":{"type":"comparison_card","settings":{"card_style":"win","tag":"What you get from Revive","title":"Revive Veneers","price":"Custom-designed by Dr. Turley","feature_1":"Thin and individually shaped, tooth by tooth.","feature_2":"Gumline contoured to your own anatomy.","feature_3":"Natural proportions and translucent edges, tooth by tooth.","feature_4":"7 design checkpoints; 14–21 days of design work.","feature_5":"Designed against Dr. Turley's 7-point protocol. Every case."}},"spectrum_card_4j7etP":{"type":"spectrum_card","settings":{"highlight":false,"badge":"","title":"Porcelain veneers at a dentist","price":"$10k–$20k+","description":"Per arch. Multiple visits, drilling, and permanent removal of natural enamel."}},"spectrum_card_tGqGy6":{"type":"spectrum_card","settings":{"highlight":true,"badge":"You are here","title":"Revive Veneers","price":"$1,297–$1,994","description":"Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."}},"spectrum_card_i6MwU9":{"type":"spectrum_card","settings":{"highlight":false,"badge":"","title":"Generic snap-ons online","price":"$200–$400","description":"One-size mold, no dentist involved, the look most people quietly stop wearing."}}},"block_order":["comparison_card_cbkYFT","comparison_card_76Uphr","spectrum_card_4j7etP","spectrum_card_tGqGy6","spectrum_card_i6MwU9"],"name":"Comparison Section","settings":{"eyebrow":"What makes it different","heading":"The cheap snap-on you almost bought, next to the one you should.","description":"Same category. Completely different product.","anchor_label":"Where Revive sits on the smile-upgrade spectrum:","button_text":"Get started","button_target":"#"}},"candidate_WUVAB3":{"type":"candidate","blocks":{"candidate_card_GyxXxc":{"type":"candidate_card","settings":{"card_style":"ideal","title":"Designed for you if:","item_1":"You have generally healthy teeth and gums","item_2":"You want to improve the look of stained, slightly gapped, or worn teeth","item_3":"You have all of your upper or all of your lower teeth","item_4":""}},"candidate_card_WF3LTQ":{"type":"candidate_card","settings":{"card_style":"good","title":"Works for you, with a longer design timeline:","item_1":"Minor bite differences (slight overbite or underbite)","item_2":"Minor bite issues (slight overbite or underbite)","item_3":"Worn or short teeth from grinding","item_4":"One or two missing teeth, not at the end of the arch"}},"candidate_card_FR6HYF":{"type":"candidate_card","settings":{"card_style":"consult","title":"Check with your own dentist first if:","item_1":"You have active gum disease or significant gum recession","item_2":"You have a severe bite misalignment","item_3":"You've had major dental work in the last 3 months","item_4":"You're missing several teeth, or teeth at the end of the arch"}},"candidate_card_gdaBfy":{"type":"candidate_card","settings":{"card_style":"not","title":"Revive isn't the right fit if:","item_1":"You have no remaining teeth in the arch you want covered","item_2":"You currently wear full dentures","item_3":"You have an active oral infection or untreated gum disease","item_4":""}}},"block_order":["candidate_card_GyxXxc","candidate_card_WF3LTQ","candidate_card_FR6HYF","candidate_card_gdaBfy"],"name":"Candidate Section","settings":{"eyebrow":"Find Your Fit","heading":"Is Revive Right for You?","description":"Revive Veneers work for most people, but not everyone. They're made for healthy teeth you want to look better, not for treating dental problems. Here's an honest look so you can decide.","cta_text":"Take the 30-Second Smile Quiz","cta_target":"shopify:\/\/pages\/quiz","nudge_text":"<p>Not sure? <strong>Take our free quiz.<\/strong> We'll tell you honestly.<\/p>","disclaimer":"Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."}},"trust_badges_jFaabb":{"type":"trust-badges","blocks":{"badge_HNwdnc":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><circle cx=\"12\" cy=\"8\" r=\"4\"><\/circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"><\/path><\/svg>","title":"Dentist-Designed","subtitle":"Every case by Dr. Turley, DDS"}},"badge_RpNNQK":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"> <path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"><\/path><\/svg>","title":"30-Day Fit Guarantee","subtitle":"Full refund if it isn't right"}},"badge_HJP7ai":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <circle cx=\"12\" cy=\"12\" r=\"9\"><\/circle><path d=\"M12 7v5l3 2\"><\/path><\/svg>","title":"3–5 Year Lifespan","subtitle":"Durable dental-grade resin"}},"badge_ycYXU7":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"><path d=\"M12 3 C 12 9, 18 12, 18 17 a6 6 0 0 1 -12 0 C 6 12, 12 9, 12 3 Z\"><\/path><\/svg>","title":"BPA-Free Resin","subtitle":"Safe cosmetic-grade material"}},"badge_KgVpz4":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h13l-4-4M16 12l-4 4\"><\/path><path d=\"M21 6v12\"><\/path><\/svg>","title":"Ships Free Both Ways","subtitle":"Kit, return & veneers covered"}},"badge_9Rjhwm":{"type":"badge","settings":{"icon_svg":"<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"><\/path><path d=\"M21 4v4h-4\"><\/path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"><\/path><path d=\"M3 20v-4h4\"><\/path><\/svg>","title":"Free Remakes (up to 2)","subtitle":"Two free remakes within 30 days"}}},"block_order":["badge_HNwdnc","badge_RpNNQK","badge_HJP7ai","badge_ycYXU7","badge_KgVpz4","badge_9Rjhwm"],"name":"Trust Badges","settings":{}},"faaq_G3ch9C":{"type":"faaq","blocks":{"faq_UTLaUp":{"type":"faq","settings":{"question":"Should I get both arches or single arch?","answer":"<p>Most buyers choose both arches because upper-only veneers can look unnatural when you smile or talk, your lower teeth show, and a color mismatch between veneered upper teeth and natural lower teeth looks off. We recommend both unless your lower teeth are already in good shape. At $1,994 for both vs. $1,297 for single, most people find the upgrade worth it.<\/p>"}},"faq_LGq4UP":{"type":"faq","settings":{"question":"Is Revive right for me?","answer":"<p>Most people are. Revive Veneers work well for anyone with healthy teeth and gums who wants to improve the appearance of stained, slightly gapped, or worn teeth. They aren't right for people with active gum disease, severe bite issues, multiple missing teeth at the end of the arch, or anyone currently wearing full dentures. Take our 60-second Smile Quiz above if you're unsure, it includes guidance on missing teeth and impression quality.<\/p>"}},"faq_nRiRU8":{"type":"faq","settings":{"question":"What happens after I order?","answer":"<p>Your impression kit ships within 48 hours. You take impressions at home (about 5 minutes), mail them back free, and your custom veneers arrive 2–3 weeks after we receive them. Every case is made to Dr. Turley's 7-Point Smile Design Protocol along the way. The kit includes two batches of putty, so if your first impressions don't capture enough detail we send a second kit free before production starts.<\/p>"}},"faq_GNUR9K":{"type":"faq","settings":{"question":"Can I cancel after ordering?","answer":"<p>Yes, cancel for a full refund any time before we begin production. Once your case is in production, the 30-Day Fit Guarantee covers you: if the fit or look isn't right, we remake it free (up to twice). Just email hello@reviveteeth.com.<\/p>"}},"faq_fphxPT":{"type":"faq","settings":{"question":"How long do the veneers last?","answer":"<p>With everyday care, Revive Veneers are built to last 3–5 years. Rinse them after eating, brush them gently, and keep them in their case when they're out.<\/p>"}},"faq_ffxCDD":{"type":"faq","settings":{"question":"Can I eat with them in?","answer":"<p>Yes, they're made for everyday wear, including most meals. We recommend taking them out for very hard or sticky foods to keep them looking their best.<\/p>"}}},"block_order":["faq_UTLaUp","faq_LGq4UP","faq_nRiRU8","faq_GNUR9K","faq_fphxPT","faq_ffxCDD"],"name":"FAQ","settings":{"eyebrow":"Common Questions","heading":"What people ask before buying","description":"The essentials are here. Anything else, we're one email away.","help_title":"Still have questions?","help_text":"Our team responds within one business day.","contact_label":"Contact us","contact_email":"hello@reviveteeth.com"}},"closing-cta":{"type":"closing-cta","settings":{"section_id":"closing","eyebrow":"Start today","heading":"Ready to start your smile?","description":"<p>Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks<\/strong>, from <strong>$1,297<\/strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.<.p><\/p>","button_label":"Start your smile","button_target":"#buy","reassurance":"30-day money-back guarantee · Free remakes until it's right"}}},"order":["hero_NFhTYw","emotional_bridge_7fkkrq","real_stories_KyEcp6","meet_designer_8TmEMk","how_it_works_wH89jW","full_width_image_YnYMxB","the_protocols_FCBtDY","comparison_JP6KmX","candidate_WUVAB3","trust_badges_jFaabb","faaq_G3ch9C","closing-cta"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_NFhTYw": {
+      "type": "hero",
+      "blocks": {
+        "hero_badge_ndYnjU": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>",
+            "text": "Dentist-Designed"
+          }
+        },
+        "hero_badge_eA6qMi": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path></svg>",
+            "text": "30-Day Fit Guarantee"
+          }
+        },
+        "hero_badge_9N4UVT": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"></path><path d=\"M21 4v4h-4\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"></path><path d=\"M3 20v-4h4\"></path></svg>",
+            "text": "Free Remakes (up to 2)"
+          }
+        },
+        "hero_badge_LDFrNF": {
+          "type": "hero_badge",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 21V4\"></path><path d=\"M5 4.5c3-1.6 6 1.4 9 0s5-1.2 5-1.2v8.4s-2 1.2-5 1.2-6-1.6-9 0\"></path></svg>",
+            "text": "Designed in the USA"
+          }
+        },
+        "payment_method_gpUrhM": {
+          "type": "payment_method",
+          "settings": {
+            "Payment_logo": "shopify://shop_images/visa.svg"
+          }
+        },
+        "payment_method_znbFKH": {
+          "type": "payment_method",
+          "settings": {
+            "Payment_logo": "shopify://shop_images/mastercard.svg"
+          }
+        },
+        "payment_method_xFw4ND": {
+          "type": "payment_method",
+          "settings": {
+            "Payment_logo": "shopify://shop_images/amex-svgrepo-com.svg"
+          }
+        },
+        "payment_method_nAr8HP": {
+          "type": "payment_method",
+          "settings": {
+            "Payment_logo": "shopify://shop_images/apple-pay_66beef56-08cf-43a3-bc41-8e8ada211754.svg"
+          }
+        },
+        "kit_item_iWcf7G": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z\"></path></svg>",
+            "heading": "Upper & Lower Impression Trays",
+            "text": "Pre-sized to fit most adult arches comfortably."
+          }
+        },
+        "kit_item_wJEktJ": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"16\" r=\"6\"></circle><circle cx=\"21\" cy=\"16\" r=\"6\"></circle></svg>",
+            "heading": "Dental Putty (×2 batches)",
+            "text": "A backup batch is included so you have room for error."
+          }
+        },
+        "kit_item_bCTC3k": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"5\" y=\"8\" width=\"22\" height=\"16\" rx=\"2\"></rect><rect x=\"8\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"13\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"18\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"23\" y=\"11\" width=\"1.5\" height=\"10\"></rect></svg>",
+            "heading": "Shade Matching Card",
+            "text": "A reference strip to capture your actual tooth color."
+          }
+        },
+        "kit_item_N7a6at": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"><path d=\"M4 10 L16 4 L28 10 L28 24 L4 24 Z\"></path><path d=\"M4 10 L16 16 L28 10\"></path></svg>",
+            "heading": "Prepaid Return Mailer",
+            "text": "Drop it in any USPS box. No postage required."
+          }
+        },
+        "kit_item_4kR7xA": {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"16\" cy=\"16\" r=\"11\"></circle><path d=\"M13 11l8 5-8 5z\" fill=\"currentColor\" stroke=\"none\"></path></svg>",
+            "heading": "Video Instructions",
+            "text": "QR code to Dr. Turley's step-by-step walkthrough."
+          }
+        },
+        "include_item_ipJViR": {
+          "type": "include_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"></path></svg>",
+            "heading": "Designed by Dr. Turley",
+            "text": "Every case is made to the 7-Point Smile Design Protocol he designed as a practicing cosmetic dentist."
+          }
+        },
+        "include_item_Ew6NKG": {
+          "type": "include_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path></svg>",
+            "heading": "30-Day Fit Guarantee",
+            "text": "If the fit or look isn't right, we remake it free within 30 days."
+          }
+        },
+        "include_item_UCCVmw": {
+          "type": "include_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"></path><path d=\"M21 4v4h-4\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"></path><path d=\"M3 20v-4h4\"></path></svg>",
+            "heading": "Free Remakes (up to 2)",
+            "text": "If the fit isn't perfect, we remake it at no cost to you."
+          }
+        },
+        "include_item_h9qL9R": {
+          "type": "include_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"1\" y=\"7\" width=\"14\" height=\"10\" rx=\"1.5\"></rect><path d=\"M15 10h4l3 3v4h-7z\"></path><circle cx=\"6\" cy=\"18\" r=\"2\"></circle><circle cx=\"18\" cy=\"18\" r=\"2\"></circle></svg>",
+            "heading": "Free Shipping Both Ways",
+            "text": "We cover your kit, your return, and your veneers."
+          }
+        },
+        "start_step_77GKJD": {
+          "type": "start_step",
+          "settings": {
+            "number": "01",
+            "heading": "Order today",
+            "text": "Your impression kit ships within 48 hours."
+          }
+        },
+        "start_step_9e8Pbq": {
+          "type": "start_step",
+          "settings": {
+            "number": "02",
+            "heading": "Take impressions at home",
+            "text": "A simple 5-minute process. Video instructions included. Mail them back free."
+          }
+        },
+        "start_step_XTLapb": {
+          "type": "start_step",
+          "settings": {
+            "number": "03",
+            "heading": "Receive your custom smile",
+            "text": "Your case is designed against Dr. Turley's 7-Point Smile Design Protocol. Your veneers arrive ready to wear in 2–3 weeks."
+          }
+        }
+      },
+      "block_order": [
+        "hero_badge_ndYnjU",
+        "hero_badge_eA6qMi",
+        "hero_badge_9N4UVT",
+        "hero_badge_LDFrNF",
+        "payment_method_gpUrhM",
+        "payment_method_znbFKH",
+        "payment_method_xFw4ND",
+        "payment_method_nAr8HP",
+        "kit_item_iWcf7G",
+        "kit_item_wJEktJ",
+        "kit_item_bCTC3k",
+        "kit_item_N7a6at",
+        "kit_item_4kR7xA",
+        "include_item_ipJViR",
+        "include_item_Ew6NKG",
+        "include_item_UCCVmw",
+        "include_item_h9qL9R",
+        "start_step_77GKJD",
+        "start_step_9e8Pbq",
+        "start_step_XTLapb"
+      ],
+      "name": "Hero Section",
+      "settings": {
+        "product": "revive-veneers",
+        "eyebrow": "Designed by Dr. Brandon Turley, DDS · Cosmetic Dentist · 12+ Years",
+        "heading": "The snap-on veneer a cosmetic dentist actually designed.",
+        "description": "Designed by a cosmetic dentist and custom-fitted to your teeth, made to order and quality-checked before it ships.",
+        "upper_icon": "<svg class=\"arch-icon\" viewBox=\"0 0 60 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 22 C 8 6, 52 6, 56 22\"></path>\n            <path d=\"M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19\" stroke-width=\"1.6\"></path>\n          </svg>",
+        "lower_icon": "<svg class=\"arch-icon\" viewBox=\"0 0 60 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 10 C 8 26, 52 26, 56 10\"></path>\n            <path d=\"M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13\" stroke-width=\"1.6\"></path>\n          </svg>",
+        "both_icon": "<svg class=\"arch-icon\" viewBox=\"0 0 60 40\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\">\n            <path d=\"M4 16 C 8 0, 52 0, 56 16\"></path>\n            <path d=\"M4 24 C 8 40, 52 40, 56 24\"></path>\n          </svg>",
+        "popular_badge": "Most Popular",
+        "bundle_save_text": "Save $600 vs. buying separately",
+        "stock_text": "In stock · Ships your impression kit within 48 hours",
+        "button_text": "Add to Cart",
+        "guarantee_text": "30-Day Fit Promise · Free Remakes (up to 2)",
+        "secure_checkout_text": "Secure checkout",
+        "kit_title": "What's in Your Kit",
+        "kit_note": "If your first impressions don't capture enough detail, we send a second kit free.",
+        "includes_title": "Your Order Includes",
+        "guarantee_card_icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
+        "guarantee_card_heading": "30-Day Fit Guarantee: Free Remakes If It's Not Right",
+        "guarantee_card_subheading": "",
+        "guarantee_card_text": "If your veneers don't fit or look right, we remake them free (up to twice) within 30 days of delivery, with a prepaid label. Because each set is custom-made to your mouth, finished veneers aren't eligible for a change-of-mind or satisfaction refund. You can cancel for a full refund any time before we begin production.",
+        "how_to_start_title": "How to Start"
+      }
+    },
+    "emotional_bridge_7fkkrq": {
+      "type": "emotional-bridge",
+      "name": "Emotional Bridge",
+      "settings": {
+        "image": "shopify://shop_images/founder-image.jpg",
+        "image_alt": "Dr. Brandon Turley standing in his dental practice in front of a wall of patient smile photos",
+        "content": "<p>You stopped smiling in photos years ago. You laugh with a hand over your mouth. You looked into fixing it, but $15,000 in a dental chair wasn't the answer.<br/><br/><em>So I designed one. This is the other way.</em></p>",
+        "button_text": "See how it works",
+        "button_link": "#how"
+      }
+    },
+    "real_stories_KyEcp6": {
+      "type": "real-stories",
+      "blocks": {
+        "video_card_FEifGb": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Video 1- Joshua With Outro.mp4",
+            "thumbnail": "shopify://shop_images/Joshua_2.png",
+            "quote": "\"I'm in sales, so confidence is everything, now I can feel myself smiling without even trying.\"",
+            "customer_name": "Joshua",
+            "show_verified": true,
+            "verified_label": "Verified customer"
+          }
+        },
+        "video_card_fed474": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/Video 2 Connie Without Outro .mp4",
+            "thumbnail": "shopify://shop_images/Connie_2.png",
+            "quote": "\"I want to cry. I really do. I feel like I could go out and smile.\"",
+            "customer_name": "Connie",
+            "show_verified": true,
+            "verified_label": "Verified customer"
+          }
+        },
+        "video_card_7W3YbA": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/MichelleFinalVideo3.mp4",
+            "thumbnail": "shopify://shop_images/Michelle_2.png",
+            "quote": "\"I got so many compliments on my new smile, nobody could tell they were snap-in veneers. They look that natural.\"",
+            "customer_name": "Michelle",
+            "show_verified": true,
+            "verified_label": "Verified customer"
+          }
+        },
+        "video_card_9VQ6V8": {
+          "type": "video_card",
+          "settings": {
+            "video": "shopify://files/videos/LindseyFinalVideo4.mp4",
+            "thumbnail": "shopify://shop_images/Lindsay_2.png",
+            "quote": "\"I've never seen my teeth that straight. Is this a dream?\"",
+            "customer_name": "Lindsay",
+            "show_verified": true,
+            "verified_label": "Verified customer"
+          }
+        }
+      },
+      "block_order": [
+        "video_card_FEifGb",
+        "video_card_fed474",
+        "video_card_7W3YbA",
+        "video_card_9VQ6V8"
+      ],
+      "name": "Real Stories",
+      "settings": {
+        "section_id": "results",
+        "eyebrow": "Customer Stories",
+        "heading": "Real reactions, unscripted.",
+        "subheading": "First-impression reactions from real customers. No scripts, no incentives, no edits.",
+        "button_label": "Start your smile",
+        "button_link": "",
+        "note": ""
+      }
+    },
+    "meet_designer_8TmEMk": {
+      "type": "meet-designer",
+      "blocks": {
+        "badge_fUhHqz": {
+          "type": "badge",
+          "settings": {
+            "svg_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
+            "title": "12+ Years Practice"
+          }
+        },
+        "badge_UWKWKf": {
+          "type": "badge",
+          "settings": {
+            "svg_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z\"></path></svg>",
+            "title": "Cosmetic Dentist"
+          }
+        },
+        "badge_VaYMPk": {
+          "type": "badge",
+          "settings": {
+            "svg_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
+            "title": "7-Point Protocol Creator"
+          }
+        }
+      },
+      "block_order": [
+        "badge_fUhHqz",
+        "badge_UWKWKf",
+        "badge_VaYMPk"
+      ],
+      "name": "Meet Your Designer",
+      "settings": {
+        "eyebrow": "Why I Built Revive.",
+        "quote": "Most snap-on veneers are an embarrassment. I built one that isn't.",
+        "body_content": "<p>Most snap-on veneers are cheaply manufactured plastic, shipped from factories by companies without a practicing dentist on the team.</p><p>Patients walk into my practice wearing them. Within a month, they stop. They're embarrassed by something they paid for.</p><p>That's the gap Revive fills. Every case is designed against my 7-Point Smile Design Protocol. <strong>If it doesn't pass, it doesn't ship.</strong> If it arrives and isn't right, we remake it. My name is on this because I built it.</p>",
+        "founder_clarity": "I'm a cosmetic dentist, but I'm not your dentist. I designed a product.",
+        "doctor_name": "Dr. Brandon Turley, DDS",
+        "doctor_title": "Doctor of Dental Surgery · Founder, Revive Teeth",
+        "video": "shopify://files/videos/Dr T Intro V2.mp4",
+        "video_poster": "shopify://shop_images/thumbnail.png",
+        "video_caption": "Dr. Brandon Turley, DDS · 1 min 52 sec"
+      }
+    },
+    "how_it_works_wH89jW": {
+      "type": "how-it-works",
+      "blocks": {
+        "step_NkQzJK": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\">\n              <path d=\"M4 11 L16 5 L28 11 L28 25 L4 25 Z\"></path>\n              <path d=\"M4 11 L16 17 L28 11\"></path>\n              <path d=\"M16 17 L16 27\"></path>\n            </svg>",
+            "step_title": "Order your impression kit",
+            "step_description": "Pick your arches and check out. Your kit ships free within 48 hours, with everything you need and a backup batch of putty.",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <path d=\"M5 12h13l-4-4M18 12l-4 4\"></path>\n              </svg>",
+            "step_time_text": "Ships in 48 hours"
+          }
+        },
+        "step_PUANi9": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M5 13 C 7 6, 25 6, 27 13 L25 22 H7 Z\"></path>\n              <path d=\"M5 13 C 9 10, 23 10, 27 13\"></path>\n            </svg>",
+            "step_title": "Take impressions at home",
+            "step_description": "Follow Dr. Turley's video walkthrough, about five minutes. Drop the prepaid mailer in any USPS box to send them back, free.",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <circle cx=\"12\" cy=\"12\" r=\"9\"></circle>\n                <path d=\"M12 7v5l3 2\"></path>\n              </svg>",
+            "step_time_text": "About 5 minutes"
+          }
+        },
+        "step_dnkK6M": {
+          "type": "step",
+          "settings": {
+            "step_icon_svg": "<svg viewbox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n              <path d=\"M6 13 C 10 24, 22 24, 26 13\"></path>\n              <path d=\"M6 13 C 9 11, 23 11, 26 13\"></path>\n              <path d=\"M11 12.5 L11 15 M16 12.5 L16 15.5 M21 12.5 L21 15\"></path>\n            </svg>",
+            "step_title": "Receive your custom smile",
+            "step_description": "Your veneers are made to your impressions and designed against Dr. Turley's 7-point protocol.",
+            "step_time_icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n                <rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"></rect>\n                <path d=\"M4 10h16M9 3v4M15 3v4\"></path>\n              </svg>",
+            "step_time_text": "2-3 weeks"
+          }
+        }
+      },
+      "block_order": [
+        "step_NkQzJK",
+        "step_PUANi9",
+        "step_dnkK6M"
+      ],
+      "name": "How It Works",
+      "settings": {
+        "section_id": "how",
+        "eyebrow": "How It Works",
+        "heading": "A better smile, mailed to your door.",
+        "description": "No dental chair, no drilling, no multiple visits. Three simple steps, mostly from your couch. Every case is designed to Dr. Turley's 7-Point Smile Design Protocol along the way.",
+        "button_text": "Start your smile",
+        "button_link": ""
+      }
+    },
+    "full_width_image_YnYMxB": {
+      "type": "full-width-image",
+      "name": "Full Width Image",
+      "settings": {
+        "image": "shopify://shop_images/full-width-image.jpg",
+        "image_alt": "",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "loading": "lazy"
+      }
+    },
+    "the_protocols_FCBtDY": {
+      "type": "the-protocols",
+      "blocks": {
+        "protocol_item_EDbKxR": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "01",
+            "title": "Smile Architecture",
+            "description": "Your veneers are shaped to suit your face, not a template. Your lip line and facial proportions guide the design.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13C33 13 24 30 24 49c0 21 13 38 26 38s26-17 26-38C76 30 67 13 50 13Z\"></path><line x1=\"50\" y1=\"16\" x2=\"50\" y2=\"84\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><line x1=\"27\" y1=\"40\" x2=\"73\" y2=\"40\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><line x1=\"27\" y1=\"60\" x2=\"73\" y2=\"60\" stroke-width=\"1\" stroke-dasharray=\"2 3\" opacity=\".32\"></line><path d=\"M37 63c5 7 21 7 26 0\" stroke-width=\"1.8\"></path><path d=\"M41 65h18\" stroke-width=\"1\" opacity=\".5\"></path></svg>"
+          }
+        },
+        "protocol_item_AUXJwf": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "02",
+            "title": "Bite Alignment",
+            "description": "Your upper and lower teeth should meet naturally. Your bite is mapped so nothing feels off when you close.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M16 36C32 22 68 22 84 36\"></path><path d=\"M24 37v9M34 35v12M45 34v13M55 34v13M66 35v12M76 37v9\" stroke-width=\"1.1\"></path><path d=\"M16 64C32 78 68 78 84 64\"></path><path d=\"M24 63v-9M34 65v-12M45 66v-13M55 66v-13M66 65v-12M76 63v-9\" stroke-width=\"1.1\"></path><line x1=\"14\" y1=\"50\" x2=\"86\" y2=\"50\" stroke-width=\"1\" stroke-dasharray=\"3 3\" opacity=\".4\"></line></svg>"
+          }
+        },
+        "protocol_item_mPbBXk": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "03",
+            "title": "Tooth-by-Tooth Proportions",
+            "description": "Each tooth is sized individually, no uniform chiclet look. The side teeth sit slightly smaller than the front ones, the way real teeth do.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 31C38 25 62 25 88 31\" stroke-width=\"1\" opacity=\".5\"></path><path d=\"M13.5 36Q13.5 33 18.5 33Q23.5 33 23.5 36L22.5 53Q18.5 57 14.5 53Z\"></path><path d=\"M26.5 35Q26.5 32 31 32Q35.5 32 35.5 35L34.5 55Q31 59 27.5 55Z\"></path><path d=\"M38.5 34Q38.5 31 44 31Q49.5 31 49.5 34L48.5 60Q44 65 39.5 60Z\"></path><path d=\"M50.5 34Q50.5 31 56 31Q61.5 31 61.5 34L60.5 60Q56 65 51.5 60Z\"></path><path d=\"M64.5 35Q64.5 32 69 32Q73.5 32 73.5 35L72.5 55Q69 59 65.5 55Z\"></path><path d=\"M76.5 36Q76.5 33 81.5 33Q86.5 33 86.5 36L85.5 53Q81.5 57 77.5 53Z\"></path><path d=\"M38.5 70v3M61.5 70v3M38.5 71.5H61.5\" stroke-width=\"1\" opacity=\".55\"></path></svg>"
+          }
+        },
+        "protocol_item_x96bxm": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "04",
+            "title": "Gumline Precision",
+            "description": "The edge where veneer meets gum is where cheap snap-ons give themselves away. Yours is contoured to your own gumline so it doesn't look applied.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 42C33 30 67 30 82 42\" stroke-width=\"1\" opacity=\".5\"></path><path d=\"M34 40Q34 31 50 31Q66 31 66 40L62 73Q50 81 38 73Z\"></path><path d=\"M34 40Q50 34 66 40\" stroke-width=\"2.2\"></path><line x1=\"66\" y1=\"39\" x2=\"82\" y2=\"31\" stroke-width=\"1\" opacity=\".5\"></line><circle cx=\"83\" cy=\"30\" r=\"1.7\" fill=\"currentColor\" stroke=\"none\"></circle></svg>"
+          }
+        },
+        "protocol_item_DGM9PW": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "05",
+            "title": "Natural Translucency",
+            "description": "Real teeth aren't flat white. The biting edges are built with graduated translucency so they catch light the way enamel does.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"pe\" x1=\"0\" y1=\"0\" x2=\"0\" y2=\"1\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".42\"></stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".03\"></stop></lineargradient></defs><path d=\"M33 20Q33 14 50 14Q67 14 67 20L71 72Q50 84 29 72Z\" fill=\"url(#pe)\" stroke=\"currentColor\"></path><path d=\"M29 72Q50 84 71 72\" stroke-width=\"2.2\"></path><path d=\"M32 64Q50 73 68 64\" stroke-width=\"1\" stroke-dasharray=\"2 2\" opacity=\".5\"></path><line x1=\"50\" y1=\"90\" x2=\"50\" y2=\"97\" stroke-width=\"1\" opacity=\".5\"></line><line x1=\"41\" y1=\"89\" x2=\"38\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"></line><line x1=\"59\" y1=\"89\" x2=\"62\" y2=\"95\" stroke-width=\"1\" opacity=\".4\"></line></svg>"
+          }
+        },
+        "protocol_item_DU6nHQ": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "06",
+            "title": "Shade Matching",
+            "description": "Your shade card is matched against a professional shade guide, calibrated to your natural teeth, not a generic Hollywood white.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><defs><lineargradient id=\"ps\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"0\"><stop offset=\"0\" stop-color=\"currentColor\" stop-opacity=\".5\"></stop><stop offset=\"1\" stop-color=\"currentColor\" stop-opacity=\".06\"></stop></lineargradient></defs><path d=\"M16 32Q16 28 22 28Q28 28 28 32L27 56Q22 60 17 56Z\"></path><path d=\"M44 31Q44 27 50 27Q56 27 56 31L55 57Q50 61 45 57Z\" stroke-width=\"1.9\"></path><path d=\"M72 32Q72 28 78 28Q84 28 84 32L83 56Q78 60 73 56Z\"></path><rect x=\"16\" y=\"68\" width=\"68\" height=\"8\" rx=\"4\" fill=\"url(#ps)\" stroke=\"currentColor\" stroke-width=\"1\"></rect><path d=\"M50 62l3.5 4.5h-7Z\" fill=\"currentColor\" stroke=\"none\"></path></svg>"
+          }
+        },
+        "protocol_item_hxd8xY": {
+          "type": "protocol_item",
+          "settings": {
+            "number": "07",
+            "title": "Final Inspection",
+            "description": "Every finished case is checked against the first six points. If anything is off, it's remade before it ships, at our cost, not yours.",
+            "svg_code": "<svg viewbox=\"0 0 100 100\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M50 13L75 22V46C75 64 64 77 50 85C36 77 25 64 25 46V22Z\"></path><path d=\"M39 47L47 56L62 37\" stroke-width=\"2.4\"></path></svg>"
+          }
+        }
+      },
+      "block_order": [
+        "protocol_item_EDbKxR",
+        "protocol_item_AUXJwf",
+        "protocol_item_mPbBXk",
+        "protocol_item_x96bxm",
+        "protocol_item_DGM9PW",
+        "protocol_item_DU6nHQ",
+        "protocol_item_hxd8xY"
+      ],
+      "name": "7 Point Protocol",
+      "settings": {
+        "eyebrow": "The Protocol",
+        "heading": "Seven decisions that make them look like your own teeth.",
+        "description": "Every case is designed against Dr. Turley's 7-Point Smile Design Protocol before it ships. Here's what that means for how yours looks.",
+        "footer_text": "Every case is designed against Dr. Turley's 7-Point Smile Design Protocol, the standard set by a practicing cosmetic dentist with 12+ years of experience. Nothing ships until it passes the protocol.",
+        "button_text": "See how it works",
+        "button_target": "#how"
+      }
+    },
+    "comparison_JP6KmX": {
+      "type": "comparison",
+      "blocks": {
+        "comparison_card_cbkYFT": {
+          "type": "comparison_card",
+          "settings": {
+            "card_style": "lose",
+            "tag": "What you find elsewhere",
+            "title": "Generic Snap-Ons",
+            "price": "What you find for $200–$400 online",
+            "feature_1": "One mold. Every customer gets the same shape.",
+            "feature_2": "Visible gap where plastic meets the gum.",
+            "feature_3": "Every tooth identical. No individual shaping.",
+            "feature_4": "Ships in days because no one designed it.",
+            "feature_5": "No dentist involved, no design, no inspection."
+          }
+        },
+        "comparison_card_76Uphr": {
+          "type": "comparison_card",
+          "settings": {
+            "card_style": "win",
+            "tag": "What you get from Revive",
+            "title": "Revive Veneers",
+            "price": "Custom-designed by Dr. Turley",
+            "feature_1": "Thin and individually shaped, tooth by tooth.",
+            "feature_2": "Gumline contoured to your own anatomy.",
+            "feature_3": "Natural proportions and translucent edges, tooth by tooth.",
+            "feature_4": "7 design checkpoints; 14–21 days of design work.",
+            "feature_5": "Designed against Dr. Turley's 7-point protocol. Every case."
+          }
+        },
+        "spectrum_card_4j7etP": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": false,
+            "badge": "",
+            "title": "Porcelain veneers at a dentist",
+            "price": "$10k–$20k+",
+            "description": "Per arch. Multiple visits, drilling, and permanent removal of natural enamel."
+          }
+        },
+        "spectrum_card_tGqGy6": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": true,
+            "badge": "You are here",
+            "title": "Revive Veneers",
+            "price": "$1,297–$1,994",
+            "description": "Dentist-designed and custom-fit. Removable, no drilling, mailed to your door."
+          }
+        },
+        "spectrum_card_i6MwU9": {
+          "type": "spectrum_card",
+          "settings": {
+            "highlight": false,
+            "badge": "",
+            "title": "Generic snap-ons online",
+            "price": "$200–$400",
+            "description": "One-size mold, no dentist involved, the look most people quietly stop wearing."
+          }
+        }
+      },
+      "block_order": [
+        "comparison_card_cbkYFT",
+        "comparison_card_76Uphr",
+        "spectrum_card_4j7etP",
+        "spectrum_card_tGqGy6",
+        "spectrum_card_i6MwU9"
+      ],
+      "name": "Comparison Section",
+      "settings": {
+        "eyebrow": "What makes it different",
+        "heading": "The cheap snap-on you almost bought, next to the one you should.",
+        "description": "Same category. Completely different product.",
+        "anchor_label": "Where Revive sits on the smile-upgrade spectrum:",
+        "button_text": "Get started",
+        "button_target": "#"
+      }
+    },
+    "candidate_WUVAB3": {
+      "type": "candidate",
+      "blocks": {
+        "candidate_card_GyxXxc": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "ideal",
+            "title": "Designed for you if:",
+            "item_1": "You have generally healthy teeth and gums",
+            "item_2": "You want to improve the look of stained, slightly gapped, or worn teeth",
+            "item_3": "You have all of your upper or all of your lower teeth",
+            "item_4": ""
+          }
+        },
+        "candidate_card_WF3LTQ": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "good",
+            "title": "Works for you, with a longer design timeline:",
+            "item_1": "Minor bite differences (slight overbite or underbite)",
+            "item_2": "Minor bite issues (slight overbite or underbite)",
+            "item_3": "Worn or short teeth from grinding",
+            "item_4": "One or two missing teeth, not at the end of the arch"
+          }
+        },
+        "candidate_card_FR6HYF": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "consult",
+            "title": "Check with your own dentist first if:",
+            "item_1": "You have active gum disease or significant gum recession",
+            "item_2": "You have a severe bite misalignment",
+            "item_3": "You've had major dental work in the last 3 months",
+            "item_4": "You're missing several teeth, or teeth at the end of the arch"
+          }
+        },
+        "candidate_card_gdaBfy": {
+          "type": "candidate_card",
+          "settings": {
+            "card_style": "not",
+            "title": "Revive isn't the right fit if:",
+            "item_1": "You have no remaining teeth in the arch you want covered",
+            "item_2": "You currently wear full dentures",
+            "item_3": "You have an active oral infection or untreated gum disease",
+            "item_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "candidate_card_GyxXxc",
+        "candidate_card_WF3LTQ",
+        "candidate_card_FR6HYF",
+        "candidate_card_gdaBfy"
+      ],
+      "name": "Candidate Section",
+      "settings": {
+        "eyebrow": "Find Your Fit",
+        "heading": "Is Revive Right for You?",
+        "description": "Revive Veneers work for most people, but not everyone. They're made for healthy teeth you want to look better, not for treating dental problems. Here's an honest look so you can decide.",
+        "cta_text": "Take the 30-Second Smile Quiz",
+        "cta_target": "shopify://pages/quiz",
+        "nudge_text": "<p>Not sure? <strong>Take our free quiz.</strong> We'll tell you honestly.</p>",
+        "disclaimer": "Revive Veneers are cosmetic appliances, not medical devices. They enhance the appearance of your smile but do not treat dental conditions. Dr. Brandon Turley, DDS, recommends consulting a licensed dentist for any underlying dental health concerns before ordering."
+      }
+    },
+    "trust_badges_jFaabb": {
+      "type": "trust-badges",
+      "blocks": {
+        "badge_HNwdnc": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\"><circle cx=\"12\" cy=\"8\" r=\"4\"></circle><path d=\"M4 21c0-4 4-6 8-6s8 2 8 6\"></path></svg>",
+            "title": "Dentist-Designed",
+            "subtitle": "Every case by Dr. Turley, DDS"
+          }
+        },
+        "badge_RpNNQK": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"> <path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path></svg>",
+            "title": "30-Day Fit Guarantee",
+            "subtitle": "Full refund if it isn't right"
+          }
+        },
+        "badge_HJP7ai": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"> <circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
+            "title": "3–5 Year Lifespan",
+            "subtitle": "Durable dental-grade resin"
+          }
+        },
+        "badge_ycYXU7": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linejoin=\"round\"><path d=\"M12 3 C 12 9, 18 12, 18 17 a6 6 0 0 1 -12 0 C 6 12, 12 9, 12 3 Z\"></path></svg>",
+            "title": "BPA-Free Resin",
+            "subtitle": "Safe cosmetic-grade material"
+          }
+        },
+        "badge_KgVpz4": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12h13l-4-4M16 12l-4 4\"></path><path d=\"M21 6v12\"></path></svg>",
+            "title": "Ships Free Both Ways",
+            "subtitle": "Kit, return & veneers covered"
+          }
+        },
+        "badge_9Rjhwm": {
+          "type": "badge",
+          "settings": {
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.7\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3L21 8\"></path><path d=\"M21 4v4h-4\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3L3 16\"></path><path d=\"M3 20v-4h4\"></path></svg>",
+            "title": "Free Remakes (up to 2)",
+            "subtitle": "Two free remakes within 30 days"
+          }
+        }
+      },
+      "block_order": [
+        "badge_HNwdnc",
+        "badge_RpNNQK",
+        "badge_HJP7ai",
+        "badge_ycYXU7",
+        "badge_KgVpz4",
+        "badge_9Rjhwm"
+      ],
+      "name": "Trust Badges",
+      "settings": {}
+    },
+    "faaq_G3ch9C": {
+      "type": "faaq",
+      "blocks": {
+        "faq_UTLaUp": {
+          "type": "faq",
+          "settings": {
+            "question": "Should I get both arches or single arch?",
+            "answer": "<p>Most buyers choose both arches because upper-only veneers can look unnatural when you smile or talk, your lower teeth show, and a color mismatch between veneered upper teeth and natural lower teeth looks off. We recommend both unless your lower teeth are already in good shape. At $1,994 for both vs. $1,297 for single, most people find the upgrade worth it.</p>"
+          }
+        },
+        "faq_LGq4UP": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Revive right for me?",
+            "answer": "<p>Most people are. Revive Veneers work well for anyone with healthy teeth and gums who wants to improve the appearance of stained, slightly gapped, or worn teeth. They aren't right for people with active gum disease, severe bite issues, multiple missing teeth at the end of the arch, or anyone currently wearing full dentures. Take our 60-second Smile Quiz above if you're unsure, it includes guidance on missing teeth and impression quality.</p>"
+          }
+        },
+        "faq_nRiRU8": {
+          "type": "faq",
+          "settings": {
+            "question": "What happens after I order?",
+            "answer": "<p>Your impression kit ships within 48 hours. You take impressions at home (about 5 minutes), mail them back free, and your custom veneers arrive 2–3 weeks after we receive them. Every case is made to Dr. Turley's 7-Point Smile Design Protocol along the way. The kit includes two batches of putty, so if your first impressions don't capture enough detail we send a second kit free before production starts.</p>"
+          }
+        },
+        "faq_GNUR9K": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I cancel after ordering?",
+            "answer": "<p>Yes, cancel for a full refund any time before we begin production. Once your case is in production, the 30-Day Fit Guarantee covers you: if the fit or look isn't right, we remake it free (up to twice). Just email hello@reviveteeth.com.</p>"
+          }
+        },
+        "faq_fphxPT": {
+          "type": "faq",
+          "settings": {
+            "question": "How long do the veneers last?",
+            "answer": "<p>With everyday care, Revive Veneers are built to last 3–5 years. Rinse them after eating, brush them gently, and keep them in their case when they're out.</p>"
+          }
+        },
+        "faq_ffxCDD": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I eat with them in?",
+            "answer": "<p>Yes, they're made for everyday wear, including most meals. We recommend taking them out for very hard or sticky foods to keep them looking their best.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_UTLaUp",
+        "faq_LGq4UP",
+        "faq_nRiRU8",
+        "faq_GNUR9K",
+        "faq_fphxPT",
+        "faq_ffxCDD"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "eyebrow": "Common Questions",
+        "heading": "What people ask before buying",
+        "description": "The essentials are here. Anything else, we're one email away.",
+        "help_title": "Still have questions?",
+        "help_text": "Our team responds within one business day.",
+        "contact_label": "Contact us",
+        "contact_email": "hello@reviveteeth.com"
+      }
+    },
+    "closing-cta": {
+      "type": "closing-cta",
+      "settings": {
+        "section_id": "closing",
+        "eyebrow": "Start today",
+        "heading": "Ready to start your smile?",
+        "description": "<p>Order your impression kit today and your custom veneers are designed within <strong>2–3 weeks</strong>, from <strong>$1,297</strong>, or 3 interest-free payments. Backed by a 30-day money-back guarantee.<.p></p>",
+        "button_label": "Start your smile",
+        "button_target": "#buy",
+        "reassurance": "30-day money-back guarantee · Free remakes until it's right"
+      }
+    }
+  },
+  "order": [
+    "hero_NFhTYw",
+    "emotional_bridge_7fkkrq",
+    "real_stories_KyEcp6",
+    "meet_designer_8TmEMk",
+    "how_it_works_wH89jW",
+    "full_width_image_YnYMxB",
+    "the_protocols_FCBtDY",
+    "comparison_JP6KmX",
+    "candidate_WUVAB3",
+    "trust_badges_jFaabb",
+    "faaq_G3ch9C",
+    "closing-cta"
+  ]
+}
