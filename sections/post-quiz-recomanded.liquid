@@ -1,3 +1,14 @@
+<style>
+  .terms-label {
+  display: flex;
+  gap:16px;
+  justify-content:flex-start;
+  align-items: flex-start;
+}
+</style>
+
+
+
 {% assign product = section.settings.product %}
 {% if section.settings.product == blank %}
   <p>Please select a product.</p>
@@ -255,7 +266,6 @@
                   <a href="/pages/privacy-policy" target="_blank" rel="noopener"> Privacy Policy </a>, and the
                   <a href="/policies/refund-policy" target="_blank" rel="noopener"> Refund, Remake & Returns Policy </a
                   >.</p>
-                  
                 </span>
               </label>
 
