@@ -285,7 +285,7 @@
             <p>“{{ section.settings.quote }}”</p>
             <div class="qattr">
               <img
-                src="{{ section.settings.quote_author_image }}"
+                src="{{ section.settings.quote_author_image | image_url }}"
                 alt="{{ section.settings.quote_author_image.alt }}"
                 height="100"
                 width="100"
@@ -341,60 +341,7 @@
           <p class="guarantee">
             {{ section.settings.guareentee_text }}
           </p>
-          <ul class="badge-row">
-            <li>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12l5 5 9-11"></path>
-              </svg>
-              Two Free Remakes
-            </li>
-            <li>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12l5 5 9-11"></path>
-              </svg>
-              Dentist-Designed
-            </li>
-            <li>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12l5 5 9-11"></path>
-              </svg>
-              Free Shipping Both Ways
-            </li>
-            <li>
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12l5 5 9-11"></path>
-              </svg>
-              Designed in the USA
-            </li>
-          </ul>
+          
 
           <ul class="badge-row">
             {% for block in section.blocks %}
