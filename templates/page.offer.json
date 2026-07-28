@@ -755,6 +755,7 @@
       ],
       "name": "Post Quiz FAQ",
       "settings": {
+        "image": "shopify://shop_images/full-width-image.jpg",
         "image_alt": "FAQ Image",
         "eyebrow": "Questions I hear most often before someone orders.",
         "heading": "What people want to know before they decide.",
@@ -774,6 +775,7 @@
       "type": "post-quiz-footer",
       "name": "Post Quiz Footer",
       "settings": {
+        "logo": "shopify://shop_images/footer-logo.png",
         "tagline": "A natural-looking smile, without the dental chair.",
         "support_heading": "Support",
         "support_link": "mailto:support@reviveteeth.com",
