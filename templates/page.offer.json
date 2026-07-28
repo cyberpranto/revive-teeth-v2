@@ -623,7 +623,7 @@
           "settings": {
             "number": "06",
             "title": "Shade Matching",
-            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion.</p>"
+            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion, avoiding the fluorescent white that tells everyone you are wearing something artificial.</p>"
           }
         },
         "protocol_qfLmMn": {
@@ -651,8 +651,8 @@
         "doctor_name": "Dr. Brandon Turley, DDS",
         "doctor_credential": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol",
         "eyebrow": "The Protocol",
-        "heading": "Seven checkpoints that make them look like your own teeth.",
-        "description": "Every Revive case is designed against a 7-point protocol I built, and it has to pass all seven before it leaves the facility. Tap any point to see what it decides.",
+        "heading": "Seven checkpoints that make them look like real teeth, not a plastic cover.",
+        "description": "I know which details the human eye reads as natural and which ones it immediately reads as fake, and every point in this protocol exists to get one of those details exactly right for you before your set ever leaves the facility. Tap any checkpoint and I will tell you exactly what it controls.",
         "bottom_text": "If it does not pass all seven, it does not leave the facility.",
         "button_text": "Start My Custom Smile Design",
         "button_link": ""
