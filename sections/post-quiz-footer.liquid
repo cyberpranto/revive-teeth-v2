@@ -1,3 +1,76 @@
+{% comment %}
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-cols">
+        <div>
+          {% if section.settings.logo != blank %}
+            <img
+              class="foot-logo"
+              src="{{ section.settings.logo | image_url: width: 300 }}"
+              alt="{{ shop.name }}"
+              width="200"
+              height="200"
+            >
+
+          {% else %}
+            <img
+              class="foot-logo"
+              src="{{ 'post-quiz-footer-logo.png' | asset_url }}"
+              alt="{{ shop.name }}"
+              width="200"
+              height="200"
+            >
+          {% endif %}
+          <p class="foot-tag">
+            {{ section.settings.tagline }}
+          </p>
+        </div>
+
+        <div>
+          <h5>{{ section.settings.support_heading }}</h5>
+
+          <ul>
+            {% if section.settings.support_email != blank %}
+              <li class="foot-email">
+                <a href="{{ section.settings.support_link }}">
+                  {{ section.settings.support_email }}
+                </a>
+              </li>
+            {% endif %}
+
+            {% if section.settings.support_text != blank %}
+              <li>{{ section.settings.support_text }}</li>
+            {% endif %}
+          </ul>
+        </div>
+
+        <div>
+          <h5>{{ section.settings.policy_heading }}</h5>
+
+          {% if section.settings.policy_menu != blank %}
+            <ul>
+              {% for link in section.settings.policy_menu.links %}
+                <li>
+                  <a href="{{ link.url }}" target="_blank">
+                    {{ link.title }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="foot-bottom">
+        {{ section.settings.copyright }}
+        <p class="foot-disclaimer">
+          {{ section.settings.disclaimer }}
+        </p>
+      </div>
+    </div>
+  </footer>
+{% endcomment %}
+
 <footer class="foot">
   <div class="wrap">
     <div class="foot-cols">
@@ -5,24 +78,17 @@
         {% if section.settings.logo != blank %}
           <img
             class="foot-logo"
-            src="{{ section.settings.logo | image_url: width: 300 }}"
+            src="{{ section.settings.logo | image_url }}"
             alt="{{ shop.name }}"
-            width="200"
-            height="200"
-          >
-
-        {% else %}
-          <img
-            class="foot-logo"
-            src="{{ 'post-quiz-footer-logo.png' | asset_url }}"
-            alt="{{ shop.name }}"
-            width="200"
-            height="200"
+            width="{{ section.settings.logo.width }}"
+            height="{{ section.settings.logo.height }}"
+            loading="lazy"
           >
         {% endif %}
-        <p class="foot-tag">
-          {{ section.settings.tagline }}
-        </p>
+
+        {% if section.settings.tagline != blank %}
+          <p class="foot-tag">{{ section.settings.tagline }}</p>
+        {% endif %}
       </div>
 
       <div>
@@ -31,9 +97,15 @@
         <ul>
           {% if section.settings.support_email != blank %}
             <li class="foot-email">
-              <a href="{{ section.settings.support_link }}">
-                {{ section.settings.support_email }}
-              </a>
+              {% if section.settings.support_link != blank %}
+                <a href="{{ section.settings.support_link }}">
+                  {{ section.settings.support_email }}
+                </a>
+              {% else %}
+                <a href="mailto:{{ section.settings.support_email }}">
+                  {{ section.settings.support_email }}
+                </a>
+              {% endif %}
             </li>
           {% endif %}
 
@@ -50,9 +122,7 @@
           <ul>
             {% for link in section.settings.policy_menu.links %}
               <li>
-                <a href="{{ link.url }}" target="_blank">
-                  {{ link.title }}
-                </a>
+                <a href="{{ link.url }}">{{ link.title }}</a>
               </li>
             {% endfor %}
           </ul>
@@ -62,9 +132,23 @@
 
     <div class="foot-bottom">
       {{ section.settings.copyright }}
-      <p class="foot-disclaimer">
-        {{ section.settings.disclaimer }}
-      </p>
+
+      {% if section.settings.disclaimer != blank %}
+        <p class="foot-disc">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M12 3l7.5 3v6c0 4.2-3 7.8-7.5 9-4.5-1.2-7.5-4.8-7.5-9V6z"></path>
+          </svg>
+
+          <span>{{ section.settings.disclaimer }}</span>
+        </p>
+      {% endif %}
     </div>
   </div>
 </footer>
@@ -114,7 +198,7 @@
       "type": "text",
       "id": "support_text",
       "label": "Support Text",
-      "default": "Pay in full at checkout, from $1,197."
+      "default": "We reply within one business day."
     },
 
     {

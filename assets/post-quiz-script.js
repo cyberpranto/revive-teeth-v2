@@ -159,7 +159,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   try {
     const a = new URLSearchParams(location.search).get("arch");
     if (a && CONFIGS[a]) applyConfig(a);
-  } catch (e) {}
+  } catch (e) { }
 })();
 
 /* ---------- BUY-BOX ACCORDIONS ---------- */
