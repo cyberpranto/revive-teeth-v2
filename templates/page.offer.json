@@ -662,28 +662,31 @@
         "step_YKQQy3": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/hiw-step-1.jpg",
             "image_alt": "Step image",
             "step": "Step 01",
             "title": "Choose your set.",
-            "description": "Describe this step."
+            "description": "Select Upper, Lower, or Upper & Lower, complete your order, and your impression kit ships within 48 hours with everything you need already packed inside the box."
           }
         },
         "step_BUEYpF": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/hiw-step-2.jpg",
             "image_alt": "Step image",
-            "step": "Step 01",
-            "title": "Choose your set.",
-            "description": "Describe this step."
+            "step": "Step 02",
+            "title": "Take your impressions at home.",
+            "description": "I have recorded a full video walkthrough so you can do this at your own pace, with no tools beyond what comes in your kit, and two batches of putty included so there is room for error without having to get it perfect on the very first try."
           }
         },
         "step_g63MmQ": {
           "type": "step",
           "settings": {
+            "image": "shopify://shop_images/hiw-step-3.jpg",
             "image_alt": "Step image",
-            "step": "Step 01",
-            "title": "Choose your set.",
-            "description": "Describe this step."
+            "step": "Step 03",
+            "title": "Your set arrives.",
+            "description": "Your set is built from your impressions, checked against all seven points of my protocol, and shipped only when it passes every one of them."
           }
         }
       },
