@@ -736,6 +736,13 @@
             "question": "Can I wear them while eating?",
             "answer": "<p>Yes, for everyday soft foods. Revive Veneers are made for daily wear, including eating and drinking. For hard, crunchy, sticky, or very hot foods, take them out first. They are a cosmetic appliance, not a replacement for your natural bite, so they are not built for heavy chewing. Removing them for tougher meals also helps them last longer.</p>"
           }
+        },
+        "faq_9B4taA": {
+          "type": "faq",
+          "settings": {
+            "question": "What if they don't feel right?",
+            "answer": "<p>Then we make it right. Your set was made to your mouth, so if it is off, that is our responsibility and not yours. We remake it free, up to twice, with prepaid shipping both ways, and a full refund is available any time before production begins. Email support@reviveteeth.com and we handle everything from there.</p>"
+          }
         }
       },
       "block_order": [
@@ -743,7 +750,8 @@
         "faq_bKnJUU",
         "faq_wErC4m",
         "faq_wJkaJp",
-        "faq_wwix9B"
+        "faq_wwix9B",
+        "faq_9B4taA"
       ],
       "name": "Post Quiz FAQ",
       "settings": {
