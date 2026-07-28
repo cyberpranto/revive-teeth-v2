@@ -262,6 +262,12 @@ section {
   color: #fff;
   box-shadow: 0 16px 36px rgba(0, 0, 0, 0.36);
 }
+
+@media screen and (max-width: 767px) {
+  .btn-invert {
+    width: 100%;
+  }
+}
 .link-navy {
   color: var(--navy);
   font-weight: 600;

@@ -1,0 +1,310 @@
+<style>
+  .desktop-view {
+    display: block;
+  }
+  .mobile-view {
+    display: none;
+  }
+  @media screen and (max-width: 560px) {
+    .desktop-view {
+      display: none;
+    }
+    .mobile-view {
+      display: block;
+    }
+    .cmp-tbl {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1.06fr 1fr;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .cmp-tbl .ch {
+      padding: 11px 8px 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 11.5px;
+      line-height: 1.25;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.07);
+      display: flex;
+      align-items: flex-end;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+    }
+    .cmp-tbl .ch.hl {
+      background: #fff;
+      color: var(--navy);
+    }
+    .cmp-tbl .cr {
+      grid-column: 1/-1;
+      padding: 9px 12px 7px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: #8fa2d2;
+      background: rgba(255, 255, 255, 0.04);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .cmp-tbl .cv {
+      padding: 8px;
+      font-size: 12px;
+      line-height: 1.35;
+      color: #dce3f2;
+      display: flex;
+      align-items: center;
+      font-variant-numeric: tabular-nums;
+    }
+    .cmp-tbl .cv.hl {
+      background: #fff;
+      color: var(--ink);
+      font-weight: 600;
+    }
+    .cmp-tbl .cv.price {
+      font-weight: 700;
+      font-size: 13px;
+      color: #fff;
+    }
+    .cmp-tbl .cv.price.hl {
+      color: var(--ink);
+      font-size: 14px;
+    }
+  }
+</style>
+
+<section class="sec-navy" id="compare" data-screen-label="Compare">
+  <div class="wrap">
+    <div class="sec-intro center reveal in">
+      <span class="eyebrow">
+        {{ section.settings.eyebrow }}
+      </span>
+
+      <h2 class="dl">
+        {{ section.settings.heading }}
+      </h2>
+
+      <p class="lead">
+        {{ section.settings.description }}
+      </p>
+    </div>
+    <div class="cmp-shots reveal in">
+      <figure class="cmp-shot">
+        {% if section.settings.generic_image != blank %}
+          <img
+            src="{{ section.settings.generic_image | image_url: width: 900 }}"
+            alt="{{ section.settings.generic_alt }}"
+            loading="lazy"
+            width="100%"
+            height="auto"
+          >
+        {% endif %}
+
+        <figcaption class="cs-cap">
+          {{ section.settings.generic_caption }}
+        </figcaption>
+      </figure>
+
+      <figure class="cmp-shot hl">
+        {% if section.settings.revive_image != blank %}
+          <img
+            src="{{ section.settings.revive_image | image_url: width: 900 }}"
+            alt="{{ section.settings.revive_image.alt }}"
+            loading="lazy"
+            width="100%"
+            height="auto"
+          >
+        {% endif %}
+
+        <figcaption class="cs-cap">
+          {{ section.settings.revive_caption }}
+        </figcaption>
+      </figure>
+    </div>
+    <div class="desktop-view">
+      <div class="cmp-wrap reveal in">
+        <div class="cmp-table">
+          <div class="ct head"></div>
+
+          <div class="ct head">
+            {{ section.settings.col_one }}
+          </div>
+
+          <div class="ct head hl">
+            {{ section.settings.col_two }}
+          </div>
+
+          <div class="ct head">
+            {{ section.settings.col_three }}
+          </div>
+
+          {% for block in section.blocks %}
+            <div class="ct lab">
+              {{ block.settings.label }}
+            </div>
+
+            <div class="ct {{block.settings.extra_class}}">
+              {{ block.settings.generic }}
+            </div>
+
+            <div class="ct {{block.settings.extra_class}} hl">
+              {{ block.settings.revive }}
+            </div>
+
+            <div class="ct {{block.settings.extra_class}}">
+              {{ block.settings.porcelain }}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="mobile-view">
+      <div class="cmp-tbl">
+        <div class="ch">
+          {{ section.settings.col_one }}
+        </div>
+
+        <div class="ch hl">
+          {{ section.settings.col_two }}
+        </div>
+
+        <div class="ch">
+          {{ section.settings.col_three }}
+        </div>
+
+        {% for block in section.blocks %}
+          <div class="cr">
+            {{ block.settings.label }}
+          </div>
+
+          <div class="cv {{ block.settings.extra_class }}">
+            {{ block.settings.generic }}
+          </div>
+
+          <div class="cv {{ block.settings.extra_class }} hl">
+            {{ block.settings.revive }}
+          </div>
+
+          <div class="cv {{ block.settings.extra_class }}">
+            {{ block.settings.porcelain }}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Post Quiz Compare",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "I have seen what else is out there."
+    },
+    {
+      "type": "textarea",
+      "id": "heading",
+      "label": "Heading",
+      "default": "A mold made for nobody. And the one built from yours."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "The difference between a set that reads as completely natural and one that goes straight in a drawer is not complicated, and I think you deserve to see it laid out plainly before you decide."
+    },
+
+    {
+      "type": "image_picker",
+      "id": "generic_image",
+      "label": "Generic Image"
+    },
+    {
+      "type": "text",
+      "id": "generic_alt",
+      "label": "Generic Image Alt",
+      "default": "Generic online set"
+    },
+    {
+      "type": "text",
+      "id": "generic_caption",
+      "label": "Generic Caption",
+      "default": "Generic online set"
+    },
+
+    {
+      "type": "image_picker",
+      "id": "revive_image",
+      "label": "Revive Image"
+    },
+    {
+      "type": "text",
+      "id": "revive_alt",
+      "label": "Revive Image Alt",
+      "default": "Revive"
+    },
+    {
+      "type": "text",
+      "id": "revive_caption",
+      "label": "Revive Caption",
+      "default": "Revive"
+    },
+
+    {
+      "type": "text",
+      "id": "col_one",
+      "label": "Column One",
+      "default": "Generic online sets"
+    },
+    {
+      "type": "text",
+      "id": "col_two",
+      "label": "Column Two",
+      "default": "Revive"
+    },
+    {
+      "type": "text",
+      "id": "col_three",
+      "label": "Column Three",
+      "default": "Porcelain veneers"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "Comparison Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        },
+        {
+          "type": "text",
+          "id": "generic",
+          "label": "Generic Online Sets"
+        },
+        {
+          "type": "text",
+          "id": "revive",
+          "label": "Revive"
+        },
+        {
+          "type": "text",
+          "id": "porcelain",
+          "label": "Porcelain Veneers"
+        },
+        {
+          "type": "text",
+          "id": "extra_class",
+          "label": "Extra Class"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

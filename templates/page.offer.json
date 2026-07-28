@@ -590,6 +590,10 @@
         "description": "I wanted this to be simple enough to do at your kitchen table, because the last thing you need is another appointment, another drive to an office, or another person standing over you telling you what your teeth are supposed to look like."
       }
     },
+    "post-quiz-compare": {
+      "type": "post-quiz-compare",
+      "settings": {}
+    },
     "post_quiz_faq_RG6RKB": {
       "type": "post-quiz-faq",
       "blocks": {
@@ -687,6 +691,7 @@
     "post_quiz_founder_story_aXQxDw",
     "post_quiz_protocols_ppTFCd",
     "post_quiz_how_it_works_NxkFRk",
+    "post-quiz-compare",
     "post_quiz_faq_RG6RKB",
     "post_quiz_closer_Lf6hGd",
     "post_quiz_footer_Pm4fPc"
