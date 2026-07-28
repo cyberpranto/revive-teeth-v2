@@ -646,6 +646,8 @@
       ],
       "name": "Post Quiz Protocols",
       "settings": {
+        "image": "shopify://shop_images/founder-image-3.jpg",
+        "signature": "shopify://shop_images/update-signature.png",
         "doctor_name": "Dr. Brandon Turley, DDS",
         "doctor_credential": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol",
         "eyebrow": "The Protocol",
