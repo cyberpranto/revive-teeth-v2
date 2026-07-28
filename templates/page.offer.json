@@ -12,6 +12,8 @@
     "header-top": {
       "type": "post-quiz-header-top",
       "settings": {
+        "announcement_text": "Designed by cosmetic dentist Dr. Brandon Turley, DDS",
+        "logo": "shopify://shop_images/offer-page-logo.png",
         "logo_width": 120,
         "secure_text": "Secure checkout",
         "show_icon": true
