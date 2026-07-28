@@ -1,45 +1,140 @@
-<header class="funnel-top">
-  <div class="wrap">
-    {% if section.settings.logo != blank %}
-      <img
-        class="fl-logo"
-        src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
-        alt="{{ section.settings.logo.alt | default: shop.name }}"
-        width="{{ section.settings.logo_width }}"
-        height="auto"
-      >
-    {% else %}
-      <img
-        class="fl-logo"
-        src="{{ 'post-quiz-logo.png' | asset_url }}"
-        alt="{{ shop.name }}"
-        width="{{ section.settings.logo_width }}"
-        height="auto"
-      >
-    {% endif %}
-
-    <span class="fl-secure">
-      {% if section.settings.show_icon %}
-        <svg
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
+{% comment %}
+  <header class="funnel-top">
+    <div class="wrap">
+      {% if section.settings.logo != blank %}
+        <img
+          class="fl-logo"
+          src="{{ section.settings.logo | image_url: width: section.settings.logo_width }}"
+          alt="{{ section.settings.logo.alt | default: shop.name }}"
+          width="{{ section.settings.logo_width }}"
+          height="auto"
         >
-          <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-          <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-        </svg>
+      {% else %}
+        <img
+          class="fl-logo"
+          src="{{ 'post-quiz-logo.png' | asset_url }}"
+          alt="{{ shop.name }}"
+          width="{{ section.settings.logo_width }}"
+          height="auto"
+        >
       {% endif %}
 
-      {{ section.settings.secure_text }}
-    </span>
+      <span class="fl-secure">
+        {% if section.settings.show_icon %}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+          </svg>
+        {% endif %}
+
+        {{ section.settings.secure_text }}
+      </span>
+    </div>
+  </header>
+
+  <header>
+    <div class="announce">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1 5.6L12 15.9 7.1 18.4l1-5.6L4 8.9l5.6-.7z"
+        ></path>
+      </svg>
+      Designed by cosmetic dentist Dr. Brandon Turley, DDS
+    </div>
+    <div class="brandbar">
+      <div class="wrap">
+        <img
+          class="bb-logo"
+          src="cd5c5e0a-02ab-49b1-be0b-83bbb6e3bb3e"
+          alt="Revive Teeth"
+        />
+        <span class="bb-secure">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+          </svg>
+          Secure checkout
+        </span>
+      </div>
+    </div>
+  </header>
+{% endcomment %}
+
+<header>
+  <div class="announce">
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path d="M12 3l2.4 5.2 5.6.7-4.1 3.9 1 5.6L12 15.9 7.1 18.4l1-5.6L4 8.9l5.6-.7z"></path>
+    </svg>
+
+    {{ section.settings.announcement_text }}
+  </div>
+
+  <div class="brandbar">
+    <div class="wrap">
+      {% if section.settings.logo != blank %}
+        <img
+          class="bb-logo"
+          src="{{ section.settings.logo | image_url }}"
+          alt="{{ shop.name }}"
+          width="{{ section.settings.logo_width }}"
+          height="auto"
+          loading="lazy"
+          style="max-width: {{ section.settings.logo_width }}px;"
+        >
+      {% endif %}
+
+      <span class="bb-secure">
+        {% if section.settings.show_icon %}
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+            <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+          </svg>
+        {% endif %}
+
+        {{ section.settings.secure_text }}
+      </span>
+    </div>
   </div>
 </header>
-
 {% schema %}
 {
   "name": "Post Quiz Header",
   "settings": [
+    {
+      "type": "text",
+      "id": "announcement_text",
+      "label": "Announcement Text",
+      "default": "Designed by cosmetic dentist Dr. Brandon Turley, DDS"
+    },
     {
       "type": "image_picker",
       "id": "logo",

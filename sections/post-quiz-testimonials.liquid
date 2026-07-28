@@ -1,152 +1,17 @@
-<section
-  class="sec-alt"
-  id="results"
-  data-screen-label="Testimonials"
->
+<section class="sec-alt" id="results" data-screen-label="Results">
   <div class="wrap">
-    <div class="sec-intro center reveal">
-      <span class="eyebrow">
-        {{ section.settings.eyebrow }}
-      </span>
-
-      <h2 class="dl">
-        {{ section.settings.heading }}
-      </h2>
-
+    <div class="sec-intro center reveal in">
+      <span class="eyebrow">{{ section.settings.eyebrow }}</span>
+      <h2 class="dl">{{ section.settings.heading }}</h2>
       <p class="lead">
         {{ section.settings.description }}
       </p>
     </div>
-
-    <div class="stories-grid" data-stagger="">
-      {% comment %}
-        <article class="story-card reveal">
-        <div class="sc-media">
-        <span class="vlabel">[ Video · Joshua ]</span>
-        <div class="sc-play" id="joshuaOverlay">
-        <span class="pbtn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 4l14 8-14 8z"></path>
-        </svg>
-        </span>
-        </div>
-        </div>
-        <div class="sc-cap">
-        <p class="q">
-        “I'm in sales, so confidence is everything. Now I can feel myself smiling without even trying.”
-        </p>
-        <div class="nm">Joshua</div>
-        <div class="vf">
-        <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        >
-        <path d="M5 12l5 5 9-11"></path>
-        </svg>
-        Verified customer
-        </div>
-        </div>
-        </article>
-        <article class="story-card reveal">
-        <div class="sc-media">
-        <span class="vlabel">[ Video · Connie ]</span>
-        <div class="sc-play" id="connieOverlay">
-        <span class="pbtn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 4l14 8-14 8z"></path>
-        </svg>
-        </span>
-        </div>
-        </div>
-        <div class="sc-cap">
-        <p class="q">“I want to cry. I really do. I feel like I could go out and smile.”</p>
-        <div class="nm">Connie</div>
-        <div class="vf">
-        <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        >
-        <path d="M5 12l5 5 9-11"></path>
-        </svg>
-        Verified customer
-        </div>
-        </div>
-        </article>
-        <article class="story-card reveal">
-        <div class="sc-media">
-        <span class="vlabel">[ Video · Michelle ]</span>
-        <div class="sc-play" id="michelleOverlay">
-        <span class="pbtn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 4l14 8-14 8z"></path>
-        </svg>
-        </span>
-        </div>
-        </div>
-        <div class="sc-cap">
-        <p class="q">
-        “I got so many compliments on my new smile, nobody could tell they were snap-on veneers. They look that
-        natural.”
-        </p>
-        <div class="nm">Michelle</div>
-        <div class="vf">
-        <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        >
-        <path d="M5 12l5 5 9-11"></path>
-        </svg>
-        Verified customer
-        </div>
-        </div>
-        </article>
-        <article class="story-card reveal">
-        <div class="sc-media">
-        <span class="vlabel">[ Video · Lindsay ]</span>
-        <div class="sc-play" id="lindsayOverlay">
-        <span class="pbtn">
-        <svg viewBox="0 0 24 24" fill="currentColor">
-        <path d="M6 4l14 8-14 8z"></path>
-        </svg>
-        </span>
-        </div>
-        </div>
-        <div class="sc-cap">
-        <p class="q">“I've never seen my teeth that straight. Is this a dream?”</p>
-        <div class="nm">Lindsay</div>
-        <div class="vf">
-        <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2.6"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        >
-        <path d="M5 12l5 5 9-11"></path>
-        </svg>
-        Verified customer
-        </div>
-        </div>
-        </article>
-      {% endcomment %}
-
+    <div class="rail">
       {% for block in section.blocks %}
         {% case block.type %}
           {% when 'story' %}
-            <article class="story-card reveal" {{ block.shopify_attributes }}>
+            <article class="story reveal in" {{ block.shopify_attributes }}>
               <div class="sc-media">
                 {% if block.settings.video_label != blank %}
                   <span class="vlabel">
@@ -205,37 +70,34 @@
                 <p class="q">
                   {{ block.settings.quote }}
                 </p>
+                <div class="sc-foot">
+                  <div class="nm">{{ block.settings.customer_name }}</div>
+                  <div class="sc-verified">
+                    {% if section.settings.check_icon != blank %}
+                      {{ section.settings.check_icon }}
+                    {% else %}
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.6"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M5 12l5 5 9-11" />
+                      </svg>
+                    {% endif %}
 
-                <div class="nm">
-                  {{ block.settings.customer_name }}
-                </div>
-
-                <div class="vf">
-                  {% if section.settings.check_icon != blank %}
-                    {{ section.settings.check_icon }}
-                  {% else %}
-                    <svg
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2.6"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path d="M5 12l5 5 9-11" />
-                    </svg>
-                  {% endif %}
-
-                  {{ block.settings.badge }}
+                    {{ block.settings.badge }}
+                  </div>
                 </div>
               </div>
             </article>
         {% endcase %}
       {% endfor %}
     </div>
-
-    <div class="mid-cta reveal">
-      <a href="{{section.settings.button_link}}" class="btn btn-ghost scroll-buy">
+    <div class="mid-cta reveal in">
+      <a href="{{section.settings.button_link}}" class="btn">
         {{ section.settings.button_text }}
 
         {% if section.settings.button_icon != blank %}
@@ -248,7 +110,7 @@
             stroke="currentColor"
             stroke-width="2"
           >
-            <path d="M5 12h14M13 6l6 6-6 6" />
+            <path d="M5 12h14M13 6l6 6-6 6"></path>
           </svg>
         {% endif %}
       </a>
