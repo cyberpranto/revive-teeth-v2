@@ -26,7 +26,7 @@
     {{ 'fonts.css' | asset_url | stylesheet_tag: preload: true }}
 
     {% if template.suffix == 'offer' %}
-      {% comment %} {{ 'post-quiz-style.css' | asset_url | stylesheet_tag }} {% endcomment %}
+      {{ 'post-quiz-style.css' | asset_url | stylesheet_tag }}
       {{ 'offer-page.css' | asset_url | stylesheet_tag }}
     {% endif %}
 

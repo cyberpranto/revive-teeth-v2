@@ -21,7 +21,23 @@
     },
     "post-quiz-banner": {
       "type": "post-quiz-banner",
-      "settings": {}
+      "settings": {
+        "product": "revive-veneers",
+        "eyebrow": "DESIGNED AROUND YOUR ANSWERS",
+        "heading": "The dentist-designed smile you were meant to have.",
+        "description": "I built it to look like real teeth, the kind nobody questions, shaped from your impressions rather than a mold that was made for nobody in particular.",
+        "badge_text": "Your recommended set",
+        "quote": "I have seen people pay twenty thousand dollars for porcelain veneers. Multiple visits, healthy enamel drilled down for good. For years, that was the only way I had to give someone that smile. It isn't anymore.",
+        "quote_author": "Dr. Brandon Turley, DDS",
+        "quote_author_designation": "Dr. Brandon Turley, DDS",
+        "credit_text": "$300 Smile Design credit applied",
+        "value_line": "It's the look you'd chase in a $20,000 dentist's chair, without the chair, the drilling, or the $20,000.",
+        "shipping_text": "In stock. Ships your impression kit within 48 hours.",
+        "guareentee_text": "Every set is made to your mouth alone, and if anything is not right when it arrives, we remake it free, up to twice, with a full refund available any time before production begins.",
+        "secure_text": "Secure checkout",
+        "kit_title": "What's in Your Kit",
+        "kit_note": "If your first impressions don't capture enough detail, we send a second kit free."
+      }
     },
     "post_quiz_testimonials_fzPW3L": {
       "type": "post-quiz-testimonials",
