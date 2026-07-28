@@ -412,15 +412,6 @@
         "spectrum_label": "Where Revive sits on the smile-upgrade spectrum."
       }
     },
-    "post-quiz-promise": {
-      "type": "post-quiz-promise",
-      "settings": {
-        "banner_alt": "A couple relaxing at home together, laughing and at ease",
-        "eyebrow": "Our Promise",
-        "heading": "Here is exactly what we stand behind.",
-        "content": "<p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p><p>When your veneers arrive, wear them. If the fit is not right, tell us. <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not consider it finished until it fits.</p><p><strong>You can cancel for a full refund any time before we begin production.</strong> Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change of mind, the same as any custom-made product.</p><p>Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit until it is right. That is the promise a custom product can stand behind.</p>"
-      }
-    },
     "post_quiz_founder_story_aXQxDw": {
       "type": "post-quiz-founder-story",
       "blocks": {
@@ -691,7 +682,6 @@
     "post_quiz_testimonials_fzPW3L",
     "post_quiz_recomanded_XrXkQ4",
     "post_quiz_different_hVrQkV",
-    "post-quiz-promise",
     "post_quiz_founder_story_aXQxDw",
     "post_quiz_protocols_ppTFCd",
     "post_quiz_how_it_works_NxkFRk",
