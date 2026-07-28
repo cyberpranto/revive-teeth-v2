@@ -469,10 +469,43 @@
             "porcelain": "$20,000",
             "extra_class": "price"
           }
+        },
+        "row_W6LjMB": {
+          "type": "row",
+          "settings": {
+            "label": "How it is made",
+            "generic": "One size mold",
+            "revive": "Made to your own impressions",
+            "porcelain": "Made in a dental lab",
+            "extra_class": ""
+          }
+        },
+        "row_tjf8Hx": {
+          "type": "row",
+          "settings": {
+            "label": "Tooth shape",
+            "generic": "Uniform and blocky",
+            "revive": "Shaped tooth by tooth",
+            "porcelain": "Shaped tooth by tooth",
+            "extra_class": ""
+          }
+        },
+        "row_LY4BnV": {
+          "type": "row",
+          "settings": {
+            "label": "Gumline",
+            "generic": "Thick plastic ridge",
+            "revive": "Contoured to your anatomy",
+            "porcelain": "Bonded at your gumline",
+            "extra_class": ""
+          }
         }
       },
       "block_order": [
-        "row_w8cDec"
+        "row_w8cDec",
+        "row_W6LjMB",
+        "row_tjf8Hx",
+        "row_LY4BnV"
       ],
       "settings": {
         "eyebrow": "I have seen what else is out there.",
