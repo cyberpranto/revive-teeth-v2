@@ -459,12 +459,29 @@
     },
     "post-quiz-compare": {
       "type": "post-quiz-compare",
+      "blocks": {
+        "row_w8cDec": {
+          "type": "row",
+          "settings": {
+            "label": "Price",
+            "generic": "$200 to $400",
+            "revive": "$1,594",
+            "porcelain": "$20,000",
+            "extra_class": "price"
+          }
+        }
+      },
+      "block_order": [
+        "row_w8cDec"
+      ],
       "settings": {
         "eyebrow": "I have seen what else is out there.",
         "heading": "A mold made for nobody. And the one built from yours.",
         "description": "The difference between a set that reads as completely natural and one that goes straight in a drawer is not complicated, and I think you deserve to see it laid out plainly before you decide.",
+        "generic_image": "shopify://shop_images/revive-set.jpg",
         "generic_alt": "Generic online set",
         "generic_caption": "Generic online set",
+        "revive_image": "shopify://shop_images/generic-set.jpg",
         "revive_alt": "Revive",
         "revive_caption": "Revive",
         "col_one": "Generic online sets",
