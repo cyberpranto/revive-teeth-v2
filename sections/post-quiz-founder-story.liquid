@@ -1,4 +1,4 @@
-{% comment %}
+
   <style>
     .founder-video {
       position: relative;
@@ -66,107 +66,9 @@
     }
     }
   </style>
-{% endcomment %}
 
-{% comment %}
-  <section class="sec-cream" id="designer">
-    <div class="wrap">
-      <div class="founder-grid">
-        <div class="founder-text reveal">
-          <span class="eyebrow">{{ section.settings.eyebrow }}</span>
-          <p class="founder-quote">
-            {{ section.settings.quote }}
-          </p>
 
-          <div class="founder-body prose">
-            {{ section.settings.story }}
-          </div>
 
-          <p class="founder-shield">
-            {{ section.settings.shield }}
-          </p>
-
-          <div class="founder-body prose">
-            {{ section.settings.bottom_story }}
-          </div>
-
-          <div class="sig-block">
-            {% if section.settings.signature_image != blank %}
-              <img
-                src="{{ section.settings.signature_image | image_url: width: 250 }}"
-                alt="{{ section.settings.founder_name }}"
-                class="sig-img"
-                width="120"
-                height="120"
-              >
-            {% else %}
-              <img
-                src="{{ 'founder-image.jfif' | asset_url }}"
-                alt="{{ section.settings.founder_name }}"
-                class="sig-img"
-                width="120"
-                height="120"
-              >
-            {% endif %}
-            <div class="sig-name">{{ section.settings.founder_name }}</div>
-
-            <div class="sig-sub">{{ section.settings.founder_designation }}</div>
-          </div>
-        </div>
-
-        <div class="founder-media reveal" data-delay="100">
-          <div class="founder-video">
-            {% assign video = section.settings.video %}
-            {% assign poster = section.settings.video_poster %}
-
-            {% if video != blank %}
-              <video
-                id="founderVideo-{{ section.id }}"
-                preload="metadata"
-                playsinline
-                {% if poster != blank %}
-                  poster="{{ poster | image_url: width: 1200 }}"
-                {% elsif video.preview_image %}
-                  poster="{{ video.preview_image | image_url: width: 1200 }}"
-                {% else %}
-                  poster="{{ 'founder-image.jfif' | asset_url }}"
-                {% endif %}
-              >
-                <source
-                  src="{{ video.sources.first.url }}"
-                  type="{{ video.sources.first.mime_type }}"
-                >
-              </video>
-            {% endif %}
-
-            <div class="fv-overlay" id="fvOverlay-{{ section.id }}">
-              <span class="fv-play" aria-label="Play founder video">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M6 4l14 8-14 8z"></path>
-                </svg>
-              </span>
-            </div>
-          </div>
-          <div class="founder-creds">
-            {% for block in section.blocks %}
-              {% if block.type == 'credential' %}
-                <div class="cred" {{ block.shopify_attributes }}>
-                  {% if block.settings.icon_svg != blank %}
-                    {{ block.settings.icon_svg }}
-                  {% endif %}
-
-                  <span>
-                    {{ block.settings.text }}
-                  </span>
-                </div>
-              {% endif %}
-            {% endfor %}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-{% endcomment %}
 
 <section class="sec-cream" id="designer" data-screen-label="Designer">
   <div class="wrap">
