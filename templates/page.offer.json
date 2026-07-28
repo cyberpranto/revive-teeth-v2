@@ -499,13 +499,57 @@
             "porcelain": "Bonded at your gumline",
             "extra_class": ""
           }
+        },
+        "row_mteXDA": {
+          "type": "row",
+          "settings": {
+            "label": "Cosmetic dentist involved",
+            "generic": "Rarely",
+            "revive": "Designed by one",
+            "porcelain": "Yes, in the chair",
+            "extra_class": ""
+          }
+        },
+        "row_xVnxbV": {
+          "type": "row",
+          "settings": {
+            "label": "Your natural teeth",
+            "generic": "Untouched",
+            "revive": "Untouched",
+            "porcelain": "Enamel drilled down for good",
+            "extra_class": ""
+          }
+        },
+        "row_6HXw7w": {
+          "type": "row",
+          "settings": {
+            "label": "Removable",
+            "generic": "Yes",
+            "revive": "Yes",
+            "porcelain": "No, permanent",
+            "extra_class": ""
+          }
+        },
+        "row_eUndxb": {
+          "type": "row",
+          "settings": {
+            "label": "Dental visits",
+            "generic": "None",
+            "revive": "None",
+            "porcelain": "Multiple",
+            "extra_class": ""
+          }
         }
       },
       "block_order": [
         "row_w8cDec",
         "row_W6LjMB",
         "row_tjf8Hx",
-        "row_LY4BnV"
+        "row_LY4BnV",
+        "row_mteXDA",
+        "row_xVnxbV",
+        "row_6HXw7w",
+        "row_eUndxb"
       ],
       "settings": {
         "eyebrow": "I have seen what else is out there.",
