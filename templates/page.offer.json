@@ -73,13 +73,13 @@
       ],
       "name": "Post Quiz Testimonials",
       "settings": {
-        "eyebrow": "Real Stories",
+        "eyebrow": "The part I never get tired of.",
         "heading": "The moment they stopped hiding.",
-        "description": "Real people, seeing their Revive smile for the first time. You can see the exact second it changes something.",
-        "button_link": "",
-        "button_text": "See Your Custom Set",
-        "button_icon": "",
-        "play_icon": "",
+        "description": "They spent years looking away from cameras and telling themselves this was just how it was going to be. These videos are the exact moment they found out it wasn't.",
+        "button_link": "#hero",
+        "button_text": "ORDER MY SET",
+        "button_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg>",
+        "play_icon": "<svg viewbox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M6 4l14 8-14 8z\"></path></svg>",
         "check_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>"
       }
     },
