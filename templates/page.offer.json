@@ -537,7 +537,7 @@
         "credential_Rryfbt": {
           "type": "credential",
           "settings": {
-            "icon_svg": "",
+            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
             "text": "12+ Years Experience"
           }
         },
