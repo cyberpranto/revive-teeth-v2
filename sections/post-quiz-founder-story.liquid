@@ -1,74 +1,69 @@
+<style>
+  .founder-video {
+    position: relative;
+    border-radius: var(--r-card);
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: #0e1830;
+    box-shadow: var(--shadow-hover);
+  }
+  .founder-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  .fv-overlay {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(13, 27, 42, 0.15), rgba(13, 27, 42, 0.5));
+    transition: opacity 0.3s ease;
+  }
+  .fv-overlay.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .fv-play {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.95);
+    display: grid;
+    place-items: center;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+    transition: transform 0.15s;
+  }
+  .fv-overlay:hover .fv-play {
+    transform: scale(1.07);
+  }
+  .fv-play svg {
+    width: 27px;
+    height: 27px;
+    color: #0d1b2a;
+    margin-left: 4px;
+  }
+  .fv-cap {
+    position: relative;
+    z-index: 1;
+    margin-top: 18px;
+    text-align: center;
+    font-size: 13px;
+    color: #8b97b8;
+    letter-spacing: 0.01em;
+  }
 
-  <style>
-    .founder-video {
-      position: relative;
-      border-radius: var(--r-card);
-      overflow: hidden;
-      aspect-ratio: 16/9;
-      background: linear-gradient(160deg, #263c70, #16264c);
-      box-shadow: var(--shadow-hover);
-    }
-    .founder-video video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .fv-overlay {
-      position: absolute;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      cursor: pointer;
-      background: linear-gradient(180deg, rgba(13, 27, 42, 0.15), rgba(13, 27, 42, 0.5));
-      transition: opacity 0.3s ease;
-    }
-    .fv-overlay.hidden {
-      opacity: 0;
-      pointer-events: none;
-    }
-    .fv-play {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.95);
-      display: grid;
-      place-items: center;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-      transition: transform 0.15s;
-    }
-    .fv-overlay:hover .fv-play {
-      transform: scale(1.07);
-    }
-    .fv-play svg {
-      width: 27px;
-      height: 27px;
-      color: #0d1b2a;
-      margin-left: 4px;
-    }
-    .fv-cap {
-      position: relative;
-      z-index: 1;
-      margin-top: 18px;
-      text-align: center;
-      font-size: 13px;
-      color: #8b97b8;
-      letter-spacing: 0.01em;
-    }
-
-
-    @media screen and (max-width: 919px){
+  @media screen and (max-width: 919px) {
     .founder-text {
       order: 2;
     }
     .founder-media {
       order: 1;
     }
-    }
-  </style>
-
-
-
+  }
+</style>
 
 <section class="sec-cream" id="designer" data-screen-label="Designer">
   <div class="wrap">
@@ -88,26 +83,26 @@
         <p class="letter-callout">
           {{ section.settings.shield }}
         </p>
-          <div class="sig-block">
-            {% if section.settings.signature_image != blank %}
-              <img
-                src="{{ section.settings.signature_image | image_url }}"
-                alt="{{ section.settings.founder_name }}"
-                class="sig-img"
-                width="{{ section.settings.signature_image.width }}"
-                height="{{ section.settings.signature_image.height }}"
-                loading="lazy"
-              >
-            {% endif %}
+        <div class="sig-block">
+          {% if section.settings.signature_image != blank %}
+            <img
+              src="{{ section.settings.signature_image | image_url }}"
+              alt="{{ section.settings.founder_name }}"
+              class="sig-img"
+              width="{{ section.settings.signature_image.width }}"
+              height="{{ section.settings.signature_image.height }}"
+              loading="lazy"
+            >
+          {% endif %}
 
-            <div class="sig-name">
-              {{ section.settings.founder_name }}
-            </div>
-
-            <div class="sig-sub">
-              {{ section.settings.founder_designation }}
-            </div>
+          <div class="sig-name">
+            {{ section.settings.founder_name }}
           </div>
+
+          <div class="sig-sub">
+            {{ section.settings.founder_designation }}
+          </div>
+        </div>
       </div>
       <div class="dr-media reveal in">
         <div class="founder-video">
