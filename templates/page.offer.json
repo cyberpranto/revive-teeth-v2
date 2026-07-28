@@ -631,7 +631,7 @@
           "settings": {
             "number": "07",
             "title": "Final Inspection",
-            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. If the case misses on any checkpoint, it does not go out.</p>"
+            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. With this final inspection, that is seven checkpoints in total. If the case misses on any of them, it does not go out. That is the point of putting my name on it.</p>"
           }
         }
       },
