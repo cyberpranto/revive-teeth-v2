@@ -705,22 +705,15 @@
         "faq_g8emjw": {
           "type": "faq",
           "settings": {
-            "question": "Frequently Asked Question",
-            "answer": "<p>Write your answer here.</p>"
-          }
-        },
-        "faq_nEEmTJ": {
-          "type": "faq",
-          "settings": {
-            "question": "Frequently Asked Question",
-            "answer": "<p>Write your answer here.</p>"
+            "question": "Should I get both or a single set?",
+            "answer": "<p>Most people order both, and the reason is straightforward: when your upper and lower are produced from the same impressions, the result reads as consistent and natural when you talk, laugh, or appear in a photo. A single set is a perfectly good option if you only want to address one. Either way, your set is built from your own impressions and nobody else's.</p>"
           }
         },
         "faq_bKnJUU": {
           "type": "faq",
           "settings": {
-            "question": "Frequently Asked Question",
-            "answer": "<p>Write your answer here.</p>"
+            "question": "What happens after I order?",
+            "answer": "<p>Your impression kit ships within 48 hours, and everything you need is already inside the box, including a prepaid return label so that sending your impressions back costs you nothing. Once we receive your impressions, production of your set begins.</p>"
           }
         },
         "faq_wErC4m": {
@@ -747,7 +740,6 @@
       },
       "block_order": [
         "faq_g8emjw",
-        "faq_nEEmTJ",
         "faq_bKnJUU",
         "faq_wErC4m",
         "faq_wJkaJp",
