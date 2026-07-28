@@ -1,224 +1,657 @@
-<section class="hero sec-cream" id="hero" data-screen-label="Hero" style="z-index: 100;">
-  <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-copy reveal">
-        <span class="eyebrow">{{ section.settings.eyebrow }}</span>
-        <h1 class="dxl">
-          {{ section.settings.heading }}
-        </h1>
+{% assign product = section.settings.product %}
 
-        <p class="lead">
-          {{ section.settings.description }}
-        </p>
-
-        <div class="chip-row">
-          {% for block in section.blocks %}
-            {% if block.type == 'chip' %}
-              <span class="chip" {{ block.shopify_attributes }}>
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.6"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+{% if product == blank %}
+  <div class="page-width">
+    <p>Please select a product.</p>
+  </div>
+{% else %}
+  <section class="hero sec-cream" id="hero" data-screen-label="Hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="gallery reveal in">
+          <div class="gal-main">
+            <img
+              src="{{ product.featured_image | image_url: width: 1200 }}"
+              alt="{{ product.featured_image.alt }}"
+              width="100"
+              height="100"
+            >
+          </div>
+          <div class="gal-thumbs" id="thumbs">
+            {% for image in product.images %}
+              <button
+                class="gal-thumb  {% if forloop.first %}active{% endif %}"
+                data-image="{{ image | image_url: width: 1200 }}"
+                data-alt="{{ image.alt | escape }}"
+                aria-label="{{ image.alt | escape }}"
+              >
+                <img
+                  src="{{ image | image_url: width: 200 }}"
+                  alt="{{ image.alt | escape }}"
+                  width="100"
+                  height="100"
                 >
-                  <path d="M5 12l5 5 9-11"></path>
-                </svg>
-
-                {{ block.settings.text }}
-              </span>
-            {% endif %}
-          {% endfor %}
+              </button>
+            {% endfor %}
+          </div>
         </div>
+        <div class="buy reveal in">
+          {% if section.settings.eyebrow != blank %}
+            <span class="eyebrow">
+              {{ section.settings.eyebrow }}
+            </span>
+          {% endif %}
+          {% if section.settings.heading != blank %}
+            <h1 class="dxl">
+              {{ section.settings.heading }}
+            </h1>
+          {% endif %}
 
-        <a
-          href="{{ section.settings.button_link | default: '#offer' }}"
-          class="btn scroll-buy"
-        >
-          {{ section.settings.button_text }}
-
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M5 12h14M13 6l6 6-6 6"></path>
-          </svg>
-        </a>
-      </div>
-
-      <div class="hero-anchor reveal" data-delay="120">
-        <div class="qr-card">
-          <div class="qr-head">
+          {% if section.settings.description != blank %}
+            <p class="hero-sub">
+              {{ section.settings.description }}
+            </p>
+          {% endif %}
+          <span class="chip">
             <svg
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2.2"
+              stroke-width="2.6"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
-              <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"></path>
-              <path d="M8.5 12.5l2.5 2.5L16 10"></path>
+              <path d="M5 12l5 5 9-11"></path>
             </svg>
-            <span>
-              {{ section.settings.card_title }}
-
-              <span class="qh-sub">
-                {{ section.settings.card_subtitle }}
-              </span>
-            </span>
-          </div>
-
-          <div class="qr-body">
-            <ul class="qr-list">
-              {% for block in section.blocks %}
-                {% if block.type == 'reason' %}
-                  <li {{ block.shopify_attributes }}>
-                    <span class="ck">
-                      <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2.6"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M5 12l5 5 9-11"></path>
-                      </svg>
-                    </span>
-
-                    {{ block.settings.text }}
-                  </li>
-                {% endif %}
-              {% endfor %}
-            </ul>
-
-            <div class="qr-credit">
-              <span class="gift">
+            {{ section.settings.badge_text }}
+          </span>
+          <div class="cfg-label">Configuration <span>· Choose one</span></div>
+          {% comment %}
+            <div class="cfg-opts" role="radiogroup" aria-label="Configuration">
+              <button class="cfg-opt" role="radio" aria-checked="false">
                 <svg
-                  viewBox="0 0 24 24"
+                  class="cfg-ico"
+                  viewBox="0 0 60 32"
                   fill="none"
                   stroke="currentColor"
-                  stroke-width="2"
+                  stroke-width="2.2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 >
-                  <rect x="3" y="8" width="18" height="4" rx="1"></rect>
-                  <path d="M5 12v9h14v-9"></path>
-                  <path d="M12 8v13"></path>
+                  <path d="M4 22 C 8 6, 52 6, 56 22"></path>
                   <path
-                    d="M12 8S10.5 3.5 8 4.5 8.5 8 12 8Zm0 0s1.5-4.5 4-3.5S15.5 8 12 8Z"
+                    d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
+                    stroke-width="1.6"
                   ></path>
                 </svg>
-              </span>
-              <div>
-                <div class="t">
-                  {{ section.settings.credit_title }}
+                <div class="ao-name">Upper</div>
+                <div class="ao-price"><s class="ao-list">$1,195</s><span class="ao-net">$895</span></div>
+              </button>
+              <button class="cfg-opt" role="radio" aria-checked="false">
+                <svg
+                  class="cfg-ico"
+                  viewBox="0 0 60 32"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                  <path
+                    d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                    stroke-width="1.6"
+                  ></path>
+                </svg>
+                <div class="ao-name">Lower</div>
+                <div class="ao-price"><s class="ao-list">$1,195</s><span class="ao-net">$895</span></div>
+              </button>
+              <button class="cfg-opt sel" role="radio" aria-checked="true">
+                <span class="ao-badge">MOST POPULAR</span>
+                <span class="ao-check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                </span>
+                <svg
+                  class="cfg-ico"
+                  viewBox="0 0 60 40"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M4 16 C 8 0, 52 0, 56 16"></path>
+                  <path d="M4 24 C 8 40, 52 40, 56 24"></path>
+                </svg>
+                <div class="ao-name">Upper &amp; Lower</div>
+                <div class="ao-price"><s class="ao-list">$1,894</s><span class="ao-net">$1,594</span></div>
+                <span class="save-note">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                  Save $196 vs. two single sets.
+                </span>
+              </button>
+            </div>
+          {% endcomment %}
+          <div
+            class="cfg-opts"
+            role="radiogroup"
+            aria-label="Configuration"
+          >
+            {% for variant in product.variants %}
+              {% assign title = variant.title | downcase %}
+
+              {% if title contains 'upper & lower' or title contains 'both' %}
+                {% assign arch = 'both' %}
+              {% elsif title contains 'upper' %}
+                {% assign arch = 'upper' %}
+              {% elsif title contains 'lower' %}
+                {% assign arch = 'lower' %}
+              {% endif %}
+              <button
+                class="cfg-opt {% if forloop.last %}sel{% endif %}"
+                role="radio"
+                data-key="{{ variant.title | handle }}"
+                aria-checked="{% if forloop.last %}true{% else %}false{% endif %}"
+                data-variant-id="{{ variant.id }}"
+                data-price="{{ variant.price }}"
+                data-title="{{ variant.title }}"
+                tabindex="0"
+                data-arch="{{ arch }}"
+              >
+                <span class="ao-check">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M5 12l5 5 9-11"></path>
+                  </svg>
+                </span>
+
+                {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
+                  <span class="ao-badge">Most Popular</span>
+
+                  <svg
+                    class="cfg-ico"
+                    viewBox="0 0 60 40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 16 C 8 0, 52 0, 56 16"></path>
+                    <path d="M4 24 C 8 40, 52 40, 56 24"></path>
+                  </svg>
+
+                {% elsif title contains 'upper' %}
+                  <svg
+                    class="cfg-ico"
+                    viewBox="0 0 60 32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 22 C 8 6, 52 6, 56 22"></path>
+                    <path
+                      d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
+                      stroke-width="1.6"
+                    ></path>
+                  </svg>
+
+                {% elsif title contains 'lower' %}
+                  <svg
+                    class="cfg-ico"
+                    viewBox="0 0 60 32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                    <path
+                      d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                      stroke-width="1.6"
+                    ></path>
+                  </svg>
+
+                {% else %}
+                  <svg
+                    class="arch-ico"
+                    viewBox="0 0 60 32"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4 10 C 8 26, 52 26, 56 10"></path>
+                    <path
+                      d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
+                      stroke-width="1.6"
+                    ></path>
+                  </svg>
+                {% endif %}
+
+                <div class="ao-name">{{ variant.title }}</div>
+                <div class="ao-price">
+                  <s class="ao-list">{{ variant.price | money_without_trailing_zeros }}</s>
+                  <span class="ao-net">{{- variant.price | minus: 30000 | money_without_trailing_zeros }}</span>
                 </div>
 
-                <div class="s">
-                  {{ section.settings.credit_description }}
-                </div>
+                {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
+                  <span class="save-note">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12l5 5 9-11"></path>
+                    </svg>
+                    Save $196 vs. two single sets.
+                  </span>
+                {% endif %}
+              </button>
+            {% endfor %}
+          </div>
+          <div class="qcard">
+            <p>“{{ section.settings.quote }}”</p>
+            <div class="qattr">
+              <img
+                src="{{ section.settings.quote_author_image }}"
+                alt="{{ section.settings.quote_author_image.alt }}"
+                height="100"
+                width="100"
+              >
+              <div>
+                <div class="nm">{{ section.settings.quote_author }}</div>
+                <div class="rl">{{ section.settings.quote_author_designation }}</div>
               </div>
             </div>
+          </div>
+          <div class="price-block">
+            <div class="price-row"><s class="p-list">$1,894</s> <span class="p-net">$1,594</span></div>
+            <div class="credit-line">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="3" y="8" width="18" height="4" rx="1"></rect>
+                <path d="M5 12v9h14v-9"></path>
+                <path d="M12 8v13"></path>
+              </svg>
+              {{ section.settings.credit_text }}
+            </div>
+            <p class="value-line">
+              {{ section.settings.value_line }}
+            </p>
+            <p class="stock-line"><span class="stock-dot"></span>{{ section.settings.shipping_text }}</p>
+          </div>
+          <label class="terms">
+            <input type="checkbox" />
+            <span
+              >I have read and agree to the <a class="link-navy" href="#">Terms of Service</a>, including the Binding
+              Arbitration Agreement and Class Action Waiver in Section 15, the
+              <a class="link-navy" href="#">Privacy Policy</a>, and the
+              <a class="link-navy" href="#">Refund, Remake &amp; Returns Policy</a>.</span
+            >
+          </label>
+          <button class="btn btn-full btn-lg">
+            ORDER MY SET
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </button>
+          <p class="guarantee">
+            {{ section.settings.guareentee_text }}
+          </p>
+          <ul class="badge-row">
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5 9-11"></path>
+              </svg>
+              Two Free Remakes
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5 9-11"></path>
+              </svg>
+              Dentist-Designed
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5 9-11"></path>
+              </svg>
+              Free Shipping Both Ways
+            </li>
+            <li>
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M5 12l5 5 9-11"></path>
+              </svg>
+              Designed in the USA
+            </li>
+          </ul>
+
+          <ul class="badge-row">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'trust_pill' %}
+                  <li class="tp" {{ block.shopify_attributes }}>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.6"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M5 12l5 5 9-11"></path>
+                    </svg>
+
+                    {{ block.settings.text }}
+                  </li>
+              {% endcase %}
+            {% endfor %}
+          </ul>
+
+          <div class="pay-row">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                {% when 'payment_method' %}
+                  <span class="pay-pill" {{ block.shopify_attributes }}>
+                    {{ block.settings.title }}
+                  </span>
+              {% endcase %}
+            {% endfor %}
+
+            <span class="pay-secure">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+              </svg>
+              {{ section.settings.secure_text }}
+            </span>
+          </div>
+          <div class="pay-row">
+            <span class="pay-pill">VISA</span>
+            <span class="pay-pill">Mastercard</span>
+            <span class="pay-pill">AMEX</span>
+            <span class="pay-pill">Apple Pay</span>
+            <span class="pay-secure">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+              </svg>
+              Secure checkout</span
+            >
+          </div>
+          <div class="drops">
+            <details class="drop">
+              <summary>
+                {{ section.settings.kit_title }}
+                <span class="plus" aria-hidden="true"></span>
+              </summary>
+              <div class="drop-inner">
+                <div class="kit-list">
+                  {% for block in section.blocks %}
+                    {% if block.type == 'kit_item' %}
+                      <div class="kit-row" {{ block.shopify_attributes }}>
+                        <span class="kit-ico">
+                          {{ block.settings.icon }}
+                        </span>
+                        <div>
+                          <h5>
+                            {{ block.settings.heading }}
+                          </h5>
+
+                          <p>
+                            {{ block.settings.text }}
+                          </p>
+                        </div>
+                      </div>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="drop-note">
+                  {{ section.settings.kit_note }}
+                </div>
+              </div>
+            </details>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-{% comment %} <script>
-    (function () {
-    var hasSession = !!localStorage.getItem('quiz_email');
+  {% comment %}
+    <script>
+        (function () {
+        var hasSession = !!localStorage.getItem('quiz_email');
 
-    if (!hasSession) {
-      window.location.replace('/pages/quiz?from=offer');
-    }
-  })();
-</script> {% endcomment %}
+        if (!hasSession) {
+          window.location.replace('/pages/quiz?from=offer');
+        }
+      })();
+    </script>
+  {% endcomment %}
+{% endif %}
 
 {% schema %}
 {
   "name": "Post Quiz Banner",
   "settings": [
     {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
       "type": "text",
       "id": "eyebrow",
       "label": "Eyebrow",
-      "default": "Your Smile Quiz Results"
+      "default": "DESIGNED AROUND YOUR ANSWERS"
     },
     {
-      "type": "textarea",
+      "type": "text",
       "id": "heading",
       "label": "Heading",
-      "default": "Dr. Turley, a cosmetic dentist, designed Revive to look like real teeth, not a plastic cover."
+      "default": "The dentist-designed smile you were meant to have."
     },
     {
       "type": "textarea",
       "id": "description",
       "label": "Description",
-      "default": "Your quiz says your teeth are healthy and your goals are cosmetic, so you're exactly who he built Revive for. Your recommended set is below, made to your impressions and finished against his 7-Point Smile Design Protocol, with your $100 credit already applied."
+      "default": "I built it to look like real teeth, the kind nobody questions, shaped from your impressions rather than a mold that was made for nobody in particular."
     },
     {
       "type": "text",
-      "id": "button_text",
-      "label": "Button Text",
-      "default": "Secure My $100 Credit & View My Set"
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "Your recommended set"
     },
     {
-      "type": "url",
-      "id": "button_link",
-      "label": "Button Link"
+      "type": "textarea",
+      "id": "quote",
+      "label": "Doctor Quote",
+      "default": "I have seen people pay twenty thousand dollars for porcelain veneers. Multiple visits, healthy enamel drilled down for good. For years, that was the only way I had to give someone that smile. It isn't anymore."
     },
     {
-      "type": "text",
-      "id": "card_title",
-      "label": "Card Title",
-      "default": "Strong fit"
-    },
-    {
-      "type": "text",
-      "id": "card_subtitle",
-      "label": "Card Subtitle",
-      "default": "Based on your Smile Quiz answers"
+      "type": "image_picker",
+      "id": "quote_author_image",
+      "label": "Quote Author Image"
     },
     {
       "type": "text",
-      "id": "credit_title",
-      "label": "Credit Title",
-      "default": "$100 quiz credit"
+      "id": "quote_author",
+      "label": "Quote Author",
+      "default": "Dr. Brandon Turley, DDS"
     },
     {
       "type": "text",
-      "id": "credit_description",
-      "label": "Credit Description",
-      "default": "Applied automatically at checkout"
+      "id": "quote_author_designation",
+      "label": "Quote Author Designation",
+      "default": "Dr. Brandon Turley, DDS"
+    },
+    {
+      "type": "text",
+      "id": "credit_text",
+      "label": "Credit Text",
+      "default": "$300 Smile Design credit applied"
+    },
+    {
+      "type": "text",
+      "id": "value_line",
+      "label": "Value Line Text",
+      "default": "It's the look you'd chase in a $20,000 dentist's chair, without the chair, the drilling, or the $20,000."
+    },
+    {
+      "type": "text",
+      "id": "shipping_text",
+      "label": "Shipping Text",
+      "default": "In stock. Ships your impression kit within 48 hours."
+    },
+    {
+      "type": "text",
+      "id": "guareentee_text",
+      "label": "Guarantee Text",
+      "default": "Every set is made to your mouth alone, and if anything is not right when it arrives, we remake it free, up to twice, with a full refund available any time before production begins."
+    },
+    {
+      "type": "text",
+      "id": "secure_text",
+      "label": "Secure Checkout Text",
+      "default": "Secure checkout"
+    },
+    {
+      "type": "text",
+      "id": "kit_title",
+      "label": "Kit Accordion Title",
+      "default": "What's in Your Kit"
+    },
+    {
+      "type": "textarea",
+      "id": "kit_note",
+      "label": "Kit Note",
+      "default": "If your first impressions don't capture enough detail, we send a second kit free."
     }
   ],
   "blocks": [
     {
-      "type": "chip",
-      "name": "Feature Chip",
+      "type": "trust_pill",
+      "name": "Trust Pill",
       "settings": [
         {
           "type": "text",
           "id": "text",
-          "label": "Chip Text"
+          "label": "Text",
+          "default": "30-Day Fit Remake"
         }
       ]
     },
     {
-      "type": "reason",
-      "name": "Fit Reason",
+      "type": "payment_method",
+      "name": "Payment Method",
       "settings": [
         {
           "type": "text",
+          "id": "title",
+          "label": "Payment Name",
+          "default": "VISA"
+        }
+      ]
+    },
+    {
+      "type": "kit_item",
+      "name": "Kit Item",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "icon",
+          "label": "SVG Icon"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "textarea",
           "id": "text",
-          "label": "Reason"
+          "label": "Description"
         }
       ]
     }
@@ -228,45 +661,92 @@
       "name": "Post Quiz Banner",
       "blocks": [
         {
-          "type": "chip",
+          "type": "trust_pill",
           "settings": {
-            "text": "30-Day Fit Remake"
+            "text": "Two Free Remakes"
           }
         },
         {
-          "type": "chip",
+          "type": "trust_pill",
           "settings": {
             "text": "Dentist-Designed"
           }
         },
+
         {
-          "type": "chip",
+          "type": "trust_pill",
           "settings": {
             "text": "Free Shipping Both Ways"
           }
         },
         {
-          "type": "chip",
+          "type": "trust_pill",
           "settings": {
             "text": "Designed in the USA"
           }
         },
         {
-          "type": "reason",
+          "type": "payment_method",
           "settings": {
-            "text": "Generally healthy teeth and gums"
+            "title": "VISA"
           }
         },
         {
-          "type": "reason",
+          "type": "payment_method",
           "settings": {
-            "text": "Cosmetic goals, not dental treatment"
+            "title": "MASTERCARD"
           }
         },
         {
-          "type": "reason",
+          "type": "payment_method",
           "settings": {
-            "text": "A full upper or lower arch to work with"
+            "title": "AMEX"
+          }
+        },
+        {
+          "type": "payment_method",
+          "settings": {
+            "title": "Apple Pay"
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z\"></path></svg>",
+            "heading": "Upper & Lower Impression Trays",
+            "text": "Pre-sized to fit most adult arches comfortably."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"12\" cy=\"16\" r=\"6\"></circle><circle cx=\"21\" cy=\"16\" r=\"6\"></circle></svg>",
+            "heading": "Dental Putty (×2 batches)",
+            "text": "A backup batch is included so you have room for error."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><rect x=\"5\" y=\"8\" width=\"22\" height=\"16\" rx=\"2\"></rect><rect x=\"8\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"13\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"18\" y=\"11\" width=\"3\" height=\"10\"></rect><rect x=\"23\" y=\"11\" width=\"1.5\" height=\"10\"></rect></svg>",
+            "heading": "Shade Matching Card",
+            "text": "A reference strip to capture your actual tooth color."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linejoin=\"round\"><path d=\"M4 10 L16 4 L28 10 L28 24 L4 24 Z\"></path><path d=\"M4 10 L16 16 L28 10\"></path></svg>",
+            "heading": "Prepaid Return Mailer",
+            "text": "Drop it in any USPS box. No postage required."
+          }
+        },
+        {
+          "type": "kit_item",
+          "settings": {
+            "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><circle cx=\"16\" cy=\"16\" r=\"11\"></circle><path d=\"M13 11l8 5-8 5z\" fill=\"currentColor\" stroke=\"none\"></path></svg>",
+            "heading": "Video Instructions",
+            "text": "QR code to Dr. Turley's step-by-step walkthrough."
           }
         }
       ]

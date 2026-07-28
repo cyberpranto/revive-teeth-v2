@@ -19,6 +19,10 @@
         "show_icon": true
       }
     },
+    "post-quiz-banner": {
+      "type": "post-quiz-banner",
+      "settings": {}
+    },
     "post_quiz_testimonials_fzPW3L": {
       "type": "post-quiz-testimonials",
       "blocks": {
@@ -657,6 +661,7 @@
   },
   "order": [
     "header-top",
+    "post-quiz-banner",
     "post_quiz_testimonials_fzPW3L",
     "post_quiz_recomanded_XrXkQ4",
     "post_quiz_founder_story_aXQxDw",

@@ -1,28 +1,28 @@
 <style>
-      .terms-label {
-      display: flex;
-      gap:16px;
-      justify-content:flex-start;
-      align-items: flex-start;
-      margin-top:16px;
-    }
+  .terms-label {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 16px;
+  }
 
-    .buy-reassure-2 {
-        text-align: left;
-        font-size: 13px;
-        color: var(--muted);
-        line-height: 1.5;
-        display: flex;
-        gap: 8px;
-        align-items: flex-start;
-        justify-content: center;
-      }
+  .buy-reassure-2 {
+    text-align: left;
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.5;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: center;
+  }
 
-      .buy-reassure-2  a {
-        text-decoration: underline;
-        color: (--ink);
-      }
-      #claimCTA:disabled {
+  .buy-reassure-2 a {
+    text-decoration: underline;
+    color: (--ink);
+  }
+  #claimCTA:disabled {
     opacity: 0.5;
     cursor: not-allowed;
   }
@@ -217,11 +217,11 @@
                     <div class="ao-name">{{ variant.title }}</div>
                     <div class="ao-price">
                       <s>{{ variant.price | money_without_trailing_zeros }}</s>
-                      {{- variant.price | minus: 10000 | money_without_trailing_zeros }}
+                      {{- variant.price | minus: 30000 | money_without_trailing_zeros }}
                     </div>
 
                     {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
-                      <div class="ao-save">Save $600 vs. two single arches at regular price.</div>
+                      <div class="ao-save">Save $196 vs. two single sets</div>
                     {% endif %}
                   </div>
                 </button>
