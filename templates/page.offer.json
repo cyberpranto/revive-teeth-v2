@@ -144,180 +144,6 @@
         "check_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12l5 5 9-11\"></path></svg>"
       }
     },
-    "post_quiz_founder_story_Tfz3xw": {
-      "type": "post-quiz-founder-story",
-      "blocks": {
-        "credential_dTywHx": {
-          "type": "credential",
-          "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
-            "text": "12+ Years Experience"
-          }
-        },
-        "credential_EKTxRL": {
-          "type": "credential",
-          "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 4c3 0 5 1.6 5 4.5 0 1.6-.5 3-.9 5.2-.4 2.2-.6 5.3-2.1 5.3-1.3 0-1.2-3-2-3s-.7 3-2 3c-1.5 0-1.7-3.1-2.1-5.3C7.5 11.5 7 10.1 7 8.5 7 5.6 9 4 12 4Z\"></path></svg>",
-            "text": "Cosmetic Dentist"
-          }
-        },
-        "credential_TygC3F": {
-          "type": "credential",
-          "settings": {
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.9\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z\"></path><path d=\"M8.5 12.5l2.5 2.5L16 10\"></path></svg>",
-            "text": "Creator of the 7-Point Protocol"
-          }
-        }
-      },
-      "block_order": [
-        "credential_dTywHx",
-        "credential_EKTxRL",
-        "credential_TygC3F"
-      ],
-      "name": "Post Quiz Founder Story",
-      "settings": {
-        "eyebrow": "What I kept watching.",
-        "quote": "I have sat across from patients who cover their mouths when they laugh. It is the hardest thing to watch as a dentist.",
-        "story": "<p>In my practice, I hear the same story every week. A patient comes in. They hate their smile. They have stopped being in photos with their kids. They want it fixed, but the clinical reality is brutal: traditional porcelain veneers mean hours in my chair, permanently drilling down healthy enamel, and a bill between ten and twenty thousand dollars.</p><p>For most hardworking people, that is not an option.</p><p>So they go online and buy a cheap plastic snap-on for a couple hundred dollars. A few weeks later, they are sitting in my chair again, showing me what arrived. It is always the same. The appliance is stamped from a single mold. The gingival margin, the gumline, is a straight, thick plastic ridge. The teeth look like identical white piano keys. They put it in, realize everyone can immediately tell it is fake, and throw it in a drawer.</p><p>They paid good money to feel worse than when they started. And the companies selling these things keep selling them anyway, because the customer is too embarrassed to complain publicly.</p><p>I got tired of seeing it. I know exactly what makes a tooth look real. It is not magic. It is proportion, translucency, and how the edge meets the gum. I knew those clinical standards could be engineered into a removable appliance if someone actually did the work. So I did.</p><p>Every Revive case is produced against the 7-Point Smile Design Protocol I built. If a case does not pass my standard, it does not ship.</p>",
-        "shield": "Let me be clear about one thing. I am a cosmetic dentist, but I am not your dentist, and Revive is not dental treatment. I designed a product.",
-        "bottom_story": "<p>I designed the standard behind it too, so a more natural-looking appliance could be made for people who had almost given up on their smile.</p>",
-        "signature_image": "shopify://shop_images/update-signature.png",
-        "founder_name": "Dr. Brandon Turley, DDS",
-        "founder_designation": "Doctor of Dental Surgery · Founder, Revive Teeth",
-        "video_label": "[ Video · Dr. Turley ]",
-        "video": "shopify://files/videos/Dr T Intro V2.mp4"
-      }
-    },
-    "post_quiz_protocols_3C37xq": {
-      "type": "post-quiz-protocols",
-      "blocks": {
-        "protocol_KJWbEt": {
-          "type": "protocol",
-          "settings": {
-            "number": "01",
-            "title": "Smile Architecture",
-            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and arch width dictate the shape, ensuring the final result actually belongs on your face.</p>"
-          }
-        },
-        "protocol_D6FzPj": {
-          "type": "protocol",
-          "settings": {
-            "number": "02",
-            "title": "Bite Alignment",
-            "content": "<p>If the appliance fights your natural bite, you will not wear it. We engineer the alignment so your upper and lower teeth meet correctly, making the set comfortable enough for daily use.</p>"
-          }
-        },
-        "protocol_4xFtay": {
-          "type": "protocol",
-          "settings": {
-            "number": "03",
-            "title": "Tooth-by-Tooth Proportions",
-            "content": "<p>Natural teeth are not identical tiles. We size and shape each tooth individually in proportion to the ones next to it. That slight, deliberate variation is what makes a smile look real.</p>"
-          }
-        },
-        "protocol_qA7kmM": {
-          "type": "protocol",
-          "settings": {
-            "number": "04",
-            "title": "Gumline Precision",
-            "content": "<p>This is where cheap snap-ons fail. We contour the edge where the veneer meets your gum exactly to your anatomy. It eliminates the thick plastic line that instantly gives away a fake appliance.</p>"
-          }
-        },
-        "protocol_eBnXBk": {
-          "type": "protocol",
-          "settings": {
-            "number": "05",
-            "title": "Natural Translucency",
-            "content": "<p>Real enamel is slightly see-through at the incisal edge. We replicate that translucency so your teeth catch light naturally.</p>"
-          }
-        },
-        "protocol_4TBk4B": {
-          "type": "protocol",
-          "settings": {
-            "number": "06",
-            "title": "Shade Matching",
-            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion.</p>"
-          }
-        },
-        "protocol_kkDiUF": {
-          "type": "protocol",
-          "settings": {
-            "number": "07",
-            "title": "Final Inspection",
-            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. If the case misses on any checkpoint, it does not go out.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "protocol_KJWbEt",
-        "protocol_D6FzPj",
-        "protocol_4xFtay",
-        "protocol_qA7kmM",
-        "protocol_eBnXBk",
-        "protocol_4TBk4B",
-        "protocol_kkDiUF"
-      ],
-      "name": "Post Quiz Protocols",
-      "settings": {
-        "doctor_name": "Dr. Brandon Turley, DDS",
-        "doctor_credential": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol",
-        "eyebrow": "The Protocol",
-        "heading": "Seven checkpoints that make them look like your own teeth.",
-        "description": "Every Revive case is designed against a 7-point protocol I built, and it has to pass all seven before it leaves the facility. Tap any point to see what it decides.",
-        "bottom_text": "If it does not pass all seven, it does not leave the facility.",
-        "button_text": "Start My Custom Smile Design",
-        "button_link": ""
-      }
-    },
-    "post_quiz_how_it_works_jVqMry": {
-      "type": "post-quiz-how-it-works",
-      "blocks": {
-        "step_RErk76": {
-          "type": "step",
-          "settings": {
-            "fallback_image": "hiw-step-1.jfif",
-            "step": "Step 01",
-            "title": "Order your impression kit",
-            "description": "Pick your arches and check out. Your kit ships free within 48 hours, with extra putty included.",
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h13l-4-4M18 12l-4 4\"></path></svg>",
-            "timing": "Ships in 48 hours"
-          }
-        },
-        "step_YaeryQ": {
-          "type": "step",
-          "settings": {
-            "fallback_image": "hiw-step-2.jfif",
-            "step": "Step 02",
-            "title": "Take impressions at home",
-            "description": "Follow Dr. Turley's video walkthrough. It takes about five minutes. Drop the prepaid mailer in the mail to send them back free.",
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path></svg>",
-            "timing": "About 5 minutes"
-          }
-        },
-        "step_N4UNxn": {
-          "type": "step",
-          "settings": {
-            "fallback_image": "hiw-step-3.jfif",
-            "step": "Step 03",
-            "title": "Receive your custom smile",
-            "description": "Your veneers are made to your impressions and built to Dr. Turley's protocol. They arrive ready to wear.",
-            "icon_svg": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"4\" y=\"6\" width=\"16\" height=\"14\" rx=\"2\"></rect><path d=\"M4 10h16M9 3v4M15 3v4\"></path></svg>",
-            "timing": "About 2 to 3 weeks"
-          }
-        }
-      },
-      "block_order": [
-        "step_RErk76",
-        "step_YaeryQ",
-        "step_N4UNxn"
-      ],
-      "name": "Post Quiz How It Works",
-      "settings": {
-        "eyebrow": "How It Works",
-        "heading": "Three steps. No dental office required.",
-        "description": "There is no drilling, no shots, and no waiting room. Your veneers are made to your own impressions and built to the 7-Point Smile Design Protocol, start to finish."
-      }
-    },
     "post_quiz_recomanded_XrXkQ4": {
       "type": "post-quiz-recomanded",
       "blocks": {
@@ -705,89 +531,264 @@
         "content": "<p>Your set is custom-made to your own mouth. We treat the fit as our responsibility, not yours.</p><p>When your veneers arrive, wear them. If the fit is not right, tell us. <strong>We remake it free, up to twice, within 30 days</strong>, with prepaid shipping both ways. We do not consider it finished until it fits.</p><p><strong>You can cancel for a full refund any time before we begin production.</strong> Because each set is made from scratch for your specific anatomy, finished cases cannot be refunded for a change of mind, the same as any custom-made product.</p><p>Before production: change your mind for any reason and pay nothing. After production: we keep refining the fit until it is right. That is the promise a custom product can stand behind.</p>"
       }
     },
-    "post_quiz_faq_KBXDLX": {
+    "post_quiz_founder_story_aXQxDw": {
+      "type": "post-quiz-founder-story",
+      "blocks": {
+        "credential_Rryfbt": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "12+ Years Experience"
+          }
+        },
+        "credential_JTQGAW": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "Cosmetic Dentist"
+          }
+        },
+        "credential_aFybtP": {
+          "type": "credential",
+          "settings": {
+            "icon_svg": "",
+            "text": "Creator of the 7-Point Protocol"
+          }
+        }
+      },
+      "block_order": [
+        "credential_Rryfbt",
+        "credential_JTQGAW",
+        "credential_aFybtP"
+      ],
+      "name": "Post Quiz Founder Story",
+      "settings": {
+        "section_eyebrow": "A note from Dr. Turley",
+        "section_heading": "The problem I couldn't stop seeing.",
+        "eyebrow": "What I kept watching.",
+        "quote": "I have sat across from patients who cover their mouths when they laugh. It is the hardest thing to watch as a dentist.",
+        "story": "<p>In my practice, I hear the same story every week. A patient comes in. They hate their smile. They have stopped being in photos with their kids. They want it fixed, but the clinical reality is brutal: traditional porcelain veneers mean hours in my chair, permanently drilling down healthy enamel, and a bill between ten and twenty thousand dollars.</p><p>For most hardworking people, that is not an option.</p><p>So they go online and buy a cheap plastic snap-on for a couple hundred dollars. A few weeks later, they are sitting in my chair again, showing me what arrived. It is always the same. The appliance is stamped from a single mold. The gingival margin, the gumline, is a straight, thick plastic ridge. The teeth look like identical white piano keys. They put it in, realize everyone can immediately tell it is fake, and throw it in a drawer.</p><p>I got tired of seeing it. I know exactly what makes a tooth look real. It is not magic. It is proportion, translucency, and how the edge meets the gum. I knew those clinical standards could be engineered into a removable appliance if someone actually did the work. So I did.</p><p>Every Revive case is produced against the 7-Point Smile Design Protocol I built. If a case does not pass my standard, it does not ship.</p>",
+        "shield": "Let me be clear about one thing. I am a cosmetic dentist, but I am not your dentist, and Revive is not dental treatment. I designed a product.",
+        "bottom_story": "<p>I designed the standard behind it too, so a more natural-looking appliance could be made for people who had almost given up on their smile.</p>",
+        "signature_image": "shopify://shop_images/update-signature.png",
+        "founder_name": "Dr. Brandon Turley, DDS",
+        "founder_designation": "Doctor of Dental Surgery · Founder, Revive Teeth",
+        "video_label": "[ Video · Dr. Turley ]",
+        "video": "shopify://files/videos/Dr T Intro V2.mp4",
+        "video_poster": "shopify://shop_images/thumbnail.png"
+      }
+    },
+    "post_quiz_protocols_ppTFCd": {
+      "type": "post-quiz-protocols",
+      "blocks": {
+        "protocol_qBe4BV": {
+          "type": "protocol",
+          "settings": {
+            "number": "01",
+            "title": "Smile Architecture",
+            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and arch width dictate the shape, ensuring the final result actually belongs on your face.</p>"
+          }
+        },
+        "protocol_VbD43y": {
+          "type": "protocol",
+          "settings": {
+            "number": "02",
+            "title": "Bite Alignment",
+            "content": "<p>If the appliance fights your natural bite, you will not wear it. We engineer the alignment so your upper and lower teeth meet correctly, making the set comfortable enough for daily use.</p>"
+          }
+        },
+        "protocol_chhyDg": {
+          "type": "protocol",
+          "settings": {
+            "number": "03",
+            "title": "Tooth-by-Tooth Proportions",
+            "content": "<p>Natural teeth are not identical tiles. We size and shape each tooth individually in proportion to the ones next to it. That slight, deliberate variation is what makes a smile look real.</p>"
+          }
+        },
+        "protocol_UPVabf": {
+          "type": "protocol",
+          "settings": {
+            "number": "04",
+            "title": "Gumline Precision",
+            "content": "<p>This is where cheap snap-ons fail. We contour the edge where the veneer meets your gum exactly to your anatomy. It eliminates the thick plastic line that instantly gives away a fake appliance.</p>"
+          }
+        },
+        "protocol_xznCCV": {
+          "type": "protocol",
+          "settings": {
+            "number": "05",
+            "title": "Natural Translucency",
+            "content": "<p>Real enamel is slightly see-through at the incisal edge. We replicate that translucency so your teeth catch light naturally.</p>"
+          }
+        },
+        "protocol_ALQwB9": {
+          "type": "protocol",
+          "settings": {
+            "number": "06",
+            "title": "Shade Matching",
+            "content": "<p>The color must be bright but believable. We select a shade that looks natural for your complexion, avoiding the fluorescent white that tells everyone you are wearing something artificial.</p>"
+          }
+        },
+        "protocol_qfLmMn": {
+          "type": "protocol",
+          "settings": {
+            "number": "07",
+            "title": "Final Inspection",
+            "content": "<p>Before anything ships, the finished case is checked against the six design decisions above. With this final inspection, that is seven checkpoints in total. If the case misses on any of them, it does not go out. That is the point of putting my name on it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "protocol_qBe4BV",
+        "protocol_VbD43y",
+        "protocol_chhyDg",
+        "protocol_UPVabf",
+        "protocol_xznCCV",
+        "protocol_ALQwB9",
+        "protocol_qfLmMn"
+      ],
+      "name": "Post Quiz Protocols",
+      "settings": {
+        "image": "shopify://shop_images/founder-image-3.jpg",
+        "signature": "shopify://shop_images/update-signature.png",
+        "doctor_name": "Dr. Brandon Turley, DDS",
+        "doctor_credential": "Cosmetic Dentist · Creator of the 7-Point Smile Design Protocol",
+        "eyebrow": "The Protocol",
+        "heading": "Seven checkpoints that make them look like real teeth, not a plastic cover.",
+        "description": "I know which details the human eye reads as natural and which ones it immediately reads as fake, and every point in this protocol exists to get one of those details exactly right for you before your set ever leaves the facility. Tap any checkpoint and I will tell you exactly what it controls.",
+        "bottom_text": "If it does not pass all seven, it does not leave the facility.",
+        "button_text": "ORDER MY SET",
+        "button_link": "#hero"
+      }
+    },
+    "post_quiz_how_it_works_NxkFRk": {
+      "type": "post-quiz-how-it-works",
+      "blocks": {
+        "step_YKQQy3": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/hiw-step-1.jpg",
+            "image_alt": "Step image",
+            "step": "Step 01",
+            "title": "Choose your set.",
+            "description": "Select Upper, Lower, or Upper & Lower, complete your order, and your impression kit ships within 48 hours with everything you need already packed inside the box."
+          }
+        },
+        "step_BUEYpF": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/hiw-step-2.jpg",
+            "image_alt": "Step image",
+            "step": "Step 02",
+            "title": "Take your impressions at home.",
+            "description": "I have recorded a full video walkthrough so you can do this at your own pace, with no tools beyond what comes in your kit, and two batches of putty included so there is room for error without having to get it perfect on the very first try."
+          }
+        },
+        "step_g63MmQ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/hiw-step-3.jpg",
+            "image_alt": "Step image",
+            "step": "Step 03",
+            "title": "Your set arrives.",
+            "description": "Your set is built from your impressions, checked against all seven points of my protocol, and shipped only when it passes every one of them."
+          }
+        }
+      },
+      "block_order": [
+        "step_YKQQy3",
+        "step_BUEYpF",
+        "step_g63MmQ"
+      ],
+      "name": "Post Quiz How It Works",
+      "settings": {
+        "eyebrow": "How it works",
+        "heading": "Three steps, and every one of them happens at home.",
+        "description": "I wanted this to be simple enough to do at your kitchen table, because the last thing you need is another appointment, another drive to an office, or another person standing over you telling you what your teeth are supposed to look like."
+      }
+    },
+    "post_quiz_faq_RG6RKB": {
       "type": "post-quiz-faq",
       "blocks": {
-        "faq_wBkQH3": {
+        "faq_g8emjw": {
           "type": "faq",
           "settings": {
-            "question": "Should I get both arches or a single arch?",
-            "answer": "<p>Upper-only veneers can look unnatural when you talk or smile, because your lower teeth show and a color difference between veneered upper teeth and natural lower teeth becomes noticeable. If your lower teeth are already in good shape, a single arch may be all you need. If not, the full set keeps everything consistent. Both arches are $1,994 ($1,894 with your credit) versus $1,297 for a single arch.</p>"
+            "question": "Should I get both or a single set?",
+            "answer": "<p>Most people order both, and the reason is straightforward: when your upper and lower are produced from the same impressions, the result reads as consistent and natural when you talk, laugh, or appear in a photo. A single set is a perfectly good option if you only want to address one. Either way, your set is built from your own impressions and nobody else's.</p>"
           }
         },
-        "faq_w7PnNF": {
-          "type": "faq",
-          "settings": {
-            "question": "Is Revive right for me?",
-            "answer": "<p>Your quiz tells us the look you want.Revive Veneers work well for anyone with healthy teeth and gums who wants to improve the appearance of stained, slightly gapped, or worn teeth. They are not right for people with active gum disease, severe bite issues, multiple missing teeth at the end of the arch, or anyone currently wearing full dentures.</p>"
-          }
-        },
-        "faq_H9cy8p": {
+        "faq_bKnJUU": {
           "type": "faq",
           "settings": {
             "question": "What happens after I order?",
-            "answer": "<p>Your impression kit ships within 48 hours. You take impressions at home (about 5 minutes), mail them back free, and your custom veneers arrive 2 to 3 weeks after we receive them. Every case is built to Dr. Turley's 7-Point Smile Design Protocol. The kit includes two batches of putty, and if your first impressions do not capture enough detail, we send a second kit free before production starts.</p>"
+            "answer": "<p>Your impression kit ships within 48 hours, and everything you need is already inside the box, including a prepaid return label so that sending your impressions back costs you nothing. Once we receive your impressions, production of your set begins.</p>"
           }
         },
-        "faq_HBpF6m": {
+        "faq_wErC4m": {
           "type": "faq",
           "settings": {
             "question": "Can I cancel after ordering?",
-            "answer": "<p>Yes. Cancel for a full refund any time before we begin production. Once your case is in production, the 30-Day Fit Remake covers you. If the fit or look is not right, we remake it free, up to twice, within 30 days of delivery. Just email <a href=\"mailto:support@reviveteeth.com\" title=\"mailto:support@reviveteeth.com\">support@reviveteeth.com.</a></p>"
+            "answer": "<p>Yes, you can cancel for a full refund at any point before production begins, because once we start building from your impressions, your set is already being made specifically and only for you, and that cannot be undone. Email support@reviveteeth.com and we will take care of everything from there.</p>"
           }
         },
-        "faq_j6BbPU": {
+        "faq_wJkaJp": {
           "type": "faq",
           "settings": {
-            "question": "How long do the veneers last?",
-            "answer": "<p>With everyday care, Revive Veneers typically last 3 to 5 years. Rinse them after eating, brush them gently, and keep them in their case when they are out. The better you care for them, the longer they last.</p>"
+            "question": "How long do they last?",
+            "answer": "<p>How long your set holds up depends on how it is used and cared for, and I am not willing to make a durability promise that might not hold true for every person, because I think that kind of claim does you a disservice. What I will promise is two free remakes if something is not right when your set arrives, because that is a promise we can actually stand behind.</p>"
           }
         },
-        "faq_GHAf9e": {
+        "faq_wwix9B": {
           "type": "faq",
           "settings": {
             "question": "Can I wear them while eating?",
             "answer": "<p>Yes, for everyday soft foods. Revive Veneers are made for daily wear, including eating and drinking. For hard, crunchy, sticky, or very hot foods, take them out first. They are a cosmetic appliance, not a replacement for your natural bite, so they are not built for heavy chewing. Removing them for tougher meals also helps them last longer.</p>"
           }
+        },
+        "faq_9B4taA": {
+          "type": "faq",
+          "settings": {
+            "question": "What if they don't feel right?",
+            "answer": "<p>Then we make it right. Your set was made to your mouth, so if it is off, that is our responsibility and not yours. We remake it free, up to twice, with prepaid shipping both ways, and a full refund is available any time before production begins. Email support@reviveteeth.com and we handle everything from there.</p>"
+          }
         }
       },
       "block_order": [
-        "faq_wBkQH3",
-        "faq_w7PnNF",
-        "faq_H9cy8p",
-        "faq_HBpF6m",
-        "faq_j6BbPU",
-        "faq_GHAf9e"
+        "faq_g8emjw",
+        "faq_bKnJUU",
+        "faq_wErC4m",
+        "faq_wJkaJp",
+        "faq_wwix9B",
+        "faq_9B4taA"
       ],
       "name": "Post Quiz FAQ",
       "settings": {
-        "eyebrow": "Common Questions",
-        "heading": "What people ask before ordering.",
-        "description": "Anything else, we are one email away.",
-        "help_title": "Still have questions?",
-        "help_text": "Our team responds within one business day.",
-        "link_text": "Contact us",
-        "link": "mailto:support@reviveteeth.com"
+        "image": "shopify://shop_images/full-width-image.jpg",
+        "image_alt": "FAQ Image",
+        "eyebrow": "Questions I hear most often before someone orders.",
+        "heading": "What people want to know before they decide.",
+        "support_email": "support@reviveteeth.com"
       }
     },
-    "post-quiz-closer": {
+    "post_quiz_closer_Lf6hGd": {
       "type": "post-quiz-closer",
+      "name": "Post Quiz Closer",
       "settings": {
-        "heading": "Your smile is next.",
-        "content": "<p>I have had patients tell me they have not smiled in a photo in five years. The smile is the point, and everything else is just how we get you there.</p><p>The smile is ready. The only thing left is the decision.</p>",
-        "button_link": "",
-        "button_text": "Begin My Transformation Now",
-        "button_icon": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M5 12h14M13 6l6 6-6 6\"></path></svg>"
+        "heading": "I built this for the person who stopped smiling in photos. If that is you, your set is ready.",
+        "button_text": "ORDER MY SET",
+        "button_link": "#hero"
       }
     },
-    "post-quiz-footer": {
+    "post_quiz_footer_Pm4fPc": {
       "type": "post-quiz-footer",
+      "name": "Post Quiz Footer",
       "settings": {
+        "logo": "shopify://shop_images/footer-logo.png",
         "tagline": "A natural-looking smile, without the dental chair.",
         "support_heading": "Support",
         "support_link": "mailto:support@reviveteeth.com",
         "support_email": "support@reviveteeth.com",
-        "support_text": "Pay in full at checkout, from $1,197.",
+        "support_text": "We reply within one business day.",
         "policy_heading": "Policies",
         "policy_menu": "legal-pages",
         "copyright": "© 2026 Revive Teeth. All rights reserved.",
@@ -799,15 +800,15 @@
     "header-top",
     "post_quiz_banner_Gmwam4",
     "post_quiz_testimonials_fzPW3L",
-    "post_quiz_founder_story_Tfz3xw",
-    "post_quiz_protocols_3C37xq",
-    "post_quiz_how_it_works_jVqMry",
     "post_quiz_recomanded_XrXkQ4",
     "post_quiz_different_hVrQkV",
     "post_quiz_your_fit_yHPgdy",
     "post-quiz-promise",
-    "post_quiz_faq_KBXDLX",
-    "post-quiz-closer",
-    "post-quiz-footer"
+    "post_quiz_founder_story_aXQxDw",
+    "post_quiz_protocols_ppTFCd",
+    "post_quiz_how_it_works_NxkFRk",
+    "post_quiz_faq_RG6RKB",
+    "post_quiz_closer_Lf6hGd",
+    "post_quiz_footer_Pm4fPc"
   ]
 }
