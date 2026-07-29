@@ -319,7 +319,7 @@
             <p class="stock-line"><span class="stock-dot"></span>{{ section.settings.shipping_text }}</p>
           </div>
           <label class="terms">
-            <input type="checkbox" />
+            <input type="checkbox">
             <span
               >I have read and agree to the <a class="link-navy" href="#">Terms of Service</a>, including the Binding
               Arbitration Agreement and Class Action Waiver in Section 15, the
@@ -341,7 +341,6 @@
           <p class="guarantee">
             {{ section.settings.guareentee_text }}
           </p>
-          
 
           <ul class="badge-row">
             {% for block in section.blocks %}
@@ -388,24 +387,26 @@
               {{ section.settings.secure_text }}
             </span>
           </div>
-          {% comment %} <div class="pay-row">
-            <span class="pay-pill">VISA</span>
-            <span class="pay-pill">Mastercard</span>
-            <span class="pay-pill">AMEX</span>
-            <span class="pay-pill">Apple Pay</span>
-            <span class="pay-secure">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
+          {% comment %}
+            <div class="pay-row">
+              <span class="pay-pill">VISA</span>
+              <span class="pay-pill">Mastercard</span>
+              <span class="pay-pill">AMEX</span>
+              <span class="pay-pill">Apple Pay</span>
+              <span class="pay-secure">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="4" y="11" width="16" height="10" rx="2"></rect>
+                  <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
+                </svg>
+                Secure checkout</span
               >
-                <rect x="4" y="11" width="16" height="10" rx="2"></rect>
-                <path d="M8 11V7a4 4 0 0 1 8 0v4"></path>
-              </svg>
-              Secure checkout</span
-            >
-          </div> {% endcomment %}
+            </div>
+          {% endcomment %}
           <div class="drops">
             <details class="drop">
               <summary>
