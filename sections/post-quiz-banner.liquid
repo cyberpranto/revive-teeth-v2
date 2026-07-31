@@ -1,5 +1,44 @@
 {% assign product = section.settings.product %}
 
+<style>
+  /* Error / Highlight State */
+  .terms.highlight {
+    border-color: #d32f2f;
+    background: rgba(211, 47, 47, 0.06);
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.12);
+    animation: termsShake 0.35s ease;
+  }
+
+  .terms-error {
+    display: none;
+    margin-top: 10px;
+    color: #d32f2f;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  @keyframes termsShake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-4px);
+    }
+    40% {
+      transform: translateX(4px);
+    }
+    60% {
+      transform: translateX(-3px);
+    }
+    80% {
+      transform: translateX(3px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>
+
 {% if product == blank %}
   <div class="page-width">
     <p>Please select a product.</p>
@@ -324,15 +363,13 @@
             </p>
             <p class="stock-line"><span class="stock-dot"></span>{{ section.settings.shipping_text }}</p>
           </div>
-          <label class="terms">
-            <input type="checkbox">
-            <span
-              >I have read and agree to the <a class="link-navy" href="#">Terms of Service</a>, including the Binding
-              Arbitration Agreement and Class Action Waiver in Section 15, the
-              <a class="link-navy" href="#">Privacy Policy</a>, and the
-              <a class="link-navy" href="#">Refund, Remake &amp; Returns Policy</a>.</span
-            >
+          <label class="terms" id="termsWrapper">
+            <input type="checkbox" id="termsAgreement">
+            <div>
+              {{ section.settings.label_content }}
+            </div>
           </label>
+          <div id="termsError" class="terms-error">Please check the box above before continuing.</div>
           <button class="btn btn-full btn-lg" id="claimCTA">
             ORDER MY SET
             <svg
@@ -541,21 +578,31 @@
 
   // ⬇️ claimCTA — session/sessionStorage বাদ দিয়ে email দিয়ে কাজ করবে
   const claimCTA = document.getElementById('claimCTA');
-
   const checkbox = document.getElementById('termsAgreement');
+  const termsWrapper = document.getElementById('termsWrapper');
   const termsError = document.getElementById('termsError');
   // শুরুতে disable
   // claimCTA.disabled = true;
 
   // Checkbox change
-  // checkbox.addEventListener('change', function () {
-  //   claimCTA.disabled = !this.checked;
-
-  //   if (this.checked) {
-  //     termsError.style.display = 'none';
-  //   }
-  // });
+  checkbox.addEventListener('change', function () {
+    if (this.checked) {
+      termsWrapper.classList.remove('highlight');
+      termsError.style.display = 'none';
+    }
+  });
   claimCTA.addEventListener('click', async function () {
+    if (!checkbox.checked) {
+      termsWrapper.classList.add('highlight');
+      termsError.style.display = 'block';
+
+      termsWrapper.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+
+      return;
+    }
     const variantId = this.dataset.variantId;
 
     console.log('Variant ID:', variantId);
@@ -703,6 +750,12 @@
       "id": "shipping_text",
       "label": "Shipping Text",
       "default": "In stock. Ships your impression kit within 48 hours."
+    },
+    {
+      "type": "richtext",
+      "id": "label_content",
+      "label": "Label Texts",
+      "default": "<p>I have read and agree to the <a href='#'>Terms of Service</a>, including the Binding Arbitration Agreement and Class Action Waiver in Section 15, the <a href='#'>Privacy Policy</a>, and the <a href='#'>Refund, Remake &amp; Returns Policy</a>.</p>"
     },
     {
       "type": "text",
