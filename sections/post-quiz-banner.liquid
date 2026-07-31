@@ -500,8 +500,9 @@
       </div>
     </div>
   </section>
+{% endif %}
 
-  {% comment %}
+
     <script>
         (function () {
         var hasSession = !!localStorage.getItem('quiz_email');
@@ -511,8 +512,6 @@
         }
       })();
     </script>
-  {% endcomment %}
-{% endif %}
 
 <script>
   const gallery = document.querySelector('.gallery');
