@@ -345,7 +345,7 @@ section {
   }
 } /* gallery */
 @media (min-width: 980px) {
-  .gallery {
+  .desktop-gallery {
     position: sticky;
     top: 24px;
   }
@@ -373,7 +373,7 @@ section {
   }
   .gal-main {
     aspect-ratio: auto;
-    height: 30vh;
+    height: 60vh;
     width: 100%;
   }
 }

@@ -37,6 +37,112 @@
       transform: translateX(0);
     }
   }
+
+  .gallery {
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+  .gal-main {
+    position: relative;
+  }
+
+  .gal-nav {
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 44px;
+
+    height: 44px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    font-size: 22px;
+  }
+
+  .gal-prev {
+    left: 14px;
+  }
+
+  .gal-next {
+    right: 14px;
+  }
+
+
+  @media screen and (max-width: 979px) {
+    #mobileGallerySlot {
+      margin-top: 24px;
+    }
+    .gal-nav {
+      width: 32px;
+      height: 32px;
+      font-size: 16px;
+    }
+    .gal-prev {
+      left: 0px;
+    }
+
+    .gal-next {
+      right: 0px;
+    }
+  }
+
+  .gal-strip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    width: 100%;
+    min-width: 0; /* খুব গুরুত্বপূর্ণ */
+  }
+
+  .gal-thumbs {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .gal-thumbs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gal-thumb {
+    flex: 0 0 calc((100% - 7 * 8px) / 8);
+    aspect-ratio: 1;
+    padding: 0;
+    border: 2px solid var(--line-2);
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    transition: border-color 0.2s ease;
+  }
+
+  .gal-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .gal-thumb.active {
+    border-color: var(--navy);
+  }
 </style>
 
 {% if product == blank %}
@@ -47,33 +153,41 @@
   <section class="hero sec-cream" id="hero" data-screen-label="Hero">
     <div class="wrap">
       <div class="hero-grid">
-        <div class="gallery reveal in">
-          <div class="gal-main">
-            <img
-              src="{{ product.featured_image | image_url: width: 1200 }}"
-              alt="{{ product.featured_image.alt }}"
-              width="100"
-              height="100"
-            >
-          </div>
-          <div class="gal-thumbs" id="thumbs">
-            {% for image in product.images %}
-              <button
-                class="gal-thumb  {% if forloop.first %}active{% endif %}"
-                data-image="{{ image | image_url: width: 1200 }}"
-                data-alt="{{ image.alt | escape }}"
-                aria-label="{{ image.alt | escape }}"
+        <div class="desktop-gallery" id="desktopGallerySlot">
+          <div class="gallery reveal in">
+            <div class="gal-main">
+              <button class="gal-nav gal-prev" type="button">&#10094;</button>
+              <img
+                src="{{ product.featured_image | image_url: width: 1200 }}"
+                alt="{{ product.featured_image.alt }}"
+                id="mainProductImage"
+                width="100"
+                height="100"
               >
-                <img
-                  src="{{ image | image_url: width: 200 }}"
-                  alt="{{ image.alt | escape }}"
-                  width="100"
-                  height="100"
-                >
-              </button>
-            {% endfor %}
+              <button class="gal-nav gal-next" type="button">&#10095;</button>
+            </div>
+            <div class="gal-strip">
+              <div class="gal-thumbs" id="thumbs">
+                {% for image in product.images %}
+                  <button
+                    class="gal-thumb {% if forloop.first %}active{% endif %}"
+                    data-image="{{ image | image_url: width: 1200 }}"
+                    data-alt="{{ image.alt | escape }}"
+                    aria-label="{{ image.alt | escape }}"
+                  >
+                    <img
+                      src="{{ image | image_url: width: 200 }}"
+                      alt="{{ image.alt | escape }}"
+                      width="100"
+                      height="100"
+                    >
+                  </button>
+                {% endfor %}
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="buy reveal in">
           {% if section.settings.eyebrow != blank %}
             <span class="eyebrow">
@@ -104,91 +218,10 @@
             </svg>
             {{ section.settings.badge_text }}
           </span>
+
+          <div id="mobileGallerySlot"></div>
+
           <div class="cfg-label">Configuration <span>· Choose one</span></div>
-          {% comment %}
-            <div class="cfg-opts" role="radiogroup" aria-label="Configuration">
-              <button class="cfg-opt" role="radio" aria-checked="false">
-                <svg
-                  class="cfg-ico"
-                  viewBox="0 0 60 32"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 22 C 8 6, 52 6, 56 22"></path>
-                  <path
-                    d="M12 12 L12 19 M20 9 L20 18 M30 7.5 L30 17.5 M40 9 L40 18 M48 12 L48 19"
-                    stroke-width="1.6"
-                  ></path>
-                </svg>
-                <div class="ao-name">Upper</div>
-                <div class="ao-price"><s class="ao-list">$1,195</s><span class="ao-net">$895</span></div>
-              </button>
-              <button class="cfg-opt" role="radio" aria-checked="false">
-                <svg
-                  class="cfg-ico"
-                  viewBox="0 0 60 32"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 10 C 8 26, 52 26, 56 10"></path>
-                  <path
-                    d="M12 20 L12 13 M20 23 L20 14 M30 24.5 L30 14.5 M40 23 L40 14 M48 20 L48 13"
-                    stroke-width="1.6"
-                  ></path>
-                </svg>
-                <div class="ao-name">Lower</div>
-                <div class="ao-price"><s class="ao-list">$1,195</s><span class="ao-net">$895</span></div>
-              </button>
-              <button class="cfg-opt sel" role="radio" aria-checked="true">
-                <span class="ao-badge">MOST POPULAR</span>
-                <span class="ao-check">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12l5 5 9-11"></path>
-                  </svg>
-                </span>
-                <svg
-                  class="cfg-ico"
-                  viewBox="0 0 60 40"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2.2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M4 16 C 8 0, 52 0, 56 16"></path>
-                  <path d="M4 24 C 8 40, 52 40, 56 24"></path>
-                </svg>
-                <div class="ao-name">Upper &amp; Lower</div>
-                <div class="ao-price"><s class="ao-list">$1,894</s><span class="ao-net">$1,594</span></div>
-                <span class="save-note">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.4"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M5 12l5 5 9-11"></path>
-                  </svg>
-                  Save $196 vs. two single sets.
-                </span>
-              </button>
-            </div>
-          {% endcomment %}
           <div
             class="cfg-opts"
             role="radiogroup"
@@ -480,6 +513,92 @@
     </script>
   {% endcomment %}
 {% endif %}
+
+<script>
+  const gallery = document.querySelector('.gallery');
+
+  const desktopSlot = document.getElementById('desktopGallerySlot');
+
+  const mobileSlot = document.getElementById('mobileGallerySlot');
+
+  function moveGallery() {
+    if (window.innerWidth <= 979) {
+      if (gallery.parentElement !== mobileSlot) {
+        mobileSlot.appendChild(gallery);
+      }
+    } else {
+      if (gallery.parentElement !== desktopSlot) {
+        desktopSlot.appendChild(gallery);
+      }
+    }
+  }
+
+  moveGallery();
+
+  window.addEventListener('resize', moveGallery);
+
+  const thumbs = [...document.querySelectorAll('.gal-thumb')];
+
+  const mainImage = document.getElementById('mainProductImage');
+
+  let current = 0;
+
+  function showImage(index) {
+    current = index;
+
+    const btn = thumbs[index];
+
+    mainImage.src = btn.dataset.image;
+
+    mainImage.alt = btn.dataset.alt;
+
+    thumbs.forEach((t) => t.classList.remove('active'));
+
+    btn.classList.add('active');
+
+    btn.scrollIntoView({
+      behavior: 'smooth',
+
+      inline: 'center',
+
+      block: 'nearest',
+    });
+  }
+
+  thumbs.forEach((btn, index) => {
+    btn.addEventListener('click', () => {
+      showImage(index);
+    });
+  });
+
+  document.querySelector('.gal-prev').onclick = () => {
+    current = (current - 1 + thumbs.length) % thumbs.length;
+
+    showImage(current);
+  };
+
+  document.querySelector('.gal-next').onclick = () => {
+    current = (current + 1) % thumbs.length;
+
+    showImage(current);
+  };
+
+  // document.querySelector('.thumb-prev').onclick = () => {
+  //   document.getElementById('thumbs').scrollBy({
+  //     left: -320,
+
+  //     behavior: 'smooth',
+  //   });
+  // };
+
+  // document.querySelector('.thumb-next').onclick = () => {
+  //   document.getElementById('thumbs').scrollBy({
+  //     left: 320,
+
+  //     behavior: 'smooth',
+  //   });
+  // };
+</script>
 
 <script>
   function formatMoney(cents) {

@@ -5,24 +5,6 @@
    No green. No countdowns. No scarcity. One decision.
    =================================================================== */
 
-/* ---------- PERSONALIZATION (optional ?name= or stored) ---------- */
-// (function(){
-//     function getName(){
-//       try{
-//         const p = new URLSearchParams(location.search).get("name");
-//         if(p && p.trim()) return p.trim().replace(/[<>]/g,"").slice(0,40);
-//         const s = localStorage.getItem("reviveFirstName");
-//         if(s && s.trim()) return s.trim().slice(0,40);
-//       }catch(e){}
-//       return "";
-//     }
-//     const nm = getName();
-//     if(nm){
-//       const h = document.getElementById("qName");
-//       if(h) h.textContent = nm + ", ";
-//     }
-//   })();
-
 
 
 
@@ -132,35 +114,7 @@ document.querySelectorAll(".faq-item").forEach((item) => {
   onScroll();
 })();
 
-/* ---------- PDP GALLERY (buy box) ---------- */
-(function () {
-  const main = document.getElementById("galMain");
-  const thumbs = Array.from(document.querySelectorAll(".thumb"));
-  if (!main || !thumbs.length) return;
-  thumbs.forEach((t) => {
-    t.addEventListener("click", () => {
-      thumbs.forEach((x) => x.classList.remove("active"));
-      t.classList.add("active");
-      const img = t.querySelector("img");
-      const src = img ? img.getAttribute("src") : "";
-      const alt = t.dataset.alt || "Revive Veneers";
-      main.classList.add("fade");
-      setTimeout(() => {
-        main.innerHTML =
-          '<img src="' + src + '" alt="Revive Veneers, ' + alt + '" />';
-        main.classList.remove("fade");
-      }, 170);
-    });
-  });
-})();
 
-/* ---------- ARCH PRESELECT FROM QUIZ PARAM (?arch=upper|lower|both) ---------- */
-(function () {
-  try {
-    const a = new URLSearchParams(location.search).get("arch");
-    if (a && CONFIGS[a]) applyConfig(a);
-  } catch (e) { }
-})();
 
 /* ---------- BUY-BOX ACCORDIONS ---------- */
 document.querySelectorAll("#drops .drop").forEach(function (d) {
