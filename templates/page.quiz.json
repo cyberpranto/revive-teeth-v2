@@ -1,19 +1,26 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-        "main": {
-            "type": "quiz-section",
-            "custom_css": [
-                ".cbb637f8eefbdba84160b001431fc2cfdaa302b46 {display: flex;}"
-            ],
-            "settings": {}
-        },
-        "quiz-header": {
-            "type": "quiz-page-header",
-            "settings": {}
-        }
+  "sections": {
+    "quiz-header": {
+      "type": "quiz-page-header",
+      "settings": {}
     },
-    "order": [
-        "quiz-header",
-        "main",
-    ]
+    "main": {
+      "type": "quiz-section",
+      "custom_css": [],
+      "settings": {}
+    }
+  },
+  "order": [
+    "quiz-header",
+    "main"
+  ]
 }
