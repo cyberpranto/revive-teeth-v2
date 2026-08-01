@@ -437,7 +437,7 @@ h2.display {
 /* .thumb {
   background: #000;
   border-radius: var(--r-md);
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/5;
   border: 1.5px solid transparent;
   overflow: hidden;
   position: relative;

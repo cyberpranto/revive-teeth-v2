@@ -1195,7 +1195,7 @@ section {
   position: relative;
   background: #000;
   border: 1.5px solid var(--line-2);
-  border-radius: 12px;
+  border-radius: 8px;
   aspect-ratio: 4 / 5;
   overflow: hidden;
   padding: 0;
