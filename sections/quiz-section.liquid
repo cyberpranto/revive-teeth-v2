@@ -115,8 +115,8 @@
       }
 
       localStorage.setItem('quiz_email', email);
-      {% comment %} if (arch) localStorage.setItem('quiz_arch', arch);
-
+    if (arch) localStorage.setItem('quiz_arch', arch);
+  {% comment %} 
       window.location.href = `https://reviveteeth.com/pages/offer?set=${arch}`; {% endcomment %}
     });
   </script>
