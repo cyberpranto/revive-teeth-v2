@@ -188,11 +188,11 @@
                   </div>
                 {% endcomment %}
 
-                {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
+                {% comment %} {% if title contains 'upper & lower' or title contains 'upper and lower' or title contains 'both' %}
                   <div class="save">
                     {{ section.settings.bundle_save_text }}
                   </div>
-                {% endif %}
+                {% endif %} {% endcomment %}
               </div>
             </button>
           {% endfor %}
