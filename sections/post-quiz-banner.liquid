@@ -635,14 +635,14 @@
       applyConfig(button);
       const url = new URL(window.location);
 
-      url.searchParams.set('arch', button.dataset.arch);
+      url.searchParams.set('set', button.dataset.arch);
 
       history.replaceState({}, '', url);
     });
   });
 
   const params = new URLSearchParams(window.location.search);
-  const arch = params.get('arch');
+  const arch = params.get('set');
 
   if (arch) {
     const button = document.querySelector(`.cfg-opt[data-arch="${arch}"]`);
