@@ -75,7 +75,7 @@
           "settings": {
             "icon": "<svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"><path d=\"M5 14 C 7 6, 25 6, 27 14 L26 22 H6 Z\"></path></svg>",
             "heading": "Upper & Lower Impression Trays",
-            "text": "Pre-sized to fit most adult arches comfortably."
+            "text": "Pre-sized to fit most adults comfortably."
           }
         },
         "kit_item_mWHJAp": {
@@ -140,6 +140,7 @@
         "credit_text": "$300 Smile Design credit applied",
         "value_line": "It's the look you'd chase in a $20,000 dentist's chair, without the chair, the drilling, or the $20,000.",
         "shipping_text": "In stock. Ships your impression kit within 48 hours.",
+        "label_content": "<p>I have read and agree to the <a href=\"#\">Terms of Service</a>, including the Binding Arbitration Agreement and Class Action Waiver in Section 15, the <a href=\"#\">Privacy Policy</a>, and the <a href=\"#\">Refund, Remake & Returns Policy</a>.</p>",
         "guareentee_text": "Every set is made to your mouth alone, and if anything is not right when it arrives, we remake it free, up to twice, with a full refund available any time before production begins.",
         "secure_text": "Secure checkout",
         "kit_title": "What's in Your Kit",
