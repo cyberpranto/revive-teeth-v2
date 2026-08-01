@@ -434,30 +434,7 @@ h2.display {
   gap: 10px;
   margin-top: 12px;
 }
-/* .thumb {
-  background: #000;
-  border-radius: var(--r-md);
-  aspect-ratio: 1/1;
-  border: 1.5px solid transparent;
-  overflow: hidden;
-  position: relative;
-  transition: border-color 0.15s;
-  padding: 0;
-  cursor: pointer;
-}
-.thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  padding: 3%;
-}
-.thumb.active {
-  border-color: var(--navy);
-}
-.thumb:hover {
-  border-color: var(--navy-tint-2);
-} buybox */
+/*  buybox */
 .buybox {
   padding-top: 4px;
 }
