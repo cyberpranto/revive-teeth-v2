@@ -413,7 +413,7 @@ h2.display {
 .gallery-main {
   background: #000;
   border-radius: var(--r-xl);
-  aspect-ratio: 5/5;
+  aspect-ratio: 4/5;
   overflow: hidden;
   position: relative;
   transition: opacity 0.3s ease;
