@@ -268,7 +268,7 @@
           "settings": {
             "number": "01",
             "title": "Smile Architecture",
-            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and arch width dictate the shape, ensuring the final result actually belongs on your face.</p>"
+            "content": "<p>We map the design to your specific facial proportions, not a template. Your lip line and <br/>mouth width dictate the shape, ensuring the final result actually belongs on your face.</p>"
           }
         },
         "protocol_VbD43y": {
