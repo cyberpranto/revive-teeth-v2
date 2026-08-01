@@ -734,9 +734,13 @@
     this.innerHTML = 'Preparing Checkout...';
 
     try {
-      await fetch('/cart/clear.js', {
+      const clearRes = await fetch('/cart/clear.js', {
         method: 'POST',
       });
+
+      if (!clearRes.ok) {
+        throw new Error('Failed to clear cart');
+      }
       // 1. AGE cart e item add koro — discount link hit korar age
       // cart e item thakte hobe, nahole apply hoy na (age ei problem tai hoyechilo)
       await fetch('/cart/add.js', {
