@@ -667,7 +667,7 @@
     // URL e ?arch=lower thakle seta agey priority pabe (user just select korle),
     // na thakle quiz theke asha localStorage er arch use hobe
     const params = new URLSearchParams(window.location.search);
-    const arch = params.get('arch') || localStorage.getItem('quiz_arch');
+    const arch = params.get('set') || localStorage.getItem('quiz_arch');
 
     if (!email) {
       console.warn('No quiz_email found on offer page');
