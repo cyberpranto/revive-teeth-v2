@@ -1196,7 +1196,7 @@ section {
   background: #000;
   border: 1.5px solid var(--line-2);
   border-radius: 12px;
-  aspect-ratio: 4/5;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
   padding: 0;
   cursor: pointer;
