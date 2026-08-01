@@ -502,16 +502,15 @@
   </section>
 {% endif %}
 
+<script>
+  (function () {
+    var hasSession = !!localStorage.getItem('quiz_email');
 
-    <script>
-        (function () {
-        var hasSession = !!localStorage.getItem('quiz_email');
-
-        if (!hasSession) {
-          window.location.replace('/pages/quiz?from=offer');
-        }
-      })();
-    </script>
+    if (!hasSession) {
+      window.location.replace('/pages/quiz?from=offer');
+    }
+  })();
+</script>
 
 <script>
   const gallery = document.querySelector('.gallery');
@@ -735,6 +734,9 @@
     this.innerHTML = 'Preparing Checkout...';
 
     try {
+      await fetch('/cart/clear.js', {
+        method: 'POST',
+      });
       // 1. AGE cart e item add koro — discount link hit korar age
       // cart e item thakte hobe, nahole apply hoy na (age ei problem tai hoyechilo)
       await fetch('/cart/add.js', {
