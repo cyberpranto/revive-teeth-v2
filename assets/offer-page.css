@@ -372,8 +372,8 @@ section {
     margin-right: auto;
   }
   .gal-main {
-    aspect-ratio: auto;
-    height: 60vh;
+    aspect-ratio: 4/5;
+    height: 100%;
     width: 100%;
   }
 }
