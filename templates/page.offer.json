@@ -343,6 +343,10 @@
         "button_link": "#hero"
       }
     },
+    "post_quiz_guess_section": {
+      "type": "post-quiz-guess",
+      "settings": {}
+    },
     "post_quiz_how_it_works_NxkFRk": {
       "type": "post-quiz-how-it-works",
       "blocks": {
@@ -593,6 +597,7 @@
     "post_quiz_testimonials_fzPW3L",
     "post_quiz_founder_story_aXQxDw",
     "post_quiz_protocols_ppTFCd",
+    "post_quiz_guess_section",
     "post_quiz_how_it_works_NxkFRk",
     "post-quiz-compare",
     "post_quiz_faq_RG6RKB",
