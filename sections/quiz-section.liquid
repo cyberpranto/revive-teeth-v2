@@ -1,128 +1,133 @@
 <style>
-     .quiz-wrapper {
-       max-width: 460px;
-       width: 100%;
-       margin: 0px auto;
-       font-family: "Hanken Grotesk";
-     }
-
-     .page-heading {
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    font-family: Hanken Grotesk;
-    color: #0f1B38;
-    font-weight: 700;
-    font-size: 28px;
-    text-align: left;
-    white-space: pre-wrap;
-    margin: 0;
-    padding: 0 22px;
+    .quiz-wrapper {
+      max-width: 460px;
+      width: 100%;
+      margin: 0px auto;
+      font-family: "Hanken Grotesk";
     }
 
-    @media screen and (min-width: 768px){
-        font-size: 32px;
-    }
-
-     #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc .oct-quiz-collect-text-wrapper > input,
-     #octane-question-wrapper50f364cb4351c2f7814fe03fd74ca828a67e0421 .oct-quiz-email-wrapper > input {
-
-       text-align: left;
-     }
-
-     #oct-q-title-6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
-     #oct-q-title-50f364cb4351c2f7814fe03fd74ca828a67e0421,
-     #oct-q-title-69e78a44febbef67a5d0bdf759e600d72394b46c {
-       font-size: 20px;
-     }
-
-     #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
-     #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c {
-       padding-bottom: 10px;
-     }
-     #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
-     #octane-question-wrapper50f364cb4351c2f7814fe03fd74ca828a67e0421,
-     #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c {
-       padding-top: 0;
-     }
-     .ced1ad843638cfce8c3e8ee0795a80cc7c5691fc3 {
-       padding-top: 0px;
-     }
-     #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c p {
-       font-family: 'Hanken Grotesk';
-       font-size: 14px;
-     }
-
-     #oct-q-title-50f364cb4351c2f7814fe03fd74ca828a67e0421,
-     #oct-q-title-6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc {
-       display: block;
-       font-size: 13px;
-       font-weight: 600;
-       color: rgb(26, 26, 26);
-       margin: 0px 0px 7px;
-     }
-
-     .oct-quiz-wrapper--question-page__subtitle {
-       padding-bottom: 20px;
-     }
-     ul {
-       width: 100%;
-       text-align: left;
-     }
-
-     ul li {
-       width: 100%;
-       text-align: left;
-     }
-     ul li div {
-       width: 100%;
-       text-align: left;
-     }
-
-     button {
-       min-width: 100%;
-     }
-
-     #octane-quiz-outer-wrapper {
-       display: flex;
-       justify-content: center;
-  height: 80vh;
-             font-family: "Hanken Grotesk";
-     }
-
-     .oct-quiz-phone-consent-checkbox-wrapper {
-       align-items: start;
-     }
-
-     .cbb637f8eefbdba84160b001431fc2cfdaa302b46 {
-     display: flex;
+    .page-heading {
+   font-stretch: normal;
+   font-style: normal;
+   line-height: normal;
+   letter-spacing: normal;
+   font-family: Hanken Grotesk;
+   color: #0f1B38;
+   font-weight: 700;
+   font-size: 28px;
+   text-align: left;
+   white-space: pre-wrap;
+   margin: 0;
+   padding: 0 22px;
    }
+
+   @media screen and (min-width: 768px){
+       font-size: 32px;
+   }
+
+    #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc .oct-quiz-collect-text-wrapper > input,
+    #octane-question-wrapper50f364cb4351c2f7814fe03fd74ca828a67e0421 .oct-quiz-email-wrapper > input {
+
+      text-align: left;
+    }
+
+    #oct-q-title-6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
+    #oct-q-title-50f364cb4351c2f7814fe03fd74ca828a67e0421,
+    #oct-q-title-69e78a44febbef67a5d0bdf759e600d72394b46c {
+      font-size: 20px;
+    }
+
+    #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
+    #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c {
+      padding-bottom: 10px;
+    }
+    #octane-question-wrapper6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc,
+    #octane-question-wrapper50f364cb4351c2f7814fe03fd74ca828a67e0421,
+    #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c {
+      padding-top: 0;
+    }
+    .ced1ad843638cfce8c3e8ee0795a80cc7c5691fc3 {
+      padding-top: 0px;
+    }
+    #octane-question-wrapper69e78a44febbef67a5d0bdf759e600d72394b46c p {
+      font-family: 'Hanken Grotesk';
+      font-size: 14px;
+    }
+
+    #oct-q-title-50f364cb4351c2f7814fe03fd74ca828a67e0421,
+    #oct-q-title-6889851e8cc7f05ecf5b9cbe26c45d81ac6282fc {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgb(26, 26, 26);
+      margin: 0px 0px 7px;
+    }
+
+    .oct-quiz-wrapper--question-page__subtitle {
+      padding-bottom: 20px;
+    }
+    ul {
+      width: 100%;
+      text-align: left;
+    }
+
+    ul li {
+      width: 100%;
+      text-align: left;
+    }
+    ul li div {
+      width: 100%;
+      text-align: left;
+    }
+
+    button {
+      min-width: 100%;
+    }
+
+    #octane-quiz-outer-wrapper {
+      display: flex;
+      justify-content: center;
+
+            font-family: "Hanken Grotesk";
+    }
+
+    .quiz-wrapper-container {
+       height: 80vh;
+   }
+
+    .oct-quiz-phone-consent-checkbox-wrapper {
+      align-items: start;
+    }
+
+    .cbb637f8eefbdba84160b001431fc2cfdaa302b46 {
+    display: flex;
+  }
 </style>
 
 <div class="quiz-wrapper">
   .
-  <div class="quiz-wrapper-container"></div>
-  <p class="page-heading">Answer 3 quick questions to unlock your $300 Smile Design credit</p>
-  <div
-    class="octane-ai-quiz "
-    data-quiz-id="CLqI8ayPPOEs7tTY"
-    data-embed-type="fullpage"
-    data-mobile-height="420px"
-    data-desktop-height="420px"
-    style="min-height:420px"
-  >
-    <div style="position: relative; width: 100%; height: 100%; min-height: 200px;" id="octane-loading-spinner-outer">
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center">
-        <div style="width: 50px; height: 50px;">
-          <img
-            style="border: none"
-            id="octane-loading-spinner-img"
-            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlPSIjNDRhMDQzIiBzdHJva2Utd2lkdGg9IjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1kYXNoYXJyYXk9IjE4MCAxMDAiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgYXR0cmlidXRlVHlwZT0iWE1MIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgNTAgNTAiIHRvPSIzNjAgNTAgNTAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9jaXJjbGU+PC9zdmc+"
-            alt="Loading..."
-            width="100%"
-            height="100%"
-          >
+  <div class="quiz-wrapper-container">
+    <p class="page-heading">Answer 3 quick questions to unlock your $300 Smile Design credit</p>
+    <div
+      class="octane-ai-quiz "
+      data-quiz-id="CLqI8ayPPOEs7tTY"
+      data-embed-type="fullpage"
+      data-mobile-height="420px"
+      data-desktop-height="420px"
+      style="min-height:420px"
+    >
+      <div style="position: relative; width: 100%; height: 100%; min-height: 200px;" id="octane-loading-spinner-outer">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center">
+          <div style="width: 50px; height: 50px;">
+            <img
+              style="border: none"
+              id="octane-loading-spinner-img"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0MCIgc3Ryb2tlPSIjNDRhMDQzIiBzdHJva2Utd2lkdGg9IjgiIGZpbGw9Im5vbmUiIHN0cm9rZS1kYXNoYXJyYXk9IjE4MCAxMDAiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgYXR0cmlidXRlVHlwZT0iWE1MIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgNTAgNTAiIHRvPSIzNjAgNTAgNTAiIGR1cj0iMXMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIi8+PC9jaXJjbGU+PC9zdmc+"
+              alt="Loading..."
+              width="100%"
+              height="100%"
+            >
+          </div>
         </div>
       </div>
     </div>
