@@ -33,11 +33,10 @@
   >
     {% if section.settings.logo %}
       <img
-        src="{{ section.settings.logo | image_url: "original" }}"
+        src="{{ section.settings.logo | image_url: 'original' }}"
         alt="{{ shop.name }}"
         width="100"
         height="30"
-        loading="eager"
       >
     {% else %}
       <img
@@ -45,7 +44,6 @@
         alt="{{ shop.name }}"
         width="100"
         height="30"
-        loading="eager"
       >
     {% endif %}
   </div>
