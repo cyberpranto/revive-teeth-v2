@@ -357,21 +357,7 @@
               </button>
             {% endfor %}
           </div>
-          <div class="qcard">
-            <p>“{{ section.settings.quote }}”</p>
-            <div class="qattr">
-              <img
-                src="{{ section.settings.quote_author_image | image_url }}"
-                alt="{{ section.settings.quote_author_image.alt }}"
-                height="100"
-                width="100"
-              >
-              <div>
-                <div class="nm">{{ section.settings.quote_author }}</div>
-                <div class="rl">{{ section.settings.quote_author_designation }}</div>
-              </div>
-            </div>
-          </div>
+
           <div class="price-block">
             <div class="price-row">
               <s class="p-list" id="p-list">$1,894</s> <span class="p-net" id="p-net">$1,594</span>
@@ -462,6 +448,21 @@
               </svg>
               {{ section.settings.secure_text }}
             </span>
+          </div>
+                    <div class="qcard">
+            <p>“{{ section.settings.quote }}”</p>
+            <div class="qattr">
+              <img
+                src="{{ section.settings.quote_author_image | image_url }}"
+                alt="{{ section.settings.quote_author_image.alt }}"
+                height="100"
+                width="100"
+              >
+              <div>
+                <div class="nm">{{ section.settings.quote_author }}</div>
+                <div class="rl">{{ section.settings.quote_author_designation }}</div>
+              </div>
+            </div>
           </div>
           <div class="drops">
             <details class="drop">
